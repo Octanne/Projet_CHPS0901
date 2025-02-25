@@ -15,7 +15,7 @@ int main(/*int argc, char** argv*/) {
     std::vector<Particle*> particles = Particle::generateParticles(6, widthAndHeight, widthAndHeight);
 
     // We create a quadtree
-    QuadTree qt;
+    QuadTree qt(widthAndHeight);
 
     std::cout << "Inserting particles into the quadtree" << std::endl;
 

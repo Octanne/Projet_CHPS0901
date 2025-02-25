@@ -15,6 +15,7 @@ private:
 
     bool isDivided;
     bool hasBody;
+    int width;
 
     QuadTree* northeast;
     QuadTree* northwest;
@@ -23,7 +24,8 @@ private:
 
     static constexpr double theta = 0.5;  // Barnes-Hut threshold parameter
 public:
-    QuadTree(double x = 0.f, double y = 0.f);
+    QuadTree(double x, double y, int width);
+    QuadTree(int width);
     ~QuadTree();
 
     void calculateForce(Particle* particle, double& fx, double& fy) const;
@@ -34,9 +36,10 @@ public:
     double getX();
     double getY();
     double getMass();
+    double getWidth();
 
     void insert(Particle* particle);
-    void subdivide(Particle* particleAdded);
+    void subdivide();
     void updateCenterOfMass(Particle* particle);
     void print(int depth = 0);
     void clear();
