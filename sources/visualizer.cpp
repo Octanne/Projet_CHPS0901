@@ -13,7 +13,7 @@
 std::thread* windowThread = nullptr;
 
 // Recursively draw the QuadTree
-int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
+int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
     if (qt == nullptr) {
         std::cout << "Quad is null" << std::endl;
         return 0;
@@ -33,10 +33,11 @@ int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
     if (qt->isItDivided()) {
         // Draw other Quads
         //std::cout << "Node is divided" << std::endl;
-        nbPart += drawQuadTree(qt->getNortheast(), width/2, 0, posX+width/2, posY+width/2);
-        nbPart += drawQuadTree(qt->getNorthwest(), width/2, 0, posX, posY+width/2);
-        nbPart += drawQuadTree(qt->getSoutheast(), width/2, 0, posX+width/2, posY);
-        nbPart += drawQuadTree(qt->getSouthwest(), width/2, 0, posX, posY);
+        int newWidth = width/2;
+        nbPart += drawQuadTree(qt->getSouthwest(), newWidth, posX, posY);
+        nbPart += drawQuadTree(qt->getSoutheast(), newWidth, posX+newWidth, posY);
+        nbPart += drawQuadTree(qt->getNorthwest(), newWidth, posX, posY+newWidth);
+        nbPart += drawQuadTree(qt->getNortheast(), newWidth, posX+newWidth, posY+newWidth);
     } else if (qt->hasParticle()) {
         // Draw particle
         //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
@@ -49,7 +50,7 @@ int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
     }
 
     if (root) {
-        std::cout << "We printed " << nbPart << " particles" << std::endl;
+        //std::cout << "We printed " << nbPart << " particles" << std::endl;
     }
 
     return nbPart;
@@ -58,7 +59,7 @@ int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
 // Display callback function
 void displayCallback(QuadTree* qt, int globalWidth) {
     if (qt != nullptr) {
-        drawQuadTree(qt, globalWidth, 1, 0, 0);
+        drawQuadTree(qt, globalWidth, 0, 0, 1);
     }
 }
 
