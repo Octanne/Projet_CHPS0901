@@ -15,30 +15,33 @@ QuadTree::~QuadTree() {
 
 void QuadTree::insert(Particle* particle) {
     // The node don't contain any particle we insert the particle
-    if (!hasBody && !isDivided) {
-        particleX = particle->getX();
-        particleY = particle->getY();
-        mass = particle->getMass();
-        hasBody = true;
+    if (!isDivided) {
+        if (!hasBody) {
+            particleX = particle->getX();
+            particleY = particle->getY();
+            mass = particle->getMass();
+            hasBody = true;
+            //std::cout << "Particle inserted" << std::endl;
+            return;
+        }
+
+        // The node is not divided and the node is not empty
+        subdivide(particle);
         return;
     }
 
-    // The node is not divided and the node is not empty
-    if (!isDivided) {
-        subdivide();
-    } 
+    // Update the mass of the node to take into account the new particle
+    updateCenterOfMass(particle);
 
     /* The node is divided we go to the corresponding quadrant */
-    updateCenterOfMass(particle); // Update the mass of the node to take into account the new particle
-
     // Insert the particle in the corresponding quadrant recursively
-    if (particle->getX() < getX()) {
+    if (particle->getX() < getX()) { // We check for west quadrants
         if (particle->getY() < getY()) {
             southwest->insert(particle);
         } else {
             northwest->insert(particle);
         }
-    } else {
+    } else { // We check for east quadrants
         if (particle->getY() < getY()) {
             southeast->insert(particle);
         } else {
@@ -47,18 +50,37 @@ void QuadTree::insert(Particle* particle) {
     }
 }
 
-void QuadTree::subdivide() {
+void QuadTree::subdivide(Particle* particleAdded) {
+    Particle particleOldest(particleX, particleY, mass);
+
     // We create the four quadrants
     northeast = new QuadTree();
     northwest = new QuadTree();
     southeast = new QuadTree();
     southwest = new QuadTree();
-    isDivided = true;
-    hasBody = false;
+    isDivided = true; // The node is set to divided
+    hasBody = false; // The node is not a leaf anymore
+    //std::cout << "Leaf expanding to four quadrants" << std::endl;
 
-    // We insert it's current particle in the corresponding quadrant
-    Particle particle(particleX, particleY, mass);
-    insert(&particle);
+    // We insert the oldest particle and the new particle in the corresponding quadrant
+    // We want them to be in different quadrants
+    if (particleOldest.getX() < particleAdded->getX()) {
+        if (particleOldest.getY() < particleAdded->getY()) {
+            southwest->insert(&particleOldest);
+            northeast->insert(particleAdded);
+        } else {
+            northwest->insert(&particleOldest);
+            southeast->insert(particleAdded);
+        }
+    } else {
+        if (particleOldest.getY() < particleAdded->getY()) {
+            southeast->insert(&particleOldest);
+            northwest->insert(particleAdded);
+        } else {
+            northeast->insert(&particleOldest);
+            southwest->insert(particleAdded);
+        }
+    }
 }
 
 void QuadTree::updateCenterOfMass(Particle* particle) {
@@ -66,6 +88,7 @@ void QuadTree::updateCenterOfMass(Particle* particle) {
     particleX = (particleX * mass + particle->getX() * particle->getMass()) / totalMass;
     particleY = (particleY * mass + particle->getY() * particle->getMass()) / totalMass;
     mass = totalMass;
+    //std::cout << "Center of mass updated" << std::endl;
 }
 
 void QuadTree::calculateForce(Particle* particle, double& fx, double& fy) const {

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <thread>
+#include <csignal>
 
 // install sudo apt install libglew-dev libglfw3-dev libglm-dev
 #include <GL/glew.h>
@@ -10,7 +11,6 @@
 
 // Global QuadTree pointer for display callback
 std::thread* windowThread = nullptr;
-int globalWidth = 800;
 
 // Recursively draw the QuadTree
 int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
@@ -24,10 +24,10 @@ int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
     //printf("Drawing boundaries at (%d, %d, %d, %d)\n", posX, posY, posX+width, posY+width);
     glBegin(GL_LINE_LOOP);
     glColor3f(0.0, 0.0, 1.0);
-    glVertex2f(posY, posX);
-    glVertex2f(posY+width, posX);
-    glVertex2f(posY+width, posX+width);
-    glVertex2f(posY, posX+width);
+    glVertex2f(posX, posY);
+    glVertex2f(posX+width, posY);
+    glVertex2f(posX+width, posY+width);
+    glVertex2f(posX, posY+width);
     glEnd();
 
     if (qt->isItDivided()) {
@@ -56,7 +56,7 @@ int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
 }
 
 // Display callback function
-void displayCallback(QuadTree* qt) {
+void displayCallback(QuadTree* qt, int globalWidth) {
     if (qt != nullptr) {
         drawQuadTree(qt, globalWidth, 1, 0, 0);
     }
@@ -64,6 +64,7 @@ void displayCallback(QuadTree* qt) {
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
+    std::cout << "Resizing of window id " << glfwGetWindowAttrib(window, GLFW_FOCUSED) << " to " << width << "x" << height << std::endl;
 }
 
 // Wait for the window to be closed
@@ -71,14 +72,21 @@ void waitClosedWindow() {
     windowThread->join();
 }
 
+GLFWwindow* window_GEN;
+void signalHandler(int signum) {
+    glfwSetWindowShouldClose(window_GEN, GLFW_TRUE);
+    std::cout << "Interrupt signal (" << signum << ") received. Closing window" << std::endl;
+}
+
 // Initialize and create window
-int createWindow(QuadTree* qt) {
+int createWindow(QuadTree* qt, int width) {
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW" << std::endl;
         return 1;
     }
 
-    GLFWwindow* window = glfwCreateWindow(globalWidth, globalWidth, "QuadTree Visualizer", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(width, width, "QuadTree Visualizer", nullptr, nullptr);
+    window_GEN = window;
     if (!window) {
         std::cerr << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -87,7 +95,7 @@ int createWindow(QuadTree* qt) {
 
     glfwMakeContextCurrent(NULL);
 
-    windowThread = new std::thread([window, qt] {
+    windowThread = new std::thread([window, qt, width] {
         // Create window
         glfwMakeContextCurrent(window);
         glewExperimental = GL_TRUE;
@@ -100,17 +108,18 @@ int createWindow(QuadTree* qt) {
 
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        glOrtho(-globalWidth, globalWidth, -globalWidth, globalWidth, -1, 1);
+        glOrtho(-1, width, -1, width+1, -1, 1);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
 
+        // Capture CTRL+C to stop gracefully
+        signal(SIGINT, signalHandler);
+
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT);
-            displayCallback(qt);
-
+            displayCallback(qt, width);
             glfwSwapBuffers(window);
             glfwPollEvents();
-
             // We sleep for 100ms
             usleep(100000);
         }

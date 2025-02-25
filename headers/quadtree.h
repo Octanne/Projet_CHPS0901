@@ -36,7 +36,7 @@ public:
     double getMass();
 
     void insert(Particle* particle);
-    void subdivide();
+    void subdivide(Particle* particleAdded);
     void updateCenterOfMass(Particle* particle);
     void clear();
 
