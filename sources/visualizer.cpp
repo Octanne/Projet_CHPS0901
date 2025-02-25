@@ -32,7 +32,6 @@ int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
 
     if (qt->isItDivided()) {
         // Draw other Quads
-        //std::cout << "Node is divided" << std::endl;
         int newWidth = width/2;
         nbPart += drawQuadTree(qt->getSouthwest(), newWidth, posX, posY);
         nbPart += drawQuadTree(qt->getSoutheast(), newWidth, posX+newWidth, posY);

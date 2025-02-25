@@ -38,6 +38,7 @@ public:
     void insert(Particle* particle);
     void subdivide(Particle* particleAdded);
     void updateCenterOfMass(Particle* particle);
+    void print(int depth = 0);
     void clear();
 
     QuadTree* getNortheast();

@@ -24,7 +24,6 @@ int main(/*int argc, char** argv*/) {
         std::cout << "Inserting particle at (" << particle->getX() << ", " << particle->getY() << ", " 
                     << particle->getMass() << ")" << std::endl;
         qt.insert(particle);
-        std::cout << "Particle inserted" << std::endl;
     }
 
     std::cout << "Particles inserted into the quadtree" << std::endl;
@@ -34,6 +33,8 @@ int main(/*int argc, char** argv*/) {
 
     // We do the simulation
     // TODO: Implement the simulation
+
+    qt.print();
 
     waitClosedWindow();
 
