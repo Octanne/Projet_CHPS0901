@@ -22,6 +22,13 @@ int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
 
     // TODO : Draw boundaries
     //printf("Drawing boundaries at (%d, %d, %d, %d)\n", posX, posY, posX+width, posY+width);
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.0, 0.0, 1.0);
+    glVertex2f(posY, posX);
+    glVertex2f(posY+width, posX);
+    glVertex2f(posY+width, posX+width);
+    glVertex2f(posY, posX+width);
+    glEnd();
 
     if (qt->isItDivided()) {
         // Draw other Quads
@@ -31,10 +38,9 @@ int drawQuadTree(QuadTree* qt, int width, int root, int posX, int posY) {
         nbPart += drawQuadTree(qt->getSoutheast(), width/2, 0, posX+width/2, posY);
         nbPart += drawQuadTree(qt->getSouthwest(), width/2, 0, posX, posY);
     } else if (qt->hasParticle()) {
-        // TODO : Draw particle
+        // Draw particle
         //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
-        // OpenGL draw dot red
-        glPointSize(5.0);
+        glPointSize(3.0);
         glBegin(GL_POINTS);
         glColor3f(1.0, 0.0, 0.0);
         glVertex2f(qt->getX(), qt->getY());
@@ -104,6 +110,9 @@ int createWindow(QuadTree* qt) {
 
             glfwSwapBuffers(window);
             glfwPollEvents();
+
+            // We sleep for 100ms
+            usleep(100000);
         }
 
         // Remove context from current thread
