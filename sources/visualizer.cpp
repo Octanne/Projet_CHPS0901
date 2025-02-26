@@ -43,7 +43,7 @@ int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
         glPointSize(3.0);
         glBegin(GL_POINTS);
         glColor3f(1.0, 0.0, 0.0);
-        glVertex2f(qt->getX(), qt->getY());
+        glVertex2f(qt->getParticle()->getX(), qt->getParticle()->getY());
         glEnd();
         return nbPart+1;
     }
