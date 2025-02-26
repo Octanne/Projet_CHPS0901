@@ -8,10 +8,6 @@ QuadTree::QuadTree(double width, double originX, double originY)
       originX(originX), originY(originY), northeast(nullptr), 
       northwest(nullptr), southeast(nullptr), southwest(nullptr) {}
 
-QuadTree::~QuadTree() {
-    clear();
-}
-
 std::string spacer(int depth) {
     std::string s = "";
     for (int i = 0; i < depth; i++) {
@@ -31,7 +27,11 @@ void QuadTree::print(int depth) {
         std::cout << spacer(depth) << "SouthWest: (depth : " << depth << ")" << std::endl;
         southwest->print(depth + 1);
     } else {
-        std::cout << spacer(depth) << "Leaf at (" << particle->getX() << ", " << particle->getY() << ") with mass " << particle->getMass() << std::endl;
+        if (particle == nullptr) {
+            std::cout << spacer(depth) << "Empty leaf" << std::endl;
+        } else {
+            std::cout << spacer(depth) << "Leaf at (" << particle->getX() << ", " << particle->getY() << ") with mass " << particle->getMass() << std::endl;
+        }
     }
 }
 
@@ -99,33 +99,63 @@ void QuadTree::updateCenterOfMass(Particle* particleInsert) {
     //std::cout << "Center of mass updated" << std::endl;
 }
 
-void QuadTree::calculateForce(Particle* particleTest, double& fx, double& fy) const {
-    if (particle->getMass() == 0 || (particle->getX() == particleTest->getX() 
-            && particle->getY() == particleTest->getY())) {
-        return;
-    }
-
-    double dx = particle->getX() - particleTest->getX();
-    double dy = particle->getY() - particleTest->getY();
-    double dist = distance(particle->getX(), particle->getY(), particleTest->getX(), particleTest->getY());
-
-    if (!isDivided && dist > 0) {
-        double force = (particle->getMass() * particleTest->getMass()) / (dist * dist);
-        fx += force * (dx / dist);
-        fy += force * (dy / dist);
-    } else if (dist < theta) {
-        double force = (particle->getMass() * particleTest->getMass()) / (dist * dist);
-        fx += force * (dx / dist);
-        fy += force * (dy / dist);
+void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
+    if (!isDivided) {
+        if (particle != nullptr && (particle->getX() != b->getX() || particle->getY() != b->getY())) {
+            double dx = particle->getX() - b->getX();
+            double dy = particle->getY() - b->getY();
+            double dist = distance(particle->getX(), particle->getY(), b->getX(), b->getY());
+            double force = (Particle::G * particle->getMass() * b->getMass()) / (dist * dist);
+            // Change the formula to consider dist as tons of meters
+            fx += force * (dx / dist);
+            fy += force * (dy / dist);
+        }
     } else {
-        if (northeast) northeast->calculateForce(particleTest, fx, fy);
-        if (northwest) northwest->calculateForce(particleTest, fx, fy);
-        if (southeast) southeast->calculateForce(particleTest, fx, fy);
-        if (southwest) southwest->calculateForce(particleTest, fx, fy);
+        double s = width;
+        double d = distance(originX, originY, b->getX(), b->getY());
+        if (s / d < theta) {
+            double dx = particle->getX() - b->getX();
+            double dy = particle->getY() - b->getY();
+            // dist is in ?
+            double dist = distance(particle->getX(), particle->getY(), b->getX(), b->getY());
+            double force = (Particle::G * particle->getMass() * b->getMass()) / (dist * dist);
+            fx += force * (dx / dist);
+            fy += force * (dy / dist);
+        } else {
+            if (northeast) northeast->calculateForce(b, fx, fy);
+            if (northwest) northwest->calculateForce(b, fx, fy);
+            if (southeast) southeast->calculateForce(b, fx, fy);
+            if (southwest) southwest->calculateForce(b, fx, fy);
+        }
+    }
+}
+
+void QuadTree::updateVelocities(double step) {
+    if (isDivided) {
+        if (northeast != nullptr) northeast->updateVelocities(step);
+        if (northwest != nullptr) northwest->updateVelocities(step);
+        if (southeast != nullptr) southeast->updateVelocities(step);
+        if (southwest != nullptr) southwest->updateVelocities(step);
+    }
+        
+    if (particle != nullptr) {
+        double fx = 0;
+        double fy = 0;
+        calculateForce(particle, fx, fy);
+        std::cout << "Force on particle at (" << particle->getX() << ", " << particle->getY() << ") is (" << fx << ", " << fy << ")" << std::endl;
+        double ax = fx / particle->getMass();
+        double ay = fy / particle->getMass();
+        particle->setVx(particle->getVx() + ax * step);
+        particle->setVy(particle->getVy() + ay * step);
+
+        // We update the position of the particle
+        particle->setX(particle->getX() + particle->getVx() * step);
+        particle->setY(particle->getY() + particle->getVy() * step);
     }
 }
 
 double QuadTree::distance(double x1, double y1, double x2, double y2) const {
+    // Calculate the distance between two points 
     return std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 }
 
@@ -153,6 +183,10 @@ double QuadTree::getOriginY() {
     return originY;
 }
 
+QuadTree::~QuadTree() {
+    clear();
+}
+
 void QuadTree::clear() {
     delete northeast;
     delete northwest;
@@ -171,9 +205,6 @@ void QuadTree::clear() {
 
     isDivided = false;
     hasBody = false;
-    originX = 0;
-    originY = 0;
-    width = 0;
 }
 
 QuadTree* QuadTree::getNortheast() {

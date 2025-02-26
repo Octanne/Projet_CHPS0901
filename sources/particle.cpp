@@ -2,9 +2,10 @@
 
 #include <cmath>
 
-Particle::Particle(double x, double y, double mass) : x(x), y(y), mass(mass) {}
+Particle::Particle(double x, double y, double mass) : x(x), y(y), mass(mass), vx(0), vy(0) {}
 
-Particle::Particle(const Particle& particle) : x(particle.x), y(particle.y), mass(particle.mass) {}
+Particle::Particle(const Particle& particle) : x(particle.x), y(particle.y), mass(particle.mass), 
+                        vx(particle.vx), vy(particle.vy) {}
 
 double Particle::getX() const {
     return x;
@@ -28,6 +29,22 @@ void Particle::setY(double y) {
 
 void Particle::setMass(double mass) {
     this->mass = mass;
+}
+
+void Particle::setVx(double vx) {
+    this->vx = vx;
+}
+
+void Particle::setVy(double vy) {
+    this->vy = vy;
+}
+
+double Particle::getVx() const {
+    return vx;
+}
+
+double Particle::getVy() const {
+    return vy;
 }
 
 std::vector<Particle*> Particle::generateParticles(int nb_particles, double width, double height, double max_mass, double min_mass) {

@@ -16,6 +16,12 @@ public:
     void setY(double y);
     void setMass(double mass);
 
+    void setVx(double vx);
+    void setVy(double vy);
+    
+    double getVx() const;
+    double getVy() const;
+
     static constexpr double G = 6.674e-11;  // Gravitational constant
     static std::vector<Particle*> generateParticles(int nb_particles, double width, double height, double max_mass = 100, double min_mass = 0.5);
 private:
@@ -23,6 +29,9 @@ private:
     double y;
 
     double mass;
+
+    double vx;
+    double vy;
 };
 
 #endif // PARTICLE_H

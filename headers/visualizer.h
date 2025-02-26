@@ -3,6 +3,8 @@
 
 #include "quadtree.h"
 
+extern bool shouldClose;
+
 int createWindow(QuadTree* qt, int width);
 void waitClosedWindow();
 

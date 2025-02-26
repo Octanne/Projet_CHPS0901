@@ -11,6 +11,9 @@
 
 // Global QuadTree pointer for display callback
 std::thread* windowThread = nullptr;
+bool shouldClose = false;
+bool renderBoundaries = false;
+bool debugMode = false;
 
 // Recursively draw the QuadTree
 int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
@@ -20,15 +23,17 @@ int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
     }
     int nbPart = 0;
 
-    // TODO : Draw boundaries
-    //printf("Drawing boundaries at (%d, %d, %d, %d)\n", posX, posY, posX+width, posY+width);
-    glBegin(GL_LINE_LOOP);
-    glColor3f(0.0, 0.0, 1.0);
-    glVertex2f(posX, posY);
-    glVertex2f(posX+width, posY);
-    glVertex2f(posX+width, posY+width);
-    glVertex2f(posX, posY+width);
-    glEnd();
+    // Draw boundaries
+    if (renderBoundaries) {
+        //printf("Drawing boundaries at (%d, %d, %d, %d)\n", posX, posY, posX+width, posY+width);
+        glBegin(GL_LINE_LOOP);
+        glColor3f(0.0, 0.0, 1.0);
+        glVertex2f(posX, posY);
+        glVertex2f(posX+width, posY);
+        glVertex2f(posX+width, posY+width);
+        glVertex2f(posX, posY+width);
+        glEnd();
+    }
 
     if (qt->isItDivided()) {
         // Draw other Quads
@@ -73,9 +78,11 @@ void waitClosedWindow() {
 }
 
 GLFWwindow* window_GEN;
-void signalHandler(int signum) {
-    glfwSetWindowShouldClose(window_GEN, GLFW_TRUE);
+void signalSIGINTHandler(int signum) {
     std::cout << "Interrupt signal (" << signum << ") received. Closing window" << std::endl;
+    glfwSetWindowShouldClose(window_GEN, GLFW_TRUE);
+    sleep(1);
+    shouldClose = true;
 }
 
 // Initialize and create window
@@ -113,7 +120,21 @@ int createWindow(QuadTree* qt, int width) {
         glLoadIdentity();
 
         // Capture CTRL+C to stop gracefully
-        signal(SIGINT, signalHandler);
+        signal(SIGINT, signalSIGINTHandler);
+
+        // Set the key callback
+        glfwSetKeyCallback(window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
+            if (debugMode) std::cout << "(" << &window << ") Key pressed: " << key << "with scancode " << scancode << " with action " << action << " with mods " << mods << std::endl;
+            // Close window when Q is pressed
+            if (key == GLFW_KEY_A && action == GLFW_RELEASE) {
+                signalSIGINTHandler(2);
+            }
+            // Switch render boundaries
+            else if (key == GLFW_KEY_F2 && action == GLFW_RELEASE) {
+                renderBoundaries = !renderBoundaries;
+                std::cout << "Render boundaries: " << (renderBoundaries ? "ON" : "OFF") << std::endl;
+            }
+        });
 
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT);

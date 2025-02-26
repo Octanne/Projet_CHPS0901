@@ -37,6 +37,7 @@ public:
     double getWidth();
     Particle* getParticle();
 
+    void updateVelocities(double step = 0.01); // Update the position of the particle step is in seconds
     void insert(Particle* particleInsert);
     void subdivide();
     void updateCenterOfMass(Particle* particleInsert);
