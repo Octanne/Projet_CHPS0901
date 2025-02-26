@@ -8,8 +8,8 @@ class QuadTree;
 
 // QuadTree class to represent the quadtree
 class QuadTree {
-private:
-    Particle particle;
+private: // TODO utiliser un pointeur pour la particule.
+    Particle* particle;
 
     bool isDivided;
     bool hasBody;
@@ -24,7 +24,6 @@ private:
 
     static constexpr double theta = 0.5;  // Barnes-Hut threshold parameter
 public:
-    QuadTree(double x, double y, double width, double originX, double originY);
     QuadTree(double width, double originX, double originY);
     ~QuadTree();
 

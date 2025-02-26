@@ -38,6 +38,7 @@ int main(/*int argc, char** argv*/) {
     waitClosedWindow();
 
     // We wait the user to press a key
+    std::cout << "Press a key to clear the quadtree and close the program" << std::endl;
     std::cin.get();
 
     // We clear the quadtree
