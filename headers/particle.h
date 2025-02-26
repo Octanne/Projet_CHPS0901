@@ -6,6 +6,7 @@
 class Particle {
 public:
     Particle(double x = 0.0, double y = 0.0, double mass = 0.0);
+    Particle(const Particle& particle);
     
     double getX() const;
     double getY() const;

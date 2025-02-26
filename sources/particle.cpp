@@ -4,6 +4,8 @@
 
 Particle::Particle(double x, double y, double mass) : x(x), y(y), mass(mass) {}
 
+Particle::Particle(const Particle& particle) : x(particle.x), y(particle.y), mass(particle.mass) {}
+
 double Particle::getX() const {
     return x;
 }

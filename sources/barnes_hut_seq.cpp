@@ -15,16 +15,9 @@ int main(/*int argc, char** argv*/) {
     std::vector<Particle*> particles = Particle::generateParticles(6, widthAndHeight, widthAndHeight);
 
     // We create a quadtree
-    QuadTree qt(widthAndHeight, 0, 0);
+    QuadTree qt(widthAndHeight, widthAndHeight/2, widthAndHeight/2);
 
     std::cout << "Inserting particles into the quadtree" << std::endl;
-
-    // We insert the particles into the quadtree
-    for (Particle* particle : particles) {
-        std::cout << "Inserting particle at (" << particle->getX() << ", " << particle->getY() << ", " 
-                    << particle->getMass() << ")" << std::endl;
-        qt.insert(particle);
-    }
 
     std::cout << "Particles inserted into the quadtree" << std::endl;
 
@@ -34,7 +27,18 @@ int main(/*int argc, char** argv*/) {
     // We do the simulation
     // TODO: Implement the simulation
 
-    qt.print();
+    //qt.print();
+
+    // We insert the particles into the quadtree
+    for (Particle* particle : particles) {
+        std::cout << "BEGIN | Inserting particle at (" << particle->getX() << ", " << particle->getY() << ", " 
+                    << particle->getMass() << ")" << std::endl;
+        qt.insert(particle);
+        std::cout << "END | Inserting particle at (" << particle->getX() << ", " << particle->getY() << ", " 
+                    << particle->getMass() << ")" << std::endl;
+        // We wait the user to press a key
+        std::cin.get();
+    }
 
     waitClosedWindow();
 

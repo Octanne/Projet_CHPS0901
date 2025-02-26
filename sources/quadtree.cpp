@@ -41,87 +41,58 @@ void QuadTree::print(int depth) {
 // TODO adding the width in account for the insertion
 void QuadTree::insert(Particle* particleInsert) {
     // If node x does not contain a body, put the new body b here.
-    if (!hasBody && !isDivided) {
-        particle.setX(particleInsert->getX());
-        particle.setY(particleInsert->getY());
-        particle.setMass(particleInsert->getMass());
-        hasBody = true;
-        return;
+    if (!isDivided) {
+        if (!hasBody) {
+            particle.setX(particleInsert->getX());
+            particle.setY(particleInsert->getY());
+            particle.setMass(particleInsert->getMass());
+            hasBody = true;
+            return;
+        } else {
+            // Subdivide the region further by creating four children
+            // We moving body b update the center-of-mass and total mass of x.
+            subdivide();
+            // We inserting the body c in the appropriate quadrant
+        }
     }
 
     // If node x is an internal node, update the center-of-mass and total mass of x.
-    if (isDivided) {
-        updateCenterOfMass(particleInsert);
-        // Recursively insert the body b in the appropriate quadrant.
-        if (particleInsert->getX() < particle.getX()) { // We check for west quadrants
-            if (particleInsert->getY() < particle.getY()) {
-                southwest->insert(particleInsert);
-            } else {
-                northwest->insert(particleInsert);
-            }
-        } else { // We check for east quadrants
-            if (particleInsert->getY() < particle.getY()) {
-                southeast->insert(particleInsert);
-            } else {
-                northeast->insert(particleInsert);
-            }
+    updateCenterOfMass(particleInsert);
+    // Recursively insert the body b in the appropriate quadrant.
+    if (particleInsert->getX() < getOriginX()) { // We check for west quadrants
+        if (particleInsert->getY() < getOriginY()) {
+            southwest->insert(particleInsert);
+            std::cout << "SouthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+        } else {
+            northwest->insert(particleInsert);
+            std::cout << "NorthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         }
-        return;
-    }
-
-    // If node x is an external node, say containing a body named c
-    if (hasBody && !isDivided) {
-        // Subdivide the region further by creating four children.
-        subdivide();
-
-        // Recursively insert both b and c into the appropriate quadrant(s).
-        Particle* existingParticle = &particle;
-        hasBody = false; // The node is not a leaf anymore
-
-        // We insert the existing particle into the appropriate quadrant
-        if (existingParticle->getX() < particleInsert->getX()) { // We check for west quadrants
-            if (existingParticle->getY() < particleInsert->getY()) {
-                southwest->insert(existingParticle);
-            } else {
-                northwest->insert(existingParticle);
-            }
-        } else { // We check for east quadrants
-            if (existingParticle->getY() < particleInsert->getY()) {
-                southeast->insert(existingParticle);
-            } else {
-                northeast->insert(existingParticle);
-            }
-        } // TODO faut prendre en compte une width pour la taille d'un quadrant lors de l'insertion
-
-        // Insert the new particle
-        if (particleInsert->getX() < existingParticle->getX()) { // We check for west quadrants
-            if (particleInsert->getY() < existingParticle->getY()) {
-                southwest->insert(particleInsert);
-            } else {
-                northwest->insert(particleInsert);
-            }
-        } else { // We check for east quadrants
-            if (particleInsert->getY() < existingParticle->getY()) {
-                southeast->insert(particleInsert);
-            } else {
-                northeast->insert(particleInsert);
-            }
+    } else { // We check for east quadrants
+        if (particleInsert->getY() < getOriginY()) {
+            southeast->insert(particleInsert);
+            std::cout << "SouthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+        } else {
+            northeast->insert(particleInsert);
+            std::cout << "NorthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         }
-
-        // Finally, update the center-of-mass and total mass of x.
-        updateCenterOfMass(particleInsert);
     }
 }
 
 void QuadTree::subdivide() {
     // We create the four quadrants
     int newWidth = width / 2;
-    northeast = new QuadTree(newWidth, originX + newWidth, originY + newWidth);
-    northwest = new QuadTree(newWidth, originX, originY + newWidth);
-    southeast = new QuadTree(newWidth, originX + newWidth, originY);
-    southwest = new QuadTree(newWidth, originX, originY);
+    int center = newWidth / 2;
+    northwest = new QuadTree(newWidth, originX - center, originY + center);
+    northeast = new QuadTree(newWidth, originX + center, originY + center);
+    southwest = new QuadTree(newWidth, originX - center, originY - center);
+    southeast = new QuadTree(newWidth, originX + center, originY - center);
     isDivided = true; // The node is set to divided
     hasBody = false; // The node is not a leaf anymore
+
+    // Recursively insert the body b in the appropriate quadrant.
+    Particle existingParticle = Particle(particle);
+    particle.setMass(0); particle.setX(0); particle.setY(0);std::cout << "Subdivided the quadtree origin at (" << originX << ", " << originY << ") with width " << width << std::endl;
+    insert(&existingParticle);
 }
 
 void QuadTree::updateCenterOfMass(Particle* particleInsert) {
