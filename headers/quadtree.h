@@ -13,9 +13,9 @@ private:
 
     bool isDivided;
     bool hasBody;
-    int width;
-    int originX;
-    int originY;
+    double width;
+    double originX;
+    double originY;
 
     QuadTree* northeast;
     QuadTree* northwest;
@@ -24,8 +24,8 @@ private:
 
     static constexpr double theta = 0.5;  // Barnes-Hut threshold parameter
 public:
-    QuadTree(double x, double y, int width, int originX, int originY);
-    QuadTree(int width, int originX, int originY);
+    QuadTree(double x, double y, double width, double originX, double originY);
+    QuadTree(double width, double originX, double originY);
     ~QuadTree();
 
     void calculateForce(Particle* particle, double& fx, double& fy) const;
@@ -33,9 +33,9 @@ public:
     bool isItDivided();
     bool hasParticle();
 
-    int getOriginX();
-    int getOriginY();
-    int getWidth();
+    double getOriginX();
+    double getOriginY();
+    double getWidth();
     Particle* getParticle();
 
     void insert(Particle* particleInsert);

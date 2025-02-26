@@ -3,12 +3,12 @@
 #include <iostream>
 #include <cmath>
 
-QuadTree::QuadTree(double x, double y, int width, int originX, int originY)
+QuadTree::QuadTree(double x, double y, double width, double originX, double originY)
     : particle(x,y), isDivided(false), hasBody(false), width(width),
       originX(originX), originY(originY), northeast(nullptr), 
       northwest(nullptr), southeast(nullptr), southwest(nullptr) {}
 
-QuadTree::QuadTree(int width, int originX, int originY)
+QuadTree::QuadTree(double width, double originX, double originY)
     : QuadTree(0, 0, width, originX, originY) {}
 
 QuadTree::~QuadTree() {
@@ -62,26 +62,26 @@ void QuadTree::insert(Particle* particleInsert) {
     if (particleInsert->getX() < getOriginX()) { // We check for west quadrants
         if (particleInsert->getY() < getOriginY()) {
             southwest->insert(particleInsert);
-            std::cout << "SouthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+            //std::cout << "SouthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         } else {
             northwest->insert(particleInsert);
-            std::cout << "NorthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+            //std::cout << "NorthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         }
     } else { // We check for east quadrants
         if (particleInsert->getY() < getOriginY()) {
             southeast->insert(particleInsert);
-            std::cout << "SouthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+            //std::cout << "SouthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         } else {
             northeast->insert(particleInsert);
-            std::cout << "NorthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+            //std::cout << "NorthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         }
     }
 }
 
 void QuadTree::subdivide() {
     // We create the four quadrants
-    int newWidth = width / 2;
-    int center = newWidth / 2;
+    double newWidth = width / 2;
+    double center = newWidth / 2;
     northwest = new QuadTree(newWidth, originX - center, originY + center);
     northeast = new QuadTree(newWidth, originX + center, originY + center);
     southwest = new QuadTree(newWidth, originX - center, originY - center);
@@ -91,7 +91,8 @@ void QuadTree::subdivide() {
 
     // Recursively insert the body b in the appropriate quadrant.
     Particle existingParticle = Particle(particle);
-    particle.setMass(0); particle.setX(0); particle.setY(0);std::cout << "Subdivided the quadtree origin at (" << originX << ", " << originY << ") with width " << width << std::endl;
+    particle.setMass(0); particle.setX(0); particle.setY(0);
+    //std::cout << "Subdivided the quadtree origin at (" << originX << ", " << originY << ") with width " << width << std::endl;
     insert(&existingParticle);
 }
 
@@ -144,15 +145,15 @@ bool QuadTree::hasParticle() {
     return hasBody;
 }
 
-int QuadTree::getWidth() {
+double QuadTree::getWidth() {
     return width;
 }
 
-int QuadTree::getOriginX() {
+double QuadTree::getOriginX() {
     return originX;
 }
 
-int QuadTree::getOriginY() {
+double QuadTree::getOriginY() {
     return originY;
 }
 
