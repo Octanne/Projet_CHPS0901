@@ -3,14 +3,13 @@
 #include <iostream>
 #include <cmath>
 
-QuadTree::QuadTree(double x, double y, int width)
-    : particleX(x), particleY(y), mass(0), 
-      isDivided(false), hasBody(false), width(width),
-      northeast(nullptr), northwest(nullptr), 
-      southeast(nullptr), southwest(nullptr) {}
+QuadTree::QuadTree(double x, double y, int width, int originX, int originY)
+    : particle(x,y), isDivided(false), hasBody(false), width(width),
+      originX(originX), originY(originY), northeast(nullptr), 
+      northwest(nullptr), southeast(nullptr), southwest(nullptr) {}
 
-QuadTree::QuadTree(int width)
-    : QuadTree(0, 0, width) {}
+QuadTree::QuadTree(int width, int originX, int originY)
+    : QuadTree(0, 0, width, originX, originY) {}
 
 QuadTree::~QuadTree() {
     clear();
@@ -35,35 +34,36 @@ void QuadTree::print(int depth) {
         std::cout << spacer(depth) << "SouthWest: (depth : " << depth << ")" << std::endl;
         southwest->print(depth + 1);
     } else {
-        std::cout << spacer(depth) << "Leaf at (" << particleX << ", " << particleY << ") with mass " << mass << std::endl;
+        std::cout << spacer(depth) << "Leaf at (" << particle.getX() << ", " << particle.getY() << ") with mass " << particle.getMass() << std::endl;
     }
 }
 
-void QuadTree::insert(Particle* particle) {
+// TODO adding the width in account for the insertion
+void QuadTree::insert(Particle* particleInsert) {
     // If node x does not contain a body, put the new body b here.
     if (!hasBody && !isDivided) {
-        particleX = particle->getX();
-        particleY = particle->getY();
-        mass = particle->getMass();
+        particle.setX(particleInsert->getX());
+        particle.setY(particleInsert->getY());
+        particle.setMass(particleInsert->getMass());
         hasBody = true;
         return;
     }
 
     // If node x is an internal node, update the center-of-mass and total mass of x.
     if (isDivided) {
-        updateCenterOfMass(particle);
+        updateCenterOfMass(particleInsert);
         // Recursively insert the body b in the appropriate quadrant.
-        if (particle->getX() < getX()) { // We check for west quadrants
-            if (particle->getY() < getY()) {
-                southwest->insert(particle);
+        if (particleInsert->getX() < particle.getX()) { // We check for west quadrants
+            if (particleInsert->getY() < particle.getY()) {
+                southwest->insert(particleInsert);
             } else {
-                northwest->insert(particle);
+                northwest->insert(particleInsert);
             }
         } else { // We check for east quadrants
-            if (particle->getY() < getY()) {
-                southeast->insert(particle);
+            if (particleInsert->getY() < particle.getY()) {
+                southeast->insert(particleInsert);
             } else {
-                northeast->insert(particle);
+                northeast->insert(particleInsert);
             }
         }
         return;
@@ -75,18 +75,18 @@ void QuadTree::insert(Particle* particle) {
         subdivide();
 
         // Recursively insert both b and c into the appropriate quadrant(s).
-        Particle* existingParticle = new Particle(particleX, particleY, mass);
+        Particle* existingParticle = &particle;
         hasBody = false; // The node is not a leaf anymore
 
         // We insert the existing particle into the appropriate quadrant
-        if (existingParticle->getX() < particle->getX()) { // We check for west quadrants
-            if (existingParticle->getY() < particle->getY()) {
+        if (existingParticle->getX() < particleInsert->getX()) { // We check for west quadrants
+            if (existingParticle->getY() < particleInsert->getY()) {
                 southwest->insert(existingParticle);
             } else {
                 northwest->insert(existingParticle);
             }
         } else { // We check for east quadrants
-            if (existingParticle->getY() < particle->getY()) {
+            if (existingParticle->getY() < particleInsert->getY()) {
                 southeast->insert(existingParticle);
             } else {
                 northeast->insert(existingParticle);
@@ -94,66 +94,66 @@ void QuadTree::insert(Particle* particle) {
         } // TODO faut prendre en compte une width pour la taille d'un quadrant lors de l'insertion
 
         // Insert the new particle
-        if (particle->getX() < existingParticle->getX()) { // We check for west quadrants
-            if (particle->getY() < getY()) {
-                southwest->insert(particle);
+        if (particleInsert->getX() < existingParticle->getX()) { // We check for west quadrants
+            if (particleInsert->getY() < existingParticle->getY()) {
+                southwest->insert(particleInsert);
             } else {
-                northwest->insert(particle);
+                northwest->insert(particleInsert);
             }
         } else { // We check for east quadrants
-            if (particle->getY() < getY()) {
-                southeast->insert(particle);
+            if (particleInsert->getY() < existingParticle->getY()) {
+                southeast->insert(particleInsert);
             } else {
-                northeast->insert(particle);
+                northeast->insert(particleInsert);
             }
         }
 
         // Finally, update the center-of-mass and total mass of x.
-        updateCenterOfMass(particle);
+        updateCenterOfMass(particleInsert);
     }
 }
 
 void QuadTree::subdivide() {
     // We create the four quadrants
     int newWidth = width / 2;
-    northeast = new QuadTree(newWidth);
-    northwest = new QuadTree(newWidth);
-    southeast = new QuadTree(newWidth);
-    southwest = new QuadTree(newWidth);
+    northeast = new QuadTree(newWidth, originX + newWidth, originY + newWidth);
+    northwest = new QuadTree(newWidth, originX, originY + newWidth);
+    southeast = new QuadTree(newWidth, originX + newWidth, originY);
+    southwest = new QuadTree(newWidth, originX, originY);
     isDivided = true; // The node is set to divided
     hasBody = false; // The node is not a leaf anymore
 }
 
-void QuadTree::updateCenterOfMass(Particle* particle) {
-    double totalMass = mass + particle->getMass();
-    particleX = (particleX * mass + particle->getX() * particle->getMass()) / totalMass;
-    particleY = (particleY * mass + particle->getY() * particle->getMass()) / totalMass;
-    mass = totalMass;
+void QuadTree::updateCenterOfMass(Particle* particleInsert) {
+    double totalMass = particle.getMass() + particleInsert->getMass();
+    particle.setX((particle.getX() * particle.getMass() + particleInsert->getX() * particleInsert->getMass()) / totalMass);
+    particle.setY((particle.getY() * particle.getMass() + particleInsert->getY() * particleInsert->getMass()) / totalMass);
+    particle.setMass(totalMass);
     //std::cout << "Center of mass updated" << std::endl;
 }
 
-void QuadTree::calculateForce(Particle* particle, double& fx, double& fy) const {
-    if (mass == 0 || (particleX == particle->getX() && particleY == particle->getY())) {
+void QuadTree::calculateForce(Particle* particleTest, double& fx, double& fy) const {
+    if (particle.getMass() == 0 || (particle.getX() == particleTest->getX() && particle.getY() == particleTest->getY())) {
         return;
     }
 
-    double dx = particleX - particle->getX();
-    double dy = particleY - particle->getY();
-    double dist = distance(particleX, particleY, particle->getX(), particle->getY());
+    double dx = particle.getX() - particleTest->getX();
+    double dy = particle.getY() - particleTest->getY();
+    double dist = distance(particle.getX(), particle.getY(), particleTest->getX(), particleTest->getY());
 
     if (!isDivided && dist > 0) {
-        double force = (mass * particle->getMass()) / (dist * dist);
+        double force = (particle.getMass() * particleTest->getMass()) / (dist * dist);
         fx += force * (dx / dist);
         fy += force * (dy / dist);
     } else if (dist < theta) {
-        double force = (mass * particle->getMass()) / (dist * dist);
+        double force = (particle.getMass() * particleTest->getMass()) / (dist * dist);
         fx += force * (dx / dist);
         fy += force * (dy / dist);
     } else {
-        if (northeast) northeast->calculateForce(particle, fx, fy);
-        if (northwest) northwest->calculateForce(particle, fx, fy);
-        if (southeast) southeast->calculateForce(particle, fx, fy);
-        if (southwest) southwest->calculateForce(particle, fx, fy);
+        if (northeast) northeast->calculateForce(particleTest, fx, fy);
+        if (northwest) northwest->calculateForce(particleTest, fx, fy);
+        if (southeast) southeast->calculateForce(particleTest, fx, fy);
+        if (southwest) southwest->calculateForce(particleTest, fx, fy);
     }
 }
 
@@ -165,24 +165,24 @@ bool QuadTree::isItDivided() {
     return isDivided;
 }
 
-double QuadTree::getX() {
-    return particleX;
-}
-
-double QuadTree::getY() {
-    return particleY;
-}
-
-double QuadTree::getWidth() {
-    return width;
-}
-
-double QuadTree::getMass() {
-    return mass;
+Particle* QuadTree::getParticle() {
+    return &particle;
 }
 
 bool QuadTree::hasParticle() {
     return hasBody;
+}
+
+int QuadTree::getWidth() {
+    return width;
+}
+
+int QuadTree::getOriginX() {
+    return originX;
+}
+
+int QuadTree::getOriginY() {
+    return originY;
 }
 
 void QuadTree::clear() {
@@ -197,7 +197,10 @@ void QuadTree::clear() {
     southwest = nullptr;
 
     isDivided = false;
-    mass = 0;
+    hasBody = false;
+    originX = 0;
+    originY = 0;
+    width = 0;
 }
 
 QuadTree* QuadTree::getNortheast() {
