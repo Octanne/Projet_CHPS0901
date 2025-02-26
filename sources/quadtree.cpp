@@ -163,7 +163,7 @@ bool QuadTree::isItDivided() {
     return isDivided;
 }
 
-Particle* QuadTree::getParticle() {
+Particle* QuadTree::getParticle() const {
     return particle;
 }
 
@@ -171,15 +171,15 @@ bool QuadTree::hasParticle() {
     return hasBody;
 }
 
-double QuadTree::getWidth() {
+const double& QuadTree::getWidth() const {
     return width;
 }
 
-double QuadTree::getOriginX() {
+const double& QuadTree::getOriginX() const {
     return originX;
 }
 
-double QuadTree::getOriginY() {
+const double& QuadTree::getOriginY() const {
     return originY;
 }
 
@@ -207,18 +207,18 @@ void QuadTree::clear() {
     hasBody = false;
 }
 
-QuadTree* QuadTree::getNortheast() {
+QuadTree* QuadTree::getNortheast() const {
     return northeast;
 }
 
-QuadTree* QuadTree::getNorthwest() {
+QuadTree* QuadTree::getNorthwest() const {
     return northwest;
 }
 
-QuadTree* QuadTree::getSoutheast() {
+QuadTree* QuadTree::getSoutheast() const {
     return southeast;
 }
 
-QuadTree* QuadTree::getSouthwest() {
+QuadTree* QuadTree::getSouthwest() const {
     return southwest;
 }

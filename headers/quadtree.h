@@ -32,10 +32,10 @@ public:
     bool isItDivided();
     bool hasParticle();
 
-    double getOriginX();
-    double getOriginY();
-    double getWidth();
-    Particle* getParticle();
+    const double& getOriginX() const;
+    const double& getOriginY() const;
+    const double& getWidth() const;
+    Particle* getParticle() const;
 
     void updateVelocities(double step = 0.01); // Update the position of the particle step is in seconds
     void insert(Particle* particleInsert);
@@ -44,10 +44,10 @@ public:
     void print(int depth = 0);
     void clear();
 
-    QuadTree* getNortheast();
-    QuadTree* getNorthwest();
-    QuadTree* getSoutheast();
-    QuadTree* getSouthwest();
+    QuadTree* getNortheast() const;
+    QuadTree* getNorthwest() const;
+    QuadTree* getSoutheast() const;
+    QuadTree* getSouthwest() const;
 };
 
 #endif // QUADTREE_H

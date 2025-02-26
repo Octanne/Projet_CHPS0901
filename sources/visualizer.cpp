@@ -16,7 +16,7 @@ bool renderBoundaries = false;
 bool debugMode = false;
 
 // Recursively draw the QuadTree
-int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
+int drawQuadTree(QuadTree* qt, double scaleFactor, int root = 0) {
     if (qt == nullptr) {
         std::cout << "Quad is null" << std::endl;
         return 0;
@@ -26,6 +26,9 @@ int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
     // Draw boundaries
     if (renderBoundaries) {
         //printf("Drawing boundaries at (%d, %d, %d, %d)\n", posX, posY, posX+width, posY+width);
+        double posX = qt->getOriginX()/scaleFactor;
+        double posY = qt->getOriginY()/scaleFactor;
+        double width = qt->getWidth()/scaleFactor;
         glBegin(GL_LINE_LOOP);
         glColor3f(0.0, 0.0, 1.0);
         glVertex2f(posX, posY);
@@ -37,18 +40,19 @@ int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
 
     if (qt->isItDivided()) {
         // Draw other Quads
-        int newWidth = width/2;
-        nbPart += drawQuadTree(qt->getSouthwest(), newWidth, posX, posY);
-        nbPart += drawQuadTree(qt->getSoutheast(), newWidth, posX+newWidth, posY);
-        nbPart += drawQuadTree(qt->getNorthwest(), newWidth, posX, posY+newWidth);
-        nbPart += drawQuadTree(qt->getNortheast(), newWidth, posX+newWidth, posY+newWidth);
+        nbPart += drawQuadTree(qt->getSouthwest(), scaleFactor);
+        nbPart += drawQuadTree(qt->getSoutheast(), scaleFactor);
+        nbPart += drawQuadTree(qt->getNorthwest(), scaleFactor);
+        nbPart += drawQuadTree(qt->getNortheast(), scaleFactor);
     } else if (qt->hasParticle()) {
         // Draw particle
         //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
-        glPointSize(3.0);
+        double posX = qt->getOriginX()/scaleFactor;
+        double posY = qt->getOriginY()/scaleFactor;
+        glPointSize(5.0);
         glBegin(GL_POINTS);
         glColor3f(1.0, 0.0, 0.0);
-        glVertex2f(qt->getParticle()->getX(), qt->getParticle()->getY());
+        glVertex2f(posX, posY);
         glEnd();
         return nbPart+1;
     }
@@ -61,9 +65,9 @@ int drawQuadTree(QuadTree* qt, int width, int posX, int posY, int root = 0) {
 }
 
 // Display callback function
-void displayCallback(QuadTree* qt, int globalWidth) {
+void displayCallback(QuadTree* qt, double scaleFactor) {
     if (qt != nullptr) {
-        drawQuadTree(qt, globalWidth, 0, 0, 1);
+        drawQuadTree(qt, scaleFactor, 1);
     }
 }
 
@@ -86,13 +90,13 @@ void signalSIGINTHandler(int signum) {
 }
 
 // Initialize and create window
-int createWindow(QuadTree* qt, int width) {
+int createWindow(QuadTree* qt, double windowSize, double scaleFactor) {
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW" << std::endl;
         return 1;
     }
 
-    GLFWwindow* window = glfwCreateWindow(width, width, "QuadTree Visualizer", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(windowSize, windowSize, "QuadTree Visualizer", nullptr, nullptr);
     window_GEN = window;
     if (!window) {
         std::cerr << "Failed to create GLFW window" << std::endl;
@@ -102,7 +106,7 @@ int createWindow(QuadTree* qt, int width) {
 
     glfwMakeContextCurrent(NULL);
 
-    windowThread = new std::thread([window, qt, width] {
+    windowThread = new std::thread([window, qt, windowSize, scaleFactor] {
         // Create window
         glfwMakeContextCurrent(window);
         glewExperimental = GL_TRUE;
@@ -115,7 +119,7 @@ int createWindow(QuadTree* qt, int width) {
 
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        glOrtho(-1, width, -1, width+1, -1, 1);
+        glOrtho(-1, windowSize, -1, windowSize+1, -1, 1);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
 
@@ -138,7 +142,7 @@ int createWindow(QuadTree* qt, int width) {
 
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT);
-            displayCallback(qt, width);
+            displayCallback(qt, scaleFactor);
             glfwSwapBuffers(window);
             glfwPollEvents();
             // We sleep for 100ms

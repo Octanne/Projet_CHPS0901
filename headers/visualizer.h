@@ -5,7 +5,7 @@
 
 extern bool shouldClose;
 
-int createWindow(QuadTree* qt, int width);
+int createWindow(QuadTree* qt, double windowSize = 1000, double scaleFactor = 10000);
 void waitClosedWindow();
 
 #endif // VISUALIZER_H

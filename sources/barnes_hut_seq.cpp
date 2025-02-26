@@ -21,7 +21,7 @@ const double massItokawa = 4.2e10; // in kilograms
 int main(/*int argc, char** argv*/) {
     std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
 
-    int widthAndHeight = 10000000;
+    double widthAndHeight = 1000000;
 
     // We generate the particles (10 thousand particles)
     std::vector<Particle*> particles = Particle::generateParticles(10, widthAndHeight, widthAndHeight, massEarth, massItokawa);
@@ -37,10 +37,10 @@ int main(/*int argc, char** argv*/) {
     std::cout << "Particles inserted into the quadtree" << std::endl;
 
     // We print the quadtree structure in the console
-    qt.print();
+    //qt.print();
 
     // We print the quadtree structure in a window
-    //createWindow(&qt, widthAndHeight);
+    createWindow(&qt, 10000, 1000);
 
     // We do the simulation
     while (!shouldClose) {
