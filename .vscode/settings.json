@@ -58,6 +58,7 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "format": "cpp",
-        "csignal": "cpp"
+        "csignal": "cpp",
+        "fstream": "cpp"
     }
 }

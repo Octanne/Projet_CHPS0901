@@ -51,11 +51,15 @@ int main(int argc, char** argv) {
     double maxMass = massEarth; // default max mass
     double minMass = massItokawa; // default min mass
     bool shouldGUI = false; // default no GUI
-
+    std::vector<Particle*> particles;
     bool wFlag = false, nFlag = false;
 
-    while ((opt = getopt(argc, argv, "w:n:G:L:gh")) != -1) {
-        switch (opt) {
+    std::string filename;
+    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:")) != -1) {
+        switch (opt) {            
+            case 'f':
+                filename = optarg;
+                break;
             case 'w':
                 windowSize = std::stod(optarg);
                 wFlag = true;
@@ -75,29 +79,50 @@ int main(int argc, char** argv) {
                 break;
             case 'h':
                 std::cout << "Command line arguments:\n"
-                          << " * -w <window_size> : Set the width/height of the simulation window (squared) (mandatory).\n"
-                          << " * -n <num_particles> : Set the number of particles (mandatory).\n"
+                          << " * -w <window_size> : Set the width/height of the simulation window (squared) (mandatory unless -f is used).\n"
+                          << " * -n <num_particles> : Set the number of particles (mandatory unless -f is used).\n"
                           << " * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).\n"
                           << " * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).\n"
                           << " * -g : Enable GUI (optional).\n"
+                          << " * -f <file> : Load particles from a file (optional).\n"
                           << " * -h : Print this help message.\n";
                 return 0;
                 break;
             default:
-                std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g]" << std::endl;
+                std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
                 return 1;
         }
     }
 
-    if (!wFlag || !nFlag) {
-        std::cerr << "Error: -w <window_size> and -n <num_particles> are mandatory." << std::endl;
-        std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g]" << std::endl;
+    if (filename.empty() && (!wFlag || !nFlag)) {
+        std::cerr << "Error: -w <window_size> and -n <num_particles> are mandatory unless -f <file> is used." << std::endl;
+        std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
         return 1;
     }
 
-    // We generate the particles
-    std::vector<Particle*> particles = Particle::generateParticles(numParticles, windowSize, windowSize, maxMass, minMass);
-
+    if (!filename.empty()) {
+        std::cout << "Loading particles from file " << filename << std::endl;
+        particles = Particle::loadParticles(filename);
+        windowSize = 0.0;
+        for (Particle* particle : particles) {
+            double absX = std::abs(particle->getX());
+            double absY = std::abs(particle->getY());
+            if (absX > windowSize) {
+                windowSize = absX;
+            }
+            if (absY > windowSize) {
+                windowSize = absY;
+            }
+        }
+        // We print the particles loaded
+        for (Particle* particle : particles) {
+            std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") with mass " << particle->getMass() << std::endl;
+        }
+    } else {
+        // We generate the particles
+        particles = Particle::generateParticles(numParticles, windowSize, windowSize, maxMass, minMass);
+    }
+    
     // We create a quadtree
     QuadTree qt(windowSize, windowSize/2, windowSize/2, &particles);
 

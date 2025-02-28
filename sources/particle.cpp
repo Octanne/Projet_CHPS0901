@@ -1,6 +1,9 @@
 #include "particle.h"
 
 #include <cmath>
+#include <fstream>
+#include <sstream>
+#include <iostream>
 
 Particle::Particle(double x, double y, double mass) : x(x), y(y), mass(mass), vx(0), vy(0) {}
 
@@ -54,6 +57,33 @@ std::vector<Particle*> Particle::generateParticles(int nb_particles, double widt
         double y = (double)rand() / RAND_MAX * height;
         double mass = (double)rand() / RAND_MAX * (max_mass - min_mass) + min_mass;
         particles.push_back(new Particle(x, y, mass));
+    }
+    return particles;
+}
+
+std::vector<Particle*> Particle::loadParticles(std::string& filename) {
+    std::vector<Particle*> particles;
+    std::ifstream file(filename);
+
+    if (file.is_open()) {
+        std::string line;
+        while (std::getline(file, line)) {
+            if (line.rfind("//", 0) == 0 || line.empty()) continue;
+            
+            std::istringstream iss(line);
+            iss.imbue(std::locale::classic());  // Ensure parsing of scientific notation
+            
+            double x, y, mass;
+            if (!(iss >> x >> y >> mass)) {
+                std::cerr << "Error while reading the file: " << line << std::endl;
+                continue;
+            }
+
+            particles.push_back(new Particle(x, y, mass));
+        }
+        file.close();
+    } else {
+        std::cerr << "Error while opening the file" << std::endl;
     }
     return particles;
 }
