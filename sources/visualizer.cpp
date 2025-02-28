@@ -53,7 +53,7 @@ int drawQuadTree(QuadTree* qt, double simulationSize, int root = 0) {
     } else if (qt->hasParticle()) {
         // Draw particle
         //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
-        glPointSize(3.0);
+        glPointSize(3.0*scaleFactor);
         glBegin(GL_POINTS);
         glColor3f(1.0, 0.0, 0.0);
         double posX = qt->getParticle()->getX()*scaleFactor;

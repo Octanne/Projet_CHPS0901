@@ -37,17 +37,14 @@ int main(int argc, char** argv) {
     double maxMass = (argc > 3) ? std::stod(argv[3]) : massEarth;
     double minMass = (argc > 4) ? std::stod(argv[4]) : massItokawa;
 
-    // We generate the particles (10 thousand particles)
+    // We generate the particles
     std::vector<Particle*> particles = Particle::generateParticles(numParticles, windowSize, windowSize, maxMass, minMass);
 
     // We create a quadtree
-    QuadTree qt(windowSize, windowSize/2, windowSize/2);
+    QuadTree qt(windowSize, windowSize/2, windowSize/2, &particles);
 
     std::cout << "Inserting particles into the quadtree" << std::endl;
-    // We insert the particles into the quadtree
-    for (Particle* particle : particles) {
-        qt.insert(particle);
-    }
+    qt.buildTree();
     std::cout << "Particles inserted into the quadtree" << std::endl;
 
     // We print the quadtree structure in the console
@@ -61,14 +58,11 @@ int main(int argc, char** argv) {
         for (int i = 0; i < 1000000 && !shouldClose; i++) {
             // We update the position of the particles
             std::cout << "Updating particles" << std::endl;
-            qt.updateVelocities(100);
+            qt.updateParticles(100);
             std::cout << "Particles updated" << std::endl;
             // We update the tree
             std::cout << "Updating quadtree" << std::endl;
-            qt.clear();
-            for (Particle* particle : particles) {
-                qt.insert(particle);
-            }
+            qt.buildTree();
             std::cout << "Quadtree updated" << std::endl;
             usleep(500000); // We sleep for 500ms
         }

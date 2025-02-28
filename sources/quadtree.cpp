@@ -3,10 +3,17 @@
 #include <iostream>
 #include <cmath>
 
+QuadTree::QuadTree(double width, double originX, double originY, std::vector<Particle*>* particles)
+    : particle(nullptr), isDivided(false), hasBody(false), width(width),
+      originX(originX), originY(originY), northeast(nullptr), northwest(nullptr), 
+      southeast(nullptr), southwest(nullptr), particles(particles) {}
+
 QuadTree::QuadTree(double width, double originX, double originY)
     : particle(nullptr), isDivided(false), hasBody(false), width(width),
       originX(originX), originY(originY), northeast(nullptr), 
-      northwest(nullptr), southeast(nullptr), southwest(nullptr) {}
+      northwest(nullptr), southeast(nullptr), southwest(nullptr) {
+    this->particles = new std::vector<Particle*>();
+}
 
 std::string spacer(int depth) {
     std::string s = "";
@@ -35,8 +42,13 @@ void QuadTree::print(int depth) {
     }
 }
 
-// TODO adding the width in account for the insertion
 void QuadTree::insert(Particle* particleInsert) {
+    insertSimple(particleInsert);    
+    // We insert the particle in the list of particles
+    particles->push_back(particleInsert);
+}
+
+void QuadTree::insertSimple(Particle* particleInsert) {
     // If node x does not contain a body, put the new body b here.
     if (!isDivided) {
         if (!hasBody) {
@@ -56,18 +68,18 @@ void QuadTree::insert(Particle* particleInsert) {
     // Recursively insert the body b in the appropriate quadrant.
     if (particleInsert->getX() < getOriginX()) { // We check for west quadrants
         if (particleInsert->getY() < getOriginY()) {
-            southwest->insert(particleInsert);
+            southwest->insertSimple(particleInsert);
             //std::cout << "SouthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         } else {
-            northwest->insert(particleInsert);
+            northwest->insertSimple(particleInsert);
             //std::cout << "NorthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         }
     } else { // We check for east quadrants
         if (particleInsert->getY() < getOriginY()) {
-            southeast->insert(particleInsert);
+            southeast->insertSimple(particleInsert);
             //std::cout << "SouthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         } else {
-            northeast->insert(particleInsert);
+            northeast->insertSimple(particleInsert);
             //std::cout << "NorthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
         }
     }
@@ -88,7 +100,7 @@ void QuadTree::subdivide() {
     Particle* particleToMove = particle;
     particle = new Particle();
     //std::cout << "Subdivided the quadtree origin at (" << originX << ", " << originY << ") with width " << width << std::endl;
-    insert(particleToMove);
+    insertSimple(particleToMove);
 }
 
 void QuadTree::updateCenterOfMass(Particle* particleInsert) {
@@ -99,26 +111,29 @@ void QuadTree::updateCenterOfMass(Particle* particleInsert) {
     //std::cout << "Center of mass updated" << std::endl;
 }
 
-void QuadTree::calculateForce(QuadTree* b, double& fx, double& fy) const {
+void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
     // If the current node is a an external node (and not b), calculate the force exerted by the current node on b, and add this amount to b's net force.
-    if (!isDivided && b != this) {
-        // We calculate the force exerted by the current node on b
-        double dx = b->getParticle()->getX() - particle->getX();
-        double dy = b->getParticle()->getY() - particle->getY();
-        double distance = std::sqrt(dx * dx + dy * dy);
-        double force = particle->getMass() * b->getParticle()->getMass() / (distance * distance);
-        fx += force * dx / distance;
-        fy += force * dy / distance;
+    if (!isDivided) {
+        if (!hasBody) return; // If the node is empty, we return
+        if (b != this->particle) {
+            // We calculate the force exerted by the current node on b
+            double dx = b->getX() - particle->getX();
+            double dy = b->getY() - particle->getY();
+            double distance = std::sqrt(dx * dx + dy * dy);
+            double force = (Particle::G * particle->getMass() * b->getMass()) / (distance * distance);
+            fx += force * dx / distance;
+            fy += force * dy / distance;
+        }
     } else {
         // Otherwise, calculate the ratio s / d, where s is the width of the region represented by the internal node, and d is the distance between the body and the node's center-of-mass.
         double s = width;
-        double d = distance(particle->getX(), particle->getY(), b->getOriginX(), b->getOriginY());
+        double d = distance(particle->getX(), particle->getY(), b->getX(), b->getY());
         if (s / d < theta) {
             // Treat the internal node as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
-            double dx = b->getParticle()->getX() - particle->getX();
-            double dy = b->getParticle()->getY() - particle->getY();
+            double dx = b->getX() - particle->getX();
+            double dy = b->getY() - particle->getY();
             double distance = std::sqrt(dx * dx + dy * dy);
-            double force = particle->getMass() * b->getParticle()->getMass() / (distance * distance);
+            double force = (Particle::G * particle->getMass() * b->getMass()) / (distance * distance);
             fx += force * dx / distance;
             fy += force * dy / distance;
         } else {
@@ -129,15 +144,70 @@ void QuadTree::calculateForce(QuadTree* b, double& fx, double& fy) const {
             if (southwest != nullptr) southwest->calculateForce(b, fx, fy);
         }
     }
+
+    // We print the force exerted on the particle
+    std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") has force (" << fx << ", " << fy << ")" << std::endl;
 }
 
-void QuadTree::updateVelocities(double step) {
-    
+void QuadTree::updateParticles(double step) {
+    for (Particle* particle : *particles) {
+        double fx = 0.0, fy = 0.0;
+        calculateForce(particle, fx, fy);
+        std::cout << "Force calculated" << std::endl;
+
+        double ax = fx / particle->getMass();
+        double ay = fy / particle->getMass();
+
+        particle->setVx(particle->getVx() + ax * step);
+        particle->setVy(particle->getVy() + ay * step);
+        
+        // We print the velocity of the particle
+        std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") has velocity (" 
+                        << particle->getVx() << ", " << particle->getVy() << ")" << std::endl;
+
+        particle->setX(particle->getX() + particle->getVx() * step);
+        particle->setY(particle->getY() + particle->getVy() * step);
+    }
 }
 
 double QuadTree::distance(double x1, double y1, double x2, double y2) const {
     // Calculate the distance between two points 
     return std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+}
+
+bool QuadTree::buildTree() {
+    // We build the tree
+    if (particles == nullptr) {
+        return false;
+    }
+
+    // We need to calculate the width of the newWindow of simulation
+    // For that we need to calculate the maximum distance from the origin
+    width = 0.0;
+    for (Particle* particle : *particles) {
+        double absX = std::abs(particle->getX());
+        double absY = std::abs(particle->getY());
+        if (absX > width) {
+            width = absX;
+        }
+        if (absY > width) {
+            width = absY;
+        }
+    }
+
+    // We reset the tree if it was already built
+    if (isDivided) {
+        std::cout << "Clearing the quadtree" << std::endl;
+        clear();
+    }
+
+    std::cout << "Building the quadtree" << std::endl;
+    // We insert the particles into the quadtree
+    for (Particle* particle : *particles) {
+        insertSimple(particle);
+    }
+
+    return true;
 }
 
 bool QuadTree::isItDivided() {
@@ -164,28 +234,37 @@ const double& QuadTree::getOriginY() const {
     return originY;
 }
 
+std::vector<Particle*>* QuadTree::getParticlesList() const {
+    return particles;
+}
+
 QuadTree::~QuadTree() {
     clear();
 }
 
 void QuadTree::clear() {
-    delete northeast;
-    delete northwest;
-    delete southeast;
-    delete southwest;
+    if (isDivided) {
+        // We delete the particle if divided because it as been created by the quadtree
+        delete particle;
 
+        // We delete the children
+        delete northeast;
+        delete northwest;
+        delete southeast;
+        delete southwest;
+    }
+
+    particle = nullptr;
+    isDivided = false;
+    hasBody = false;
+    // width = width
+    // originX = originX
+    // originY = originY
     northeast = nullptr;
     northwest = nullptr;
     southeast = nullptr;
     southwest = nullptr;
-
-    if (isDivided) {
-        delete particle;
-        particle = nullptr;
-    }
-
-    isDivided = false;
-    hasBody = false;
+    // particles = nullptr; // We do not delete the particles listes
 }
 
 QuadTree* QuadTree::getNortheast() const {

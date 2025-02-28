@@ -22,7 +22,7 @@ public:
     double getVx() const;
     double getVy() const;
 
-    static constexpr double G = 6.674e-11;  // Gravitational constant
+    static constexpr double G = 6.6743e-11;  // Gravitational constant
     static std::vector<Particle*> generateParticles(int nb_particles, double width, double height, double max_mass = 100, double min_mass = 0.5);
 private:
     double x;
