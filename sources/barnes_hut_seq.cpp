@@ -30,6 +30,9 @@ const double massItokawa = 4.2e10; // in kilograms
  * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).
  * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).
  * -g : Enable GUI (optional).
+ * -f <file> : Load particles from a file (optional).
+ * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).
+ * -d : Enable debug mode (optional).
  * -h : Print this help message.
  *
  * @param argc Number of command line arguments.
@@ -52,6 +55,9 @@ int main(int argc, char** argv) {
     std::string filename;
     while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:")) != -1) {
         switch (opt) {
+            case 'd':
+                debugMode = true;
+                break;
             case 't':
                 timeStep = std::stod(optarg);
                 break;
@@ -84,6 +90,7 @@ int main(int argc, char** argv) {
                           << " * -g : Enable GUI (optional).\n"
                           << " * -f <file> : Load particles from a file (optional).\n"
                           << " * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).\n"
+                          << " * -d : Enable debug mode (optional).\n"
                           << " * -h : Print this help message.\n";
                 return 0;
                 break;
@@ -121,10 +128,6 @@ int main(int argc, char** argv) {
         // We generate the particles
         particles = Particle::generateParticles(numParticles, windowSizeG, windowSizeG, maxMass, minMass);
     }
-
-
-    // We increase the window size by 10% to have some margin
-    windowSizeG *= 1.1;
     
     // We create a quadtree
     QuadTree qt(windowSizeG, windowSizeG/2, windowSizeG/2, &particles);
@@ -147,13 +150,13 @@ int main(int argc, char** argv) {
     while (!shouldClose) {
         // We update the position of the particles
         if (!shouldPause) {
-            std::cout << "Updating particles" << std::endl;
+            if (debugMode) std::cout << "Updating particles" << std::endl;
             qt.updateParticles(timeStep);
-            std::cout << "Particles updated" << std::endl;
+            if (debugMode) std::cout << "Particles updated" << std::endl;
             // We update the tree
-            std::cout << "Updating quadtree" << std::endl;
+            if (debugMode) std::cout << "Updating quadtree" << std::endl;
             qt.buildTree();
-            std::cout << "Quadtree updated" << std::endl;
+            if (debugMode) std::cout << "Quadtree updated" << std::endl;
         }
         usleep(500000); // 500 ms
         if (!shouldGUI) qt.print();
