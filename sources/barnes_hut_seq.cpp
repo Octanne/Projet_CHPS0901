@@ -141,6 +141,12 @@ int main(int argc, char** argv) {
         });
     }
 
+    if (nbSteps != 0) {
+        std::cout << "Running simulation for " << nbSteps << " steps" << std::endl;
+    } else {
+        std::cout << "Running simulation indefinitely" << std::endl;
+    }
+
     // We do the simulation
     int step = 0;
     while (!shouldClose && (nbSteps == 0 || step < nbSteps)) {

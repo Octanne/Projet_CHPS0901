@@ -170,24 +170,6 @@ void QuadTree::updateParticles(double step) {
         particle->setX(particle->getX() + particle->getVx() * step);
         particle->setY(particle->getY() + particle->getVy() * step);
 
-        // We bound the particle to the window
-        if (particle->getX() > width) {
-            particle->setX(width);
-            particle->setVx(-particle->getVx());
-        }
-        if (particle->getX() < -width) {
-            particle->setX(-width);
-            particle->setVx(-particle->getVx());
-        }
-        if (particle->getY() > width) {
-            particle->setY(width);
-            particle->setVy(-particle->getVy());
-        }
-        if (particle->getY() < -width) {
-            particle->setY(-width);
-            particle->setVy(-particle->getVy());
-        }
-
         // We make bounces on the window
         if (particle->getX() > width) {
             particle->setX(width);
