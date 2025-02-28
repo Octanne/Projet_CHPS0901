@@ -99,59 +99,40 @@ void QuadTree::updateCenterOfMass(Particle* particleInsert) {
     //std::cout << "Center of mass updated" << std::endl;
 }
 
-void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
-    if (!isDivided) {
-        if (particle != nullptr && (particle->getX() != b->getX() || particle->getY() != b->getY())) {
-            double dx = particle->getX() - b->getX();
-            double dy = particle->getY() - b->getY();
-            double dist = distance(particle->getX(), particle->getY(), b->getX(), b->getY());
-            double force = (Particle::G * particle->getMass() * b->getMass()) / (dist * dist);
-            // Change the formula to consider dist as tons of meters
-            fx += force * (dx / dist);
-            fy += force * (dy / dist);
-        }
+void QuadTree::calculateForce(QuadTree* b, double& fx, double& fy) const {
+    // If the current node is a an external node (and not b), calculate the force exerted by the current node on b, and add this amount to b's net force.
+    if (!isDivided && b != this) {
+        // We calculate the force exerted by the current node on b
+        double dx = b->getParticle()->getX() - particle->getX();
+        double dy = b->getParticle()->getY() - particle->getY();
+        double distance = std::sqrt(dx * dx + dy * dy);
+        double force = particle->getMass() * b->getParticle()->getMass() / (distance * distance);
+        fx += force * dx / distance;
+        fy += force * dy / distance;
     } else {
+        // Otherwise, calculate the ratio s / d, where s is the width of the region represented by the internal node, and d is the distance between the body and the node's center-of-mass.
         double s = width;
-        double d = distance(originX, originY, b->getX(), b->getY());
+        double d = distance(particle->getX(), particle->getY(), b->getOriginX(), b->getOriginY());
         if (s / d < theta) {
-            double dx = particle->getX() - b->getX();
-            double dy = particle->getY() - b->getY();
-            // dist is in ?
-            double dist = distance(particle->getX(), particle->getY(), b->getX(), b->getY());
-            double force = (Particle::G * particle->getMass() * b->getMass()) / (dist * dist);
-            fx += force * (dx / dist);
-            fy += force * (dy / dist);
+            // Treat the internal node as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
+            double dx = b->getParticle()->getX() - particle->getX();
+            double dy = b->getParticle()->getY() - particle->getY();
+            double distance = std::sqrt(dx * dx + dy * dy);
+            double force = particle->getMass() * b->getParticle()->getMass() / (distance * distance);
+            fx += force * dx / distance;
+            fy += force * dy / distance;
         } else {
-            if (northeast) northeast->calculateForce(b, fx, fy);
-            if (northwest) northwest->calculateForce(b, fx, fy);
-            if (southeast) southeast->calculateForce(b, fx, fy);
-            if (southwest) southwest->calculateForce(b, fx, fy);
+            // Recursively call the same function on each of the current node's children.
+            if (northeast != nullptr) northeast->calculateForce(b, fx, fy);
+            if (northwest != nullptr) northwest->calculateForce(b, fx, fy);
+            if (southeast != nullptr) southeast->calculateForce(b, fx, fy);
+            if (southwest != nullptr) southwest->calculateForce(b, fx, fy);
         }
     }
 }
 
 void QuadTree::updateVelocities(double step) {
-    if (isDivided) {
-        if (northeast != nullptr) northeast->updateVelocities(step);
-        if (northwest != nullptr) northwest->updateVelocities(step);
-        if (southeast != nullptr) southeast->updateVelocities(step);
-        if (southwest != nullptr) southwest->updateVelocities(step);
-    }
-        
-    if (particle != nullptr) {
-        double fx = 0;
-        double fy = 0;
-        calculateForce(particle, fx, fy);
-        std::cout << "Force on particle at (" << particle->getX() << ", " << particle->getY() << ") is (" << fx << ", " << fy << ")" << std::endl;
-        double ax = fx / particle->getMass();
-        double ay = fy / particle->getMass();
-        particle->setVx(particle->getVx() + ax * step);
-        particle->setVy(particle->getVy() + ay * step);
-
-        // We update the position of the particle
-        particle->setX(particle->getX() + particle->getVx() * step);
-        particle->setY(particle->getY() + particle->getVy() * step);
-    }
+    
 }
 
 double QuadTree::distance(double x1, double y1, double x2, double y2) const {

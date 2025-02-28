@@ -12,67 +12,82 @@
 // Global QuadTree pointer for display callback
 std::thread* windowThread = nullptr;
 bool shouldClose = false;
-bool renderBoundaries = false;
+bool renderBoundaries = true;
 bool debugMode = false;
+double* windowSize;
 
 // Recursively draw the QuadTree
-int drawQuadTree(QuadTree* qt, double scaleFactor, int root = 0) {
+int drawQuadTree(QuadTree* qt, double simulationSize, int root = 0) {
     if (qt == nullptr) {
         std::cout << "Quad is null" << std::endl;
         return 0;
     }
     int nbPart = 0;
+    double scaleFactor = (*windowSize)/simulationSize;
+    double width = qt->getWidth()*scaleFactor*0.5;
+
+    // Print scale factor and width
+    //if (root) std::cout << "Scale factor: " << scaleFactor << " Width: " << width << std::endl;
 
     // Draw boundaries
     if (renderBoundaries) {
-        //printf("Drawing boundaries at (%d, %d, %d, %d)\n", posX, posY, posX+width, posY+width);
-        double posX = qt->getOriginX()/scaleFactor;
-        double posY = qt->getOriginY()/scaleFactor;
-        double width = qt->getWidth()/scaleFactor;
+        double posX = qt->getOriginX()*scaleFactor;
+        double posY = qt->getOriginY()*scaleFactor;
+        //std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
+        //printf("Drawing boundaries at (%f, %f, %f, %f)\n", posX-width, posY+width, posX+width, posY-width);
         glBegin(GL_LINE_LOOP);
         glColor3f(0.0, 0.0, 1.0);
-        glVertex2f(posX, posY);
-        glVertex2f(posX+width, posY);
+        glVertex2f(posX-width, posY+width);
         glVertex2f(posX+width, posY+width);
-        glVertex2f(posX, posY+width);
+        glVertex2f(posX+width, posY-width);
+        glVertex2f(posX-width, posY-width);
         glEnd();
     }
 
     if (qt->isItDivided()) {
         // Draw other Quads
-        nbPart += drawQuadTree(qt->getSouthwest(), scaleFactor);
-        nbPart += drawQuadTree(qt->getSoutheast(), scaleFactor);
-        nbPart += drawQuadTree(qt->getNorthwest(), scaleFactor);
-        nbPart += drawQuadTree(qt->getNortheast(), scaleFactor);
+        nbPart += drawQuadTree(qt->getSouthwest(), simulationSize);
+        nbPart += drawQuadTree(qt->getSoutheast(), simulationSize);
+        nbPart += drawQuadTree(qt->getNorthwest(), simulationSize);
+        nbPart += drawQuadTree(qt->getNortheast(), simulationSize);
     } else if (qt->hasParticle()) {
         // Draw particle
         //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
-        double posX = qt->getOriginX()/scaleFactor;
-        double posY = qt->getOriginY()/scaleFactor;
-        glPointSize(5.0);
+        glPointSize(3.0);
         glBegin(GL_POINTS);
         glColor3f(1.0, 0.0, 0.0);
+        double posX = qt->getParticle()->getX()*scaleFactor;
+        double posY = qt->getParticle()->getY()*scaleFactor;
         glVertex2f(posX, posY);
         glEnd();
         return nbPart+1;
     }
 
-    if (root) {
-        //std::cout << "We printed " << nbPart << " particles" << std::endl;
-    }
+    if (root == 1) {}/*std::cout << "We printed " << nbPart << " particles" << std::endl;*/
 
     return nbPart;
 }
 
 // Display callback function
-void displayCallback(QuadTree* qt, double scaleFactor) {
+void displayCallback(QuadTree* qt, double simulationSize) {
     if (qt != nullptr) {
-        drawQuadTree(qt, scaleFactor, 1);
+        drawQuadTree(qt, simulationSize, 1);
+        // Usleep for 60 fps
+        usleep(1000000/60);
     }
 }
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+void framebuffer_size_callback(GLFWwindow* window, int width, int height) {  
+    *windowSize = width;
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(-1, (*windowSize), -1, (*windowSize)+1, -1, 1);
+    // I want to lock aspect ratio
+    glfwSetWindowAspectRatio(window, 1, 1);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
     glViewport(0, 0, width, height);
+  
     std::cout << "Resizing of window id " << glfwGetWindowAttrib(window, GLFW_FOCUSED) << " to " << width << "x" << height << std::endl;
 }
 
@@ -85,18 +100,17 @@ GLFWwindow* window_GEN;
 void signalSIGINTHandler(int signum) {
     std::cout << "Interrupt signal (" << signum << ") received. Closing window" << std::endl;
     glfwSetWindowShouldClose(window_GEN, GLFW_TRUE);
-    sleep(1);
     shouldClose = true;
 }
 
 // Initialize and create window
-int createWindow(QuadTree* qt, double windowSize, double scaleFactor) {
+int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize) {
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW" << std::endl;
         return 1;
     }
 
-    GLFWwindow* window = glfwCreateWindow(windowSize, windowSize, "QuadTree Visualizer", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(windowDefaultSize, windowDefaultSize, "QuadTree Visualizer", nullptr, nullptr);
     window_GEN = window;
     if (!window) {
         std::cerr << "Failed to create GLFW window" << std::endl;
@@ -106,7 +120,9 @@ int createWindow(QuadTree* qt, double windowSize, double scaleFactor) {
 
     glfwMakeContextCurrent(NULL);
 
-    windowThread = new std::thread([window, qt, windowSize, scaleFactor] {
+    windowSize = new double(windowDefaultSize);
+
+    windowThread = new std::thread([window, qt, simulationSize]() {
         // Create window
         glfwMakeContextCurrent(window);
         glewExperimental = GL_TRUE;
@@ -119,7 +135,9 @@ int createWindow(QuadTree* qt, double windowSize, double scaleFactor) {
 
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        glOrtho(-1, windowSize, -1, windowSize+1, -1, 1);
+        glOrtho(-1, (*windowSize), -1, (*windowSize)+1, -1, 1);
+        // I want to lock aspect ratio
+        glfwSetWindowAspectRatio(window, 1, 1);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
 
@@ -142,7 +160,7 @@ int createWindow(QuadTree* qt, double windowSize, double scaleFactor) {
 
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT);
-            displayCallback(qt, scaleFactor);
+            displayCallback(qt, simulationSize);
             glfwSwapBuffers(window);
             glfwPollEvents();
             // We sleep for 100ms
@@ -153,6 +171,8 @@ int createWindow(QuadTree* qt, double windowSize, double scaleFactor) {
         glfwMakeContextCurrent(NULL);
         glfwDestroyWindow(window);
         glfwTerminate();
+
+        delete windowSize;
 
         std::cout << "Window closed" << std::endl;
     });

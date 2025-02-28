@@ -18,16 +18,30 @@ const double massVesta = 2.59e20;  // in kilograms
 const double massEros = 6.69e15;   // in kilograms
 const double massItokawa = 4.2e10; // in kilograms
 
-int main(/*int argc, char** argv*/) {
+int main(int argc, char** argv) {
     std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
 
-    double widthAndHeight = 1000000;
+    // We get arguments from the command line to set :
+    // the width/height of the simulation window (squared)
+    // the number of particles
+    // the maximum mass of the particles
+    // the minimum mass of the particles
+
+    if (argc < 3 || argc > 5) {
+        std::cerr << "Usage: " << argv[0] << " <window_size> <num_particles> [<max_mass> <min_mass>]" << std::endl;
+        return 1;
+    }
+
+    double windowSize = std::stod(argv[1]);
+    int numParticles = std::stoi(argv[2]);
+    double maxMass = (argc > 3) ? std::stod(argv[3]) : massEarth;
+    double minMass = (argc > 4) ? std::stod(argv[4]) : massItokawa;
 
     // We generate the particles (10 thousand particles)
-    std::vector<Particle*> particles = Particle::generateParticles(10, widthAndHeight, widthAndHeight, massEarth, massItokawa);
+    std::vector<Particle*> particles = Particle::generateParticles(numParticles, windowSize, windowSize, maxMass, minMass);
 
     // We create a quadtree
-    QuadTree qt(widthAndHeight, widthAndHeight/2, widthAndHeight/2);
+    QuadTree qt(windowSize, windowSize/2, windowSize/2);
 
     std::cout << "Inserting particles into the quadtree" << std::endl;
     // We insert the particles into the quadtree
@@ -40,14 +54,14 @@ int main(/*int argc, char** argv*/) {
     //qt.print();
 
     // We print the quadtree structure in a window
-    createWindow(&qt, 10000, 1000);
+    createWindow(&qt, 800, windowSize);
 
     // We do the simulation
     while (!shouldClose) {
-        for (int i = 0; i < 60 && !shouldClose; i++) {
+        for (int i = 0; i < 1000000 && !shouldClose; i++) {
             // We update the position of the particles
             std::cout << "Updating particles" << std::endl;
-            qt.updateVelocities(1);
+            qt.updateVelocities(100);
             std::cout << "Particles updated" << std::endl;
             // We update the tree
             std::cout << "Updating quadtree" << std::endl;
@@ -56,7 +70,7 @@ int main(/*int argc, char** argv*/) {
                 qt.insert(particle);
             }
             std::cout << "Quadtree updated" << std::endl;
-            usleep(1000000); // We sleep for 1000ms
+            usleep(500000); // We sleep for 500ms
         }
         // We ask if we want to go to n iterations or not
         if (shouldClose) break;
@@ -68,7 +82,7 @@ int main(/*int argc, char** argv*/) {
     }
 
     std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
-    //waitClosedWindow();
+    waitClosedWindow();
 
     // We clear the quadtree
     qt.clear();

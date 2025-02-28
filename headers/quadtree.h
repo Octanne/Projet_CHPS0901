@@ -27,7 +27,7 @@ public:
     QuadTree(double width, double originX, double originY);
     ~QuadTree();
 
-    void calculateForce(Particle* particle, double& fx, double& fy) const;
+    void calculateForce(QuadTree* b, double& fx, double& fy) const;
     double distance(double x1, double y1, double x2, double y2) const;
     bool isItDivided();
     bool hasParticle();
