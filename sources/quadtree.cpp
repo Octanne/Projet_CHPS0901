@@ -151,6 +151,12 @@ void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
     if (debugMode) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") has force (" << fx << ", " << fy << ")" << std::endl;
 }
 
+// TODO MAYBE DO A FUSION OF PARTICLES WHEN THEY COLLIDE TO MAKE THEM SPREAD
+// in multiple particles but we keep the mass total to avoid losing matter (energy conservation)
+// We can also do a fusion of particles when they are too close to each other
+// We can also do a fusion of particles when they are too close to the center of mass TO AVOID 
+// THE COLLAPSE OF THE SYSTEM (To much divided sectors)
+
 void QuadTree::updateParticles(double step) {
     for (Particle* particle : *particles) {
         double fx = 0.0, fy = 0.0;
@@ -170,23 +176,22 @@ void QuadTree::updateParticles(double step) {
         particle->setX(particle->getX() + particle->getVx() * step);
         particle->setY(particle->getY() + particle->getVy() * step);
 
-        // We make bounces on the window
-        if (particle->getX() > width) {
-            particle->setX(width);
-            particle->setVx(-particle->getVx());
-        }
+        // We make bounces on the window but we reduce the speed to avoid infinite bounces 0 to width
         if (particle->getX() < 0) {
-            particle->setX(-width);
-            particle->setVx(-particle->getVx());
-        }
-        if (particle->getY() > width) {
-            particle->setY(width);
-            particle->setVy(-particle->getVy());
+            particle->setX(0);
+            particle->setVx(-particle->getVx() * 0.5);
+        } else if (particle->getX() > width) {
+            particle->setX(width);
+            particle->setVx(-particle->getVx() * 0.5);
         }
         if (particle->getY() < 0) {
-            particle->setY(-width);
-            particle->setVy(-particle->getVy());
+            particle->setY(0);
+            particle->setVy(-particle->getVy() * 0.5);
+        } else if (particle->getY() > width) {
+            particle->setY(width);
+            particle->setVy(-particle->getVy() * 0.5);
         }
+        
     }
 }
 
