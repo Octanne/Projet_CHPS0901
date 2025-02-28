@@ -39,29 +39,27 @@ const double massItokawa = 4.2e10; // in kilograms
 int main(int argc, char** argv) {
     std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
 
-    // We get arguments from the command line to set :
-    // the width/height of the simulation window (squared)
-    // the number of particles
-    // the maximum mass of the particles
-    // the minimum mass of the particles
-
     int opt;
-    double windowSize = 800; // default window size
+    double windowSizeG = 800; // default window size
     int numParticles = 1000; // default number of particles
     double maxMass = massEarth; // default max mass
     double minMass = massItokawa; // default min mass
     bool shouldGUI = false; // default no GUI
     std::vector<Particle*> particles;
     bool wFlag = false, nFlag = false;
+    double timeStep = 0.5; // default time step
 
     std::string filename;
-    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:")) != -1) {
-        switch (opt) {            
+    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:")) != -1) {
+        switch (opt) {
+            case 't':
+                timeStep = std::stod(optarg);
+                break;
             case 'f':
                 filename = optarg;
                 break;
             case 'w':
-                windowSize = std::stod(optarg);
+                windowSizeG = std::stod(optarg);
                 wFlag = true;
                 break;
             case 'n':
@@ -85,6 +83,7 @@ int main(int argc, char** argv) {
                           << " * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).\n"
                           << " * -g : Enable GUI (optional).\n"
                           << " * -f <file> : Load particles from a file (optional).\n"
+                          << " * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).\n"
                           << " * -h : Print this help message.\n";
                 return 0;
                 break;
@@ -103,15 +102,15 @@ int main(int argc, char** argv) {
     if (!filename.empty()) {
         std::cout << "Loading particles from file " << filename << std::endl;
         particles = Particle::loadParticles(filename);
-        windowSize = 0.0;
+        windowSizeG = 0.0;
         for (Particle* particle : particles) {
             double absX = std::abs(particle->getX());
             double absY = std::abs(particle->getY());
-            if (absX > windowSize) {
-                windowSize = absX;
+            if (absX > windowSizeG) {
+                windowSizeG = absX;
             }
-            if (absY > windowSize) {
-                windowSize = absY;
+            if (absY > windowSizeG) {
+                windowSizeG = absY;
             }
         }
         // We print the particles loaded
@@ -120,19 +119,22 @@ int main(int argc, char** argv) {
         }
     } else {
         // We generate the particles
-        particles = Particle::generateParticles(numParticles, windowSize, windowSize, maxMass, minMass);
+        particles = Particle::generateParticles(numParticles, windowSizeG, windowSizeG, maxMass, minMass);
     }
+
+
+    // We increase the window size by 10% to have some margin
+    windowSizeG *= 1.1;
     
     // We create a quadtree
-    QuadTree qt(windowSize, windowSize/2, windowSize/2, &particles);
-
-    std::cout << "Inserting particles into the quadtree" << std::endl;
+    QuadTree qt(windowSizeG, windowSizeG/2, windowSizeG/2, &particles);
     qt.buildTree();
-    std::cout << "Particles inserted into the quadtree" << std::endl;
+    std::cout << "The simulation window size is " << windowSizeG << std::endl;
 
     // We print the quadtree structure in a window
     if (shouldGUI) {
-        createWindow(&qt, 800, windowSize);
+        createWindow(&qt, 800, windowSizeG);
+        shouldPause = true;
     } else {
         // We put the signal handler to close the program
         signal(SIGINT, [](int signum) {
@@ -146,14 +148,14 @@ int main(int argc, char** argv) {
         // We update the position of the particles
         if (!shouldPause) {
             std::cout << "Updating particles" << std::endl;
-            qt.updateParticles(0.5);
+            qt.updateParticles(timeStep);
             std::cout << "Particles updated" << std::endl;
             // We update the tree
             std::cout << "Updating quadtree" << std::endl;
             qt.buildTree();
             std::cout << "Quadtree updated" << std::endl;
         }
-        usleep(500000); // We sleep for 500ms
+        usleep(500000); // 500 ms
         if (!shouldGUI) qt.print();
     }
 

@@ -4,10 +4,16 @@
 #include <unistd.h>
 #include <thread>
 #include <csignal>
+#include <fstream>
+#include <vector>
 
 // install sudo apt install libglew-dev libglfw3-dev libglm-dev
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
 
 // Global QuadTree pointer for display callback
 std::thread* windowThread = nullptr;
@@ -28,7 +34,7 @@ int drawQuadTree(QuadTree* qt, double simulationSize, int root = 0) {
     double width = qt->getWidth()*scaleFactor*0.5;
 
     // Print scale factor and width
-    //if (root) std::cout << "Scale factor: " << scaleFactor << " Width: " << width << std::endl;
+    if (root && debugMode) std::cout << "Scale factor: " << scaleFactor << " Width: " << width << std::endl;
 
     // Draw boundaries
     if (renderBoundaries) {
@@ -54,7 +60,7 @@ int drawQuadTree(QuadTree* qt, double simulationSize, int root = 0) {
     } else if (qt->hasParticle()) {
         // Draw particle
         //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
-        glPointSize(3.0*scaleFactor);
+        glPointSize(5.0);
         glBegin(GL_POINTS);
         glColor3f(1.0, 0.0, 0.0);
         double posX = qt->getParticle()->getX()*scaleFactor;
@@ -64,9 +70,126 @@ int drawQuadTree(QuadTree* qt, double simulationSize, int root = 0) {
         return nbPart+1;
     }
 
-    if (root == 1) {}/*std::cout << "We printed " << nbPart << " particles" << std::endl;*/
+    if (root == 1 && debugMode) std::cout << "We printed " << nbPart << " particles" << std::endl;
 
     return nbPart;
+}
+
+GLuint fontTexture;
+std::vector<std::pair<float, float>> charUVs(256);  // Stores UVs for characters
+std::vector<std::pair<float, float>> charSizes(256);  // Stores sizes for characters
+
+GLuint loadTexture(const char* filepath) {
+    int width, height, channels;
+    unsigned char* data = stbi_load(filepath, &width, &height, &channels, 4);
+    if (!data) {
+        std::cerr << "Failed to load texture: " << filepath << std::endl;
+        return 0;
+    }
+
+    GLuint textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glBindTexture(GL_TEXTURE_2D, 0);
+    stbi_image_free(data);
+    return textureID;
+}
+
+void drawText(const std::string& text, float x, float y, float scale) {
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, fontTexture);
+    glPushMatrix();
+    glTranslatef(x, y, 0);
+    glScalef(scale, scale, 1.0f);
+
+    glBegin(GL_QUADS);
+    for (size_t i = 0; i < text.length(); ++i) {
+        char c = text[i];
+        float u = charUVs[c].first;
+        float v = charUVs[c].second;
+        float w = charSizes[c].first;
+        float h = charSizes[c].second;
+
+        glTexCoord2f(u, v);
+        glVertex2f(0, 0);
+        glTexCoord2f(u + w, v);
+        glVertex2f(w, 0);
+        glTexCoord2f(u + w, v + h);
+        glVertex2f(w, h);
+        glTexCoord2f(u, v + h);
+        glVertex2f(0, h);
+
+        glTranslatef(w, 0, 0); // Move to the next character position
+    }
+    glEnd();
+
+    glPopMatrix();
+    glDisable(GL_TEXTURE_2D);
+}
+
+void loadFont(const char* folder) {
+    std::string fontFile = std::string(folder) + "/font.fnt";
+    std::string textureFile = std::string(folder) + "/font_0.tga";
+
+    fontTexture = loadTexture(textureFile.c_str());
+    if (!fontTexture) return;
+
+    std::ifstream file(fontFile);
+    if (!file) {
+        std::cerr << "Failed to open font file: " << fontFile << std::endl;
+        return;
+    }
+
+    // Assuming texture dimensions are 256x256 based on .fnt file information
+    const float textureWidth = 256.0f;
+    const float textureHeight = 256.0f;
+
+    std::string line;
+    while (std::getline(file, line)) {
+        if (line.substr(0, 5) == "char ") {
+            int id, x, y, width, height, xoffset, yoffset, xadvance;
+            sscanf(line.c_str(), "char id=%d x=%d y=%d width=%d height=%d xoffset=%d yoffset=%d xadvance=%d",
+                   &id, &x, &y, &width, &height, &xoffset, &yoffset, &xadvance);
+
+            // Calculate normalized UV coordinates
+            float u1 = x / textureWidth;
+            float v1 = y / textureHeight;
+            float u2 = (x + width) / textureWidth;
+            float v2 = (y + height) / textureHeight;
+
+            // Store the UVs for the character
+            charUVs[id] = std::make_pair(u1, v1);
+            charSizes[id] = std::make_pair(u2 - u1, v2 - v1);  // store the width and height as UV deltas
+        }
+    }
+
+    file.close();
+}
+
+void displayDebugDataInWindow() {
+    glColor3f(1.0, 1.0, 1.0);
+    glRasterPos2f(10, (*windowSize) - 20);
+    std::string text = "shouldClose: " + std::to_string(shouldClose);
+    drawText(text, 10, (*windowSize) - 20, 1.0);
+  
+    glRasterPos2f(10, (*windowSize) - 40);
+    text = "shouldPause: " + std::to_string(shouldPause);
+    drawText(text, 10, (*windowSize) - 40, 1.0);
+
+    glRasterPos2f(10, (*windowSize) - 60);
+    text = "renderBoundaries: " + std::to_string(renderBoundaries);
+    drawText(text, 10, (*windowSize) - 60, 1.0);
+
+    glRasterPos2f(10, (*windowSize) - 80);
+    text = "debugMode: " + std::to_string(debugMode);
+    drawText(text, 10, (*windowSize) - 80, 1.0);
+
+    glRasterPos2f(10, (*windowSize) - 100);
+    text = "windowSize: " + std::to_string(*windowSize);
+    drawText(text, 10, (*windowSize) - 100, 1.0);
 }
 
 // Display callback function
@@ -75,6 +198,7 @@ void displayCallback(QuadTree* qt, double simulationSize) {
         drawQuadTree(qt, simulationSize, 1);
         // Usleep for 60 fps
         usleep(1000000/60);
+        //if (debugMode) displayDebugDataInWindow();
     }
 }
 
@@ -132,6 +256,8 @@ int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize) 
             return;
         }
 
+        // Load font texture
+        loadFont("fonts");
         glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
         glMatrixMode(GL_PROJECTION);
@@ -161,6 +287,11 @@ int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize) 
             else if (key == GLFW_KEY_F2 && action == GLFW_RELEASE) {
                 renderBoundaries = !renderBoundaries;
                 std::cout << "Render boundaries: " << (renderBoundaries ? "ON" : "OFF") << std::endl;
+            }
+            // Switch debug mode
+            else if (key == GLFW_KEY_F3 && action == GLFW_RELEASE) {
+                debugMode = !debugMode;
+                std::cout << "Debug mode: " << (debugMode ? "ON" : "OFF") << std::endl;
             }
         });
 

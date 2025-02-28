@@ -59,6 +59,22 @@
         "variant": "cpp",
         "format": "cpp",
         "csignal": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "cstring": "cpp",
+        "strstream": "cpp",
+        "bitset": "cpp",
+        "cfenv": "cpp",
+        "complex": "cpp",
+        "condition_variable": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "source_location": "cpp",
+        "mutex": "cpp",
+        "ranges": "cpp",
+        "shared_mutex": "cpp",
+        "typeindex": "cpp",
+        "valarray": "cpp",
+        "stdfloat": "cpp"
     }
 }

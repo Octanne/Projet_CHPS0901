@@ -56,7 +56,12 @@ std::vector<Particle*> Particle::generateParticles(int nb_particles, double widt
         double x = (double)rand() / RAND_MAX * width;
         double y = (double)rand() / RAND_MAX * height;
         double mass = (double)rand() / RAND_MAX * (max_mass - min_mass) + min_mass;
-        particles.push_back(new Particle(x, y, mass));
+        double vx = (double)rand() / RAND_MAX * 2 - 1;
+        double vy = (double)rand() / RAND_MAX * 2 - 1;
+        Particle* particle = new Particle(x, y, mass);
+        particle->setVx(vx);
+        particle->setVy(vy);
+        particles.push_back(particle);
     }
     return particles;
 }
@@ -73,13 +78,15 @@ std::vector<Particle*> Particle::loadParticles(std::string& filename) {
             std::istringstream iss(line);
             iss.imbue(std::locale::classic());  // Ensure parsing of scientific notation
             
-            double x, y, mass;
-            if (!(iss >> x >> y >> mass)) {
+            double x, y, vx, vy, mass;
+            if (!(iss >> x >> y >> vx >> vy >> mass)) {
                 std::cerr << "Error while reading the file: " << line << std::endl;
                 continue;
             }
-
-            particles.push_back(new Particle(x, y, mass));
+            Particle* particle = new Particle(x, y, mass);
+            particle->setVx(vx);
+            particle->setVy(vy);
+            particles.push_back(particle);
         }
         file.close();
     } else {
