@@ -175,7 +175,7 @@ void QuadTree::updateParticles(double step) {
             particle->setX(width);
             particle->setVx(-particle->getVx());
         }
-        if (particle->getX() < -width) {
+        if (particle->getX() < 0) {
             particle->setX(-width);
             particle->setVx(-particle->getVx());
         }
@@ -183,7 +183,7 @@ void QuadTree::updateParticles(double step) {
             particle->setY(width);
             particle->setVy(-particle->getVy());
         }
-        if (particle->getY() < -width) {
+        if (particle->getY() < 0) {
             particle->setY(-width);
             particle->setVy(-particle->getVy());
         }
