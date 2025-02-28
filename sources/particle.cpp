@@ -94,3 +94,16 @@ std::vector<Particle*> Particle::loadParticles(std::string& filename) {
     }
     return particles;
 }
+
+void Particle::saveParticles(std::string& filename, std::vector<Particle*>& particles) {
+    std::ofstream
+        file(filename);
+    if (file.is_open()) {
+        for (Particle* particle : particles) {
+            file << particle->getX() << " " << particle->getY() << " " << particle->getVx() << " " << particle->getVy() << " " << particle->getMass() << std::endl;
+        }
+        file.close();
+    } else {
+        std::cerr << "Error while opening the file" << std::endl;
+    }
+}

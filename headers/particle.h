@@ -51,6 +51,13 @@ public:
      * Each line represents a particle with its x position, y position, and mass.
      */
     static std::vector<Particle*> loadParticles(std::string& filename);
+    /**
+     * @brief Saves particles to a file.
+     * 
+     * @param filename The name of the file to save particles to.
+     * @param particles The vector of Particle pointers to save.
+     */
+    static void saveParticles(std::string& filename, std::vector<Particle*>& particles);
 private:
     double x;
     double y;

@@ -29,6 +29,7 @@ const double massItokawa = 4.2e10; // in kilograms
  * -n <num_particles> : Set the number of particles (mandatory).
  * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).
  * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).
+ * -e <num_steps> : Set the number of steps for the simulation (optional, default is none).
  * -g : Enable GUI (optional).
  * -f <file> : Load particles from a file (optional).
  * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).
@@ -51,10 +52,14 @@ int main(int argc, char** argv) {
     std::vector<Particle*> particles;
     bool wFlag = true, nFlag = false;
     double timeStep = 0.5; // default time step
+    double nbSteps = 0; // default number of steps
 
     std::string filename;
-    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:")) != -1) {
+    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:")) != -1) {
         switch (opt) {
+            case 'e':
+                nbSteps = std::stod(optarg);
+                break;
             case 'd':
                 debugMode = true;
                 break;
@@ -89,6 +94,7 @@ int main(int argc, char** argv) {
                           << " * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).\n"
                           << " * -g : Enable GUI (optional).\n"
                           << " * -f <file> : Load particles from a file (optional).\n"
+                          << " * -e <num_steps> : Set the number of steps for the simulation (optional, default is none).\n"
                           << " * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).\n"
                           << " * -d : Enable debug mode (optional).\n"
                           << " * -h : Print this help message.\n";
@@ -136,7 +142,8 @@ int main(int argc, char** argv) {
     }
 
     // We do the simulation
-    while (!shouldClose) {
+    int step = 0;
+    while (!shouldClose && (nbSteps == 0 || step < nbSteps)) {
         // We update the position of the particles
         if (!shouldPause) {
             if (debugMode) std::cout << "Updating particles" << std::endl;
@@ -146,6 +153,7 @@ int main(int argc, char** argv) {
             if (debugMode) std::cout << "Updating quadtree" << std::endl;
             qt.buildTree();
             if (debugMode) std::cout << "Quadtree updated" << std::endl;
+            step++;
         }
         usleep(500000); // 500 ms
         if (!shouldGUI) qt.print();
@@ -158,6 +166,11 @@ int main(int argc, char** argv) {
 
     // We clear the quadtree
     qt.clear();
+
+    // We save the particles to a file particle_output_date.txt
+    std::string filenameOutput = "particle_output_" + std::to_string(time(0)) + ".txt";
+    Particle::saveParticles(filenameOutput, particles);
+    std::cout << "Particles status result saved to " << filenameOutput << std::endl;
 
     // We clear the particles
     for (Particle* particle : particles) {
