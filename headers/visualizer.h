@@ -4,6 +4,7 @@
 #include "quadtree.h"
 
 extern bool shouldClose;
+extern bool shouldPause;
 
 int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize);
 void waitClosedWindow();

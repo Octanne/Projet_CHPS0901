@@ -12,6 +12,7 @@
 // Global QuadTree pointer for display callback
 std::thread* windowThread = nullptr;
 bool shouldClose = false;
+bool shouldPause = false;
 bool renderBoundaries = true;
 bool debugMode = false;
 double* windowSize;
@@ -150,6 +151,11 @@ int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize) 
             // Close window when Q is pressed
             if (key == GLFW_KEY_A && action == GLFW_RELEASE) {
                 signalSIGINTHandler(2);
+            }
+            // Pause simulation
+            else if (key == GLFW_KEY_SPACE && action == GLFW_RELEASE) {
+                shouldPause = !shouldPause;
+                std::cout << "Simulation " << (shouldPause ? "paused" : "resumed") << std::endl;
             }
             // Switch render boundaries
             else if (key == GLFW_KEY_F2 && action == GLFW_RELEASE) {

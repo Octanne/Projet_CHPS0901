@@ -18,6 +18,24 @@ const double massVesta = 2.59e20;  // in kilograms
 const double massEros = 6.69e15;   // in kilograms
 const double massItokawa = 4.2e10; // in kilograms
 
+/**
+ * @brief Main function for the Barnes-Hut Sequential Implementation.
+ *
+ * This function initializes the simulation parameters from command line arguments,
+ * generates particles, builds a quadtree, and runs the simulation.
+ *
+ * Command line arguments:
+ * -w <window_size> : Set the width/height of the simulation window (squared) (mandatory).
+ * -n <num_particles> : Set the number of particles (mandatory).
+ * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).
+ * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).
+ * -g : Enable GUI (optional).
+ * -h : Print this help message.
+ *
+ * @param argc Number of command line arguments.
+ * @param argv Array of command line arguments.
+ * @return int Exit status of the program.
+ */
 int main(int argc, char** argv) {
     std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
 
@@ -27,15 +45,55 @@ int main(int argc, char** argv) {
     // the maximum mass of the particles
     // the minimum mass of the particles
 
-    if (argc < 3 || argc > 5) {
-        std::cerr << "Usage: " << argv[0] << " <window_size> <num_particles> [<max_mass> <min_mass>]" << std::endl;
-        return 1;
+    int opt;
+    double windowSize = 800; // default window size
+    int numParticles = 1000; // default number of particles
+    double maxMass = massEarth; // default max mass
+    double minMass = massItokawa; // default min mass
+    bool shouldGUI = false; // default no GUI
+
+    bool wFlag = false, nFlag = false;
+
+    while ((opt = getopt(argc, argv, "w:n:G:L:gh")) != -1) {
+        switch (opt) {
+            case 'w':
+                windowSize = std::stod(optarg);
+                wFlag = true;
+                break;
+            case 'n':
+                numParticles = std::stoi(optarg);
+                nFlag = true;
+                break;
+            case 'G':
+                maxMass = std::stod(optarg);
+                break;
+            case 'L':
+                minMass = std::stod(optarg);
+                break;
+            case 'g':
+                shouldGUI = true;
+                break;
+            case 'h':
+                std::cout << "Command line arguments:\n"
+                          << " * -w <window_size> : Set the width/height of the simulation window (squared) (mandatory).\n"
+                          << " * -n <num_particles> : Set the number of particles (mandatory).\n"
+                          << " * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).\n"
+                          << " * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).\n"
+                          << " * -g : Enable GUI (optional).\n"
+                          << " * -h : Print this help message.\n";
+                return 0;
+                break;
+            default:
+                std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g]" << std::endl;
+                return 1;
+        }
     }
 
-    double windowSize = std::stod(argv[1]);
-    int numParticles = std::stoi(argv[2]);
-    double maxMass = (argc > 3) ? std::stod(argv[3]) : massEarth;
-    double minMass = (argc > 4) ? std::stod(argv[4]) : massItokawa;
+    if (!wFlag || !nFlag) {
+        std::cerr << "Error: -w <window_size> and -n <num_particles> are mandatory." << std::endl;
+        std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g]" << std::endl;
+        return 1;
+    }
 
     // We generate the particles
     std::vector<Particle*> particles = Particle::generateParticles(numParticles, windowSize, windowSize, maxMass, minMass);
@@ -47,36 +105,31 @@ int main(int argc, char** argv) {
     qt.buildTree();
     std::cout << "Particles inserted into the quadtree" << std::endl;
 
-    // We print the quadtree structure in the console
-    //qt.print();
-
     // We print the quadtree structure in a window
-    createWindow(&qt, 800, windowSize);
+    if (shouldGUI) {
+        createWindow(&qt, 800, windowSize);
+    }
 
     // We do the simulation
     while (!shouldClose) {
-        for (int i = 0; i < 1000000 && !shouldClose; i++) {
-            // We update the position of the particles
+        // We update the position of the particles
+        if (!shouldPause) {
             std::cout << "Updating particles" << std::endl;
-            qt.updateParticles(100);
+            qt.updateParticles(0.5);
             std::cout << "Particles updated" << std::endl;
             // We update the tree
             std::cout << "Updating quadtree" << std::endl;
             qt.buildTree();
             std::cout << "Quadtree updated" << std::endl;
-            usleep(500000); // We sleep for 500ms
         }
-        // We ask if we want to go to n iterations or not
-        if (shouldClose) break;
-        std::cout << "Do you want to do 60 more iterations? (y/n)" << std::endl;
-        char answer;
-        std::cin >> answer;
-        if (answer == 'y') continue;
-        else break;
+        usleep(500000); // We sleep for 500ms
+        if (!shouldGUI) qt.print();
     }
 
-    std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
-    waitClosedWindow();
+    if (shouldGUI) {
+        std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
+        waitClosedWindow();
+    }
 
     // We clear the quadtree
     qt.clear();
@@ -86,7 +139,7 @@ int main(int argc, char** argv) {
         delete particle;
     }
 
-    std::cout << "End of Barnes-Hut Sequential Implementation" << std::endl;
+    std::cout << "End of Simulation with Barnes-Hut Sequential Implementation" << std::endl;
 
     return 0;
 }
