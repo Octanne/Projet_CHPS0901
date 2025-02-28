@@ -193,9 +193,9 @@ void displayDebugDataInWindow() {
 }
 
 // Display callback function
-void displayCallback(QuadTree* qt, double simulationSize) {
+void displayCallback(QuadTree* qt) {
     if (qt != nullptr) {
-        drawQuadTree(qt, simulationSize, 1);
+        drawQuadTree(qt, qt->getWidth(), 1);
         // Usleep for 60 fps
         usleep(1000000/60);
         //if (debugMode) displayDebugDataInWindow();
@@ -229,7 +229,7 @@ void signalSIGINTHandler(int signum) {
 }
 
 // Initialize and create window
-int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize) {
+int createWindow(QuadTree* qt, double windowDefaultSize) {
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW" << std::endl;
         return 1;
@@ -247,7 +247,7 @@ int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize) 
 
     windowSize = new double(windowDefaultSize);
 
-    windowThread = new std::thread([window, qt, simulationSize]() {
+    windowThread = new std::thread([window, qt]() {
         // Create window
         glfwMakeContextCurrent(window);
         glewExperimental = GL_TRUE;
@@ -297,7 +297,7 @@ int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize) 
 
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT);
-            displayCallback(qt, simulationSize);
+            displayCallback(qt);
             glfwSwapBuffers(window);
             glfwPollEvents();
             // We sleep for 100ms

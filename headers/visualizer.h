@@ -7,7 +7,7 @@ extern bool shouldClose;
 extern bool shouldPause;
 extern bool debugMode;
 
-int createWindow(QuadTree* qt, double windowDefaultSize, double simulationSize);
+int createWindow(QuadTree* qt, double windowDefaultSize);
 void waitClosedWindow();
 
 #endif // VISUALIZER_H

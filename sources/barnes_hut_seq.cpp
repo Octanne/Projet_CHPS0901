@@ -25,7 +25,7 @@ const double massItokawa = 4.2e10; // in kilograms
  * generates particles, builds a quadtree, and runs the simulation.
  *
  * Command line arguments:
- * -w <window_size> : Set the width/height of the simulation window (squared) (mandatory).
+ * -w <window_size> : Set the width/height of the generate window (squared) (mandatory).
  * -n <num_particles> : Set the number of particles (mandatory).
  * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).
  * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).
@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
     double minMass = massItokawa; // default min mass
     bool shouldGUI = false; // default no GUI
     std::vector<Particle*> particles;
-    bool wFlag = false, nFlag = false;
+    bool wFlag = true, nFlag = false;
     double timeStep = 0.5; // default time step
 
     std::string filename;
@@ -83,7 +83,7 @@ int main(int argc, char** argv) {
                 break;
             case 'h':
                 std::cout << "Command line arguments:\n"
-                          << " * -w <window_size> : Set the width/height of the simulation window (squared) (mandatory unless -f is used).\n"
+                          << " * -w <window_size> : Set the width/height of the generate window (squared) (mandatory unless -f is used).\n"
                           << " * -n <num_particles> : Set the number of particles (mandatory unless -f is used).\n"
                           << " * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).\n"
                           << " * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).\n"
@@ -109,17 +109,6 @@ int main(int argc, char** argv) {
     if (!filename.empty()) {
         std::cout << "Loading particles from file " << filename << std::endl;
         particles = Particle::loadParticles(filename);
-        windowSizeG = 0.0;
-        for (Particle* particle : particles) {
-            double absX = std::abs(particle->getX());
-            double absY = std::abs(particle->getY());
-            if (absX > windowSizeG) {
-                windowSizeG = absX;
-            }
-            if (absY > windowSizeG) {
-                windowSizeG = absY;
-            }
-        }
         // We print the particles loaded
         for (Particle* particle : particles) {
             std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") with mass " << particle->getMass() << std::endl;
@@ -132,11 +121,11 @@ int main(int argc, char** argv) {
     // We create a quadtree
     QuadTree qt(windowSizeG, windowSizeG/2, windowSizeG/2, &particles);
     qt.buildTree();
-    std::cout << "The simulation window size is " << windowSizeG << std::endl;
+    std::cout << "The simulation window size is " << qt.getWidth() << std::endl;
 
     // We print the quadtree structure in a window
     if (shouldGUI) {
-        createWindow(&qt, 800, windowSizeG);
+        createWindow(&qt, 800);
         shouldPause = true;
     } else {
         // We put the signal handler to close the program
