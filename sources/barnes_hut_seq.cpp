@@ -108,6 +108,12 @@ int main(int argc, char** argv) {
     // We print the quadtree structure in a window
     if (shouldGUI) {
         createWindow(&qt, 800, windowSize);
+    } else {
+        // We put the signal handler to close the program
+        signal(SIGINT, [](int signum) {
+            shouldClose = true;
+            printf("Interrupt signal received (%d)\n", signum);
+        });
     }
 
     // We do the simulation
