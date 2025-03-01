@@ -54,6 +54,10 @@ public:
     QuadTree* getNorthwest() const;
     QuadTree* getSoutheast() const;
     QuadTree* getSouthwest() const;
+
+    static bool* debugModePtr;
+    static void setDebugModePtr(bool* debugMode);
+    static bool debugMode();
 };
 
 #endif // QUADTREE_H

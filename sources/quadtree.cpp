@@ -1,9 +1,18 @@
 #include "quadtree.h"
 #include "particle.h"
+
 #include <iostream>
 #include <cmath>
 
-extern bool debugMode;
+bool* QuadTree::debugModePtr = nullptr;
+
+bool QuadTree::debugMode() {
+    return *debugModePtr;
+}
+
+void QuadTree::setDebugModePtr(bool* debugMode) {
+    debugModePtr = debugMode;
+}
 
 QuadTree::QuadTree(double width, double originX, double originY, std::vector<Particle*>* particles)
     : particle(nullptr), isDivided(false), hasBody(false), width(width),
@@ -148,7 +157,7 @@ void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
     }
 
     // We print the force exerted on the particle
-    if (debugMode) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") has force (" << fx << ", " << fy << ")" << std::endl;
+    if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") has force (" << fx << ", " << fy << ")" << std::endl;
 }
 
 // TODO MAYBE DO A FUSION OF PARTICLES WHEN THEY COLLIDE TO MAKE THEM SPREAD
@@ -161,7 +170,7 @@ void QuadTree::updateParticles(double step) {
     for (Particle* particle : *particles) {
         double fx = 0.0, fy = 0.0;
         calculateForce(particle, fx, fy);
-        if (debugMode) std::cout << "Force calculated" << std::endl;
+        if (debugMode()) std::cout << "Force calculated" << std::endl;
 
         double ax = fx / particle->getMass();
         double ay = fy / particle->getMass();
@@ -170,7 +179,7 @@ void QuadTree::updateParticles(double step) {
         particle->setVy(particle->getVy() + ay * step);
         
         // We print the velocity of the particle
-        if (debugMode) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") has velocity (" 
+        if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") has velocity (" 
                         << particle->getVx() << ", " << particle->getVy() << ")" << std::endl;
 
         particle->setX(particle->getX() + particle->getVx() * step);
@@ -229,11 +238,11 @@ bool QuadTree::buildTree() {
 
     // We reset the tree if it was already built
     if (isDivided) {
-        if (debugMode) std::cout << "Clearing the quadtree" << std::endl;
+        if (debugMode()) std::cout << "Clearing the quadtree" << std::endl;
         clear();
     }
 
-    if (debugMode) std::cout << "Building the quadtree" << std::endl;
+    if (debugMode()) std::cout << "Building the quadtree" << std::endl;
     // We insert the particles into the quadtree
     for (Particle* particle : *particles) {
         insertSimple(particle);

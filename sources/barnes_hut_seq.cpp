@@ -53,6 +53,7 @@ int main(int argc, char** argv) {
     bool wFlag = true, nFlag = false;
     double timeStep = 0.5; // default time step
     double nbSteps = 0; // default number of steps
+    double debugMode = false;
 
     std::string filename;
     while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:")) != -1) {
@@ -125,18 +126,21 @@ int main(int argc, char** argv) {
     }
     
     // We create a quadtree
+    QuadTree::setDebugModePtr(Visualizer::ptrDebugMode());
     QuadTree qt(windowSizeG, windowSizeG/2, windowSizeG/2, &particles);
     qt.buildTree();
     std::cout << "The simulation window size is " << qt.getWidth() << std::endl;
 
     // We print the quadtree structure in a window
+    Visualizer* qtVisu = Visualizer::getInstance(&qt, 800);
+    qtVisu->setDebug(debugMode);
     if (shouldGUI) {
-        createWindow(&qt, 800);
-        shouldPause = true;
+        qtVisu->createWindow();
+        qtVisu->setPause(true);
     } else {
         // We put the signal handler to close the program
         signal(SIGINT, [](int signum) {
-            shouldClose = true;
+            Visualizer::getInstance()->closeWindow();
             printf("Interrupt signal received (%d)\n", signum);
         });
     }
@@ -149,16 +153,16 @@ int main(int argc, char** argv) {
 
     // We do the simulation
     int step = 0;
-    while (!shouldClose && (nbSteps == 0 || step < nbSteps)) {
+    while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps)) {
         // We update the position of the particles
-        if (!shouldPause) {
-            if (debugMode) std::cout << "Updating particles" << std::endl;
+        if (!qtVisu->isInPause()) {
+            if (qtVisu->isInDebug()) std::cout << "Updating particles" << std::endl;
             qt.updateParticles(timeStep);
-            if (debugMode) std::cout << "Particles updated" << std::endl;
+            if (qtVisu->isInDebug()) std::cout << "Particles updated" << std::endl;
             // We update the tree
-            if (debugMode) std::cout << "Updating quadtree" << std::endl;
+            if (qtVisu->isInDebug()) std::cout << "Updating quadtree" << std::endl;
             qt.buildTree();
-            if (debugMode) std::cout << "Quadtree updated" << std::endl;
+            if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
             step++;
         }
         usleep(500000); // 500 ms
@@ -167,14 +171,15 @@ int main(int argc, char** argv) {
 
     if (shouldGUI) {
         std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
-        waitClosedWindow();
+        qtVisu->closeWindow();
+        qtVisu->waitClosedWindow();
     }
 
     // We clear the quadtree
     qt.clear();
 
     // We save the particles to a file particle_output_date.txt
-    std::string filenameOutput = "particle_output_" + std::to_string(time(0)) + ".txt";
+    std::string filenameOutput = "results/particle_output_" + std::to_string(time(0)) + ".txt";
     Particle::saveParticles(filenameOutput, particles);
     std::cout << "Particles status result saved to " << filenameOutput << std::endl;
 

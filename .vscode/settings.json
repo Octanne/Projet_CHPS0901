@@ -75,6 +75,15 @@
         "shared_mutex": "cpp",
         "typeindex": "cpp",
         "valarray": "cpp",
-        "stdfloat": "cpp"
+        "stdfloat": "cpp",
+        "any": "cpp",
+        "hash_map": "cpp",
+        "codecvt": "cpp",
+        "coroutine": "cpp",
+        "csetjmp": "cpp",
+        "forward_list": "cpp",
+        "unordered_set": "cpp",
+        "future": "cpp",
+        "text_encoding": "cpp"
     }
 }
