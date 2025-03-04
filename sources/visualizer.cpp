@@ -24,30 +24,33 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->fullRender = true;
 }
 
-int Visualizer::drawQuadTreeArea(QuadTree* qt, double winX, double winY, double scaleFactor, int root) {
+int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
     if (qt == nullptr) {
         std::cout << "Quad is null" << std::endl;
         return 0;
     }
     int nbPart = 0;
-    double width = qt->getWidth()*scaleFactor*0.5;
-    double winTopX = winX+windowSize;
-    double winTopY = winY+windowSize;
+
+    // I want when scaleFactor == 1 then computeFactor = windowSize/this->qt->getWidth()
+    // If scaleFactor == 2 then computeFactor = windowSize/this->qt->getWidth()*0.5
+    // If scaleFactor == 0.5 then computeFactor = windowSize/this->qt->getWidth()*2
+    // So computeFactor = windowSize/(this->qt->getWidth()*scaleFactor)
+    double scaleFactorLocal = windowSize/(this->qt->getWidth()*(1/scaleFactor));
+    double width = qt->getWidth()*scaleFactorLocal*0.5;
 
     // Print scale factor and width
     if (root && debugMode) std::cout << "Scale factor: " << scaleFactor << " Width: " << width << std::endl;
 
     // We compute the position of the quadtree
-    double posX = qt->getOriginX()*scaleFactor;
-    double posY = qt->getOriginY()*scaleFactor;
-    //std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
-    // We return the quadtree if no part of it is in the window
-    if (posX-width < winX || posY-width < winY || posX+width > winTopX || posY > winTopY) {
-        return 0;
-    }
+    double posX = qt->getOriginX()*scaleFactorLocal;
+    double posY = qt->getOriginY()*scaleFactorLocal;
+    // To draw at the correct pos in the window we have to substract the window position
+    posX += winX;
+    posY += winY;
 
     // Draw boundaries
-    if (renderBoundaries) {
+    if (renderBoundaries && posX-width < windowSize && posX+width > -windowSize && posY+width > -windowSize && posY-width < windowSize) {
+        // If draw the quadtree only if the quadtree intersects the window
         //printf("Drawing boundaries at (%f, %f, %f, %f)\n", posX-width, posY+width, posX+width, posY-width);
         glBegin(GL_LINE_LOOP);
         glColor3f(0.0, 0.0, 1.0);
@@ -61,21 +64,27 @@ int Visualizer::drawQuadTreeArea(QuadTree* qt, double winX, double winY, double 
     // We draw the other quads
     if (qt->isItDivided()) {
         // Draw other Quads
-        nbPart += drawQuadTreeArea(qt->getSouthwest(), winX, winY, scaleFactor);
-        nbPart += drawQuadTreeArea(qt->getSoutheast(), winX, winY, scaleFactor);
-        nbPart += drawQuadTreeArea(qt->getNorthwest(), winX, winY, scaleFactor);
-        nbPart += drawQuadTreeArea(qt->getNortheast(), winX, winY, scaleFactor);
+        nbPart += drawQuadTreeArea(qt->getSouthwest());
+        nbPart += drawQuadTreeArea(qt->getSoutheast());
+        nbPart += drawQuadTreeArea(qt->getNorthwest());
+        nbPart += drawQuadTreeArea(qt->getNortheast());
     } else if (qt->hasParticle()) {
         // Draw particle
-        //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
-        glPointSize(5.0);
-        glBegin(GL_POINTS);
-        glColor3f(1.0, 0.0, 0.0);
-        double posX = qt->getParticle()->getX()*scaleFactor;
-        double posY = qt->getParticle()->getY()*scaleFactor;
-        glVertex2f(posX, posY);
-        glEnd();
-        return nbPart+1;
+        double posX = qt->getParticle()->getX()*scaleFactorLocal;
+        double posY = qt->getParticle()->getY()*scaleFactorLocal;
+        // We have to substract the window position
+        posX += winX;
+        posY += winY;
+        // If point is in the window we draw it in green
+        if (posX >= -windowSize && posY >= -windowSize && posX <= windowSize && posY <= windowSize) {
+            //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
+            glPointSize(5.0);
+            glBegin(GL_POINTS);
+            glColor3f(0.0, 1.0, 0.0);
+            glVertex2f(posX, posY);
+            glEnd();
+            return nbPart+1;
+        }
     }
 
     if (root == 1 && debugMode) std::cout << "We printed " << nbPart << " particles" << std::endl;
@@ -90,16 +99,16 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
         return 0;
     }
     int nbPart = 0;
-    double scaleFactor = windowSize/this->qt->getWidth();
-    double width = qt->getWidth()*scaleFactor*0.5;
+    double scaleFactorLocal = windowSize/this->qt->getWidth();
+    double width = qt->getWidth()*scaleFactorLocal*0.5;
 
     // Print scale factor and width
-    if (root && debugMode) std::cout << "Scale factor: " << scaleFactor << " Width: " << width << std::endl;
+    if (root && debugMode) std::cout << "Scale factor: " << scaleFactorLocal << " Width: " << width << std::endl;
 
     // Draw boundaries
     if (renderBoundaries) {
-        double posX = qt->getOriginX()*scaleFactor;
-        double posY = qt->getOriginY()*scaleFactor;
+        double posX = qt->getOriginX()*scaleFactorLocal;
+        double posY = qt->getOriginY()*scaleFactorLocal;
         //std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
         //printf("Drawing boundaries at (%f, %f, %f, %f)\n", posX-width, posY+width, posX+width, posY-width);
         glBegin(GL_LINE_LOOP);
@@ -123,8 +132,8 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
         glPointSize(5.0);
         glBegin(GL_POINTS);
         glColor3f(1.0, 0.0, 0.0);
-        double posX = qt->getParticle()->getX()*scaleFactor;
-        double posY = qt->getParticle()->getY()*scaleFactor;
+        double posX = qt->getParticle()->getX()*scaleFactorLocal;
+        double posY = qt->getParticle()->getY()*scaleFactorLocal;
         glVertex2f(posX, posY);
         glEnd();
         return nbPart+1;
@@ -159,15 +168,7 @@ void Visualizer::displayCallback() {
     if (qt != nullptr) {
         if (fullRender) drawQuadTree(qt, 1);
         else {
-            // We compute scaleFactorCompute which is the scale factor to apply to the quadtree for that we have : 
-            // scaleFactor which is the number of pixels a unit (1) of the window coordinates represent in the window
-            // example : if scaleFactor == 1 then 1 pixel of the window == one pixel of the quadtree
-            // winX and winY which are the coordinates of the window
-            // windowSize which is the length of the window
-            // qt->getWidth() which is the length of the quadtree
-            // we want to compute scaleFactorCompute such as scaleFactorCompute*qt->getWidth() == windowSize
-            double scaleFactorCompute = windowSize/qt->getWidth();
-            drawQuadTreeArea(qt, winX, winY, scaleFactorCompute, 1);
+            drawQuadTreeArea(qt, 1);
         }
         // Usleep for 60 fps
         usleep(1000000/60);

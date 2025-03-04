@@ -41,7 +41,7 @@ private:
     double scaleFactor;
     bool fullRender;
 
-    int drawQuadTreeArea(QuadTree* qt, double winX = 0, double winY = 0, double scaleFactor = 1, int root = 0);
+    int drawQuadTreeArea(QuadTree* qt, int root = 0);
     int drawQuadTree(QuadTree* qt, int root = 0);
     void displayDebugDataInWindow();
     void displayCallback();
