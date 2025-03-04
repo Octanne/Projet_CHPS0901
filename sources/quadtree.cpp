@@ -230,7 +230,7 @@ bool QuadTree::buildTree() {
     }
 
     // We give a little margin to the window size to 2 times the maximum distance
-    width *= 2.0;
+    width *= 1.5;
 
     // We set the origin of the new window
     originX = width / 2;

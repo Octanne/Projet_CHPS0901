@@ -36,7 +36,13 @@ private:
     std::thread* windowThread;
     GLFWwindow* window;
 
-    int drawQuadTree(QuadTree* qt, double simulationSize, int root = 0);
+    int winX;
+    int winY;
+    double scaleFactor;
+    bool fullRender;
+
+    int drawQuadTreeArea(QuadTree* qt, double winX = 0, double winY = 0, double scaleFactor = 1, int root = 0);
+    int drawQuadTree(QuadTree* qt, int root = 0);
     void displayDebugDataInWindow();
     void displayCallback();
 

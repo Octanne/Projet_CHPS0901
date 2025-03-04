@@ -17,16 +17,80 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->renderBoundaries = false;
     this->windowThread = nullptr;
     this->window = nullptr;
+
+    this->winX = 0;
+    this->winY = 0;
+    this->scaleFactor = 1;
+    this->fullRender = true;
 }
 
-// Recursively draw the QuadTree
-int Visualizer::drawQuadTree(QuadTree* qt, double simulationSize, int root) {
+int Visualizer::drawQuadTreeArea(QuadTree* qt, double winX, double winY, double scaleFactor, int root) {
     if (qt == nullptr) {
         std::cout << "Quad is null" << std::endl;
         return 0;
     }
     int nbPart = 0;
-    double scaleFactor = windowSize/simulationSize;
+    double width = qt->getWidth()*scaleFactor*0.5;
+    double winTopX = winX+windowSize;
+    double winTopY = winY+windowSize;
+
+    // Print scale factor and width
+    if (root && debugMode) std::cout << "Scale factor: " << scaleFactor << " Width: " << width << std::endl;
+
+    // We compute the position of the quadtree
+    double posX = qt->getOriginX()*scaleFactor;
+    double posY = qt->getOriginY()*scaleFactor;
+    //std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
+    // We return the quadtree if no part of it is in the window
+    if (posX-width < winX || posY-width < winY || posX+width > winTopX || posY > winTopY) {
+        return 0;
+    }
+
+    // Draw boundaries
+    if (renderBoundaries) {
+        //printf("Drawing boundaries at (%f, %f, %f, %f)\n", posX-width, posY+width, posX+width, posY-width);
+        glBegin(GL_LINE_LOOP);
+        glColor3f(0.0, 0.0, 1.0);
+        glVertex2f(posX-width, posY+width);
+        glVertex2f(posX+width, posY+width);
+        glVertex2f(posX+width, posY-width);
+        glVertex2f(posX-width, posY-width);
+        glEnd();
+    }
+
+    // We draw the other quads
+    if (qt->isItDivided()) {
+        // Draw other Quads
+        nbPart += drawQuadTreeArea(qt->getSouthwest(), winX, winY, scaleFactor);
+        nbPart += drawQuadTreeArea(qt->getSoutheast(), winX, winY, scaleFactor);
+        nbPart += drawQuadTreeArea(qt->getNorthwest(), winX, winY, scaleFactor);
+        nbPart += drawQuadTreeArea(qt->getNortheast(), winX, winY, scaleFactor);
+    } else if (qt->hasParticle()) {
+        // Draw particle
+        //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
+        glPointSize(5.0);
+        glBegin(GL_POINTS);
+        glColor3f(1.0, 0.0, 0.0);
+        double posX = qt->getParticle()->getX()*scaleFactor;
+        double posY = qt->getParticle()->getY()*scaleFactor;
+        glVertex2f(posX, posY);
+        glEnd();
+        return nbPart+1;
+    }
+
+    if (root == 1 && debugMode) std::cout << "We printed " << nbPart << " particles" << std::endl;
+
+    return nbPart;
+}
+
+// Draw quadtree but in full scalled to the window size
+int Visualizer::drawQuadTree(QuadTree* qt, int root) {
+    if (qt == nullptr) {
+        std::cout << "Quad is null" << std::endl;
+        return 0;
+    }
+    int nbPart = 0;
+    double scaleFactor = windowSize/this->qt->getWidth();
     double width = qt->getWidth()*scaleFactor*0.5;
 
     // Print scale factor and width
@@ -49,10 +113,10 @@ int Visualizer::drawQuadTree(QuadTree* qt, double simulationSize, int root) {
 
     if (qt->isItDivided()) {
         // Draw other Quads
-        nbPart += drawQuadTree(qt->getSouthwest(), simulationSize);
-        nbPart += drawQuadTree(qt->getSoutheast(), simulationSize);
-        nbPart += drawQuadTree(qt->getNorthwest(), simulationSize);
-        nbPart += drawQuadTree(qt->getNortheast(), simulationSize);
+        nbPart += drawQuadTree(qt->getSouthwest());
+        nbPart += drawQuadTree(qt->getSoutheast());
+        nbPart += drawQuadTree(qt->getNorthwest());
+        nbPart += drawQuadTree(qt->getNortheast());
     } else if (qt->hasParticle()) {
         // Draw particle
         //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
@@ -93,7 +157,18 @@ void Visualizer::displayDebugDataInWindow() {
 // Display callback function
 void Visualizer::displayCallback() {
     if (qt != nullptr) {
-        drawQuadTree(qt, qt->getWidth(), 1);
+        if (fullRender) drawQuadTree(qt, 1);
+        else {
+            // We compute scaleFactorCompute which is the scale factor to apply to the quadtree for that we have : 
+            // scaleFactor which is the number of pixels a unit (1) of the window coordinates represent in the window
+            // example : if scaleFactor == 1 then 1 pixel of the window == one pixel of the quadtree
+            // winX and winY which are the coordinates of the window
+            // windowSize which is the length of the window
+            // qt->getWidth() which is the length of the quadtree
+            // we want to compute scaleFactorCompute such as scaleFactorCompute*qt->getWidth() == windowSize
+            double scaleFactorCompute = windowSize/qt->getWidth();
+            drawQuadTreeArea(qt, winX, winY, scaleFactorCompute, 1);
+        }
         // Usleep for 60 fps
         usleep(1000000/60);
         //if (debugMode) displayDebugDataInWindow();
@@ -108,7 +183,7 @@ void Visualizer::framebuffer_size_callback(GLFWwindow* window, int width, int he
     instance->windowSize = width;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(-1, instance->windowSize, -1, instance->windowSize+1, -1, 1);
+    glOrtho(-instance->windowSize, instance->windowSize, -instance->windowSize, instance->windowSize, -1, 1);
     // I want to lock aspect ratio
     glfwSetWindowAspectRatio(window, 1, 1);
     glMatrixMode(GL_MODELVIEW);
@@ -136,15 +211,74 @@ void Visualizer::keyboardCallback(GLFWwindow* window, int key, int scancode, int
         instance->shouldPause = !instance->shouldPause;
         std::cout << "Simulation " << (instance->shouldPause ? "paused" : "resumed") << std::endl;
     }
+    // Switch debug mode
+    else if (key == GLFW_KEY_F1 && action == GLFW_RELEASE) {
+        instance->debugMode = !instance->debugMode;
+        std::cout << "Debug mode: " << (instance->debugMode ? "ON" : "OFF") << std::endl;
+    }        
     // Switch render boundaries
     else if (key == GLFW_KEY_F2 && action == GLFW_RELEASE) {
         instance->renderBoundaries = !instance->renderBoundaries;
         std::cout << "Render boundaries: " << (instance->renderBoundaries ? "ON" : "OFF") << std::endl;
     }
-    // Switch debug mode
+    // Print the options status
     else if (key == GLFW_KEY_F3 && action == GLFW_RELEASE) {
-        instance->debugMode = !instance->debugMode;
         std::cout << "Debug mode: " << (instance->debugMode ? "ON" : "OFF") << std::endl;
+        std::cout << "Render boundaries: " << (instance->renderBoundaries ? "ON" : "OFF") << std::endl;
+        std::cout << "Render mode: " << (instance->fullRender ? "FULL" : "PARTIAL") << std::endl;
+        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
+        std::cout << "Window size: " << instance->windowSize << std::endl;
+        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
+        std::cout << "Pause: " << (instance->shouldPause ? "ON" : "OFF") << std::endl;
+        std::cout << "Close: " << (instance->shouldClose ? "ON" : "OFF") << std::endl;
+    }
+    // Switch between full render and partial render
+    else if (key == GLFW_KEY_F4 && action == GLFW_RELEASE) {
+        instance->fullRender = !instance->fullRender;
+        std::cout << "Render mode: " << (instance->fullRender ? "FULL" : "PARTIAL") << std::endl;
+    }
+
+    // Increase the factor of the window
+    else if (key == GLFW_KEY_KP_ADD && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+        instance->scaleFactor *= 1.1;
+        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
+    }
+    // Decrease the factor of the window
+    else if (key == GLFW_KEY_KP_SUBTRACT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+        instance->scaleFactor /= 1.1;
+        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
+    }
+    // Reset the factor of the window
+    else if (key == GLFW_KEY_KP_MULTIPLY && action == GLFW_RELEASE) {
+        instance->scaleFactor = 1;
+        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
+    }
+
+    // Move the window to the left
+    else if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+        instance->winX -= 10;
+        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
+    }
+    // Move the window to the right
+    else if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+        instance->winX += 10;
+        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
+    }
+    // Move the window to the top
+    else if (key == GLFW_KEY_UP && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+        instance->winY += 10;
+        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
+    }
+    // Move the window to the bottom
+    else if (key == GLFW_KEY_DOWN && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+        instance->winY -= 10;
+        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
+    }
+    // Reset the window position
+    else if (key == GLFW_KEY_END && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+        instance->winX = 0;
+        instance->winY = 0;
+        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
 }
 
@@ -180,7 +314,7 @@ int Visualizer::createWindow() {
 
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        glOrtho(-1, windowSize, -1, windowSize+1, -1, 1);
+        glOrtho(-windowSize, windowSize, -windowSize, windowSize, -1, 1);
         // I want to lock aspect ratio
         glfwSetWindowAspectRatio(window, 1, 1);
         glMatrixMode(GL_MODELVIEW);

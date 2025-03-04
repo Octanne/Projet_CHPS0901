@@ -84,6 +84,7 @@
         "forward_list": "cpp",
         "unordered_set": "cpp",
         "future": "cpp",
-        "text_encoding": "cpp"
+        "text_encoding": "cpp",
+        "hash_set": "cpp"
     }
 }
