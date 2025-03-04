@@ -6,9 +6,9 @@
 #include <vector>
 #include <string>
 
-GLuint fontTexture;
-std::vector<std::pair<float, float>> charUVs(256);  // Stores UVs for characters
-std::vector<std::pair<float, float>> charSizes(256);  // Stores sizes for characters
+//GLuint fontTexture;
+//std::vector<std::pair<float, float>> charUVs(256);  // Stores UVs for characters
+//std::vector<std::pair<float, float>> charSizes(256);  // Stores sizes for characters
 
 void loadFont(const char* folder);
 GLuint loadTexture(const char* filepath);

@@ -6,6 +6,8 @@
 #include <fstream>
 #include <vector>
 
+#include "drawFont.h"
+
 // Set debug mode to false
 bool Visualizer::debugMode = false;
 
@@ -145,34 +147,32 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
 }
 
 void Visualizer::displayDebugDataInWindow() {
-    /*glColor3f(1.0, 1.0, 1.0);
+    glColor3f(1.0, 1.0, 1.0);
     glRasterPos2f(10, windowSize - 20);
     std::string text = "shouldClose: " + std::to_string(shouldClose);
-    drawText(text, 10, windowSize - 20, 1.0);
+    drawText(text, 10, windowSize - 20, 2.0);
     glRasterPos2f(10, windowSize - 40);
     text = "shouldPause: " + std::to_string(shouldPause);
-    drawText(text, 10, windowSize - 40, 1.0);
+    drawText(text, 10, windowSize - 40, 2.0);
     glRasterPos2f(10, windowSize - 60);
     text = "renderBoundaries: " + std::to_string(renderBoundaries);
-    drawText(text, 10, windowSize - 60, 1.0);
+    drawText(text, 10, windowSize - 60, 2.0);
     glRasterPos2f(10, windowSize - 80);
     text = "debugMode: " + std::to_string(debugMode);
-    drawText(text, 10, windowSize - 80, 1.0);
+    drawText(text, 10, windowSize - 80, 2.0);
     glRasterPos2f(10, windowSize - 100);
     text = "windowSize: " + std::to_string(windowSize);
-    drawText(text, 10, windowSize - 100, 1.0);*/
+    drawText(text, 10, windowSize - 100, 2.0);
 }
 
 // Display callback function
 void Visualizer::displayCallback() {
     if (qt != nullptr) {
         if (fullRender) drawQuadTree(qt, 1);
-        else {
-            drawQuadTreeArea(qt, 1);
-        }
+        else drawQuadTreeArea(qt, 1);
         // Usleep for 60 fps
         usleep(1000000/60);
-        //if (debugMode) displayDebugDataInWindow();
+        if (debugMode) displayDebugDataInWindow();
     }
 }
 
@@ -255,13 +255,13 @@ void Visualizer::keyboardCallback(GLFWwindow* window, int key, int scancode, int
         std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
     }
 
-    // Move the window to the left
-    else if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+    // Move the window to the right
+    else if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
         instance->winX -= 10;
         std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
-    // Move the window to the right
-    else if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+    // Move the window to the left
+    else if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
         instance->winX += 10;
         std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
@@ -310,7 +310,7 @@ int Visualizer::createWindow() {
         }
 
         // Load font texture
-        //loadFont("fonts");
+        loadFont("fonts");
         glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
         glMatrixMode(GL_PROJECTION);

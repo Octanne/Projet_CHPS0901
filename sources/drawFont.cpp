@@ -5,6 +5,12 @@
 #include <iostream>
 #include <fstream>
 
+// We set fontTexture to 0
+GLuint fontTexture = 0;
+// We set charUVs and charSizes to 256
+std::vector<std::pair<float, float>> charUVs(256);
+std::vector<std::pair<float, float>> charSizes(256);
+
 GLuint loadTexture(const char* filepath) {
     int width, height, channels;
     unsigned char* data = stbi_load(filepath, &width, &height, &channels, 4);
