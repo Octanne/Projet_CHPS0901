@@ -24,6 +24,7 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->winY = 0;
     this->scaleFactor = 1;
     this->fullRender = true;
+    this->windowDebugMode = false;
 }
 
 int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {

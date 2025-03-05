@@ -51,6 +51,7 @@ private:
     static void keyboardCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
     static Visualizer* instance;
     static bool debugMode;
+    static bool windowDebugMode;
 };
 
 #endif // VISUALIZER_H
