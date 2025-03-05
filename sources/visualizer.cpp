@@ -5,6 +5,8 @@
 #include <csignal>
 #include <fstream>
 #include <vector>
+#include <sstream>
+#include <iomanip>
 
 #include "drawFont.h"
 
@@ -150,22 +152,33 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
 void Visualizer::displayDebugDataInWindow() {
     // color
     glColor3f(1.0, 1.0, 1.0);
+    float size = 0.5;
+    // We print the alphabet for test
+    //std::string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    //drawText(alphabet, -windowSize + 10, windowSize - 35, 0.5);
+    std::stringstream stream;
     std::string text = "Debug mode : " + std::string(instance->debugMode ? "ON" : "OFF");
-    drawText(text, -windowSize + 10, windowSize - 35, 2.5);
+    drawText(text, -windowSize + 10, windowSize - 35, size);
     text = "Render boundaries : " + std::string(instance->renderBoundaries ? "ON" : "OFF");
-    drawText(text, -windowSize + 10, windowSize - 70, 2.5);
+    drawText(text, -windowSize + 10, windowSize - 70, size);
     text =  "Render mode : " + std::string(instance->fullRender ? "FULL" : "PARTIAL");
-    drawText(text, -windowSize + 10, windowSize - 105, 2.5);
+    drawText(text, -windowSize + 10, windowSize - 105, size);
     text =  "Window coordinates : (" + std::to_string(instance->winX) + ", " + std::to_string(instance->winY) + ")";
-    drawText(text, -windowSize + 10, windowSize - 140, 2.5);
-    text =  "Window size : " + std::to_string(instance->windowSize);
-    drawText(text, -windowSize + 10, windowSize - 175, 2.5);
-    text =  "Scale factor : " + std::to_string(instance->scaleFactor);
-    drawText(text, -windowSize + 10, windowSize - 210, 2.5);
+    drawText(text, -windowSize + 10, windowSize - 140, size);
+    // We print the windowSize with only 2 decimals and use , as decimal separator
+    stream.str("");
+    stream << std::fixed << std::setprecision(2) << std::setfill('0') << std::setw(2) << std::right << std::setfill('0') << std::setw(2) << std::right << windowSize;
+    text = "Window size : " + stream.str();
+    drawText(text, -windowSize + 10, windowSize - 175, size);
+    // We print the scaleFactor with only 2 decimals and use a comma as decimal separator
+    stream.str("");
+    stream << std::fixed << std::setprecision(2) << std::setfill('0') << std::setw(2) << std::right << std::setfill('0') << std::setw(2) << std::right << instance->scaleFactor;
+    text = "Scale factor : " + stream.str();
+    drawText(text, -windowSize + 10, windowSize - 210, size);
     text =  "Simulation : " + std::string(instance->shouldPause ? "PAUSE" : "RESUME");
-    drawText(text, -windowSize + 10, windowSize - 245, 2.5);
+    drawText(text, -windowSize + 10, windowSize - 245, size);
     text =  "Close : " + std::string(instance->shouldClose ? "YES" : "NO");
-    drawText(text, -windowSize + 10, windowSize - 280, 2.5);
+    drawText(text, -windowSize + 10, windowSize - 280, size);
 }
 
 // Display callback function
