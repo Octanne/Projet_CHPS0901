@@ -10,6 +10,7 @@
 
 // Set debug mode to false
 bool Visualizer::debugMode = false;
+bool Visualizer::windowDebugMode = false;
 
 Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->qt = qt;
@@ -24,7 +25,6 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->winY = 0;
     this->scaleFactor = 1;
     this->fullRender = true;
-    this->windowDebugMode = false;
 }
 
 int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
@@ -73,25 +73,25 @@ int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
         nbPart += drawQuadTreeArea(qt->getNortheast());
     } else if (qt->hasParticle()) {
         // Draw particle
-        double posX = qt->getParticle()->getX()*scaleFactorLocal;
-        double posY = qt->getParticle()->getY()*scaleFactorLocal;
+        double posXP = qt->getParticle()->getX()*scaleFactorLocal;
+        double posYP = qt->getParticle()->getY()*scaleFactorLocal;
         // We have to substract the window position
-        posX += winX;
-        posY += winY;
+        posXP += winX;
+        posYP += winY;
         // If point is in the window we draw it in green
-        if (posX >= -windowSize && posY >= -windowSize && posX <= windowSize && posY <= windowSize) {
-            //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
-            glPointSize(5.0);
-            glBegin(GL_POINTS);
+        if (posXP >= -windowSize && posYP >= -windowSize && posXP <= windowSize && posYP <= windowSize) {
+            //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());       
+            glPointSize(3.0);
+            glBegin(GL_POINTS);     
             glColor3f(0.0, 1.0, 0.0);
-            glVertex2f(posX, posY);
+            glVertex2f(posXP, posYP);
+            glEnd();
             glEnd();
             return nbPart+1;
         }
     }
 
     if (root == 1 && debugMode) std::cout << "We printed " << nbPart << " particles" << std::endl;
-
     return nbPart;
 }
 
@@ -114,8 +114,8 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
         double posY = qt->getOriginY()*scaleFactorLocal;
         //std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
         //printf("Drawing boundaries at (%f, %f, %f, %f)\n", posX-width, posY+width, posX+width, posY-width);
-        glBegin(GL_LINE_LOOP);
         glColor3f(0.0, 0.0, 1.0);
+        glBegin(GL_LINE_LOOP);
         glVertex2f(posX-width, posY+width);
         glVertex2f(posX+width, posY+width);
         glVertex2f(posX+width, posY-width);
@@ -131,10 +131,10 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
         nbPart += drawQuadTree(qt->getNortheast());
     } else if (qt->hasParticle()) {
         // Draw particle
-        //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());
-        glPointSize(5.0);
-        glBegin(GL_POINTS);
+        //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());         
+        glPointSize(3.0);
         glColor3f(1.0, 0.0, 0.0);
+        glBegin(GL_POINTS);
         double posX = qt->getParticle()->getX()*scaleFactorLocal;
         double posY = qt->getParticle()->getY()*scaleFactorLocal;
         glVertex2f(posX, posY);
@@ -148,22 +148,24 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
 }
 
 void Visualizer::displayDebugDataInWindow() {
+    // color
     glColor3f(1.0, 1.0, 1.0);
-    glRasterPos2f(10, windowSize - 20);
-    std::string text = "shouldClose: " + std::to_string(shouldClose);
-    drawText(text, 10, windowSize - 20, 2.0);
-    glRasterPos2f(10, windowSize - 40);
-    text = "shouldPause: " + std::to_string(shouldPause);
-    drawText(text, 10, windowSize - 40, 2.0);
-    glRasterPos2f(10, windowSize - 60);
-    text = "renderBoundaries: " + std::to_string(renderBoundaries);
-    drawText(text, 10, windowSize - 60, 2.0);
-    glRasterPos2f(10, windowSize - 80);
-    text = "debugMode: " + std::to_string(debugMode);
-    drawText(text, 10, windowSize - 80, 2.0);
-    glRasterPos2f(10, windowSize - 100);
-    text = "windowSize: " + std::to_string(windowSize);
-    drawText(text, 10, windowSize - 100, 2.0);
+    std::string text = "Debug mode : " + std::string(instance->debugMode ? "ON" : "OFF");
+    drawText(text, -windowSize + 10, windowSize - 35, 2.5);
+    text = "Render boundaries : " + std::string(instance->renderBoundaries ? "ON" : "OFF");
+    drawText(text, -windowSize + 10, windowSize - 70, 2.5);
+    text =  "Render mode : " + std::string(instance->fullRender ? "FULL" : "PARTIAL");
+    drawText(text, -windowSize + 10, windowSize - 105, 2.5);
+    text =  "Window coordinates : (" + std::to_string(instance->winX) + ", " + std::to_string(instance->winY) + ")";
+    drawText(text, -windowSize + 10, windowSize - 140, 2.5);
+    text =  "Window size : " + std::to_string(instance->windowSize);
+    drawText(text, -windowSize + 10, windowSize - 175, 2.5);
+    text =  "Scale factor : " + std::to_string(instance->scaleFactor);
+    drawText(text, -windowSize + 10, windowSize - 210, 2.5);
+    text =  "Simulation : " + std::string(instance->shouldPause ? "PAUSE" : "RESUME");
+    drawText(text, -windowSize + 10, windowSize - 245, 2.5);
+    text =  "Close : " + std::string(instance->shouldClose ? "YES" : "NO");
+    drawText(text, -windowSize + 10, windowSize - 280, 2.5);
 }
 
 // Display callback function
@@ -171,9 +173,10 @@ void Visualizer::displayCallback() {
     if (qt != nullptr) {
         if (fullRender) drawQuadTree(qt, 1);
         else drawQuadTreeArea(qt, 1);
+        if (windowDebugMode) displayDebugDataInWindow();
+        glEnd();
         // Usleep for 60 fps
         usleep(1000000/60);
-        if (debugMode) displayDebugDataInWindow();
     }
 }
 
@@ -225,14 +228,9 @@ void Visualizer::keyboardCallback(GLFWwindow* window, int key, int scancode, int
     }
     // Print the options status
     else if (key == GLFW_KEY_F3 && action == GLFW_RELEASE) {
-        std::cout << "Debug mode: " << (instance->debugMode ? "ON" : "OFF") << std::endl;
-        std::cout << "Render boundaries: " << (instance->renderBoundaries ? "ON" : "OFF") << std::endl;
-        std::cout << "Render mode: " << (instance->fullRender ? "FULL" : "PARTIAL") << std::endl;
-        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
-        std::cout << "Window size: " << instance->windowSize << std::endl;
-        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
-        std::cout << "Pause: " << (instance->shouldPause ? "ON" : "OFF") << std::endl;
-        std::cout << "Close: " << (instance->shouldClose ? "ON" : "OFF") << std::endl;
+        // We switch window debug mode
+        instance->windowDebugMode = !instance->windowDebugMode;
+        std::cout << "Window debug mode: " << (instance->windowDebugMode ? "ON" : "OFF") << std::endl;
     }
     // Switch between full render and partial render
     else if (key == GLFW_KEY_F4 && action == GLFW_RELEASE) {

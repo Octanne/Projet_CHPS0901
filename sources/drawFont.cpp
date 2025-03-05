@@ -9,6 +9,7 @@
 GLuint fontTexture = 0;
 // We set charUVs and charSizes to 256
 std::vector<std::pair<float, float>> charUVs(256);
+std::vector<std::pair<float, float>> charUVs2(256);
 std::vector<std::pair<float, float>> charSizes(256);
 
 GLuint loadTexture(const char* filepath) {
@@ -18,6 +19,8 @@ GLuint loadTexture(const char* filepath) {
         std::cerr << "Failed to load texture: " << filepath << std::endl;
         return 0;
     }
+
+    std::cout << "Loaded texture: " << filepath << " with width: " << width << " and height: " << height << std::endl;
 
     GLuint textureID;
     glGenTextures(1, &textureID);
@@ -59,14 +62,22 @@ void loadFont(const char* folder) {
             float v1 = y / textureHeight;
             float u2 = (x + width) / textureWidth;
             float v2 = (y + height) / textureHeight;
+            float w = width;
+            float h = height;
 
             // Store the UVs for the character
             charUVs[id] = std::make_pair(u1, v1);
-            charSizes[id] = std::make_pair(u2 - u1, v2 - v1);  // store the width and height as UV deltas
+            charUVs2[id] = std::make_pair(u2, v2);
+            charSizes[id] = std::make_pair(w, h);
+            //std::cout << "Character " << id << " which is the character " << (char)id << std::endl;
         }
     }
 
+    // We reduce the size of the space character
+    charSizes[' '].first = 6;
+
     file.close();
+    std::cout << "Font loaded successfully" << std::endl;
 }
 
 void drawText(const std::string& text, float x, float y, float scale) {
@@ -74,26 +85,31 @@ void drawText(const std::string& text, float x, float y, float scale) {
     glBindTexture(GL_TEXTURE_2D, fontTexture);
     glPushMatrix();
     glTranslatef(x, y, 0);
-    glScalef(scale, scale, 1.0f);
+    glScalef(scale, scale, 1);
 
     glBegin(GL_QUADS);
-    for (size_t i = 0; i < text.length(); ++i) {
-        char c = text[i];
-        float u = charUVs[c].first;
-        float v = charUVs[c].second;
+    // We print the text
+    double xW = 0; double yW = 0;
+    for (char c : text) {
+        float u1 = charUVs[c].first;
+        float v1 = charUVs[c].second;
+        float u2 = charUVs2[c].first;
+        float v2 = charUVs2[c].second;
         float w = charSizes[c].first;
         float h = charSizes[c].second;
 
-        glTexCoord2f(u, v);
-        glVertex2f(0, 0);
-        glTexCoord2f(u + w, v);
-        glVertex2f(w, 0);
-        glTexCoord2f(u + w, v + h);
-        glVertex2f(w, h);
-        glTexCoord2f(u, v + h);
-        glVertex2f(0, h);
+        // We print the quad of the dimensions of the character with the correct UVs
+        glTexCoord2f(u1, v2);
+        glVertex2f(xW, yW);
+        glTexCoord2f(u2, v2);
+        glVertex2f(xW + w, yW);
+        glTexCoord2f(u2, v1);
+        glVertex2f(xW + w, yW + h);
+        glTexCoord2f(u1, v1);
+        glVertex2f(xW, yW + h);
 
-        glTranslatef(w, 0, 0); // Move to the next character position
+        xW += w;
+        //std::cout << "Character " << c << " is id " << (int)c << std::endl;
     }
     glEnd();
 

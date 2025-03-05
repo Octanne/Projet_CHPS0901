@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 
-//GLuint fontTexture;
+extern GLuint fontTexture;
 //std::vector<std::pair<float, float>> charUVs(256);  // Stores UVs for characters
 //std::vector<std::pair<float, float>> charSizes(256);  // Stores sizes for characters
 
