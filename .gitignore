@@ -1,0 +1,6 @@
+# Remove bin directory
+bin/
+# Remove obj directory
+obj/
+# Remove results directory
+results/

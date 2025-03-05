@@ -96,8 +96,12 @@ std::vector<Particle*> Particle::loadParticles(std::string& filename) {
 }
 
 void Particle::saveParticles(std::string& filename, std::vector<Particle*>& particles) {
-    std::ofstream
-        file(filename);
+    // Create the folder if it does not exist
+    std::string folder = filename.substr(0, filename.find_last_of("/\\"));
+    if (!folder.empty()) {
+        system(("mkdir -p " + folder).c_str());
+    }
+    std::ofstream file(filename);
     if (file.is_open()) {
         for (Particle* particle : particles) {
             file << particle->getX() << " " << particle->getY() << " " << particle->getVx() << " " << particle->getVy() << " " << particle->getMass() << std::endl;
