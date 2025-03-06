@@ -18,6 +18,8 @@ private: // TODO utiliser un pointeur pour la particule.
     double originX;
     double originY;
 
+    int weightBranch;
+
     QuadTree* northeast;
     QuadTree* northwest;
     QuadTree* southeast;
@@ -30,7 +32,7 @@ private: // TODO utiliser un pointeur pour la particule.
     void updateCenterOfMass(Particle* particleInsert);
 public:
     QuadTree(double width, double originX, double originY, std::vector<Particle*>* particles);
-    QuadTree(double width, double originX, double originY);
+    QuadTree(double width, double originX, double originY, int weightBranch);
     ~QuadTree();
 
     void calculateForce(Particle* b, double& fx, double& fy) const;
@@ -39,6 +41,7 @@ public:
     bool isItDivided();
     bool hasParticle();
 
+    const int& getWeightBranch() const;
     const double& getOriginX() const;
     const double& getOriginY() const;
     const double& getWidth() const;

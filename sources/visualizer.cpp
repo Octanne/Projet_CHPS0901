@@ -26,7 +26,7 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->winX = 0;
     this->winY = 0;
     this->scaleFactor = 1;
-    this->fullRender = true;
+    this->fullRender = false;
 }
 
 int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
@@ -84,7 +84,7 @@ int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
         if (posXP >= -windowSize && posYP >= -windowSize && posXP <= windowSize && posYP <= windowSize) {
             //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());       
             glPointSize(3.0);
-            glBegin(GL_POINTS);     
+            glBegin(GL_POINTS);
             glColor3f(0.0, 1.0, 0.0);
             glVertex2f(posXP, posYP);
             glEnd();
