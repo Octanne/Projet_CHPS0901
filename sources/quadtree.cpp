@@ -209,6 +209,50 @@ void QuadTree::updateParticles(double step) {
     }
 }
 
+QuadTree::~QuadTree() {
+    clear();
+}
+
+void QuadTree::clear() {
+    if (isDivided) {
+        //std::cerr << "Deleting quadtree" << std::endl;
+        //std::cerr << "Deleting the quadtree at (" << originX << ", " << originY << ")" << std::endl;
+        // We delete the particle if divided because it as been created by the quadtree
+        if (particle != nullptr) {
+            delete particle;
+            //std::cerr << "Delete center of mass at (" << originX << ", " << originY << ") done" << std::endl;
+        }/* else {
+            std::cerr << "No center of mass to delete at (" << originX << ", " << originY << ")" << std::endl;
+            exit(1);
+        }*/
+
+        // We delete the children
+        delete northeast;
+        delete northwest;
+        delete southeast;
+        delete southwest;
+        //std::cerr << "Deleted the quadtree at (" << originX << ", " << originY << ") done" << std::endl;
+    }/* else {
+        std::cerr << "Deleting empty quadtree" << std::endl;
+    }*/
+
+    particle = nullptr;
+
+    isDivided = false;
+    hasBody = false;
+    weightBranch = 0;
+    width = 0;
+    originX = 0;
+    originY = 0;
+
+    // We set the children to nullptr
+    northeast = nullptr;
+    northwest = nullptr;
+    southeast = nullptr;
+    southwest = nullptr;
+    // particles = nullptr; // We do not delete the particles listes
+}
+
 bool QuadTree::buildTree() {
     // We build the tree
     if (particles == nullptr) {
@@ -220,6 +264,8 @@ bool QuadTree::buildTree() {
         if (debugMode()) std::cout << "Clearing the quadtree" << std::endl;
         clear();
     }
+
+    if (debugMode()) std::cout << "Compute the quadtree base width" << std::endl;
 
     // We need to calculate the width of the newWindow of simulation
     // For that we need to calculate the maximum distance from the origin
@@ -273,43 +319,6 @@ const double& QuadTree::getOriginY() const {
 
 std::vector<Particle*>* QuadTree::getParticlesList() const {
     return particles;
-}
-
-QuadTree::~QuadTree() {
-    clear();
-}
-
-void QuadTree::clear() {
-    if (isDivided) {
-        // We delete the particle if divided because it as been created by the quadtree
-        if (particle == nullptr) std::cerr << "Should not be null" << std::endl;
-        delete particle;
-
-        // We delete the children
-        delete northeast;
-        delete northwest;
-        delete southeast;
-        delete southwest;
-        std::cerr << "Deleting the quadtree at (" << originX << ", " << originY << ")" << std::endl;
-    } else {
-        std::cerr << "Deleting the particle at (" << particle->getX() << ", " << particle->getY() << ")" << std::endl;
-    }
-
-    particle = nullptr;
-
-    isDivided = false;
-    hasBody = false;
-    weightBranch = 0;
-    width = 0;
-    originX = 0;
-    originY = 0;
-
-    // We set the children to nullptr
-    northeast = nullptr;
-    northwest = nullptr;
-    southeast = nullptr;
-    southwest = nullptr;
-    // particles = nullptr; // We do not delete the particles listes
 }
 
 QuadTree* QuadTree::getNortheast() const {

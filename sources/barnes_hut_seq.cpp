@@ -217,9 +217,9 @@ int main(int argc, char** argv) {
             if (qtVisu->isInDebug()) std::cout << "Particles updated" << std::endl;
             // We update the tree
             if (qtVisu->isInDebug()) std::cout << "Updating quadtree" << std::endl;
-            qtVisu->semLock();
+            //qtVisu->semLock();
             qt.buildTree();
-            qtVisu->semUnlock();
+            //qtVisu->semUnlock();
             if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
             step++;
         }

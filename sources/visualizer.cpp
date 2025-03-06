@@ -34,7 +34,7 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
 
 int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
     if (qt == nullptr) {
-        std::cout << "Quad is null" << std::endl;
+        //std::cout << "Quad is null" << std::endl;
         return 0;
     }
     int nbPart = 0;
@@ -186,7 +186,7 @@ void Visualizer::displayDebugDataInWindow() {
 
 // Display callback function
 void Visualizer::displayCallback() {
-    if (qt != nullptr) {
+    if (qt != nullptr /*&& semCheck()*/) {
         glClear(GL_COLOR_BUFFER_BIT);
         if (fullRender) drawQuadTree(qt, 1);
         else drawQuadTreeArea(qt, 1);
@@ -194,10 +194,6 @@ void Visualizer::displayCallback() {
         //glEnd();
         // Usleep for 60 fps
         usleep(1000000/60);
-        // wait that sem is unlocked
-        while (!semCheck()) {
-            usleep(1000000/60);
-        }
     }
 }
 
@@ -406,6 +402,7 @@ bool Visualizer::semLock() {
         return false;
     } else {
         waitSem = true;
+        accountedSem = false;
         if (debugMode) std::cout << "Semaphore awaiting accountabilty" << std::endl;
         // We wait for the semaphore to be accounted
         while (!accountedSem) {
@@ -432,6 +429,8 @@ bool Visualizer::semUnlock() {
         waitSem = false;
         accountedSem = false;
         if (debugMode) std::cout << "Semaphore unlocked" << std::endl;
+        // We sleep for 1ms to let the other thread to lock the semaphore
+        usleep(1000);
         return true;
     }
     if (debugMode) std::cout << "Semaphore already unlocked" << std::endl;
