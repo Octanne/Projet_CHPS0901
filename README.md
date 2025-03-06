@@ -77,7 +77,7 @@ Merci aux développeurs de ces bibliothèques pour leur travail précieux.
 Ce projet est distribué sous la licence MIT.
 
 ## Auteurs
-- Corentin - Développeur GUI, Simulation et OpenMPI
+- Corentin Levalet - Développeur GUI, Simulation et OpenMPI
 - Théo Ponsin - Développeur Simulation et OpenMPI
 
 Pour toute question ou suggestion, n'hésitez pas à nous contacter.
