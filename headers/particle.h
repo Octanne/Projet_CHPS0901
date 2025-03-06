@@ -23,8 +23,8 @@ public:
     double getVx() const;
     double getVy() const;
 
-    //static constexpr double G = 6.6743e-11; // Gravitational constant
-    static constexpr double G = 6.6743e-31;  // Gravitational constant
+    static constexpr double G = 6.6743e-11; // Gravitational constant
+    //static constexpr double G = 6.6743e-31;  // Gravitational constant
     
     /**
      * Generates a vector of Particle pointers with random positions and masses.
