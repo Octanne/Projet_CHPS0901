@@ -114,15 +114,15 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
     double width = qt->getWidth()*scaleFactorLocal*0.5;
 
     // Print scale factor and width
-    if (debugMode) std::cout << "Scale factor: " << scaleFactorLocal << " Width (scaled): " << width << "Width :" << qt->getWidth() << 
+    /*if (debugMode) std::cout << "Scale factor: " << scaleFactorLocal << " Width (scaled): " << width << "Width :" << qt->getWidth() << 
         "Factor from root :" << (qt->getWidth()/this->qt->getWidth()) <<
-        " Origin :" << qt->getOriginX() << "," << qt->getOriginY() << std::endl;
+        " Origin :" << qt->getOriginX() << "," << qt->getOriginY() << std::endl;*/
 
     // Draw boundaries
     if (renderBoundaries) {
         double posX = qt->getOriginX()*scaleFactorLocal;
         double posY = qt->getOriginY()*scaleFactorLocal;
-        if (debugMode) std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
+        //if (debugMode) std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
         //printf("Drawing boundaries at (%f, %f, %f, %f)\n", posX-width, posY+width, posX+width, posY-width);
         glColor3f(0.0, 0.0, 1.0);
         glBegin(GL_LINE_LOOP);
@@ -241,7 +241,6 @@ void Visualizer::signalSIGINTHandler(int signum) {
 }
 
 void Visualizer::keyboardCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-    //std::cout << "Key pressed: " << key << "with scancode " << scancode << " with action " << action << " with mods " << mods << std::endl;
     if (action == GLFW_REPEAT) {
         if (key == GLFW_KEY_LEFT) keyLeftPressed = true;
         if (key == GLFW_KEY_RIGHT) keyRightPressed = true;

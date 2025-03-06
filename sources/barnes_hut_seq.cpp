@@ -202,9 +202,9 @@ int main(int argc, char** argv) {
     }
 
     if (nbSteps != 0) {
-        std::cout << "Running simulation for " << nbSteps << " steps" << std::endl;
+        std::cout << "Running simulation for " << nbSteps << " steps with a time step of " << timeStep << "s" << std::endl;
     } else {
-        std::cout << "Running simulation indefinitely" << std::endl;
+        std::cout << "Running simulation indefinitely with a time step of " << timeStep << "s" << std::endl;
     }
 
     // We do the simulation
@@ -223,8 +223,8 @@ int main(int argc, char** argv) {
             if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
             step++;
         }
-        // Refresh every refreshRate
-        usleep(refreshRate * 1000000);
+        // Refresh every refreshRate if GUI is enabled
+        if (shouldGUI) usleep(refreshRate * 1000000);
         // We print the quadtree
         if (!shouldGUI && qtVisu->isInDebug()) qt.print();
     }

@@ -140,7 +140,7 @@ void calcForce(Particle* b, Particle* c, double& fx, double& fy) {
     double dx = b->getX() - c->getX();
     double dy = b->getY() - c->getY();
     double distance = std::sqrt((dx * dx) + (dy * dy));
-    double accel = (-1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
+    double accel = (1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
     double forceVecX = dx / distance;
     double forceVecY = dy / distance;
 
@@ -159,9 +159,9 @@ void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
     } else {
         // Otherwise, calculate the ratio s / d, where s is the width of the region represented by the internal node, and d is the distance between the body and the node's center-of-mass.
         double s = width;
-        double d = distance(particle->getX(), particle->getY(), b->getX(), b->getY());
+        double d = distance(b->getX(), b->getY(), particle->getX(), particle->getY());
         // If ratio > theta we perform recursively on each of the current node's children.
-        if (s / d > theta) { 
+        if (s / d < theta) { 
             // Treat the internal node as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
             // We call the function to calculate the force between the two particles and add it to the net force of the particle.
             calcForce(b, particle, fx, fy);
