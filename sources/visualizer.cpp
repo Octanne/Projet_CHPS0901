@@ -13,6 +13,13 @@
 // Set debug mode to false
 bool Visualizer::debugMode = false;
 bool Visualizer::windowDebugMode = false;
+// Set key pressed to false
+bool Visualizer::keyLeftPressed = false;
+bool Visualizer::keyRightPressed = false;
+bool Visualizer::keyUpPressed = false;
+bool Visualizer::keyDownPressed = false;
+bool Visualizer::keyMinusPressed = false;
+bool Visualizer::keyPlusPressed = false;
 
 Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->qt = qt;
@@ -26,7 +33,7 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->winX = 0;
     this->winY = 0;
     this->scaleFactor = 1;
-    this->fullRender = true;
+    this->fullRender = false;
 
     this->waitSem = false;
     this->accountedSem = false;
@@ -50,11 +57,9 @@ int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
     if (root && debugMode) std::cout << "Scale factor: " << scaleFactor << " Width: " << width << std::endl;
 
     // We compute the position of the quadtree
-    double posX = qt->getOriginX()*scaleFactorLocal;
-    double posY = qt->getOriginY()*scaleFactorLocal;
+    double posX = (qt->getOriginX()+winX)*scaleFactorLocal;
+    double posY = (qt->getOriginY()+winY)*scaleFactorLocal;
     // To draw at the correct pos in the window we have to substract the window position
-    posX += winX;
-    posY += winY;
 
     // Draw boundaries
     if (renderBoundaries && posX-width < windowSize && posX+width > -windowSize && posY+width > -windowSize && posY-width < windowSize) {
@@ -77,12 +82,10 @@ int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
         nbPart += drawQuadTreeArea(qt->getNorthwest());
         nbPart += drawQuadTreeArea(qt->getNortheast());
     } else if (qt->hasParticle()) {
-        // Draw particle
-        double posXP = qt->getParticle()->getX()*scaleFactorLocal;
-        double posYP = qt->getParticle()->getY()*scaleFactorLocal;
-        // We have to substract the window position
-        posXP += winX;
-        posYP += winY;
+        // Draw particle // We have to substract the window position
+        double posXP = (qt->getParticle()->getX()+winX)*scaleFactorLocal;
+        double posYP = (qt->getParticle()->getY()+winY)*scaleFactorLocal;
+        
         // If point is in the window we draw it in green
         if (posXP >= -windowSize && posYP >= -windowSize && posXP <= windowSize && posYP <= windowSize) {
             //printf("Drawing particle at (%f, %f, %f)\n", qt->getX(), qt->getY(), qt->getMass());       
@@ -157,33 +160,45 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
 void Visualizer::displayDebugDataInWindow() {
     // color
     glColor3f(1.0, 1.0, 1.0);
-    float size = 0.5;
+    float size = 0.25;
     // We print the alphabet for test
     //std::string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     //drawText(alphabet, -windowSize + 10, windowSize - 35, 0.5);
+    double topX = -windowSize/2 + 10;
+    double topY = windowSize/2;
     std::stringstream stream;
     std::string text = "Debug mode : " + std::string(instance->debugMode ? "ON" : "OFF");
-    drawText(text, -windowSize + 10, windowSize - 35, size);
+    drawText(text, topX, topY - 17.5, size);
     text = "Render boundaries : " + std::string(instance->renderBoundaries ? "ON" : "OFF");
-    drawText(text, -windowSize + 10, windowSize - 70, size);
+    drawText(text, topX, topY - 35, size);
     text =  "Render mode : " + std::string(instance->fullRender ? "FULL" : "PARTIAL");
-    drawText(text, -windowSize + 10, windowSize - 105, size);
+    drawText(text, topX, topY - 52.5, size);
     text =  "Window coordinates : (" + std::to_string(instance->winX) + ", " + std::to_string(instance->winY) + ")";
-    drawText(text, -windowSize + 10, windowSize - 140, size);
+    drawText(text, topX, topY - 70, size);
     // We print the windowSize with only 2 decimals and use , as decimal separator
     stream.str("");
     stream << std::fixed << std::setprecision(2) << std::setfill('0') << std::setw(2) << std::right << std::setfill('0') << std::setw(2) << std::right << windowSize;
     text = "Window size : " + stream.str();
-    drawText(text, -windowSize + 10, windowSize - 175, size);
+    drawText(text, topX, topY - 87.5, size);
     // We print the scaleFactor with only 2 decimals and use a comma as decimal separator
     stream.str("");
     stream << std::fixed << std::setprecision(2) << std::setfill('0') << std::setw(2) << std::right << std::setfill('0') << std::setw(2) << std::right << instance->scaleFactor;
     text = "Scale factor : " + stream.str();
-    drawText(text, -windowSize + 10, windowSize - 210, size);
+    drawText(text, topX, topY - 105, size);
     text =  "Simulation : " + std::string(instance->shouldPause ? "PAUSE" : "RESUME");
-    drawText(text, -windowSize + 10, windowSize - 245, size);
+    drawText(text, topX, topY - 122.5, size);
     text =  "Close : " + std::string(instance->shouldClose ? "YES" : "NO");
-    drawText(text, -windowSize + 10, windowSize - 280, size);
+    drawText(text, topX, topY - 140, size);
+
+    // We print a cross of 1 percent of the window size to mark the center
+    double crossSize = windowSize * 0.01;
+    glBegin(GL_LINES);
+    glColor3f(1.0, 0.0, 0.0);
+    glVertex2f(-crossSize, 0);
+    glVertex2f(crossSize, 0);
+    glVertex2f(0, -crossSize);
+    glVertex2f(0, crossSize);
+    glEnd();
 }
 
 // Display callback function
@@ -226,6 +241,30 @@ void Visualizer::signalSIGINTHandler(int signum) {
 }
 
 void Visualizer::keyboardCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+    //std::cout << "Key pressed: " << key << "with scancode " << scancode << " with action " << action << " with mods " << mods << std::endl;
+    if (action == GLFW_REPEAT) {
+        if (key == GLFW_KEY_LEFT) keyLeftPressed = true;
+        if (key == GLFW_KEY_RIGHT) keyRightPressed = true;
+        if (key == GLFW_KEY_UP) keyUpPressed = true;
+        if (key == GLFW_KEY_DOWN) keyDownPressed = true;
+        if (key == GLFW_KEY_KP_ADD) keyPlusPressed = true;
+        if (key == GLFW_KEY_KP_SUBTRACT) keyMinusPressed = true;
+    }
+    if (action == GLFW_PRESS) {
+        if (key == GLFW_KEY_LEFT) keyLeftPressed = true;
+        if (key == GLFW_KEY_RIGHT) keyRightPressed = true;
+        if (key == GLFW_KEY_UP) keyUpPressed = true;
+        if (key == GLFW_KEY_DOWN) keyDownPressed = true;
+        if (key == GLFW_KEY_KP_ADD) keyPlusPressed = true;
+        if (key == GLFW_KEY_KP_SUBTRACT) keyMinusPressed = true;
+    } else if (action == GLFW_RELEASE) {
+        if (key == GLFW_KEY_LEFT) keyLeftPressed = false;
+        if (key == GLFW_KEY_RIGHT) keyRightPressed = false;
+        if (key == GLFW_KEY_UP) keyUpPressed = false;
+        if (key == GLFW_KEY_DOWN) keyDownPressed = false;
+        if (key == GLFW_KEY_KP_ADD) keyPlusPressed = false;
+        if (key == GLFW_KEY_KP_SUBTRACT) keyMinusPressed = false;
+    }
     if (instance->debugMode) std::cout << "(" << &window << ") Key pressed: " << key << "with scancode " << scancode << " with action " << action << " with mods " << mods << std::endl;
     // Close window when Q is pressed
     if (key == GLFW_KEY_A && action == GLFW_RELEASE) {
@@ -256,48 +295,42 @@ void Visualizer::keyboardCallback(GLFWwindow* window, int key, int scancode, int
     else if (key == GLFW_KEY_F4 && action == GLFW_RELEASE) {
         instance->fullRender = !instance->fullRender;
         std::cout << "Render mode: " << (instance->fullRender ? "FULL" : "PARTIAL") << std::endl;
+    }    
+    // Reset the window position
+    else if (key == GLFW_KEY_END && action == GLFW_RELEASE) {
+        instance->winX = 0;
+        instance->winY = 0;
+        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
-
-    // Increase the factor of the window
-    else if (key == GLFW_KEY_KP_ADD && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
-        instance->scaleFactor *= 1.1;
-        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
-    }
-    // Decrease the factor of the window
-    else if (key == GLFW_KEY_KP_SUBTRACT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
-        instance->scaleFactor /= 1.1;
-        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
-    }
-    // Reset the factor of the window
-    else if (key == GLFW_KEY_KP_MULTIPLY && action == GLFW_RELEASE) {
+    // Reset the window factor
+    else if (key == GLFW_KEY_KP_DIVIDE && action == GLFW_RELEASE) {
         instance->scaleFactor = 1;
         std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
     }
-
-    // Move the window to the left
-    else if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+    // Increase / Decrease the factor
+    else if (keyPlusPressed) {
+        instance->scaleFactor += 0.05;
+        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
+    }
+    else if (keyMinusPressed) {
+        instance->scaleFactor -= 0.05;
+        std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
+    }
+    // Move the window center
+    else if (keyLeftPressed) {
         instance->winX -= 10;
         std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
-    // Move the window to the right
-    else if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+    else if (keyRightPressed) {
         instance->winX += 10;
         std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
-    // Move the window to the top
-    else if (key == GLFW_KEY_UP && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+    else if (keyUpPressed) {
         instance->winY += 10;
         std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
-    // Move the window to the bottom
-    else if (key == GLFW_KEY_DOWN && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+    else if (keyDownPressed) {
         instance->winY -= 10;
-        std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
-    }
-    // Reset the window position
-    else if (key == GLFW_KEY_END && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
-        instance->winX = 0;
-        instance->winY = 0;
         std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
 }

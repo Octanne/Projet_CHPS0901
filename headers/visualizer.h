@@ -58,6 +58,12 @@ private:
     static Visualizer* instance;
     static bool debugMode;
     static bool windowDebugMode;
+    static bool keyLeftPressed;
+    static bool keyRightPressed;
+    static bool keyUpPressed;
+    static bool keyDownPressed;
+    static bool keyMinusPressed;
+    static bool keyPlusPressed;
 };
 
 #endif // VISUALIZER_H

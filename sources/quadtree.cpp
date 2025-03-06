@@ -281,7 +281,6 @@ bool QuadTree::buildTree() {
     width *= 2;
     // We do a little bit more to avoid particles to be on the edge
     width *= 1.1;
-    printf("The simulation window size is %f\n", width);
 
     if (debugMode()) std::cout << "Building the quadtree" << std::endl;
     // We insert the particles into the quadtree
