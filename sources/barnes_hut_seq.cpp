@@ -18,6 +18,56 @@ const double massVesta = 2.59e20;  // in kilograms
 const double massEros = 6.69e15;   // in kilograms
 const double massItokawa = 4.2e10; // in kilograms
 
+double getADoubleFromOptarg() {
+    // Check if not null
+    if (optarg == nullptr) {
+        std::cerr << "Error: The value must be a number." << std::endl;
+        exit(1);
+    }
+    // Convert the optarg to a double check if stod failed
+    double value;
+    try {
+        value = std::stod(optarg);
+    } catch (const std::invalid_argument& e) {
+        std::cerr << "Error: Invalid argument for conversion to double." << std::endl;
+        exit(1);
+    } catch (const std::out_of_range& e) {
+        std::cerr << "Error: Argument out of range for conversion to double." << std::endl;
+        exit(1);
+    }
+    // Check if the value is positive
+    if (value <= 0) {
+        std::cerr << "Error: The value must be positive." << std::endl;
+        exit(1);
+    }
+    return value;
+}
+
+int getAnIntFromOptarg() {
+    // Check if not null
+    if (optarg == nullptr) {
+        std::cerr << "Error: The value must be a number." << std::endl;
+        exit(1);
+    }
+    // Convert the optarg to an int check if stoi failed
+    int value;
+    try {
+        value = std::stoi(optarg);
+    } catch (const std::invalid_argument& e) {
+        std::cerr << "Error: Invalid argument for conversion to int." << std::endl;
+        exit(1);
+    } catch (const std::out_of_range& e) {
+        std::cerr << "Error: Argument out of range for conversion to int." << std::endl;
+        exit(1);
+    }
+    // Check if the value is positive
+    if (value <= 0) {
+        std::cerr << "Error: The value must be positive." << std::endl;
+        exit(1);
+    }
+    return value;
+}
+
 /**
  * @brief Main function for the Barnes-Hut Sequential Implementation.
  *
@@ -58,35 +108,6 @@ int main(int argc, char** argv) {
     std::string filename;
     while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:")) != -1) {
         switch (opt) {
-            case 'e':
-                nbSteps = std::stod(optarg);
-                break;
-            case 'd':
-                debugMode = true;
-                break;
-            case 't':
-                timeStep = std::stod(optarg);
-                break;
-            case 'f':
-                filename = optarg;
-                break;
-            case 'w':
-                windowSizeG = std::stod(optarg);
-                wFlag = true;
-                break;
-            case 'n':
-                numParticles = std::stoi(optarg);
-                nFlag = true;
-                break;
-            case 'G':
-                maxMass = std::stod(optarg);
-                break;
-            case 'L':
-                minMass = std::stod(optarg);
-                break;
-            case 'g':
-                shouldGUI = true;
-                break;
             case 'h':
                 std::cout << "Command line arguments:\n"
                           << " * -w <window_size> : Set the width/height of the generate window (squared) (mandatory unless -f is used).\n"
@@ -100,6 +121,35 @@ int main(int argc, char** argv) {
                           << " * -d : Enable debug mode (optional).\n"
                           << " * -h : Print this help message.\n";
                 return 0;
+                break;
+            case 'e':
+                nbSteps = getADoubleFromOptarg();
+                break;
+            case 'd':
+                debugMode = true;
+                break;
+            case 't':
+                timeStep = getADoubleFromOptarg();
+                break;
+            case 'f':
+                filename = optarg;
+                break;
+            case 'w':
+                windowSizeG = getADoubleFromOptarg();
+                wFlag = true;
+                break;
+            case 'n':
+                numParticles = getAnIntFromOptarg();
+                nFlag = true;
+                break;
+            case 'G':
+                maxMass = std::stod(optarg);
+                break;
+            case 'L':
+                minMass = std::stod(optarg);
+                break;
+            case 'g':
+                shouldGUI = true;
                 break;
             default:
                 std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;

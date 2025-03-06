@@ -267,13 +267,13 @@ void Visualizer::keyboardCallback(GLFWwindow* window, int key, int scancode, int
         std::cout << "Scale factor: " << instance->scaleFactor << std::endl;
     }
 
-    // Move the window to the right
-    else if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+    // Move the window to the left
+    else if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
         instance->winX -= 10;
         std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
-    // Move the window to the left
-    else if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
+    // Move the window to the right
+    else if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT)) {
         instance->winX += 10;
         std::cout << "Window coordinates: (" << instance->winX << ", " << instance->winY << ")" << std::endl;
     }
