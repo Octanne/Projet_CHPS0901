@@ -82,7 +82,8 @@ int getAnIntFromOptarg() {
  * -e <num_steps> : Set the number of steps for the simulation (optional, default is none).
  * -g : Enable GUI (optional).
  * -f <file> : Load particles from a file (optional).
- * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).
+ * -t <step> : Set the time step for the simulation (optional, default is 0.5s).
+ * -r <refresh_rate> : Set the refresh rate of the simulation (optional, default is 0.5s).
  * -d : Enable debug mode (optional).
  * -h : Print this help message.
  *
@@ -102,11 +103,12 @@ int main(int argc, char** argv) {
     std::vector<Particle*> particles;
     bool wFlag = true, nFlag = false;
     double timeStep = 0.5; // default time step 500ms by default
+    double refreshRate = 0.5; // default refresh rate 500ms by default
     double nbSteps = 0; // default number of steps
     double debugMode = false;
 
     std::string filename;
-    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:")) != -1) {
+    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:r:")) != -1) {
         switch (opt) {
             case 'h':
                 std::cout << "Command line arguments:\n"
@@ -118,12 +120,16 @@ int main(int argc, char** argv) {
                           << " * -f <file> : Load particles from a file (optional).\n"
                           << " * -e <num_steps> : Set the number of steps for the simulation (optional, default is none).\n"
                           << " * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).\n"
+                          << " * -r <refresh_rate> : Set the refresh rate of the simulation (optional, default is 0.5).\n"
                           << " * -d : Enable debug mode (optional).\n"
                           << " * -h : Print this help message.\n";
                 return 0;
                 break;
             case 'e':
                 nbSteps = getADoubleFromOptarg();
+                break;
+            case 'r': 
+                refreshRate = getADoubleFromOptarg();
                 break;
             case 'd':
                 debugMode = true;
@@ -215,8 +221,8 @@ int main(int argc, char** argv) {
             if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
             step++;
         }
-        // Refresh every 10ms
-        usleep(10000);
+        // Refresh every refreshRate
+        usleep(refreshRate * 1000000);
         // We print the quadtree
         if (!shouldGUI && qtVisu->isInDebug()) qt.print();
     }

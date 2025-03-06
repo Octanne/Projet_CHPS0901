@@ -220,13 +220,9 @@ bool QuadTree::buildTree() {
     // For that we need to calculate the maximum distance from the origin
     width = 0.0;
     for (Particle* particle : *particles) {
-        double absX = std::abs(particle->getX());
-        double absY = std::abs(particle->getY());
-        if (absX > width) {
-            width = absX;
-        }
-        if (absY > width) {
-            width = absY;
+        double distance = std::max(std::abs(particle->getX()), std::abs(particle->getY()));
+        if (distance > width) {
+            width = distance;
         }
     }
 
