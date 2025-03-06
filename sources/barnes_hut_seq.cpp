@@ -8,6 +8,8 @@
 #include <unistd.h>
 #include <csignal>
 
+#include <mpi.h>
+
 // Defining the masses as constants
 const double massEarth = 5.972e24; // in kilograms
 const double massMoon = 7.347e22;  // in kilograms
@@ -17,6 +19,247 @@ const double massCeres = 9.39e20;  // in kilograms
 const double massVesta = 2.59e20;  // in kilograms
 const double massEros = 6.69e15;   // in kilograms
 const double massItokawa = 4.2e10; // in kilograms
+
+// MPI variables
+int rankMPI, sizeMPI;
+
+int main(int argc, char** argv) {
+    std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
+
+    // Open MPI initialization
+    MPI_Init(&argc, &argv);
+
+    // Get the rank of the process
+    MPI_Comm_rank(MPI_COMM_WORLD, &rankMPI);
+    // Get the number of processes
+    MPI_Comm_size(MPI_COMM_WORLD, &sizeMPI);
+
+    double windowSizeG = 800; // default window size
+    int numParticles = 1000; // default number of particles
+    double maxMass = massEarth; // default max mass
+    double minMass = massItokawa; // default min mass
+    bool shouldGUI = false; // default no GUI
+    double timeStep = 0.5; // default time step 500ms by default
+    double refreshRate = 0.5; // default refresh rate 500ms by default
+    double nbSteps = 0; // default number of steps
+    double debugMode = false; // default no debug mode
+    std::string filename; // default no file
+    std::vector<Particle*> particles; // vector of particles
+
+    // We handle the program options
+    if (!handleProgramOptions(argc, argv, nbSteps, refreshRate, debugMode, timeStep, filename, windowSizeG, 
+            numParticles, maxMass, minMass, shouldGUI)) {
+        MPI_Finalize();
+        return 1;
+    }
+    
+    // We load/generated the particles
+    loadParticles(particles, filename, windowSizeG, numParticles, maxMass, minMass);
+
+    // We create a quadtree
+    QuadTree::setDebugModePtr(Visualizer::ptrDebugMode());
+    QuadTree qt(windowSizeG, 0, 0, &particles);
+    qt.buildTree();
+    std::cout << "The simulation window size is " << qt.getWidth() << std::endl;
+
+    // We print the quadtree structure in a window
+    Visualizer *qtVisu = Visualizer::getInstance(&qt, 800);
+    qtVisu->setDebug(debugMode);
+    if (shouldGUI)
+    {
+        qtVisu->createWindow();
+        qtVisu->setPause(true);
+    }
+    else
+    {
+        // We put the signal handler to close the program
+        signal(SIGINT, [](int signum)
+                {
+        Visualizer::getInstance()->closeWindow();
+        printf("Interrupt signal received (%d)\n", signum); });
+    }
+
+    if (nbSteps != 0)
+    {
+        std::cout << "Running simulation for " << nbSteps << " steps with a time step of " << timeStep << "s" << std::endl;
+    }
+    else
+    {
+        std::cout << "Running simulation indefinitely with a time step of " << timeStep << "s" << std::endl;
+    }
+
+    // We do the simulation
+    int step = 0;
+    while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
+    {
+        // We update the position of the particles
+        if (!qtVisu->isInPause())
+        {
+            if (qtVisu->isInDebug())
+                std::cout << "Updating particles" << std::endl;
+            qt.updateParticles(timeStep);
+            if (qtVisu->isInDebug())
+                std::cout << "Particles updated" << std::endl;
+            // We update the tree
+            if (qtVisu->isInDebug())
+                std::cout << "Updating quadtree" << std::endl;
+            // qtVisu->semLock();
+            qt.buildTree();
+            // qtVisu->semUnlock();
+            if (qtVisu->isInDebug())
+                std::cout << "Quadtree updated" << std::endl;
+            step++;
+        }
+        // Refresh every refreshRate if GUI is enabled
+        if (shouldGUI)
+            usleep(refreshRate * 1000000);
+        // We print the quadtree
+        if (!shouldGUI && qtVisu->isInDebug())
+            qt.print();
+    }
+
+    if (shouldGUI)
+    {
+        std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
+        qtVisu->closeWindow();
+        qtVisu->waitClosedWindow();
+    }
+
+    // We clear the quadtree
+    qt.clear();
+
+    // We save the particles to a file particle_output_date.txt
+    std::string filenameOutput = "results/particle_output_" + std::to_string(time(0)) + ".txt";
+    Particle::saveParticles(filenameOutput, particles);
+    std::cout << "Particles status result saved to " << filenameOutput << std::endl;
+
+    // We clear the particles
+    for (Particle *particle : particles)
+    {
+        delete particle;
+    }
+
+    std::cout << "End of Simulation with Barnes-Hut Sequential Implementation" << std::endl;
+
+    // Open MPI finalization
+    MPI_Finalize();
+
+    return 0;
+}
+
+void loadParticles(std::vector<Particle *> &particles, std::string &filename, double &windowSizeG, int &numParticles, double &maxMass, double &minMass)
+{
+    if (!filename.empty())
+    {
+        std::cout << "Loading particles from file " << filename << std::endl;
+        particles = Particle::loadParticles(filename);
+        // We print the particles loaded
+        for (Particle *particle : particles)
+        {
+            std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") with mass " << particle->getMass() << std::endl;
+        }
+    }
+    else
+    {
+        // TODO make it only done by rank 0 and then broadcast the particles to the other ranks
+        if (rankMPI == 0) {
+            std::cout << "Generating " << numParticles << " particles" << std::endl;
+            // We generate the particles
+            particles = Particle::generateParticles(numParticles, windowSizeG, windowSizeG, maxMass, minMass);
+            // We send the particles list to all the other ranks
+            for (int i = 1; i < sizeMPI; i++) {
+                for (Particle *particle : particles) {
+                    double x = particle->getX();
+                    double y = particle->getY();
+                    double mass = particle->getMass();
+                    MPI_Send(&x, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
+                    MPI_Send(&y, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
+                    MPI_Send(&mass, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
+                }
+            }
+        } else {
+            for (int i = 0; i < numParticles; i++) {
+                double x, y, mass;
+                MPI_Recv(&x, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                MPI_Recv(&y, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                MPI_Recv(&mass, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                particles.push_back(new Particle(x, y, mass));
+            }
+        }
+        std::cout << "Particles generated" << std::endl;
+    }
+}
+
+int handleProgramOptions(int argc, char **argv, double &nbSteps, double &refreshRate, double &debugMode, double &timeStep, std::string &filename, double &windowSizeG, int &numParticles, double &maxMass, double &minMass, bool &shouldGUI)
+{
+    int opt;
+    bool wFlag = true;
+    bool nFlag = false;
+    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:r:")) != -1)
+    {
+        switch (opt)
+        {
+        case 'h':
+            std::cout << "Command line arguments:\n"
+                        << " * -w <window_size> : Set the width/height of the generate window (squared) (mandatory unless -f is used).\n"
+                        << " * -n <num_particles> : Set the number of particles (mandatory unless -f is used).\n"
+                        << " * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).\n"
+                        << " * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).\n"
+                        << " * -g : Enable GUI (optional).\n"
+                        << " * -f <file> : Load particles from a file (optional).\n"
+                        << " * -e <num_steps> : Set the number of steps for the simulation (optional, default is none).\n"
+                        << " * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).\n"
+                        << " * -r <refresh_rate> : Set the refresh rate of the simulation (optional, default is 0.5).\n"
+                        << " * -d : Enable debug mode (optional).\n"
+                        << " * -h : Print this help message.\n";
+            return 1;
+        case 'e':
+            nbSteps = getADoubleFromOptarg();
+            break;
+        case 'r':
+            refreshRate = getADoubleFromOptarg();
+            break;
+        case 'd':
+            debugMode = true;
+            break;
+        case 't':
+            timeStep = getADoubleFromOptarg();
+            break;
+        case 'f':
+            filename = optarg;
+            break;
+        case 'w':
+            windowSizeG = getADoubleFromOptarg();
+            wFlag = true;
+            break;
+        case 'n':
+            numParticles = getAnIntFromOptarg();
+            nFlag = true;
+            break;
+        case 'G':
+            maxMass = std::stod(optarg);
+            break;
+        case 'L':
+            minMass = std::stod(optarg);
+            break;
+        case 'g':
+            shouldGUI = true;
+            break;
+        default:
+            std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
+            return 1;
+        }
+    }
+
+    if (filename.empty() && (!wFlag || !nFlag))
+    {
+        std::cerr << "Error: -w <window_size> and -n <num_particles> are mandatory unless -f <file> is used." << std::endl;
+        std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
+        return 1;
+    }
+
+    return 0;
+}
 
 double getADoubleFromOptarg() {
     // Check if not null
@@ -66,189 +309,4 @@ int getAnIntFromOptarg() {
         exit(1);
     }
     return value;
-}
-
-/**
- * @brief Main function for the Barnes-Hut Sequential Implementation.
- *
- * This function initializes the simulation parameters from command line arguments,
- * generates particles, builds a quadtree, and runs the simulation.
- *
- * Command line arguments:
- * -w <window_size> : Set the width/height of the generate window (squared) (mandatory).
- * -n <num_particles> : Set the number of particles (mandatory).
- * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).
- * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).
- * -e <num_steps> : Set the number of steps for the simulation (optional, default is none).
- * -g : Enable GUI (optional).
- * -f <file> : Load particles from a file (optional).
- * -t <step> : Set the time step for the simulation (optional, default is 0.5s).
- * -r <refresh_rate> : Set the refresh rate of the simulation (optional, default is 0.5s).
- * -d : Enable debug mode (optional).
- * -h : Print this help message.
- *
- * @param argc Number of command line arguments.
- * @param argv Array of command line arguments.
- * @return int Exit status of the program.
- */
-int main(int argc, char** argv) {
-    std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
-
-    int opt;
-    double windowSizeG = 800; // default window size
-    int numParticles = 1000; // default number of particles
-    double maxMass = massEarth; // default max mass
-    double minMass = massItokawa; // default min mass
-    bool shouldGUI = false; // default no GUI
-    std::vector<Particle*> particles;
-    bool wFlag = true, nFlag = false;
-    double timeStep = 0.5; // default time step 500ms by default
-    double refreshRate = 0.5; // default refresh rate 500ms by default
-    double nbSteps = 0; // default number of steps
-    double debugMode = false;
-
-    std::string filename;
-    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:r:")) != -1) {
-        switch (opt) {
-            case 'h':
-                std::cout << "Command line arguments:\n"
-                          << " * -w <window_size> : Set the width/height of the generate window (squared) (mandatory unless -f is used).\n"
-                          << " * -n <num_particles> : Set the number of particles (mandatory unless -f is used).\n"
-                          << " * -G <max_mass> : Set the maximum mass of the particles (optional, default is massEarth).\n"
-                          << " * -L <min_mass> : Set the minimum mass of the particles (optional, default is massItokawa).\n"
-                          << " * -g : Enable GUI (optional).\n"
-                          << " * -f <file> : Load particles from a file (optional).\n"
-                          << " * -e <num_steps> : Set the number of steps for the simulation (optional, default is none).\n"
-                          << " * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).\n"
-                          << " * -r <refresh_rate> : Set the refresh rate of the simulation (optional, default is 0.5).\n"
-                          << " * -d : Enable debug mode (optional).\n"
-                          << " * -h : Print this help message.\n";
-                return 0;
-                break;
-            case 'e':
-                nbSteps = getADoubleFromOptarg();
-                break;
-            case 'r': 
-                refreshRate = getADoubleFromOptarg();
-                break;
-            case 'd':
-                debugMode = true;
-                break;
-            case 't':
-                timeStep = getADoubleFromOptarg();
-                break;
-            case 'f':
-                filename = optarg;
-                break;
-            case 'w':
-                windowSizeG = getADoubleFromOptarg();
-                wFlag = true;
-                break;
-            case 'n':
-                numParticles = getAnIntFromOptarg();
-                nFlag = true;
-                break;
-            case 'G':
-                maxMass = std::stod(optarg);
-                break;
-            case 'L':
-                minMass = std::stod(optarg);
-                break;
-            case 'g':
-                shouldGUI = true;
-                break;
-            default:
-                std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
-                return 1;
-        }
-    }
-
-    if (filename.empty() && (!wFlag || !nFlag)) {
-        std::cerr << "Error: -w <window_size> and -n <num_particles> are mandatory unless -f <file> is used." << std::endl;
-        std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
-        return 1;
-    }
-
-    if (!filename.empty()) {
-        std::cout << "Loading particles from file " << filename << std::endl;
-        particles = Particle::loadParticles(filename);
-        // We print the particles loaded
-        for (Particle* particle : particles) {
-            std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") with mass " << particle->getMass() << std::endl;
-        }
-    } else {
-        // We generate the particles
-        particles = Particle::generateParticles(numParticles, windowSizeG, windowSizeG, maxMass, minMass);
-    }
-    
-    // We create a quadtree
-    QuadTree::setDebugModePtr(Visualizer::ptrDebugMode());
-    QuadTree qt(windowSizeG, 0, 0, &particles);
-    qt.buildTree();
-    std::cout << "The simulation window size is " << qt.getWidth() << std::endl;
-
-    // We print the quadtree structure in a window
-    Visualizer* qtVisu = Visualizer::getInstance(&qt, 800);
-    qtVisu->setDebug(debugMode);
-    if (shouldGUI) {
-        qtVisu->createWindow();
-        qtVisu->setPause(true);
-    } else {
-        // We put the signal handler to close the program
-        signal(SIGINT, [](int signum) {
-            Visualizer::getInstance()->closeWindow();
-            printf("Interrupt signal received (%d)\n", signum);
-        });
-    }
-
-    if (nbSteps != 0) {
-        std::cout << "Running simulation for " << nbSteps << " steps with a time step of " << timeStep << "s" << std::endl;
-    } else {
-        std::cout << "Running simulation indefinitely with a time step of " << timeStep << "s" << std::endl;
-    }
-
-    // We do the simulation
-    int step = 0;
-    while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps)) {
-        // We update the position of the particles
-        if (!qtVisu->isInPause()) {
-            if (qtVisu->isInDebug()) std::cout << "Updating particles" << std::endl;
-            qt.updateParticles(timeStep);
-            if (qtVisu->isInDebug()) std::cout << "Particles updated" << std::endl;
-            // We update the tree
-            if (qtVisu->isInDebug()) std::cout << "Updating quadtree" << std::endl;
-            //qtVisu->semLock();
-            qt.buildTree();
-            //qtVisu->semUnlock();
-            if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
-            step++;
-        }
-        // Refresh every refreshRate if GUI is enabled
-        if (shouldGUI) usleep(refreshRate * 1000000);
-        // We print the quadtree
-        if (!shouldGUI && qtVisu->isInDebug()) qt.print();
-    }
-
-    if (shouldGUI) {
-        std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
-        qtVisu->closeWindow();
-        qtVisu->waitClosedWindow();
-    }
-
-    // We clear the quadtree
-    qt.clear();
-
-    // We save the particles to a file particle_output_date.txt
-    std::string filenameOutput = "results/particle_output_" + std::to_string(time(0)) + ".txt";
-    Particle::saveParticles(filenameOutput, particles);
-    std::cout << "Particles status result saved to " << filenameOutput << std::endl;
-
-    // We clear the particles
-    for (Particle* particle : particles) {
-        delete particle;
-    }
-
-    std::cout << "End of Simulation with Barnes-Hut Sequential Implementation" << std::endl;
-
-    return 0;
 }
