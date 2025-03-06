@@ -22,7 +22,7 @@ GLuint loadTexture(const char* filepath) {
         return 0;
     }
 
-    std::cout << "Loaded texture: " << filepath << " with width: " << width << " and height: " << height << std::endl;
+    //std::cout << "Loaded texture: " << filepath << " with width: " << width << " and height: " << height << std::endl;
 
     GLuint textureID;
     glGenTextures(1, &textureID);
@@ -53,7 +53,7 @@ void loadFont(const char* folder) {
         // We get the size of the textures from the line common lineHeight=64 base=51 scaleW=256 scaleH=256
         if (line.substr(0, 7) == "common ") {
             sscanf(line.c_str(), "common lineHeight=%*d base=%*d scaleW=%f scaleH=%f", &textureWidth, &textureHeight);
-            std::cout << "Texture size: " << textureWidth << "x" << textureHeight << std::endl;
+            //std::cout << "Texture size: " << textureWidth << "x" << textureHeight << std::endl;
         }
         // We load the textures
         if (line.substr(0, 5) == "page ") {
@@ -61,11 +61,10 @@ void loadFont(const char* folder) {
             sscanf(line.c_str(), "page id=%d file=\"%[^\"]\"", &id, textureName);
             // We add the folder to the texture name
             std::string fullTextureName = std::string(folder) + "/" + textureName;
-            std::cout << "Loading texture: " << fullTextureName << std::endl;
+            //std::cout << "Loading texture: " << fullTextureName << std::endl;
             GLuint textureID = loadTexture(fullTextureName.c_str());
             if (!textureID) return;
             fontTexture[id] = textureID;
-            std::cout << "Loaded texture: " << fullTextureName << std::endl;
         } 
         // We load the characters
         else
