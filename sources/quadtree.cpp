@@ -137,12 +137,15 @@ void calcForce(Particle* b, Particle* c, double& fx, double& fy) {
     // We calculate the force exerted by the current node on b and add this amount to b's net force
     // We use the formula F = G * m1 * m2 / d^2
     // We add the force to the net force of the particle.
-    double dx = c->getX() - b->getX();
-    double dy = c->getY() - b->getY();
-    double distance = std::sqrt(dx * dx + dy * dy);
-    double force = (Particle::G * b->getMass() * c->getMass()) / (distance * distance);
-    fx += force * dx / distance;
-    fy += force * dy / distance;
+    double dx = b->getX() - c->getX();
+    double dy = b->getY() - c->getY();
+    double distance = std::sqrt((dx * dx) + (dy * dy));
+    double accel = (-1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
+    double forceVecX = dx / distance;
+    double forceVecY = dy / distance;
+
+    fx += accel * forceVecX;
+    fy += accel * forceVecY;
 }
 
 void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
@@ -189,12 +192,8 @@ void QuadTree::updateParticles(double step) {
         if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() 
             << ") has force (" << fx << ", " << fy << ")" << std::endl;
 
-        // We apply the force to the particle to update the velocity
-        double ax = fx / particle->getMass();
-        double ay = fy / particle->getMass();
-
-        particle->setVx(particle->getVx() + ax * step);
-        particle->setVy(particle->getVy() + ay * step);
+        particle->setVx(particle->getVx() + fx * step);
+        particle->setVy(particle->getVy() + fy * step);
 
         // We print the velocity of the particle
         if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY()
@@ -216,6 +215,12 @@ bool QuadTree::buildTree() {
         return false;
     }
 
+    // We reset the tree if it was already built
+    if (isDivided) {
+        if (debugMode()) std::cout << "Clearing the quadtree" << std::endl;
+        clear();
+    }
+
     // We need to calculate the width of the newWindow of simulation
     // For that we need to calculate the maximum distance from the origin
     width = 0.0;
@@ -228,16 +233,6 @@ bool QuadTree::buildTree() {
 
     // We give a little margin to the window size to 2 times the maximum distance
     width *= 2;
-
-    // We set the origin of the new window
-    originX = 0;
-    originY = 0;
-
-    // We reset the tree if it was already built
-    if (isDivided) {
-        if (debugMode()) std::cout << "Clearing the quadtree" << std::endl;
-        clear();
-    }
 
     if (debugMode()) std::cout << "Building the quadtree" << std::endl;
     // We insert the particles into the quadtree
@@ -287,6 +282,7 @@ QuadTree::~QuadTree() {
 void QuadTree::clear() {
     if (isDivided) {
         // We delete the particle if divided because it as been created by the quadtree
+        if (particle == nullptr) std::cerr << "Should not be null" << std::endl;
         delete particle;
 
         // We delete the children
@@ -294,15 +290,21 @@ void QuadTree::clear() {
         delete northwest;
         delete southeast;
         delete southwest;
+        std::cerr << "Deleting the quadtree at (" << originX << ", " << originY << ")" << std::endl;
+    } else {
+        std::cerr << "Deleting the particle at (" << particle->getX() << ", " << particle->getY() << ")" << std::endl;
     }
 
     particle = nullptr;
+
     isDivided = false;
     hasBody = false;
     weightBranch = 0;
-    // width = width
-    // originX = originX
-    // originY = originY
+    width = 0;
+    originX = 0;
+    originY = 0;
+
+    // We set the children to nullptr
     northeast = nullptr;
     northwest = nullptr;
     southeast = nullptr;

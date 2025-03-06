@@ -16,6 +16,9 @@ public:
 
     bool hasToClose() const;
     bool isInPause() const;
+    bool semLock();
+    bool semUnlock();
+    bool semCheck();
 
     bool setPause(bool pause);
     bool setDebug(bool debug);
@@ -40,6 +43,9 @@ private:
     int winY;
     double scaleFactor;
     bool fullRender;
+
+    bool waitSem;
+    bool accountedSem;
 
     int drawQuadTreeArea(QuadTree* qt, int root = 0);
     int drawQuadTree(QuadTree* qt, int root = 0);

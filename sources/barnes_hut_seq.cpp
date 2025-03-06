@@ -183,7 +183,7 @@ int main(int argc, char** argv) {
     
     // We create a quadtree
     QuadTree::setDebugModePtr(Visualizer::ptrDebugMode());
-    QuadTree qt(windowSizeG, windowSizeG/2, windowSizeG/2, &particles);
+    QuadTree qt(windowSizeG, 0, 0, &particles);
     qt.buildTree();
     std::cout << "The simulation window size is " << qt.getWidth() << std::endl;
 
@@ -217,7 +217,9 @@ int main(int argc, char** argv) {
             if (qtVisu->isInDebug()) std::cout << "Particles updated" << std::endl;
             // We update the tree
             if (qtVisu->isInDebug()) std::cout << "Updating quadtree" << std::endl;
+            qtVisu->semLock();
             qt.buildTree();
+            qtVisu->semUnlock();
             if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
             step++;
         }

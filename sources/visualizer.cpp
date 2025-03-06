@@ -27,6 +27,9 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->winY = 0;
     this->scaleFactor = 1;
     this->fullRender = false;
+
+    this->waitSem = false;
+    this->accountedSem = false;
 }
 
 int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
@@ -184,12 +187,17 @@ void Visualizer::displayDebugDataInWindow() {
 // Display callback function
 void Visualizer::displayCallback() {
     if (qt != nullptr) {
+        glClear(GL_COLOR_BUFFER_BIT);
         if (fullRender) drawQuadTree(qt, 1);
         else drawQuadTreeArea(qt, 1);
         if (windowDebugMode) displayDebugDataInWindow();
-        glEnd();
+        //glEnd();
         // Usleep for 60 fps
         usleep(1000000/60);
+        // wait that sem is unlocked
+        while (!semCheck()) {
+            usleep(1000000/60);
+        }
     }
 }
 
@@ -390,6 +398,44 @@ bool Visualizer::setDebug(bool debug) {
 
 void Visualizer::closeWindow() {
     shouldClose = true;
+}
+
+bool Visualizer::semLock() {
+    if (waitSem) {
+        if (debugMode) std::cout << "Semaphore already locked" << std::endl;
+        return false;
+    } else {
+        waitSem = true;
+        if (debugMode) std::cout << "Semaphore awaiting accountabilty" << std::endl;
+        // We wait for the semaphore to be accounted
+        while (!accountedSem) {
+            usleep(1000);
+        }
+        if (debugMode) std::cout << "Semaphore locked" << std::endl;
+        return true;
+    }
+}
+
+bool Visualizer::semCheck() {
+    if (waitSem) {
+        if (debugMode) std::cout << "Semaphore is currently locked" << std::endl;
+        accountedSem = true;
+        return false;
+    } else {
+        if (debugMode) std::cout << "Semaphore is currently unlocked" << std::endl;
+        return true;
+    }
+}
+
+bool Visualizer::semUnlock() {
+    if (waitSem) {
+        waitSem = false;
+        accountedSem = false;
+        if (debugMode) std::cout << "Semaphore unlocked" << std::endl;
+        return true;
+    }
+    if (debugMode) std::cout << "Semaphore already unlocked" << std::endl;
+    return false;
 }
 
 Visualizer* Visualizer::instance = nullptr;
