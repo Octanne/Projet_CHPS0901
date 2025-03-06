@@ -15,10 +15,11 @@ private: // TODO utiliser un pointeur pour la particule.
     bool isDivided;
     bool hasBody;
     double width;
-    double originX;
-    double originY;
 
     int weightBranch;
+    
+    double originX;
+    double originY;
 
     QuadTree* northeast;
     QuadTree* northwest;
