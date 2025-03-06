@@ -101,7 +101,7 @@ int main(int argc, char** argv) {
     bool shouldGUI = false; // default no GUI
     std::vector<Particle*> particles;
     bool wFlag = true, nFlag = false;
-    double timeStep = 0.5; // default time step
+    double timeStep = 0.5; // default time step 500ms by default
     double nbSteps = 0; // default number of steps
     double debugMode = false;
 
@@ -215,8 +215,10 @@ int main(int argc, char** argv) {
             if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
             step++;
         }
-        usleep(500000); // 500 ms
-        if (!shouldGUI) qt.print();
+        // Refresh every 10ms
+        usleep(10000);
+        // We print the quadtree
+        if (!shouldGUI && qtVisu->isInDebug()) qt.print();
     }
 
     if (shouldGUI) {
