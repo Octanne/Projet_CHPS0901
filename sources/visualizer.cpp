@@ -26,7 +26,7 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->winX = 0;
     this->winY = 0;
     this->scaleFactor = 1;
-    this->fullRender = false;
+    this->fullRender = true;
 
     this->waitSem = false;
     this->accountedSem = false;
@@ -34,7 +34,7 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
 
 int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
     if (qt == nullptr) {
-        //std::cout << "Quad is null" << std::endl;
+        if (debugMode) std::cout << "Quad is null" << std::endl;
         return 0;
     }
     int nbPart = 0;
@@ -96,7 +96,7 @@ int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
         }
     }
 
-    if (root == 1 && debugMode) std::cout << "We printed " << nbPart << " particles" << std::endl;
+    if (root && debugMode) std::cout << "We printed " << nbPart << " particles" << std::endl;
     return nbPart;
 }
 
@@ -111,13 +111,15 @@ int Visualizer::drawQuadTree(QuadTree* qt, int root) {
     double width = qt->getWidth()*scaleFactorLocal*0.5;
 
     // Print scale factor and width
-    if (root && debugMode) std::cout << "Scale factor: " << scaleFactorLocal << " Width: " << width << std::endl;
+    if (debugMode) std::cout << "Scale factor: " << scaleFactorLocal << " Width (scaled): " << width << "Width :" << qt->getWidth() << 
+        "Factor from root :" << (qt->getWidth()/this->qt->getWidth()) <<
+        " Origin :" << qt->getOriginX() << "," << qt->getOriginY() << std::endl;
 
     // Draw boundaries
     if (renderBoundaries) {
         double posX = qt->getOriginX()*scaleFactorLocal;
         double posY = qt->getOriginY()*scaleFactorLocal;
-        //std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
+        if (debugMode) std::cout << "Box origin at (" << posX << ", " << posY << ")" << std::endl;
         //printf("Drawing boundaries at (%f, %f, %f, %f)\n", posX-width, posY+width, posX+width, posY-width);
         glColor3f(0.0, 0.0, 1.0);
         glBegin(GL_LINE_LOOP);
@@ -191,7 +193,7 @@ void Visualizer::displayCallback() {
         if (fullRender) drawQuadTree(qt, 1);
         else drawQuadTreeArea(qt, 1);
         if (windowDebugMode) displayDebugDataInWindow();
-        //glEnd();
+        glEnd();
         // Usleep for 60 fps
         usleep(1000000/60);
     }
@@ -205,7 +207,8 @@ void Visualizer::framebuffer_size_callback(GLFWwindow* window, int width, int he
     instance->windowSize = width;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(-instance->windowSize, instance->windowSize, -instance->windowSize, instance->windowSize, -1, 1);
+    double ratio = (width/2)+1;
+    glOrtho(-ratio, ratio, -ratio, ratio, -1, 1);
     // I want to lock aspect ratio
     glfwSetWindowAspectRatio(window, 1, 1);
     glMatrixMode(GL_MODELVIEW);
@@ -330,8 +333,9 @@ int Visualizer::createWindow() {
         glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
         glMatrixMode(GL_PROJECTION);
-        glLoadIdentity();
-        glOrtho(-windowSize, windowSize, -windowSize, windowSize, -1, 1);
+        glLoadIdentity();   
+        double ratio = (windowSize/2)+1;
+        glOrtho(-ratio, ratio, -ratio, ratio, -1, 1);
         // I want to lock aspect ratio
         glfwSetWindowAspectRatio(window, 1, 1);
         glMatrixMode(GL_MODELVIEW);
