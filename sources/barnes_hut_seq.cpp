@@ -1,10 +1,5 @@
 #include "barnes_hut_seq.h"
 
-#include "quadtree.h"
-#include "visualizer.h"
-
-#include <iostream>
-#include <vector>
 #include <unistd.h>
 #include <csignal>
 
@@ -24,8 +19,6 @@ const double massItokawa = 4.2e10; // in kilograms
 int rankMPI, sizeMPI;
 
 int main(int argc, char** argv) {
-    std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
-
     // Open MPI initialization
     MPI_Init(&argc, &argv);
 
@@ -33,6 +26,11 @@ int main(int argc, char** argv) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rankMPI);
     // Get the number of processes
     MPI_Comm_size(MPI_COMM_WORLD, &sizeMPI);
+
+    // We bind the MPI rank and size to the quadtree class
+    QuadTree::setupMPIValues(&rankMPI, &sizeMPI);
+
+    if (rankMPI == 0) std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
 
     double windowSizeG = 800; // default window size
     int numParticles = 1000; // default number of particles
@@ -47,10 +45,10 @@ int main(int argc, char** argv) {
     std::vector<Particle*> particles; // vector of particles
 
     // We handle the program options
-    if (!handleProgramOptions(argc, argv, nbSteps, refreshRate, debugMode, timeStep, filename, windowSizeG, 
+    if (handleProgramOptions(argc, argv, nbSteps, refreshRate, debugMode, timeStep, filename, windowSizeG, 
             numParticles, maxMass, minMass, shouldGUI)) {
         MPI_Finalize();
-        return 1;
+        return 0;
     }
     
     // We load/generated the particles
@@ -64,14 +62,15 @@ int main(int argc, char** argv) {
     initVisualizer(qtVisu, shouldGUI, debugMode);
 
     // We print the simulation parameters
-    if (nbSteps != 0) std::cout << "Running simulation for " << nbSteps << " steps with a time step of " 
+    if (rankMPI == 0) {
+        if (nbSteps != 0) std::cout << "Running simulation for " << nbSteps << " steps with a time step of " 
             << timeStep << "s" << std::endl;
-    else std::cout << "Running simulation indefinitely with a time step of " 
+        else std::cout << "Running simulation indefinitely with a time step of " 
             << timeStep << "s" << std::endl;
-
+    }
 
     // We do the simulation
-    launchSimulation(qt, particles, qtVisu, nbSteps, timeStep, refreshRate, debugMode, shouldGUI);
+    launchSimulation(qt, particles, qtVisu, nbSteps, timeStep, refreshRate, shouldGUI);
 
     // We clean after the simulation
     cleanVisualizer(qtVisu, shouldGUI);
@@ -82,7 +81,7 @@ int main(int argc, char** argv) {
     // We clean the particles and save them if needed
     cleanParticles(particles, true);
 
-    std::cout << "End of Simulation with Barnes-Hut Sequential Implementation" << std::endl;
+    if (rankMPI == 0) std::cout << "End of Simulation with Barnes-Hut Sequential Implementation" << std::endl;
 
     // Open MPI finalization
     MPI_Finalize();
@@ -90,21 +89,23 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualizer *qtVisu, double nbSteps, double timeStep, double refreshRate, double debugMode, bool shouldGUI)
+void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualizer *qtVisu, double nbSteps, double timeStep, double refreshRate, bool shouldGUI)
 {
     int step = 0;
+    if (rankMPI == 0) std::cout << "Starting simulation with " << particles.size() << " particles" << std::endl;
+    // We do the simulation
     while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
     {
         // We update the position of the particles
         if (!qtVisu->isInPause())
         {
-            if (qtVisu->isInDebug()) std::cout << "Updating particles" << std::endl;
+            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating particles" << std::endl;
             qt.updateParticles(timeStep);
-            if (qtVisu->isInDebug()) std::cout << "Particles updated" << std::endl;
+            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Particles updated" << std::endl;
             // We update the tree
-            if (qtVisu->isInDebug()) std::cout << "Updating quadtree" << std::endl;
+            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating quadtree" << std::endl;
             qt.buildTree();
-            if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
+            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Quadtree updated" << std::endl;
             step++;
         }
         // Refresh every refreshRate if GUI is enabled
@@ -125,7 +126,7 @@ QuadTree initQuadTree(std::vector<Particle *> &particles, double windowSizeG)
 
 void cleanVisualizer(Visualizer *qtVisu, bool& shouldGUI)
 {
-    if (shouldGUI)
+    if (shouldGUI && rankMPI == 0)
     {
         std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
         qtVisu->closeWindow();
@@ -136,12 +137,12 @@ void cleanVisualizer(Visualizer *qtVisu, bool& shouldGUI)
 void initVisualizer(Visualizer *qtVisu, bool shouldGUI, double debugMode)
 {
     qtVisu->setDebug(debugMode);
-    if (shouldGUI)
+    if (shouldGUI && rankMPI == 0)
     {
         qtVisu->createWindow();
         qtVisu->setPause(true);
     }
-    else
+    else if (rankMPI == 0)
     {
         // We put the signal handler to close the program
         signal(SIGINT, [](int signum)
@@ -154,7 +155,7 @@ void initVisualizer(Visualizer *qtVisu, bool shouldGUI, double debugMode)
 void cleanParticles(std::vector<Particle *> &particles, bool saveParticles)
 {
     // We save the particles to a file particle_output_date.txt
-    if (saveParticles) {
+    if (saveParticles && rankMPI == 0) {
         std::string filenameOutput = "results/particle_output_" + std::to_string(time(0)) + ".txt";
         Particle::saveParticles(filenameOutput, particles);
         std::cout << "Particles status result saved to " << filenameOutput << std::endl;
@@ -170,17 +171,19 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
 {
     if (!filename.empty())
     {
-        std::cout << "Loading particles from file " << filename << std::endl;
+        if (rankMPI == 0) std::cout << "Loading particles from file " << filename << std::endl;
         particles = Particle::loadParticles(filename);
         // We print the particles loaded
-        for (Particle *particle : particles)
-        {
-            std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") with mass " << particle->getMass() << std::endl;
+        if (rankMPI == 0) {
+            for (Particle *particle : particles)
+            {
+                std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() << ") with mass " << particle->getMass() << std::endl;
+            }
         }
     }
     else
     {
-        // TODO make it only done by rank 0 and then broadcast the particles to the other ranks
+        // make it only done by rank 0 and then broadcast the particles to the other ranks
         if (rankMPI == 0) {
             std::cout << "Generating " << numParticles << " particles" << std::endl;
             // We generate the particles
@@ -190,22 +193,28 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
                 for (Particle *particle : particles) {
                     double x = particle->getX();
                     double y = particle->getY();
+                    double v_x = particle->getVx();
+                    double v_y = particle->getVy();
                     double mass = particle->getMass();
                     MPI_Send(&x, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
                     MPI_Send(&y, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
+                    MPI_Send(&v_x, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
+                    MPI_Send(&v_y, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
                     MPI_Send(&mass, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
                 }
             }
         } else {
             for (int i = 0; i < numParticles; i++) {
-                double x, y, mass;
+                double x, y, v_x, v_y, mass;
                 MPI_Recv(&x, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
                 MPI_Recv(&y, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                MPI_Recv(&v_x, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                MPI_Recv(&v_y, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
                 MPI_Recv(&mass, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
                 particles.push_back(new Particle(x, y, mass));
             }
         }
-        std::cout << "Particles generated" << std::endl;
+        if (rankMPI == 0) std::cout << "Particles generated" << std::endl;
     }
 }
 
@@ -265,18 +274,19 @@ int handleProgramOptions(int argc, char **argv, double &nbSteps, double &refresh
             shouldGUI = true;
             break;
         default:
-            std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
+            if (rankMPI == 0) std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
             return 1;
         }
     }
 
     if (filename.empty() && (!wFlag || !nFlag))
     {
-        std::cerr << "Error: -w <window_size> and -n <num_particles> are mandatory unless -f <file> is used." << std::endl;
-        std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
+        if (rankMPI == 0) {
+            std::cerr << "Error: -w <window_size> and -n <num_particles> are mandatory unless -f <file> is used." << std::endl;
+            std::cerr << "Usage: " << argv[0] << " -w <window_size> -n <num_particles> [ -G <max_mass> -L <min_mass> -g -f <file>]" << std::endl;
+        }
         return 1;
     }
-
     return 0;
 }
 

@@ -1,3 +1,10 @@
+
+#include "quadtree.h"
+#include "visualizer.h"
+
+#include <iostream>
+#include <vector>
+
 /**
  * @brief Retrieves an integer value from the command line option argument.
  *
@@ -56,7 +63,7 @@ int main(int argc, char **argv);
  * @param debugMode Debug mode flag.
  * @param shouldGUI Flag to enable or disable GUI.
  */
-void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualizer *qtVisu, double nbSteps, double timeStep, double refreshRate, double debugMode, bool shouldGUI);
+void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualizer *qtVisu, double nbSteps, double timeStep, double refreshRate, bool shouldGUI);
 
 /**
  * @brief Handles the program options from the command line arguments.
@@ -123,3 +130,14 @@ void cleanVisualizer(Visualizer *qtVisu, bool& shouldGUI);
  * @param debugMode Debug mode flag.
  */
 void initVisualizer(Visualizer *qtVisu, bool shouldGUI, double debugMode);
+
+/**
+ * @brief Initializes the quadtree.
+ *
+ * This function initializes the quadtree based on the particles and window size.
+ *
+ * @param particles Vector of particle pointers.
+ * @param windowSizeG Reference to the window size.
+ * @return QuadTree The initialized quadtree.
+ */
+QuadTree initQuadTree(std::vector<Particle *> &particles, double windowSizeG);

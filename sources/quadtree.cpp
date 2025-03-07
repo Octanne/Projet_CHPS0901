@@ -5,6 +5,8 @@
 #include <cmath>
 
 bool* QuadTree::debugModePtr = nullptr;
+int* QuadTree::rankMPI = nullptr;
+int* QuadTree::sizeMPI = nullptr;
 
 bool QuadTree::debugMode() {
     return *debugModePtr;
@@ -182,7 +184,88 @@ void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
 // We can also do a fusion of particles when they are too close to the center of mass TO AVOID 
 // THE COLLAPSE OF THE SYSTEM (To much divided sectors)
 
+void QuadTree::computePosOfSubtree(QuadTree* tree, int *posOfSubtree, int& rankUsed, int branchNumber, int& nbParticleCovered) {
+    // posOfSubtree is a array of sizeMPI
+    // We compute the position of the start of the subtree to be handled by each rank
+    // We have on weightBranch the number of particles in the branch
+    // We have sizeMPI the number of ranks
+    // We have rankMPI the rank of the current rank
+    // We have tree the tree to compute the position of the subtree
+    // We have posOfSubtree the array to store the position of the start of the subtree for each rank
+    int branchParticle = tree->getWeightBranch();
+
+    int particlesPerRank = weightBranch / *sizeMPI;
+
+    // If the number of particle is less than the number of ranks we give the branch to the rank
+
+
+
+    // If there is only one rank left then we give the whole branch to the rank
+    if (rankUsed == *sizeMPI - 1) {
+        posOfSubtree[rankUsed] = branchNumber;
+        rankUsed++;
+        nbParticleCovered += branchParticle;
+        return;
+    }
+    // If the branch has more than 1/sizeMPI but less than 2/sizeMPI of the total particles 
+    // we enter in the branch and give the part to the rank.
+    if (branchParticle >= particlesPerRank && branchParticle < 2 * particlesPerRank) {
+        // We give the branch to the rank
+        posOfSubtree[rankUsed] = branchNumber;
+        rankUsed++;
+        nbParticleCovered += branchParticle;
+        return;
+    // We only enter in the branch if the branch has more than 2/sizeMPI of the total particles because 
+    // the branch will just have less particles if we continue to go deeper in the tree
+    } else if (branchParticle >= 2 * particlesPerRank) {
+        // We enter in one of the quadrants
+        if (tree->getNortheast() != nullptr) {
+            computePosOfSubtree(tree->getNortheast(), posOfSubtree, rankUsed, branchNumber * 4 + 1, nbParticleCovered);
+        }
+        if (tree->getNorthwest() != nullptr && nbParticleCovered < weightBranch) {
+            computePosOfSubtree(tree->getNorthwest(), posOfSubtree, rankUsed, branchNumber * 4 + 2, nbParticleCovered);
+        }
+        if (tree->getSoutheast() != nullptr && nbParticleCovered < weightBranch) {
+            computePosOfSubtree(tree->getSoutheast(), posOfSubtree, rankUsed, branchNumber * 4 + 3, nbParticleCovered);
+        }
+        if (tree->getSouthwest() != nullptr && nbParticleCovered < weightBranch) {
+            computePosOfSubtree(tree->getSouthwest(), posOfSubtree, rankUsed, branchNumber * 4 + 4, nbParticleCovered);
+        }
+    } else {
+        // We do not enter in the branch
+        return;
+    }
+}
+
 void QuadTree::updateParticles(double step) {
+    int posOfSubtree = 0;
+    
+    // We compute the position of the start of the subtree to be handled by each rank
+    int* posOfSubtreeArray = new int[*sizeMPI];
+    int rankUsed = 0;
+    int nbParticlesCovered = 0;
+    computePosOfSubtree(this, posOfSubtreeArray, rankUsed, posOfSubtree, nbParticlesCovered);
+    if (rankMPI == 0) {
+        for (int i = 0; i < *sizeMPI; i++) {
+            std::cout << "Rank " << i << " has to handle the branch " << posOfSubtreeArray[i] << std::endl;
+        }
+        std::cout << "Number of particles covered " << nbParticlesCovered << "out of " << weightBranch << std::endl;
+    }
+
+    // HEAD NODE
+    if (rankMPI != nullptr && *rankMPI == 0) {
+        for (Particle* particle : *particles) {
+            double fx = 0.0, fy = 0.0;
+            
+
+        }
+
+    }
+
+    // WORKER NODE
+
+
+
     // Update velocity of the particles
     // CAN BE OPENMPized
     for (Particle* particle : *particles) {
@@ -337,4 +420,9 @@ QuadTree* QuadTree::getSoutheast() const {
 
 QuadTree* QuadTree::getSouthwest() const {
     return southwest;
+}
+
+void QuadTree::setupMPIValues(int* rank, int* size) {
+    rankMPI = rank;
+    sizeMPI = size;
 }

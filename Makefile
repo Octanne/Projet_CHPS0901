@@ -1,7 +1,7 @@
 # Makefile for C++ project
 
 # Compiler
-CXX = g++
+CXX = mpicxx
 
 # Directories
 SRC_DIR = sources
