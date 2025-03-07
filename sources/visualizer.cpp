@@ -57,8 +57,8 @@ int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
     if (root && debugMode) std::cout << "Scale factor: " << scaleFactor << " Width: " << width << std::endl;
 
     // We compute the position of the quadtree
-    double posX = (qt->getOriginX()+winX)*scaleFactorLocal;
-    double posY = (qt->getOriginY()+winY)*scaleFactorLocal;
+    double posX = (qt->getOriginX())*scaleFactorLocal+winX;
+    double posY = (qt->getOriginY())*scaleFactorLocal+winY;
     // To draw at the correct pos in the window we have to substract the window position
 
     // Draw boundaries
@@ -83,8 +83,8 @@ int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
         nbPart += drawQuadTreeArea(qt->getNortheast());
     } else if (qt->hasParticle()) {
         // Draw particle // We have to substract the window position
-        double posXP = (qt->getParticle()->getX()+winX)*scaleFactorLocal;
-        double posYP = (qt->getParticle()->getY()+winY)*scaleFactorLocal;
+        double posXP = (qt->getParticle()->getX())*scaleFactorLocal+winX;
+        double posYP = (qt->getParticle()->getY())*scaleFactorLocal+winY;
         
         // If point is in the window we draw it in green
         if (posXP >= -windowSize && posYP >= -windowSize && posXP <= windowSize && posYP <= windowSize) {

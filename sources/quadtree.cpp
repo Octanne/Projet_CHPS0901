@@ -140,7 +140,7 @@ void calcForce(Particle* b, Particle* c, double& fx, double& fy) {
     double dx = b->getX() - c->getX();
     double dy = b->getY() - c->getY();
     double distance = std::sqrt((dx * dx) + (dy * dy));
-    double accel = (1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
+    double accel = (-1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
     double forceVecX = dx / distance;
     double forceVecY = dy / distance;
 
