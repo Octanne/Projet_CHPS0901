@@ -86,5 +86,6 @@
         "future": "cpp",
         "text_encoding": "cpp",
         "hash_set": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

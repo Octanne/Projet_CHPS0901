@@ -56,14 +56,85 @@ int main(int argc, char** argv) {
     // We load/generated the particles
     loadParticles(particles, filename, windowSizeG, numParticles, maxMass, minMass);
 
-    // We create a quadtree
+    // We init the default quadtree
+    QuadTree qt = initQuadTree(particles, windowSizeG);
+
+    // We create the quadtree visualizer
+    Visualizer *qtVisu = Visualizer::getInstance(&qt, 800);
+    initVisualizer(qtVisu, shouldGUI, debugMode);
+
+    // We print the simulation parameters
+    if (nbSteps != 0) std::cout << "Running simulation for " << nbSteps << " steps with a time step of " 
+            << timeStep << "s" << std::endl;
+    else std::cout << "Running simulation indefinitely with a time step of " 
+            << timeStep << "s" << std::endl;
+
+
+    // We do the simulation
+    launchSimulation(qt, particles, qtVisu, nbSteps, timeStep, refreshRate, debugMode, shouldGUI);
+
+    // We clean after the simulation
+    cleanVisualizer(qtVisu, shouldGUI);
+
+    // We clear the quadtree
+    qt.clear();
+
+    // We clean the particles and save them if needed
+    cleanParticles(particles, true);
+
+    std::cout << "End of Simulation with Barnes-Hut Sequential Implementation" << std::endl;
+
+    // Open MPI finalization
+    MPI_Finalize();
+
+    return 0;
+}
+
+void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualizer *qtVisu, double nbSteps, double timeStep, double refreshRate, double debugMode, bool shouldGUI)
+{
+    int step = 0;
+    while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
+    {
+        // We update the position of the particles
+        if (!qtVisu->isInPause())
+        {
+            if (qtVisu->isInDebug()) std::cout << "Updating particles" << std::endl;
+            qt.updateParticles(timeStep);
+            if (qtVisu->isInDebug()) std::cout << "Particles updated" << std::endl;
+            // We update the tree
+            if (qtVisu->isInDebug()) std::cout << "Updating quadtree" << std::endl;
+            qt.buildTree();
+            if (qtVisu->isInDebug()) std::cout << "Quadtree updated" << std::endl;
+            step++;
+        }
+        // Refresh every refreshRate if GUI is enabled
+        if (shouldGUI) usleep(refreshRate * 1000000);
+        // We print the quadtree
+        if (!shouldGUI && qtVisu->isInDebug()) qt.print();
+    }
+}
+
+QuadTree initQuadTree(std::vector<Particle *> &particles, double windowSizeG)
+{
     QuadTree::setDebugModePtr(Visualizer::ptrDebugMode());
     QuadTree qt(windowSizeG, 0, 0, &particles);
     qt.buildTree();
     std::cout << "The simulation window size is " << qt.getWidth() << std::endl;
+    return qt;
+}
 
-    // We print the quadtree structure in a window
-    Visualizer *qtVisu = Visualizer::getInstance(&qt, 800);
+void cleanVisualizer(Visualizer *qtVisu, bool& shouldGUI)
+{
+    if (shouldGUI)
+    {
+        std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
+        qtVisu->closeWindow();
+        qtVisu->waitClosedWindow();
+    }
+}
+
+void initVisualizer(Visualizer *qtVisu, bool shouldGUI, double debugMode)
+{
     qtVisu->setDebug(debugMode);
     if (shouldGUI)
     {
@@ -78,73 +149,21 @@ int main(int argc, char** argv) {
         Visualizer::getInstance()->closeWindow();
         printf("Interrupt signal received (%d)\n", signum); });
     }
+}
 
-    if (nbSteps != 0)
-    {
-        std::cout << "Running simulation for " << nbSteps << " steps with a time step of " << timeStep << "s" << std::endl;
-    }
-    else
-    {
-        std::cout << "Running simulation indefinitely with a time step of " << timeStep << "s" << std::endl;
-    }
-
-    // We do the simulation
-    int step = 0;
-    while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
-    {
-        // We update the position of the particles
-        if (!qtVisu->isInPause())
-        {
-            if (qtVisu->isInDebug())
-                std::cout << "Updating particles" << std::endl;
-            qt.updateParticles(timeStep);
-            if (qtVisu->isInDebug())
-                std::cout << "Particles updated" << std::endl;
-            // We update the tree
-            if (qtVisu->isInDebug())
-                std::cout << "Updating quadtree" << std::endl;
-            // qtVisu->semLock();
-            qt.buildTree();
-            // qtVisu->semUnlock();
-            if (qtVisu->isInDebug())
-                std::cout << "Quadtree updated" << std::endl;
-            step++;
-        }
-        // Refresh every refreshRate if GUI is enabled
-        if (shouldGUI)
-            usleep(refreshRate * 1000000);
-        // We print the quadtree
-        if (!shouldGUI && qtVisu->isInDebug())
-            qt.print();
-    }
-
-    if (shouldGUI)
-    {
-        std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
-        qtVisu->closeWindow();
-        qtVisu->waitClosedWindow();
-    }
-
-    // We clear the quadtree
-    qt.clear();
-
+void cleanParticles(std::vector<Particle *> &particles, bool saveParticles)
+{
     // We save the particles to a file particle_output_date.txt
-    std::string filenameOutput = "results/particle_output_" + std::to_string(time(0)) + ".txt";
-    Particle::saveParticles(filenameOutput, particles);
-    std::cout << "Particles status result saved to " << filenameOutput << std::endl;
-
+    if (saveParticles) {
+        std::string filenameOutput = "results/particle_output_" + std::to_string(time(0)) + ".txt";
+        Particle::saveParticles(filenameOutput, particles);
+        std::cout << "Particles status result saved to " << filenameOutput << std::endl;
+    }
     // We clear the particles
     for (Particle *particle : particles)
     {
         delete particle;
     }
-
-    std::cout << "End of Simulation with Barnes-Hut Sequential Implementation" << std::endl;
-
-    // Open MPI finalization
-    MPI_Finalize();
-
-    return 0;
 }
 
 void loadParticles(std::vector<Particle *> &particles, std::string &filename, double &windowSizeG, int &numParticles, double &maxMass, double &minMass)
