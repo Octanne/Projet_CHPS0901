@@ -7,6 +7,7 @@
 #include <vector>
 #include <unistd.h>
 #include <csignal>
+#include <ctime>
 
 // Defining the masses as constants
 const double massEarth = 5.972e24; // in kilograms
@@ -209,7 +210,9 @@ int main(int argc, char** argv) {
 
     // We do the simulation
     int step = 0;
-    while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps)) {
+    double startTime = std::clock();
+    while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps)) 
+    {
         // We update the position of the particles
         if (!qtVisu->isInPause()) {
             if (qtVisu->isInDebug()) std::cout << "Updating particles" << std::endl;
@@ -228,6 +231,8 @@ int main(int argc, char** argv) {
         // We print the quadtree
         if (!shouldGUI && qtVisu->isInDebug()) qt.print();
     }
+    double endTime = std::clock();
+    std::cout << "Simulation time: " << (endTime - startTime) << " seconds" << std::endl;
 
     if (shouldGUI) {
         std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
