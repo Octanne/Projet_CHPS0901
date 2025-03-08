@@ -70,7 +70,12 @@ int main(int argc, char** argv) {
     }*/
 
     // We do the simulation
+    double startTime = MPI_Wtime();
     launchSimulation(qt, particles, qtVisu, nbSteps, timeStep, refreshRate, shouldGUI);
+    double endTime = MPI_Wtime();
+    if (rankMPI == 0) {
+        std::cout << "Simulation time: " << (endTime - startTime) << " seconds" << std::endl;
+    }
 
     // We clean after the simulation
     cleanVisualizer(qtVisu, shouldGUI);
