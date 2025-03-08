@@ -17,7 +17,7 @@ EXECUTABLE = $(BIN_DIR)/main
 
 # Flags
 CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11
-LDFLAGS = -L/usr/lib/x86_64-linux-gnu/libglfw.so -lGLEW -lGL -lglfw -lpthread
+LDFLAGS = -L/usr/lib/x86_64-linux-gnu/libglfw.so -lGLEW -lGL -lglfw -lpthread -fopenmp
 
 # Targets
 all: $(EXECUTABLE)

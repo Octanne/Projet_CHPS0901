@@ -91,25 +91,7 @@ int main(int argc, char** argv) {
 
 void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualizer *qtVisu, double nbSteps, double timeStep, double refreshRate, bool shouldGUI)
 {
-    if (rankMPI == 0) {
-        // We compute the position of the start of the subtree to be handled by each rank
-        std::vector<std::vector<QuadTree*>> poOfSubtree = qt.computeBalancedRanks(sizeMPI);
-        int nbParticleCovered = 0;
-        for (int rank = 0; rank < sizeMPI; ++rank) {
-            std::cerr << "Rank " << rank << " covers " << poOfSubtree[rank].size() << " QuadTree nodes" << std::endl;
-            int totalRankWeight = 0;
-            for (QuadTree* node : poOfSubtree[rank]) {
-                nbParticleCovered += node->getWeightBranch();
-                std::cerr << "  Node at (" << node->getOriginX() << ", " << node->getOriginY() << ") with width " << node->getWidth() 
-                          << " and weight " << node->getWeightBranch() << std::endl;
-                totalRankWeight += node->getWeightBranch();
-            }
-            std::cerr << "Rank " << rank << " has " << totalRankWeight << " particles" << std::endl;
-        }
-        std::cerr << "Number of particles covered " << nbParticleCovered << " out of " << qt.getWeightBranch() << std::endl;
-    }
-
-    /*int step = 0;
+    int step = 0;
     if (rankMPI == 0) std::cout << "Starting simulation with " << particles.size() << " particles" << std::endl;
     // We do the simulation
     while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
@@ -130,7 +112,7 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
         if (shouldGUI) usleep(refreshRate * 1000000);
         // We print the quadtree
         if (!shouldGUI && qtVisu->isInDebug()) qt.print();
-    }*/
+    }
 }
 
 QuadTree initQuadTree(std::vector<Particle *> &particles, double windowSizeG)
