@@ -53,13 +53,17 @@ public:
     void insert(Particle* particleInsert);
     void print(int depth = 0);
     void clear();
-    void computePosOfSubtree(QuadTree* tree, int *posOfSubtree, int& rankUsed, int branchNumber, int& nbParticlesCovered);
+
+
+    int computePosOfSubtreeHierarchical(QuadTree* tree, QuadTree** posOfSubtree, int& alreadyUsed, int& lastUsedRank,
+        int& nbParticleCovered, int depth);
+    void computePosOfSubtreeDynamic(QuadTree* tree, QuadTree** posOfSubtree, std::vector<int>& currentLoadPerRank, 
+        int& rankUsed, int branchNumber, int& nbParticleCovered, int depth);
 
     QuadTree* getNortheast() const;
     QuadTree* getNorthwest() const;
     QuadTree* getSoutheast() const;
     QuadTree* getSouthwest() const;
-
 
     static int* rankMPI;
     static int* sizeMPI;

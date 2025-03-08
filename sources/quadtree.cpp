@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <cmath>
+#include <algorithm>
+#include <numeric>
 
 bool* QuadTree::debugModePtr = nullptr;
 int* QuadTree::rankMPI = nullptr;
@@ -119,6 +121,8 @@ void QuadTree::subdivide() {
     particle = new Particle();
     //std::cout << "Subdivided the quadtree origin at (" << originX << ", " << originY << ") with width " << width << std::endl;
     insertSimple(particleToMove);
+    // We decrement the weight of the branch because we have moved the particle and it will be inserted again
+    weightBranch--;
 }
 
 void QuadTree::updateCenterOfMass(Particle* particleInsert) {
@@ -184,83 +188,142 @@ void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
 // We can also do a fusion of particles when they are too close to the center of mass TO AVOID 
 // THE COLLAPSE OF THE SYSTEM (To much divided sectors)
 
-void QuadTree::computePosOfSubtree(QuadTree* tree, int *posOfSubtree, int& rankUsed, int branchNumber, int& nbParticleCovered) {
-    // posOfSubtree is a array of sizeMPI
-    // We compute the position of the start of the subtree to be handled by each rank
-    // We have on weightBranch the number of particles in the branch
-    // We have sizeMPI the number of ranks
-    // We have rankMPI the rank of the current rank
-    // We have tree the tree to compute the position of the subtree
-    // We have posOfSubtree the array to store the position of the start of the subtree for each rank
-    int branchParticle = tree->getWeightBranch();
-
-    int particlesPerRank = weightBranch / *sizeMPI;
-
-    // If the number of particle is less than the number of ranks we give the branch to the rank
-
-
-
-    // If there is only one rank left then we give the whole branch to the rank
-    if (rankUsed == *sizeMPI - 1) {
-        posOfSubtree[rankUsed] = branchNumber;
-        rankUsed++;
-        nbParticleCovered += branchParticle;
+void QuadTree::computePosOfSubtreeDynamic(QuadTree* tree, QuadTree** posOfSubtree, std::vector<int>& currentLoadPerRank, 
+    int& rankUsed, int branchNumber, int& nbParticleCovered, int depth) {
+    // Si le sous-arbre actuel n'a pas de particules, retour
+    if (tree == nullptr || !tree->hasParticle()) {
         return;
     }
-    // If the branch has more than 1/sizeMPI but less than 2/sizeMPI of the total particles 
-    // we enter in the branch and give the part to the rank.
-    if (branchParticle >= particlesPerRank && branchParticle < 2 * particlesPerRank) {
-        // We give the branch to the rank
-        posOfSubtree[rankUsed] = branchNumber;
+
+    // Calcul du poids de l'arbre (nombre de particules dans ce sous-arbre)
+    int subtreeWeight = tree->getWeightBranch();
+
+    // Mise à jour du nombre total de particules couvertes
+    nbParticleCovered += subtreeWeight;
+
+    // Recherche du rank avec la charge la plus faible
+    int minRank = std::distance(currentLoadPerRank.begin(), std::min_element(currentLoadPerRank.begin(), currentLoadPerRank.end()));
+
+    // Si la charge de travail pour ce rank est trop importante, rééquilibrage nécessaire
+    if (currentLoadPerRank[minRank] + subtreeWeight > nbParticleCovered / (rankUsed + 1)) {
+        // Si un processus a trop de charge, on peut décider d'utiliser un autre processus
+        minRank = (minRank + 1) % rankUsed;  // Répartition dynamique (peut ajuster en fonction d'autres critères)
+    }
+
+    // Attribuer le sous-arbre au processus (rank) identifié
+    posOfSubtree[minRank] = tree;
+
+    // Mettre à jour la charge de travail pour ce processus
+    currentLoadPerRank[minRank] += subtreeWeight;
+
+    // Incrémenter le nombre de ranks utilisés si nécessaire
+    if (currentLoadPerRank[minRank] > nbParticleCovered / (rankUsed + 1) && rankUsed < branchNumber) {
         rankUsed++;
-        nbParticleCovered += branchParticle;
-        return;
-    // We only enter in the branch if the branch has more than 2/sizeMPI of the total particles because 
-    // the branch will just have less particles if we continue to go deeper in the tree
-    } else if (branchParticle >= 2 * particlesPerRank) {
-        // We enter in one of the quadrants
-        if (tree->getNortheast() != nullptr) {
-            computePosOfSubtree(tree->getNortheast(), posOfSubtree, rankUsed, branchNumber * 4 + 1, nbParticleCovered);
-        }
-        if (tree->getNorthwest() != nullptr && nbParticleCovered < weightBranch) {
-            computePosOfSubtree(tree->getNorthwest(), posOfSubtree, rankUsed, branchNumber * 4 + 2, nbParticleCovered);
-        }
-        if (tree->getSoutheast() != nullptr && nbParticleCovered < weightBranch) {
-            computePosOfSubtree(tree->getSoutheast(), posOfSubtree, rankUsed, branchNumber * 4 + 3, nbParticleCovered);
-        }
-        if (tree->getSouthwest() != nullptr && nbParticleCovered < weightBranch) {
-            computePosOfSubtree(tree->getSouthwest(), posOfSubtree, rankUsed, branchNumber * 4 + 4, nbParticleCovered);
-        }
-    } else {
-        // We do not enter in the branch
-        return;
+    }
+
+    // Si l'arbre est divisé en sous-arbres (quadrants), appliquer récursivement aux sous-arbres
+    if (tree->getNortheast() != nullptr) {
+        computePosOfSubtreeDynamic(tree->getNortheast(), posOfSubtree, currentLoadPerRank, rankUsed, branchNumber, nbParticleCovered, depth + 1);
+    }
+    if (tree->getNorthwest() != nullptr) {
+        computePosOfSubtreeDynamic(tree->getNorthwest(), posOfSubtree, currentLoadPerRank, rankUsed, branchNumber, nbParticleCovered, depth + 1);
+    }
+    if (tree->getSoutheast() != nullptr) {
+        computePosOfSubtreeDynamic(tree->getSoutheast(), posOfSubtree, currentLoadPerRank, rankUsed, branchNumber, nbParticleCovered, depth + 1);
+    }
+    if (tree->getSouthwest() != nullptr) {
+        computePosOfSubtreeDynamic(tree->getSouthwest(), posOfSubtree, currentLoadPerRank, rankUsed, branchNumber, nbParticleCovered, depth + 1);
     }
 }
 
-void QuadTree::updateParticles(double step) {
-    int posOfSubtree = 0;
+
+int QuadTree::computePosOfSubtreeHierarchical(QuadTree* tree, QuadTree** posOfSubtree, int& alreadyUsed, int& lastUsedRank, int& nbParticleCovered, int depth) {
+    // On commence par regarder combien de particules sont couvertes par le sous-arbre
+    int subtreeWeight = tree->getWeightBranch();
+    int meanWeight = getWeightBranch() / *sizeMPI;
+    std::cout << "Subtree weight " << subtreeWeight << " from depth " << depth << std::endl;
     
-    // We compute the position of the start of the subtree to be handled by each rank
-    int* posOfSubtreeArray = new int[*sizeMPI];
-    int rankUsed = 0;
-    int nbParticlesCovered = 0;
-    computePosOfSubtree(this, posOfSubtreeArray, rankUsed, posOfSubtree, nbParticlesCovered);
-    if (rankMPI == 0) {
-        for (int i = 0; i < *sizeMPI; i++) {
-            std::cout << "Rank " << i << " has to handle the branch " << posOfSubtreeArray[i] << std::endl;
+    // On ajoute la branche si le poids et <= au meanWeight
+    if (subtreeWeight <= meanWeight && alreadyUsed < *sizeMPI) {
+        std::cerr << "Subtree weight " << subtreeWeight << " is less than mean weight " << meanWeight << std::endl;
+        posOfSubtree[lastUsedRank] = tree;
+        lastUsedRank++;
+        return 0;
+    }
+
+    // Si le nombre de processus est supérieur à 1, on doit répartir les sous-arbres
+    // On commence par recuperer le nombre de sous arbres à traiter (non vide)
+    int nbBranches = 0;
+    if (isDivided){
+        if (tree->northeast->getWeightBranch()) nbBranches++;
+        if (tree->northwest->getWeightBranch()) nbBranches++;
+        if (tree->southeast->getWeightBranch()) nbBranches++;
+        if (tree->southwest->getWeightBranch()) nbBranches++;
+    }
+
+    // On mets à jour le nombre de processus utilisés si on a suffisamment de rank pour traiter les sous-arbres
+    if (nbBranches+alreadyUsed <= *sizeMPI) {
+        alreadyUsed += nbBranches;
+    } else {
+        return 1;
+    }
+
+    // Sinon on doit répartir les sous-arbres
+    if (isDivided) {
+        // On parcourt les sous-arbres du plus gros au plus petit
+        std::vector<QuadTree*> branches;
+        if (tree->weightBranch) branches.push_back(tree->northeast);
+        if (tree->weightBranch) branches.push_back(tree->northwest);
+        if (tree->weightBranch) branches.push_back(tree->southeast);
+        if (tree->weightBranch) branches.push_back(tree->southwest);
+        std::sort(branches.begin(), branches.end(), [](QuadTree* a, QuadTree* b) {
+            return a->weightBranch > b->weightBranch;
+        });
+
+        // On parcourt les branches et on les attribue aux processus
+        for (QuadTree* branch : branches) {
+            int hasNotAddChild = computePosOfSubtreeHierarchical(branch, posOfSubtree, alreadyUsed, lastUsedRank, nbParticleCovered, depth + 1);
+            if (hasNotAddChild) {
+                posOfSubtree[lastUsedRank] = branch;
+                lastUsedRank++;
+            }
         }
-        std::cout << "Number of particles covered " << nbParticlesCovered << "out of " << weightBranch << std::endl;
+    }
+
+    return 0;
+}
+
+void QuadTree::updateParticles(double step) { 
+    // We compute the position of the start of the subtree to be handled by each rank
+    QuadTree* poOfSubtree[*sizeMPI];
+    // we set to -1
+    for (int i = 0; i < *sizeMPI; i++) poOfSubtree[i] = nullptr;
+    int rankUsed = 0;
+    int nbParticleCovered = 0;
+    int lastUsedRank = 0;
+    std::vector<int> currentLoadPerRank(*sizeMPI, 0);  // Charge de chaque processus
+    computePosOfSubtreeHierarchical(this, poOfSubtree, rankUsed, lastUsedRank, nbParticleCovered, 0);
+    if (*rankMPI == 0) {
+        for (int i = 0; i < *sizeMPI; i++) {
+            std::cout << "Rank " << i << " has to handle the branch " << poOfSubtree[i] << std::endl;
+            std::cout << "Number of particles covered " << currentLoadPerRank[i] << std::endl;
+            QuadTree* branch = poOfSubtree[i];
+            std::cout << "Branch number " << poOfSubtree[i] << " width address " << branch << std::endl;
+            std::cout << "Branch number " << poOfSubtree[i] << " has " << branch->getWeightBranch() << " particles" << std::endl;
+            std::cout << "Branch number " << poOfSubtree[i] << " with pointer " << branch << std::endl;
+        }
+        std::cout << "Number of particles covered " << nbParticleCovered << " out of " << getWeightBranch() << std::endl;
     }
 
     // HEAD NODE
-    if (rankMPI != nullptr && *rankMPI == 0) {
+    /*if (rankMPI != nullptr && *rankMPI == 0) {
         for (Particle* particle : *particles) {
             double fx = 0.0, fy = 0.0;
             
 
         }
 
-    }
+    }*/
 
     // WORKER NODE
 

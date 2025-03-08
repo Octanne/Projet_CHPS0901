@@ -1,0 +1,16 @@
+ L'idée d'adapter un algorithme de Dijkstra dans le cadre du partitionnement d'un quadtree est intéressante. L'algorithme de Dijkstra est couramment utilisé pour le calcul des plus courts chemins, mais il peut aussi être adapté pour résoudre des problèmes où l'on cherche à sélectionner des sous-arbres (ou des nœuds) en fonction de leur poids, en choisissant les plus "intéressants" (avec un poids élevé), tout en respectant des contraintes comme le nombre maximum de ranks et la couverture complète de l'arbre.
+Comment adapter Dijkstra à ce problème ?
+Idée de l'adaptation :
+
+    Nœuds à traiter : Chaque sous-arbre ou nœud dans le quadtree représente un "nœud" dans un graphe. Les "distances" entre ces nœuds ne seront pas calculées de manière classique, mais plutôt en fonction du poids des sous-arbres. L'objectif est de maximiser la charge distribuée tout en respectant la contrainte du nombre de ranks.
+
+    Critère de "distance" : La distance à un nœud peut être vue comme une sorte de coût qui est inversément lié au poids du sous-arbre. Les nœuds les plus "intéressants" (avec un poids plus élevé) doivent être explorés en priorité.
+
+    Propagation du poids : Comme Dijkstra explore les nœuds voisins en fonction de la distance minimale, dans notre cas, cela revient à explorer les sous-arbres en fonction de leur poids, et à attribuer ces sous-arbres aux ranks disponibles de manière optimale.
+
+    Limitation à un nombre de ranks : À chaque étape, lorsque l'on sélectionne un sous-arbre à attribuer à un rank, on peut attribuer le sous-arbre aux ranks disponibles, tout en veillant à ne pas dépasser le nombre maximal de ranks autorisé.
+
+Algorithme Dijkstra adapté pour le partitionnement :
+
+Voici une proposition d'implémentation de cet algorithme adapté au problème du quadtree.
+1. Dijkstra adapté pour partitionnement de quadtree

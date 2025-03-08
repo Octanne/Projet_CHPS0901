@@ -91,7 +91,27 @@ int main(int argc, char** argv) {
 
 void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualizer *qtVisu, double nbSteps, double timeStep, double refreshRate, bool shouldGUI)
 {
-    int step = 0;
+    if (rankMPI == 0) {
+        // We compute the position of the start of the subtree to be handled by each rank
+        QuadTree* poOfSubtree[sizeMPI];
+        // we set to -1
+        for (int i = 0; i < sizeMPI; i++) poOfSubtree[i] = nullptr;
+        int rankUsed = 0;
+        int lastUsedRank = 0;
+        int nbParticleCovered = 0;
+        std::vector<int> currentLoadPerRank(sizeMPI, 0);  // Charge de chaque processus
+        qt.computePosOfSubtreeHierarchical(&qt, poOfSubtree, rankUsed, lastUsedRank, nbParticleCovered, 0);
+        for (int i = 0; i < sizeMPI; i++) {
+            std::cerr << "======================" << std::endl;
+            std::cerr << "Rank " << i << " has to handle the branch " << poOfSubtree[i] << std::endl;
+            std::cerr << "Number of particles covered " << currentLoadPerRank[i] << std::endl;
+            std::cerr << "From ptr => number of particles covered " << poOfSubtree[i]->getWeightBranch() << std::endl;
+            std::cerr << "======================" << std::endl;
+        }
+        std::cerr << "Number of particles covered " << nbParticleCovered << " out of " << qt.getWeightBranch() << std::endl;
+    }
+
+    /*int step = 0;
     if (rankMPI == 0) std::cout << "Starting simulation with " << particles.size() << " particles" << std::endl;
     // We do the simulation
     while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
@@ -112,7 +132,7 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
         if (shouldGUI) usleep(refreshRate * 1000000);
         // We print the quadtree
         if (!shouldGUI && qtVisu->isInDebug()) qt.print();
-    }
+    }*/
 }
 
 QuadTree initQuadTree(std::vector<Particle *> &particles, double windowSizeG)
@@ -120,7 +140,7 @@ QuadTree initQuadTree(std::vector<Particle *> &particles, double windowSizeG)
     QuadTree::setDebugModePtr(Visualizer::ptrDebugMode());
     QuadTree qt(windowSizeG, 0, 0, &particles);
     qt.buildTree();
-    std::cout << "The simulation window size is " << qt.getWidth() << std::endl;
+    if (rankMPI == 0) std::cout << "The simulation window size is " << qt.getWidth() << std::endl;
     return qt;
 }
 
@@ -129,7 +149,7 @@ void cleanVisualizer(Visualizer *qtVisu, bool& shouldGUI)
     if (shouldGUI && rankMPI == 0)
     {
         std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
-        qtVisu->closeWindow();
+        //qtVisu->closeWindow();
         qtVisu->waitClosedWindow();
     }
 }
@@ -189,32 +209,39 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
             // We generate the particles
             particles = Particle::generateParticles(numParticles, windowSizeG, windowSizeG, maxMass, minMass);
             // We send the particles list to all the other ranks
-            for (int i = 1; i < sizeMPI; i++) {
-                for (Particle *particle : particles) {
-                    double x = particle->getX();
-                    double y = particle->getY();
-                    double v_x = particle->getVx();
-                    double v_y = particle->getVy();
-                    double mass = particle->getMass();
-                    MPI_Send(&x, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-                    MPI_Send(&y, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-                    MPI_Send(&v_x, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-                    MPI_Send(&v_y, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-                    MPI_Send(&mass, 1, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-                }
-            }
-        } else {
+            int particleDataSize = numParticles * 5; // Each particle has 5 attributes: x, y, v_x, v_y, mass
+            double* particleData = new double[particleDataSize];
             for (int i = 0; i < numParticles; i++) {
-                double x, y, v_x, v_y, mass;
-                MPI_Recv(&x, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                MPI_Recv(&y, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                MPI_Recv(&v_x, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                MPI_Recv(&v_y, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                MPI_Recv(&mass, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                particles.push_back(new Particle(x, y, mass));
+                particleData[i * 5] = particles[i]->getX();
+                particleData[i * 5 + 1] = particles[i]->getY();
+                particleData[i * 5 + 2] = particles[i]->getVx();
+                particleData[i * 5 + 3] = particles[i]->getVy();
+                particleData[i * 5 + 4] = particles[i]->getMass();
             }
+            for (int i = 1; i < sizeMPI; i++) {
+                std::cout << "Sending particles to rank " << i << std::endl;
+                MPI_Send(particleData, particleDataSize, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
+                std::cout << "Particles sent to rank " << i << std::endl;
+            }
+            delete[] particleData;
+        } else {
+            int particleDataSize = numParticles * 5;
+            double* particleData = new double[particleDataSize];
+            MPI_Recv(particleData, particleDataSize, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+            for (int i = 0; i < numParticles; i++) {
+                double x = particleData[i * 5];
+                double y = particleData[i * 5 + 1];
+                double v_x = particleData[i * 5 + 2];
+                double v_y = particleData[i * 5 + 3];
+                double mass = particleData[i * 5 + 4];
+                Particle *particle = new Particle(x, y, mass);
+                particle->setVx(v_x);
+                particle->setVy(v_y);
+                particles.push_back(particle);
+            }
+            delete[] particleData;
         }
-        if (rankMPI == 0) std::cout << "Particles generated" << std::endl;
+        std::cout << "Particles received by rank " << rankMPI << std::endl;
     }
 }
 
