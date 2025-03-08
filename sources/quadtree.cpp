@@ -3,8 +3,13 @@
 
 #include <iostream>
 #include <cmath>
+#include <queue>
+
+#include <mpi.h>
 
 bool* QuadTree::debugModePtr = nullptr;
+int* QuadTree::rankMPI = nullptr;
+int* QuadTree::sizeMPI = nullptr;
 
 bool QuadTree::debugMode() {
     return *debugModePtr;
@@ -117,6 +122,8 @@ void QuadTree::subdivide() {
     particle = new Particle();
     //std::cout << "Subdivided the quadtree origin at (" << originX << ", " << originY << ") with width " << width << std::endl;
     insertSimple(particleToMove);
+    // We decrement the weight of the branch because we have moved the particle and it will be inserted again
+    weightBranch--;
 }
 
 void QuadTree::updateCenterOfMass(Particle* particleInsert) {
@@ -176,34 +183,120 @@ void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
     }
 }
 
+std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) const {
+    std::vector<std::vector<QuadTree*>> result(nRank);
+    if (nRank <= 0) return result;
+
+    double totalWeight = static_cast<double>(this->weightBranch);
+    double targetPerRank = totalWeight / nRank;
+    int currentRank = 0;
+    double currentSum = 0.0;
+
+    //std::cout << "Total weight " << totalWeight << " and target per rank " << targetPerRank << std::endl;
+
+    std::queue<const QuadTree*> bfsQueue;
+    // On ajoute les enfants du noeud courant si présent dans la file car sinon le cas 1 mets fin à la boucle
+    if (isDivided) {
+        // On ajoute seulement les enfants > 0
+        if (northeast->weightBranch > 0) bfsQueue.push(northeast);
+        if (northwest->weightBranch > 0) bfsQueue.push(northwest);
+        if (southeast->weightBranch > 0) bfsQueue.push(southeast);
+        if (southwest->weightBranch > 0) bfsQueue.push(southwest);
+    } else {
+        bfsQueue.push(this);
+    }
+
+    while (!bfsQueue.empty() && currentRank < nRank) {
+        const QuadTree* node = bfsQueue.front();
+        bfsQueue.pop();
+
+        // Cas 1 : Le noeud rentre dans le rang actuel
+        if (currentSum + node->weightBranch <= targetPerRank || (bfsQueue.empty() && !node->isDivided)) {
+            result[currentRank].push_back(const_cast<QuadTree*>(node));
+            currentSum += node->weightBranch;
+        }
+        // Cas 2 : Le noeud est trop gros mais divisible -> on explore ses enfants
+        else if (node->isDivided) {
+            // On ajoute seulement les enfants > 0
+            if (node->northeast->weightBranch > 0) bfsQueue.push(node->northeast);
+            if (node->northwest->weightBranch > 0) bfsQueue.push(node->northwest);
+            if (node->southeast->weightBranch > 0) bfsQueue.push(node->southeast);
+            if (node->southwest->weightBranch > 0) bfsQueue.push(node->southwest);
+        }
+        // Cas 3 : Noeud indivisible trop gros -> on l'affecte malgré tout
+        else {
+            result[currentRank].push_back(const_cast<QuadTree*>(node));
+            currentSum = targetPerRank; // Force passage au rang suivant
+        }
+
+        // Passage au rang suivant si quota atteint
+        if (currentSum >= targetPerRank && currentRank < nRank - 1) {
+            currentRank++;
+            currentSum = 0.0;
+        }
+    }
+
+    return result;
+}
+
 // TODO MAYBE DO A FUSION OF PARTICLES WHEN THEY COLLIDE TO MAKE THEM SPREAD
 // in multiple particles but we keep the mass total to avoid losing matter (energy conservation)
 // We can also do a fusion of particles when they are too close to each other
 // We can also do a fusion of particles when they are too close to the center of mass TO AVOID 
 // THE COLLAPSE OF THE SYSTEM (To much divided sectors)
 
-void QuadTree::updateParticles(double step) {
-    // Update velocity of the particles
-    // CAN BE OPENMPized
-    for (Particle* particle : *particles) {
-        double fx = 0.0, fy = 0.0;
-        calculateForce(particle, fx, fy);
+void QuadTree::updateParticles(double step) { 
+    // We compute the position of the start of the subtree to be handled by each rank
+    std::vector<std::vector<QuadTree*>> poOfSubtree = computeBalancedRanks(*sizeMPI);
+
+    // Stockage des accélérations locales (chaque rang calcule sa contribution)
+    std::vector<double> localAccX(particles->size(), 0.0);
+    std::vector<double> localAccY(particles->size(), 0.0);
+
+    // We get are nodes list to handle
+    std::vector<QuadTree*> nodesToHandle = poOfSubtree[*rankMPI];
+    // We handle the nodes
+    
+    // We compute the forces exerted on the particles
+    // CAN BE OPTIMIZED BY OPENMP
+    #pragma omp parallel for
+    for (size_t i = 0; i < particles->size(); ++i) {
+        Particle* particle = (*particles)[i];
+        for (QuadTree* node : poOfSubtree[*rankMPI]) {
+            double fx = 0.0, fy = 0.0;
+            node->calculateForce(particle, fx, fy); // Déjà basé sur G*mass/d²
+            localAccX[i] += fx; // fx contient l'accélération (pas besoin de diviser par mass)
+            localAccY[i] += fy;
+        }
+    }
+    
+    // MPI AllReduce pour sommer les accélérations locales
+    MPI_Allreduce(MPI_IN_PLACE, localAccX.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+    MPI_Allreduce(MPI_IN_PLACE, localAccY.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+
+    // On met à jour les vitesses et positions des particules
+    // CAN BE OPTIMIZED BY OPENMP
+    #pragma omp parallel for
+    for (size_t i = 0; i < particles->size(); ++i) {
+        Particle* particle = (*particles)[i];
+
         // We print the force exerted on the particle
         if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() 
-            << ") has force (" << fx << ", " << fy << ")" << std::endl;
+            << ") has force (" << localAccX[i] << ", " << localAccY[i] << ")" << std::endl;
 
-        particle->setVx(particle->getVx() + fx * step);
-        particle->setVy(particle->getVy() + fy * step);
+        // We update the velocity of the particle
+        particle->setVx(particle->getVx() + localAccX[i] * step);
+        particle->setVy(particle->getVy() + localAccY[i] * step);
 
         // We print the velocity of the particle
         if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY()
              << ") has velocity (" << particle->getVx() << ", " << particle->getVy() << ")" << std::endl;
-    }
-    // Update position of the particles
-    // Can be OPENMPized
-    for (Particle* particle : *particles) {
+
+        // We update the position of the particle
         particle->setX(particle->getX() + particle->getVx() * step);
         particle->setY(particle->getY() + particle->getVy() * step);
+
+        // We print the position of the particle
         if (debugMode()) std::cout << "Particle now at (" << particle->getX() << ", " << particle->getY() 
             << ")" << std::endl;
     }
@@ -337,4 +430,9 @@ QuadTree* QuadTree::getSoutheast() const {
 
 QuadTree* QuadTree::getSouthwest() const {
     return southwest;
+}
+
+void QuadTree::setupMPIValues(int* rank, int* size) {
+    rankMPI = rank;
+    sizeMPI = size;
 }

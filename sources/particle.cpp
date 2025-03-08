@@ -70,6 +70,7 @@ std::vector<Particle*> Particle::loadParticles(std::string& filename) {
     std::vector<Particle*> particles;
     std::ifstream file(filename);
 
+    // Read only so GOOD
     if (file.is_open()) {
         std::string line;
         while (std::getline(file, line)) {

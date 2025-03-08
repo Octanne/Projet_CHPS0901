@@ -54,14 +54,20 @@ public:
     void print(int depth = 0);
     void clear();
 
+    std::vector<std::vector<QuadTree*>> computeBalancedRanks(int nRank) const;
+
     QuadTree* getNortheast() const;
     QuadTree* getNorthwest() const;
     QuadTree* getSoutheast() const;
     QuadTree* getSouthwest() const;
 
+    static int* rankMPI;
+    static int* sizeMPI;
     static bool* debugModePtr;
     static void setDebugModePtr(bool* debugMode);
     static bool debugMode();
+    static void setupMPIValues(int* rank, int* size);    
+
 };
 
 #endif // QUADTREE_H

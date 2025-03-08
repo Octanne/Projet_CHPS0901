@@ -1,0 +1,99 @@
+Proposition de méthode computeBalancedRanks
+
+Signature :
+cpp
+Copy
+
+std::vector<std::vector<QuadTree*>> computeBalancedRanks(int nRank) const;
+
+Algorithme :
+
+    Parcours BFS pour prioriser les sous-arbres larges (meilleure opportunité d'équilibrage).
+
+    Remplissage glouton par rang :
+
+        Cible : totalWeight / nRank.
+
+        Pour chaque rang, accumuler des sous-arbres jusqu'à approcher la cible.
+
+        Si un nœud dépasse le quota restant, explorer ses enfants (s'il est divisible).
+
+    Gestion des cas rebelles :
+
+        Si un nœud indivisible dépasse le quota, il est affecté au rang actuel.
+
+        Les rangs suivants compensent avec des sous-arbres plus petits.
+
+Avantages :
+
+    Complexité O(n) garantie (chaque nœud est visité une fois).
+
+    Respect de la couverture complète (via le BFS et la logique de subdivision).
+
+    Équilibrage "best-effort" grâce à la priorisation des gros sous-arbres.
+
+Code d'exemple
+cpp
+Copy
+
+std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) const {
+    std::vector<std::vector<QuadTree*>> result(nRank);
+    if (nRank <= 0) return result;
+
+    double totalWeight = static_cast<double>(this->weightBranch);
+    double targetPerRank = totalWeight / nRank;
+    int currentRank = 0;
+    double currentSum = 0.0;
+
+    std::queue<const QuadTree*> bfsQueue;
+    bfsQueue.push(this);
+
+    while (!bfsQueue.empty() && currentRank < nRank) {
+        const QuadTree* node = bfsQueue.front();
+        bfsQueue.pop();
+
+        // Cas 1 : Le noeud rentre dans le rang actuel
+        if (currentSum + node->weightBranch <= targetPerRank || bfsQueue.empty()) {
+            result[currentRank].push_back(const_cast<QuadTree*>(node));
+            currentSum += node->weightBranch;
+        }
+        // Cas 2 : Le noeud est trop gros mais divisible -> on explore ses enfants
+        else if (node->isDivided()) {
+            bfsQueue.push(node->northeast);
+            bfsQueue.push(node->northwest);
+            bfsQueue.push(node->southeast);
+            bfsQueue.push(node->southwest);
+        }
+        // Cas 3 : Noeud indivisible trop gros -> on l'affecte malgré tout
+        else {
+            result[currentRank].push_back(const_cast<QuadTree*>(node));
+            currentSum = targetPerRank; // Force passage au rang suivant
+        }
+
+        // Passage au rang suivant si quota atteint
+        if (currentSum >= targetPerRank && currentRank < nRank - 1) {
+            currentRank++;
+            currentSum = 0.0;
+        }
+    }
+
+    return result;
+}
+
+Explications clés :
+
+    BFS pour l'équité :
+
+        Traite les larges sous-arbres en premier (meilleure chance d'équilibrer les poids).
+
+        Exemple : Si nRank=4 et que le quadtree a 4 branches équilibrées, chaque rang obtient une branche.
+
+    Gestion des outliers :
+
+        Un nœud géant indivisible (ex : weightBranch=50 avec target=10) sera attribué à un seul rang, déséquilibrant temporairement. Les rangs suivants se compensent avec des petits sous-arbres.
+
+    Preuve O(n) :
+
+        Chaque nœud est traité une fois via la file BFS.
+
+        Aucune opération coûteuse (pas de tris, pas de backtracking).
