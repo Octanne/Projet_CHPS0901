@@ -4,12 +4,14 @@
 #include <iostream>
 #include <cmath>
 #include <queue>
+#include <algorithm>
 
 #include <mpi.h>
 
 bool* QuadTree::debugModePtr = nullptr;
 int* QuadTree::rankMPI = nullptr;
 int* QuadTree::sizeMPI = nullptr;
+std::vector<QuadTree*> QuadTree::nodePool;
 
 bool QuadTree::debugMode() {
     return *debugModePtr;
@@ -110,10 +112,10 @@ void QuadTree::subdivide() {
     // We create the four quadrants
     double newWidth = width / 2;
     double center = newWidth / 2;
-    northwest = new QuadTree(newWidth, originX - center, originY + center, 0);
-    northeast = new QuadTree(newWidth, originX + center, originY + center, 0);
-    southwest = new QuadTree(newWidth, originX - center, originY - center, 0);
-    southeast = new QuadTree(newWidth, originX + center, originY - center, 0);
+    northwest = getNode(newWidth, originX - center, originY + center, 0);
+    northeast = getNode(newWidth, originX + center, originY + center, 0);
+    southwest = getNode(newWidth, originX - center, originY - center, 0);
+    southeast = getNode(newWidth, originX + center, originY - center, 0);
     isDivided = true; // The node is set to divided
     hasBody = false; // The node is not a leaf anymore
 
@@ -306,6 +308,53 @@ QuadTree::~QuadTree() {
     clear();
 }
 
+QuadTree* QuadTree::getNode(double w, double ox, double oy, int weightBranch) {
+    if (nodePool.empty()) {
+        return new QuadTree(w, ox, oy, 0);
+    }
+    QuadTree* node = nodePool.back();
+    nodePool.pop_back();
+    node->reset(); // Clear children/particle
+    node->width = w; node->originX = ox; node->originY = oy; node->weightBranch = weightBranch;
+    return node;
+}
+
+void QuadTree::recycle() {
+    if (isDivided) {
+        northeast->recycle();
+        northwest->recycle();
+        southeast->recycle();
+        southwest->recycle();
+    }
+    nodePool.push_back(this);
+}
+
+void QuadTree::reset() {
+    if (particle != nullptr && isDivided) {
+        delete particle;
+
+        northeast->reset();
+        northwest->reset();
+        southeast->reset();
+        southwest->reset();
+    }
+    particle = nullptr;
+
+    isDivided = false;
+    hasBody = false;
+    weightBranch = 0;
+    width = 0;
+    originX = 0;
+    originY = 0;
+
+    // We set the children to nullptr
+    northeast = nullptr;
+    northwest = nullptr;
+    southeast = nullptr;
+    southwest = nullptr;
+    // particles = nullptr; // We do not delete the particles listes
+}
+
 void QuadTree::clear() {
     if (isDivided) {
         //std::cerr << "Deleting quadtree" << std::endl;
@@ -354,11 +403,24 @@ bool QuadTree::buildTree() {
 
     // We reset the tree if it was already built
     if (isDivided) {
-        if (debugMode()) std::cout << "Clearing the quadtree" << std::endl;
-        clear();
+        if (debugMode()) std::cout << "Recycling the quadtree" << std::endl;
+        // We recycle the quadtree to avoid memory allocation and deallocation but only the children
+        // Because we are in the root node
+        if (northeast != nullptr) northeast->recycle();
+        if (northwest != nullptr) northwest->recycle();
+        if (southeast != nullptr) southeast->recycle();
+        if (southwest != nullptr) southwest->recycle();
+        // We reset the root node
+        reset();
     }
 
     if (debugMode()) std::cout << "Compute the quadtree base width" << std::endl;
+
+    // Sort particles by Morton code or spatial grid
+    std::sort(particles->begin(), particles->end(), 
+    [](Particle* a, Particle* b) {
+        return (a->getX() < b->getX()) || (a->getX() == b->getX() && a->getY() < b->getY());
+    });
 
     // We need to calculate the width of the newWindow of simulation
     // For that we need to calculate the maximum distance from the origin

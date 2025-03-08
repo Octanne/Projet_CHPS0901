@@ -31,6 +31,11 @@ private: // TODO utiliser un pointeur pour la particule.
     void insertSimple(Particle* particleInsert);
     void subdivide();
     void updateCenterOfMass(Particle* particleInsert);
+
+    void recycle(); // Reset and return to pool
+    void reset(); // Reset the node
+    static std::vector<QuadTree*> nodePool;
+    static QuadTree* getNode(double width, double ox, double oy, int weightBranch);
 public:
     QuadTree(double width, double originX, double originY, std::vector<Particle*>* particles);
     QuadTree(double width, double originX, double originY, int weightBranch);

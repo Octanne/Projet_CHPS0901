@@ -129,7 +129,7 @@ void cleanVisualizer(Visualizer *qtVisu, bool& shouldGUI)
     if (shouldGUI && rankMPI == 0)
     {
         std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
-        //qtVisu->closeWindow();
+        qtVisu->closeWindow();
         qtVisu->waitClosedWindow();
     }
 }
