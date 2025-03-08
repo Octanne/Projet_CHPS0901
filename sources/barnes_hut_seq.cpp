@@ -97,11 +97,14 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
         int nbParticleCovered = 0;
         for (int rank = 0; rank < sizeMPI; ++rank) {
             std::cerr << "Rank " << rank << " covers " << poOfSubtree[rank].size() << " QuadTree nodes" << std::endl;
+            int totalRankWeight = 0;
             for (QuadTree* node : poOfSubtree[rank]) {
                 nbParticleCovered += node->getWeightBranch();
                 std::cerr << "  Node at (" << node->getOriginX() << ", " << node->getOriginY() << ") with width " << node->getWidth() 
                           << " and weight " << node->getWeightBranch() << std::endl;
+                totalRankWeight += node->getWeightBranch();
             }
+            std::cerr << "Rank " << rank << " has " << totalRankWeight << " particles" << std::endl;
         }
         std::cerr << "Number of particles covered " << nbParticleCovered << " out of " << qt.getWeightBranch() << std::endl;
     }

@@ -190,13 +190,16 @@ std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) co
     int currentRank = 0;
     double currentSum = 0.0;
 
+    std::cout << "Total weight " << totalWeight << " and target per rank " << targetPerRank << std::endl;
+
     std::queue<const QuadTree*> bfsQueue;
     // On ajoute les enfants du noeud courant si présent dans la file car sinon le cas 1 mets fin à la boucle
     if (isDivided) {
-        bfsQueue.push(northeast);
-        bfsQueue.push(northwest);
-        bfsQueue.push(southeast);
-        bfsQueue.push(southwest);
+        // On ajoute seulement les enfants > 0
+        if (northeast->weightBranch > 0) bfsQueue.push(northeast);
+        if (northwest->weightBranch > 0) bfsQueue.push(northwest);
+        if (southeast->weightBranch > 0) bfsQueue.push(southeast);
+        if (southwest->weightBranch > 0) bfsQueue.push(southwest);
     } else {
         bfsQueue.push(this);
     }
@@ -206,7 +209,7 @@ std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) co
         bfsQueue.pop();
 
         // Cas 1 : Le noeud rentre dans le rang actuel
-        if (currentSum + node->weightBranch <= targetPerRank || bfsQueue.empty()) {
+        if (currentSum + node->weightBranch <= targetPerRank || (bfsQueue.empty() && !node->isDivided)) {
             result[currentRank].push_back(const_cast<QuadTree*>(node));
             currentSum += node->weightBranch;
         }
@@ -248,11 +251,14 @@ void QuadTree::updateParticles(double step) {
         int nbParticleCovered = 0;
         for (int rank = 0; rank < *sizeMPI; ++rank) {
             std::cerr << "Rank " << rank << " covers " << poOfSubtree[rank].size() << " QuadTree nodes" << std::endl;
+            int totalRankWeight = 0;
             for (QuadTree* node : poOfSubtree[rank]) {
                 nbParticleCovered += node->getWeightBranch();
                 std::cerr << "  Node at (" << node->getOriginX() << ", " << node->getOriginY() << ") with width " << node->getWidth() 
                           << " and weight " << node->getWeightBranch() << std::endl;
+                totalRankWeight += node->getWeightBranch();
             }
+            std::cerr << "Rank " << rank << " has " << totalRankWeight << " particles" << std::endl;
         }
         std::cerr << "Number of particles covered " << nbParticleCovered << " out of " << getWeightBranch() << std::endl;
     }
