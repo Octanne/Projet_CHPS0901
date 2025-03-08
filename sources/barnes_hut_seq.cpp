@@ -232,7 +232,8 @@ int main(int argc, char** argv) {
         if (!shouldGUI && qtVisu->isInDebug()) qt.print();
     }
     double endTime = std::clock();
-    std::cout << "Simulation time: " << (endTime - startTime) << " seconds" << std::endl;
+    double duration = (endTime - startTime) / CLOCKS_PER_SEC;
+    std::cout << "Simulation ended in " << duration << "s" << std::endl;
 
     if (shouldGUI) {
         std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
