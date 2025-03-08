@@ -54,11 +54,7 @@ public:
     void print(int depth = 0);
     void clear();
 
-
-    int computePosOfSubtreeHierarchical(QuadTree* tree, QuadTree** posOfSubtree, int& alreadyUsed, int& lastUsedRank,
-        int& nbParticleCovered, int depth);
-    void computePosOfSubtreeDynamic(QuadTree* tree, QuadTree** posOfSubtree, std::vector<int>& currentLoadPerRank, 
-        int& rankUsed, int branchNumber, int& nbParticleCovered, int depth);
+    std::vector<std::vector<QuadTree*>> computeBalancedRanks(int nRank) const;
 
     QuadTree* getNortheast() const;
     QuadTree* getNorthwest() const;

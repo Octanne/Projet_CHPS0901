@@ -1,16 +1,99 @@
- L'idée d'adapter un algorithme de Dijkstra dans le cadre du partitionnement d'un quadtree est intéressante. L'algorithme de Dijkstra est couramment utilisé pour le calcul des plus courts chemins, mais il peut aussi être adapté pour résoudre des problèmes où l'on cherche à sélectionner des sous-arbres (ou des nœuds) en fonction de leur poids, en choisissant les plus "intéressants" (avec un poids élevé), tout en respectant des contraintes comme le nombre maximum de ranks et la couverture complète de l'arbre.
-Comment adapter Dijkstra à ce problème ?
-Idée de l'adaptation :
+Proposition de méthode computeBalancedRanks
 
-    Nœuds à traiter : Chaque sous-arbre ou nœud dans le quadtree représente un "nœud" dans un graphe. Les "distances" entre ces nœuds ne seront pas calculées de manière classique, mais plutôt en fonction du poids des sous-arbres. L'objectif est de maximiser la charge distribuée tout en respectant la contrainte du nombre de ranks.
+Signature :
+cpp
+Copy
 
-    Critère de "distance" : La distance à un nœud peut être vue comme une sorte de coût qui est inversément lié au poids du sous-arbre. Les nœuds les plus "intéressants" (avec un poids plus élevé) doivent être explorés en priorité.
+std::vector<std::vector<QuadTree*>> computeBalancedRanks(int nRank) const;
 
-    Propagation du poids : Comme Dijkstra explore les nœuds voisins en fonction de la distance minimale, dans notre cas, cela revient à explorer les sous-arbres en fonction de leur poids, et à attribuer ces sous-arbres aux ranks disponibles de manière optimale.
+Algorithme :
 
-    Limitation à un nombre de ranks : À chaque étape, lorsque l'on sélectionne un sous-arbre à attribuer à un rank, on peut attribuer le sous-arbre aux ranks disponibles, tout en veillant à ne pas dépasser le nombre maximal de ranks autorisé.
+    Parcours BFS pour prioriser les sous-arbres larges (meilleure opportunité d'équilibrage).
 
-Algorithme Dijkstra adapté pour le partitionnement :
+    Remplissage glouton par rang :
 
-Voici une proposition d'implémentation de cet algorithme adapté au problème du quadtree.
-1. Dijkstra adapté pour partitionnement de quadtree
+        Cible : totalWeight / nRank.
+
+        Pour chaque rang, accumuler des sous-arbres jusqu'à approcher la cible.
+
+        Si un nœud dépasse le quota restant, explorer ses enfants (s'il est divisible).
+
+    Gestion des cas rebelles :
+
+        Si un nœud indivisible dépasse le quota, il est affecté au rang actuel.
+
+        Les rangs suivants compensent avec des sous-arbres plus petits.
+
+Avantages :
+
+    Complexité O(n) garantie (chaque nœud est visité une fois).
+
+    Respect de la couverture complète (via le BFS et la logique de subdivision).
+
+    Équilibrage "best-effort" grâce à la priorisation des gros sous-arbres.
+
+Code d'exemple
+cpp
+Copy
+
+std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) const {
+    std::vector<std::vector<QuadTree*>> result(nRank);
+    if (nRank <= 0) return result;
+
+    double totalWeight = static_cast<double>(this->weightBranch);
+    double targetPerRank = totalWeight / nRank;
+    int currentRank = 0;
+    double currentSum = 0.0;
+
+    std::queue<const QuadTree*> bfsQueue;
+    bfsQueue.push(this);
+
+    while (!bfsQueue.empty() && currentRank < nRank) {
+        const QuadTree* node = bfsQueue.front();
+        bfsQueue.pop();
+
+        // Cas 1 : Le noeud rentre dans le rang actuel
+        if (currentSum + node->weightBranch <= targetPerRank || bfsQueue.empty()) {
+            result[currentRank].push_back(const_cast<QuadTree*>(node));
+            currentSum += node->weightBranch;
+        }
+        // Cas 2 : Le noeud est trop gros mais divisible -> on explore ses enfants
+        else if (node->isDivided()) {
+            bfsQueue.push(node->northeast);
+            bfsQueue.push(node->northwest);
+            bfsQueue.push(node->southeast);
+            bfsQueue.push(node->southwest);
+        }
+        // Cas 3 : Noeud indivisible trop gros -> on l'affecte malgré tout
+        else {
+            result[currentRank].push_back(const_cast<QuadTree*>(node));
+            currentSum = targetPerRank; // Force passage au rang suivant
+        }
+
+        // Passage au rang suivant si quota atteint
+        if (currentSum >= targetPerRank && currentRank < nRank - 1) {
+            currentRank++;
+            currentSum = 0.0;
+        }
+    }
+
+    return result;
+}
+
+Explications clés :
+
+    BFS pour l'équité :
+
+        Traite les larges sous-arbres en premier (meilleure chance d'équilibrer les poids).
+
+        Exemple : Si nRank=4 et que le quadtree a 4 branches équilibrées, chaque rang obtient une branche.
+
+    Gestion des outliers :
+
+        Un nœud géant indivisible (ex : weightBranch=50 avec target=10) sera attribué à un seul rang, déséquilibrant temporairement. Les rangs suivants se compensent avec des petits sous-arbres.
+
+    Preuve O(n) :
+
+        Chaque nœud est traité une fois via la file BFS.
+
+        Aucune opération coûteuse (pas de tris, pas de backtracking).

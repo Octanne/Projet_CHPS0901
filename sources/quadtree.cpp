@@ -3,8 +3,7 @@
 
 #include <iostream>
 #include <cmath>
-#include <algorithm>
-#include <numeric>
+#include <queue>
 
 bool* QuadTree::debugModePtr = nullptr;
 int* QuadTree::rankMPI = nullptr;
@@ -182,137 +181,80 @@ void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
     }
 }
 
+std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) const {
+    std::vector<std::vector<QuadTree*>> result(nRank);
+    if (nRank <= 0) return result;
+
+    double totalWeight = static_cast<double>(this->weightBranch);
+    double targetPerRank = totalWeight / nRank;
+    int currentRank = 0;
+    double currentSum = 0.0;
+
+    std::queue<const QuadTree*> bfsQueue;
+    // On ajoute les enfants du noeud courant si présent dans la file car sinon le cas 1 mets fin à la boucle
+    if (isDivided) {
+        bfsQueue.push(northeast);
+        bfsQueue.push(northwest);
+        bfsQueue.push(southeast);
+        bfsQueue.push(southwest);
+    } else {
+        bfsQueue.push(this);
+    }
+
+    while (!bfsQueue.empty() && currentRank < nRank) {
+        const QuadTree* node = bfsQueue.front();
+        bfsQueue.pop();
+
+        // Cas 1 : Le noeud rentre dans le rang actuel
+        if (currentSum + node->weightBranch <= targetPerRank || bfsQueue.empty()) {
+            result[currentRank].push_back(const_cast<QuadTree*>(node));
+            currentSum += node->weightBranch;
+        }
+        // Cas 2 : Le noeud est trop gros mais divisible -> on explore ses enfants
+        else if (node->isDivided) {
+            // On ajoute seulement les enfants > 0
+            if (node->northeast->weightBranch > 0) bfsQueue.push(node->northeast);
+            if (node->northwest->weightBranch > 0) bfsQueue.push(node->northwest);
+            if (node->southeast->weightBranch > 0) bfsQueue.push(node->southeast);
+            if (node->southwest->weightBranch > 0) bfsQueue.push(node->southwest);
+        }
+        // Cas 3 : Noeud indivisible trop gros -> on l'affecte malgré tout
+        else {
+            result[currentRank].push_back(const_cast<QuadTree*>(node));
+            currentSum = targetPerRank; // Force passage au rang suivant
+        }
+
+        // Passage au rang suivant si quota atteint
+        if (currentSum >= targetPerRank && currentRank < nRank - 1) {
+            currentRank++;
+            currentSum = 0.0;
+        }
+    }
+
+    return result;
+}
+
 // TODO MAYBE DO A FUSION OF PARTICLES WHEN THEY COLLIDE TO MAKE THEM SPREAD
 // in multiple particles but we keep the mass total to avoid losing matter (energy conservation)
 // We can also do a fusion of particles when they are too close to each other
 // We can also do a fusion of particles when they are too close to the center of mass TO AVOID 
 // THE COLLAPSE OF THE SYSTEM (To much divided sectors)
 
-void QuadTree::computePosOfSubtreeDynamic(QuadTree* tree, QuadTree** posOfSubtree, std::vector<int>& currentLoadPerRank, 
-    int& rankUsed, int branchNumber, int& nbParticleCovered, int depth) {
-    // Si le sous-arbre actuel n'a pas de particules, retour
-    if (tree == nullptr || !tree->hasParticle()) {
-        return;
-    }
-
-    // Calcul du poids de l'arbre (nombre de particules dans ce sous-arbre)
-    int subtreeWeight = tree->getWeightBranch();
-
-    // Mise à jour du nombre total de particules couvertes
-    nbParticleCovered += subtreeWeight;
-
-    // Recherche du rank avec la charge la plus faible
-    int minRank = std::distance(currentLoadPerRank.begin(), std::min_element(currentLoadPerRank.begin(), currentLoadPerRank.end()));
-
-    // Si la charge de travail pour ce rank est trop importante, rééquilibrage nécessaire
-    if (currentLoadPerRank[minRank] + subtreeWeight > nbParticleCovered / (rankUsed + 1)) {
-        // Si un processus a trop de charge, on peut décider d'utiliser un autre processus
-        minRank = (minRank + 1) % rankUsed;  // Répartition dynamique (peut ajuster en fonction d'autres critères)
-    }
-
-    // Attribuer le sous-arbre au processus (rank) identifié
-    posOfSubtree[minRank] = tree;
-
-    // Mettre à jour la charge de travail pour ce processus
-    currentLoadPerRank[minRank] += subtreeWeight;
-
-    // Incrémenter le nombre de ranks utilisés si nécessaire
-    if (currentLoadPerRank[minRank] > nbParticleCovered / (rankUsed + 1) && rankUsed < branchNumber) {
-        rankUsed++;
-    }
-
-    // Si l'arbre est divisé en sous-arbres (quadrants), appliquer récursivement aux sous-arbres
-    if (tree->getNortheast() != nullptr) {
-        computePosOfSubtreeDynamic(tree->getNortheast(), posOfSubtree, currentLoadPerRank, rankUsed, branchNumber, nbParticleCovered, depth + 1);
-    }
-    if (tree->getNorthwest() != nullptr) {
-        computePosOfSubtreeDynamic(tree->getNorthwest(), posOfSubtree, currentLoadPerRank, rankUsed, branchNumber, nbParticleCovered, depth + 1);
-    }
-    if (tree->getSoutheast() != nullptr) {
-        computePosOfSubtreeDynamic(tree->getSoutheast(), posOfSubtree, currentLoadPerRank, rankUsed, branchNumber, nbParticleCovered, depth + 1);
-    }
-    if (tree->getSouthwest() != nullptr) {
-        computePosOfSubtreeDynamic(tree->getSouthwest(), posOfSubtree, currentLoadPerRank, rankUsed, branchNumber, nbParticleCovered, depth + 1);
-    }
-}
-
-
-int QuadTree::computePosOfSubtreeHierarchical(QuadTree* tree, QuadTree** posOfSubtree, int& alreadyUsed, int& lastUsedRank, int& nbParticleCovered, int depth) {
-    // On commence par regarder combien de particules sont couvertes par le sous-arbre
-    int subtreeWeight = tree->getWeightBranch();
-    int meanWeight = getWeightBranch() / *sizeMPI;
-    std::cout << "Subtree weight " << subtreeWeight << " from depth " << depth << std::endl;
-    
-    // On ajoute la branche si le poids et <= au meanWeight
-    if (subtreeWeight <= meanWeight && alreadyUsed < *sizeMPI) {
-        std::cerr << "Subtree weight " << subtreeWeight << " is less than mean weight " << meanWeight << std::endl;
-        posOfSubtree[lastUsedRank] = tree;
-        lastUsedRank++;
-        return 0;
-    }
-
-    // Si le nombre de processus est supérieur à 1, on doit répartir les sous-arbres
-    // On commence par recuperer le nombre de sous arbres à traiter (non vide)
-    int nbBranches = 0;
-    if (isDivided){
-        if (tree->northeast->getWeightBranch()) nbBranches++;
-        if (tree->northwest->getWeightBranch()) nbBranches++;
-        if (tree->southeast->getWeightBranch()) nbBranches++;
-        if (tree->southwest->getWeightBranch()) nbBranches++;
-    }
-
-    // On mets à jour le nombre de processus utilisés si on a suffisamment de rank pour traiter les sous-arbres
-    if (nbBranches+alreadyUsed <= *sizeMPI) {
-        alreadyUsed += nbBranches;
-    } else {
-        return 1;
-    }
-
-    // Sinon on doit répartir les sous-arbres
-    if (isDivided) {
-        // On parcourt les sous-arbres du plus gros au plus petit
-        std::vector<QuadTree*> branches;
-        if (tree->weightBranch) branches.push_back(tree->northeast);
-        if (tree->weightBranch) branches.push_back(tree->northwest);
-        if (tree->weightBranch) branches.push_back(tree->southeast);
-        if (tree->weightBranch) branches.push_back(tree->southwest);
-        std::sort(branches.begin(), branches.end(), [](QuadTree* a, QuadTree* b) {
-            return a->weightBranch > b->weightBranch;
-        });
-
-        // On parcourt les branches et on les attribue aux processus
-        for (QuadTree* branch : branches) {
-            int hasNotAddChild = computePosOfSubtreeHierarchical(branch, posOfSubtree, alreadyUsed, lastUsedRank, nbParticleCovered, depth + 1);
-            if (hasNotAddChild) {
-                posOfSubtree[lastUsedRank] = branch;
-                lastUsedRank++;
-            }
-        }
-    }
-
-    return 0;
-}
-
 void QuadTree::updateParticles(double step) { 
     // We compute the position of the start of the subtree to be handled by each rank
-    QuadTree* poOfSubtree[*sizeMPI];
-    // we set to -1
-    for (int i = 0; i < *sizeMPI; i++) poOfSubtree[i] = nullptr;
-    int rankUsed = 0;
-    int nbParticleCovered = 0;
-    int lastUsedRank = 0;
-    std::vector<int> currentLoadPerRank(*sizeMPI, 0);  // Charge de chaque processus
-    computePosOfSubtreeHierarchical(this, poOfSubtree, rankUsed, lastUsedRank, nbParticleCovered, 0);
-    if (*rankMPI == 0) {
-        for (int i = 0; i < *sizeMPI; i++) {
-            std::cout << "Rank " << i << " has to handle the branch " << poOfSubtree[i] << std::endl;
-            std::cout << "Number of particles covered " << currentLoadPerRank[i] << std::endl;
-            QuadTree* branch = poOfSubtree[i];
-            std::cout << "Branch number " << poOfSubtree[i] << " width address " << branch << std::endl;
-            std::cout << "Branch number " << poOfSubtree[i] << " has " << branch->getWeightBranch() << " particles" << std::endl;
-            std::cout << "Branch number " << poOfSubtree[i] << " with pointer " << branch << std::endl;
+    if (rankMPI == 0) {
+        // We compute the position of the start of the subtree to be handled by each rank
+        std::vector<std::vector<QuadTree*>> poOfSubtree = computeBalancedRanks(*sizeMPI);
+        int nbParticleCovered = 0;
+        for (int rank = 0; rank < *sizeMPI; ++rank) {
+            std::cerr << "Rank " << rank << " covers " << poOfSubtree[rank].size() << " QuadTree nodes" << std::endl;
+            for (QuadTree* node : poOfSubtree[rank]) {
+                nbParticleCovered += node->getWeightBranch();
+                std::cerr << "  Node at (" << node->getOriginX() << ", " << node->getOriginY() << ") with width " << node->getWidth() 
+                          << " and weight " << node->getWeightBranch() << std::endl;
+            }
         }
-        std::cout << "Number of particles covered " << nbParticleCovered << " out of " << getWeightBranch() << std::endl;
+        std::cerr << "Number of particles covered " << nbParticleCovered << " out of " << getWeightBranch() << std::endl;
     }
 
     // HEAD NODE

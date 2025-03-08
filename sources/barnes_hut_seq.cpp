@@ -62,12 +62,12 @@ int main(int argc, char** argv) {
     initVisualizer(qtVisu, shouldGUI, debugMode);
 
     // We print the simulation parameters
-    if (rankMPI == 0) {
+    /*if (rankMPI == 0) {
         if (nbSteps != 0) std::cout << "Running simulation for " << nbSteps << " steps with a time step of " 
             << timeStep << "s" << std::endl;
         else std::cout << "Running simulation indefinitely with a time step of " 
             << timeStep << "s" << std::endl;
-    }
+    }*/
 
     // We do the simulation
     launchSimulation(qt, particles, qtVisu, nbSteps, timeStep, refreshRate, shouldGUI);
@@ -93,20 +93,15 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
 {
     if (rankMPI == 0) {
         // We compute the position of the start of the subtree to be handled by each rank
-        QuadTree* poOfSubtree[sizeMPI];
-        // we set to -1
-        for (int i = 0; i < sizeMPI; i++) poOfSubtree[i] = nullptr;
-        int rankUsed = 0;
-        int lastUsedRank = 0;
+        std::vector<std::vector<QuadTree*>> poOfSubtree = qt.computeBalancedRanks(sizeMPI);
         int nbParticleCovered = 0;
-        std::vector<int> currentLoadPerRank(sizeMPI, 0);  // Charge de chaque processus
-        qt.computePosOfSubtreeHierarchical(&qt, poOfSubtree, rankUsed, lastUsedRank, nbParticleCovered, 0);
-        for (int i = 0; i < sizeMPI; i++) {
-            std::cerr << "======================" << std::endl;
-            std::cerr << "Rank " << i << " has to handle the branch " << poOfSubtree[i] << std::endl;
-            std::cerr << "Number of particles covered " << currentLoadPerRank[i] << std::endl;
-            std::cerr << "From ptr => number of particles covered " << poOfSubtree[i]->getWeightBranch() << std::endl;
-            std::cerr << "======================" << std::endl;
+        for (int rank = 0; rank < sizeMPI; ++rank) {
+            std::cerr << "Rank " << rank << " covers " << poOfSubtree[rank].size() << " QuadTree nodes" << std::endl;
+            for (QuadTree* node : poOfSubtree[rank]) {
+                nbParticleCovered += node->getWeightBranch();
+                std::cerr << "  Node at (" << node->getOriginX() << ", " << node->getOriginY() << ") with width " << node->getWidth() 
+                          << " and weight " << node->getWeightBranch() << std::endl;
+            }
         }
         std::cerr << "Number of particles covered " << nbParticleCovered << " out of " << qt.getWeightBranch() << std::endl;
     }
