@@ -259,6 +259,7 @@ void QuadTree::updateParticles(double step) {
     
     // We compute the forces exerted on the particles
     // CAN BE OPTIMIZED BY OPENMP
+    #pragma omp parallel for
     for (size_t i = 0; i < particles->size(); ++i) {
         Particle* particle = (*particles)[i];
         for (QuadTree* node : poOfSubtree[*rankMPI]) {
@@ -275,6 +276,7 @@ void QuadTree::updateParticles(double step) {
 
     // On met à jour les vitesses et positions des particules
     // CAN BE OPTIMIZED BY OPENMP
+    #pragma omp parallel for
     for (size_t i = 0; i < particles->size(); ++i) {
         Particle* particle = (*particles)[i];
 
