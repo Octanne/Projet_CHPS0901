@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     // We bind the MPI rank and size to the quadtree class
     QuadTree::setupMPIValues(&rankMPI, &sizeMPI);
 
-    if (rankMPI == 0) std::cout << "Barnes-Hut Sequential Implementation" << std::endl;
+    if (rankMPI == 0) std::cout << "Barnes-Hut MPI/OpenMP with recycle memory implementation" << std::endl;
 
     double windowSizeG = 800; // default window size
     int numParticles = 1000; // default number of particles
@@ -62,12 +62,12 @@ int main(int argc, char** argv) {
     initVisualizer(qtVisu, shouldGUI, debugMode);
 
     // We print the simulation parameters
-    /*if (rankMPI == 0) {
+    if (rankMPI == 0) {
         if (nbSteps != 0) std::cout << "Running simulation for " << nbSteps << " steps with a time step of " 
             << timeStep << "s" << std::endl;
         else std::cout << "Running simulation indefinitely with a time step of " 
             << timeStep << "s" << std::endl;
-    }*/
+    }
 
     // We do the simulation
     double startTime = MPI_Wtime();
@@ -86,7 +86,7 @@ int main(int argc, char** argv) {
     // We clean the particles and save them if needed
     cleanParticles(particles, true);
 
-    if (rankMPI == 0) std::cout << "End of Simulation with Barnes-Hut Sequential Implementation" << std::endl;
+    if (rankMPI == 0) std::cout << "End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation" << std::endl;
 
     // Open MPI finalization
     MPI_Finalize();
