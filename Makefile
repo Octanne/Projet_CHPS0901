@@ -1,4 +1,5 @@
 # Makefile for C++ project
+INSTALL_DIR=libs/install
 
 # Compiler
 CXX = g++
@@ -18,9 +19,15 @@ EXECUTABLE = $(BIN_DIR)/main
 # Flags
 CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11
 LDFLAGS = -lGLEW -lGL -lglfw -lpthread
+LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -lGL -lpthread 
 
 # Targets
 all: $(EXECUTABLE)
+
+# Local library build
+locallibs: LDFLAGS=$(LDFLAGS_LOCAL)
+locallibs: CXXFLAGS+=-I${INSTALL_DIR}/include
+locallibs: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
 	@mkdir -p $(BIN_DIR)

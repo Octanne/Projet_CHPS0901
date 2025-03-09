@@ -4,3 +4,5 @@ bin/
 obj/
 # Remove results directory
 results/
+# Remove local libs directory
+libs/
