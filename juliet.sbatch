@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=n_corps_chps0901    # Job name
-#SBATCH --output=output_ncorps_%j.txt  # Output file (%j will be replaced with the job ID)
+#SBATCH --output=results/output_ncorps_%j.txt  # Output file (%j will be replaced with the job ID)
 #SBATCH --ntasks=20                    # Number of MPI processes (5 processes)
 #SBATCH --cpus-per-task=4              # Number of CPU cores per MPI process (for OpenMP threads)
 #SBATCH --time=01:00:00                # Maximum runtime (1 hour)
