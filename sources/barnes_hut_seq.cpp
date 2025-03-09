@@ -4,6 +4,7 @@
 #include <csignal>
 
 #include <mpi.h>
+#include <omp.h>
 
 // Defining the masses as constants
 const double massEarth = 5.972e24; // in kilograms
@@ -67,6 +68,13 @@ int main(int argc, char** argv) {
             << timeStep << "s" << std::endl;
         else std::cout << "Running simulation indefinitely with a time step of " 
             << timeStep << "s" << std::endl;
+        
+        // We print the OMP parameters and MPI parameters and before also the number of particles
+        std::cout << "Step (dt): " << timeStep << "s" << std::endl;
+        std::cout << "Number of epochs compute: " << nbSteps << std::endl;
+        std::cout << "Number of particles: " << particles.size() << std::endl;
+        std::cout << "Number of MPI processes: " << sizeMPI << std::endl;
+        std::cout << "Number of OpenMP threads: " << omp_get_max_threads() << std::endl;
     }
 
     // We do the simulation
