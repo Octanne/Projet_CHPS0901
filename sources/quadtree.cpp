@@ -7,6 +7,7 @@
 #include <algorithm>
 
 #include <mpi.h>
+#include <omp.h>
 
 bool* QuadTree::debugModePtr = nullptr;
 int* QuadTree::rankMPI = nullptr;
