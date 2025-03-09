@@ -4,6 +4,7 @@
 #include <csignal>
 
 #include <mpi.h>
+#include <omp.h>
 
 // Defining the masses as constants
 const double massEarth = 5.972e24; // in kilograms
@@ -67,6 +68,13 @@ int main(int argc, char** argv) {
             << timeStep << "s" << std::endl;
         else std::cout << "Running simulation indefinitely with a time step of " 
             << timeStep << "s" << std::endl;
+        
+        // We print the OMP parameters and MPI parameters and before also the number of particles
+        std::cout << "Step (dt): " << timeStep << "s" << std::endl;
+        std::cout << "Number of epochs compute: " << nbSteps << std::endl;
+        std::cout << "Number of particles: " << particles.size() << std::endl;
+        std::cout << "Number of MPI processes: " << sizeMPI << std::endl;
+        std::cout << "Number of OpenMP threads: " << omp_get_max_threads() << std::endl;
     }
 
     // We do the simulation
@@ -195,36 +203,30 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
             particles = Particle::generateParticles(numParticles, windowSizeG, windowSizeG, maxMass, minMass);
             // We send the particles list to all the other ranks
             int particleDataSize = numParticles * 5; // Each particle has 5 attributes: x, y, v_x, v_y, mass
-            double* particleData = new double[particleDataSize];
+            std::vector<double> particleData(particleDataSize);
             for (int i = 0; i < numParticles; i++) {
-                particleData[i * 5] = particles[i]->getX();
-                particleData[i * 5 + 1] = particles[i]->getY();
-                particleData[i * 5 + 2] = particles[i]->getVx();
-                particleData[i * 5 + 3] = particles[i]->getVy();
-                particleData[i * 5 + 4] = particles[i]->getMass();
+            particleData[i * 5] = particles[i]->getX();
+            particleData[i * 5 + 1] = particles[i]->getY();
+            particleData[i * 5 + 2] = particles[i]->getVx();
+            particleData[i * 5 + 3] = particles[i]->getVy();
+            particleData[i * 5 + 4] = particles[i]->getMass();
             }
-            for (int i = 1; i < sizeMPI; i++) {
-                std::cout << "Sending particles to rank " << i << std::endl;
-                MPI_Send(particleData, particleDataSize, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-                std::cout << "Particles sent to rank " << i << std::endl;
-            }
-            delete[] particleData;
+            MPI_Bcast(particleData.data(), particleDataSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
         } else {
             int particleDataSize = numParticles * 5;
-            double* particleData = new double[particleDataSize];
-            MPI_Recv(particleData, particleDataSize, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+            std::vector<double> particleData(particleDataSize);
+            MPI_Bcast(particleData.data(), particleDataSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
             for (int i = 0; i < numParticles; i++) {
-                double x = particleData[i * 5];
-                double y = particleData[i * 5 + 1];
-                double v_x = particleData[i * 5 + 2];
-                double v_y = particleData[i * 5 + 3];
-                double mass = particleData[i * 5 + 4];
-                Particle *particle = new Particle(x, y, mass);
-                particle->setVx(v_x);
-                particle->setVy(v_y);
-                particles.push_back(particle);
+            double x = particleData[i * 5];
+            double y = particleData[i * 5 + 1];
+            double v_x = particleData[i * 5 + 2];
+            double v_y = particleData[i * 5 + 3];
+            double mass = particleData[i * 5 + 4];
+            Particle *particle = new Particle(x, y, mass);
+            particle->setVx(v_x);
+            particle->setVy(v_y);
+            particles.push_back(particle);
             }
-            delete[] particleData;
         }
         std::cout << "Particles received by rank " << rankMPI << std::endl;
     }
