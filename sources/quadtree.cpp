@@ -418,10 +418,10 @@ bool QuadTree::buildTree() {
     if (debugMode()) std::cout << "Compute the quadtree base width" << std::endl;
 
     // Sort particles by Morton code or spatial grid
-    std::sort(particles->begin(), particles->end(), 
+    /*std::sort(particles->begin(), particles->end(), 
     [](Particle* a, Particle* b) {
         return (a->getX() < b->getX()) || (a->getX() == b->getX() && a->getY() < b->getY());
-    });
+    });*/
 
     // We need to calculate the width of the newWindow of simulation
     // For that we need to calculate the maximum distance from the origin
