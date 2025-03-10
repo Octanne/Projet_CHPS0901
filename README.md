@@ -15,6 +15,21 @@ sudo apt install cmake g++ make libglfw3-dev libglew-dev libglm-dev
 ### ArchLinux
 ```sh
 sudo pacman -Syu
+
+## Utilisation de bibliothèques locales
+Si vous souhaitez compiler l'application en utilisant des bibliothèques installées localement, vous pouvez utiliser le script `install_lib.sh` pour installer les bibliothèques nécessaires dans un répertoire local. Ensuite, compilez l'application avec la commande `make locallibs`.
+
+### Installation des bibliothèques locales
+Pour installer les bibliothèques localement, exécutez le script `install_lib.sh` :
+```sh
+./install_lib.sh
+```
+
+### Compilation avec les bibliothèques locales
+Après avoir installé les bibliothèques localement, compilez l'application avec la commande suivante :
+```sh
+make locallibs
+```
 sudo pacman -S cmake gcc make glfw-3 glew glm
 ```
 
