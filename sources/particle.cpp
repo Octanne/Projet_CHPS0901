@@ -101,6 +101,7 @@ void Particle::saveParticles(std::string& filename, std::vector<Particle*>& part
     std::string folder = filename.substr(0, filename.find_last_of("/\\"));
     if (!folder.empty()) {
         system(("mkdir -p " + folder).c_str());
+        std::cout << "Creating folder " << folder << std::endl;
     }
     std::ofstream file(filename);
     if (file.is_open()) {
