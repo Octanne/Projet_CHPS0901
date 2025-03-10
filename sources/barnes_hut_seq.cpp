@@ -2,6 +2,7 @@
 
 #include <unistd.h>
 #include <csignal>
+#include <cstring>
 
 #include <mpi.h>
 #include <omp.h>
@@ -42,6 +43,7 @@ int main(int argc, char** argv) {
     double refreshRate = 0.5; // default refresh rate 500ms by default
     double nbSteps = 0; // default number of steps
     double debugMode = false; // default no debug mode
+    bool saveParticles = true; // default no save particles
     std::string filename; // default no file
     std::vector<Particle*> particles; // vector of particles
 
@@ -92,7 +94,7 @@ int main(int argc, char** argv) {
     qt.clear();
 
     // We clean the particles and save them if needed
-    cleanParticles(particles, true);
+    cleanParticles(particles, saveParticles);
 
     if (rankMPI == 0) std::cout << "End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation" << std::endl;
 
@@ -232,12 +234,12 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
     }
 }
 
-int handleProgramOptions(int argc, char **argv, double &nbSteps, double &refreshRate, double &debugMode, double &timeStep, std::string &filename, double &windowSizeG, int &numParticles, double &maxMass, double &minMass, bool &shouldGUI)
+int handleProgramOptions(int argc, char **argv, double &nbSteps, double &refreshRate, double &debugMode, double &timeStep, std::string &filename, double &windowSizeG, int &numParticles, double &maxMass, double &minMass, bool &shouldGUI, bool &saveParticles)
 {
     int opt;
     bool wFlag = true;
     bool nFlag = false;
-    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:r:")) != -1)
+    while ((opt = getopt(argc, argv, "w:n:G:L:ghf:t:de:r:s:")) != -1)
     {
         switch (opt)
         {
@@ -253,10 +255,21 @@ int handleProgramOptions(int argc, char **argv, double &nbSteps, double &refresh
                         << " * -t <time_step> : Set the time step for the simulation (optional, default is 0.5).\n"
                         << " * -r <refresh_rate> : Set the refresh rate of the simulation (optional, default is 0.5).\n"
                         << " * -d : Enable debug mode (optional).\n"
+                        << " * -s <false or true> : Save the particles at the end of the simulation (optional).\n"
                         << " * -h : Print this help message.\n";
             return 1;
         case 'e':
             nbSteps = getADoubleFromOptarg();
+            break;
+        case 's':
+            if (strcmp(optarg, "false") == 0) {
+                saveParticles = false;
+            } else if (strcmp(optarg, "true") == 0) {
+                saveParticles = true;
+            } else {
+                std::cerr << "Error: The value must be either 'true' or 'false'." << std::endl;
+                exit(1);
+            }
             break;
         case 'r':
             refreshRate = getADoubleFromOptarg();

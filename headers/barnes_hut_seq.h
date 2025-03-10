@@ -82,9 +82,10 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
  * @param maxMass Reference to the maximum mass of the particles.
  * @param minMass Reference to the minimum mass of the particles.
  * @param shouldGUI Reference to the flag to enable or disable GUI.
+ * @param saveParticles Reference to the flag to save the particle state.
  * @return int Status of the option handling.
  */
-int handleProgramOptions(int argc, char **argv, double &nbSteps, double &refreshRate, double &debugMode, double &timeStep, std::string &filename, double &windowSizeG, int &numParticles, double &maxMass, double &minMass, bool &shouldGUI);
+int handleProgramOptions(int argc, char **argv, double &nbSteps, double &refreshRate, double &debugMode, double &timeStep, std::string &filename, double &windowSizeG, int &numParticles, double &maxMass, double &minMass, bool &shouldGUI, bool &saveParticles);
 
 /**
  * @brief Loads particles from a file.
