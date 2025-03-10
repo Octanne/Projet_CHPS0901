@@ -11,11 +11,12 @@
 # Load OpenMPI module
 spack load openmpi@4.1.6               # Load OpenMPI module if available
 spack load gcc@13.1.0
+spack load maqao@2.20.13
 
-export LD_LIBRARY_PATH="$(pwd)/libs/install/lib64:$LD_LIBRARY_PATH"
 # Set the number of threads for OpenMP (if not set in code or environment)
+export LD_LIBRARY_PATH="$(pwd)/libs/install/lib64:$LD_LIBRARY_PATH"
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK  # Use the number of CPU cores per task
 
 # Run the program using mpirun with OpenMP parallelism inside each MPI process
-mpirun -n $SLURM_NTASKS bin/main -n 100000 -e 100 -t 1
-
+# mpirun -n $SLURM_NTASKS bin/main -n 100000 -e 100 -t 1
+maqao oneview -R1 --number-processes=$SLURM_NTASKS --mpi-command="mpirun -n $SLURM_NTASKS" --number-processes-per-node=$SLURM_CPUS_PER_TASK -- bin/main -n 100000 -e 100 -t 1
