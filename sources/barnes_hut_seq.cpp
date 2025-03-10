@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
 
     // We handle the program options
     if (handleProgramOptions(argc, argv, nbSteps, refreshRate, debugMode, timeStep, filename, windowSizeG, 
-            numParticles, maxMass, minMass, shouldGUI)) {
+            numParticles, maxMass, minMass, shouldGUI, saveParticles)) {
         MPI_Finalize();
         return 0;
     }
