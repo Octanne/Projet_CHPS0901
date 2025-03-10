@@ -19,4 +19,4 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK  # Use the number of CPU cores per t
 
 # Run the program using mpirun with OpenMP parallelism inside each MPI process
 # mpirun -n $SLURM_NTASKS bin/main -n 100000 -e 100 -t 1
-maqao oneview -R1 --number-processes=$SLURM_NTASKS --mpi-command="mpirun -n $SLURM_NTASKS" --number-processes-per-node=$SLURM_CPUS_PER_TASK -- bin/main -n 100000 -e 100 -t 1
+maqao oneview -R1 --ignore-output-code --number-processes=$SLURM_NTASKS --mpi-command="mpirun -n $SLURM_NTASKS" --number-processes-per-node=$SLURM_CPUS_PER_TASK -- bin/main -n 100000 -e 100 -t 1

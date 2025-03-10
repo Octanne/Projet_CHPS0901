@@ -1,0 +1,27 @@
+
+* Info: "ref-cycles" not supported on juliet2: fallback to "cpu-clock"[0mBarnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+Particles received by rank 0
+Particles received by rank 1
+Particles received by rank 2
+Particles received by rank 3
+Particles received by rank 4
+The simulation window size is 1759.99
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 130.94 seconds
+
+* Info: addr2line => ??:0
+[0m
+* Info: Sending SIGTERM to application (host juliet2, process 827688)
+[0m
+* Info: If application should not be killed, rerun with ignore-signals=15[0m
+* Info: If application has normaly exited, rerun with set-exit-signals=15
+[0mInfo: Cleaning /home/colevalet/Cours/CHPS0901/Projet_CHPS0901/maqao_2025-03-10_23-43-00/tools/lprof_npsu_run_0
+
+*** Critical: Aborted profiling
