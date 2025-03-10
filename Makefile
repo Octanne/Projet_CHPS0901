@@ -25,7 +25,7 @@ LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -l
 all: $(EXECUTABLE)
 
 # Local library build
-locallibs: LDFLAGS=$(LDFLAGS_LOCAL)
+locallibs: LDFLAGS=$(LDFLAGS_LOCAL) -g
 locallibs: CXXFLAGS+=-I${INSTALL_DIR}/include
 locallibs: $(EXECUTABLE)
 
