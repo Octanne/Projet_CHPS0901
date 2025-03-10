@@ -1,0 +1,6 @@
+********************************************************************************
+MAQAO 2.20.13 - a8b9d25147f68c2778b2c2e450419542396ae03f::20241210-162123 || 2024/12/10
+maqao oneview -R1 --number-processes=5 "--mpi-command=mpirun -n 5" --number-processes-per-node=16 -- bin/main -n 100000 -e 100 -t 1 
+CPY:  [true] bin/main --> /home/colevalet/Cours/CHPS0901/Projet_CHPS0901/maqao_2025-03-10_23-43-00/binaries/main
+CMD:   /projects/m24090/MAQAO/maqao.x86_64.2.20.13/bin/maqao lprof _caller=oneview  --xp="/home/colevalet/Cours/CHPS0901/Projet_CHPS0901/maqao_2025-03-10_23-43-00/tools/lprof_npsu_run_0" --mpi-command="mpirun -n 5" --collect-CPU-time-intervals --collect-topology ppn=16   -- /home/colevalet/Cours/CHPS0901/Projet_CHPS0901/maqao_2025-03-10_23-43-00/binaries/main  -n 100000 -e 100 -t 1
+###   ERROR 255   ###
