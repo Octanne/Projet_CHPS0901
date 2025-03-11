@@ -1,0 +1,112 @@
+/usr/include/c++/14.2.1/bits/new_allocator.h: 191 - 191
+--------------------------------------------------------------------------------
+
+191: 	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+/usr/include/c++/14.2.1/bits/vector.tcc: 114 - 123
+--------------------------------------------------------------------------------
+
+114: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+115: 	  {
+116: 	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
+117: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+118: 				     std::forward<_Args>(__args)...);
+119: 	    ++this->_M_impl._M_finish;
+120: 	    _GLIBCXX_ASAN_ANNOTATE_GREW(1);
+121: 	  }
+122: 	else
+123: 	  _M_realloc_append(std::forward<_Args>(__args)...);
+/usr/include/c++/14.2.1/bits/stl_iterator.h: 1068 - 1068
+--------------------------------------------------------------------------------
+
+1068:       : _M_current(__i) { }
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 72 - 457
+--------------------------------------------------------------------------------
+
+72:     if (!isDivided) {
+73:         if (!hasBody) {
+74:             particle = particleInsert;
+75:             hasBody = true;
+76:             // We increment the weight of the branch
+77:             weightBranch++;
+78:             return;
+79:         } else {
+80:             // Subdivide the region further by creating four children
+81:             // We moving body b update the center-of-mass and total mass of x.
+82:             subdivide();
+[...]
+333:     if (isDivided) {
+334:         northeast->recycle();
+335:         northwest->recycle();
+336:         southeast->recycle();
+337:         southwest->recycle();
+338:     }
+339:     nodePool.push_back(this);
+340: }
+341: 
+342: void QuadTree::reset() {
+343:     if (particle != nullptr && isDivided) {
+344:         delete particle;
+345: 
+346:         northeast->reset();
+347:         northwest->reset();
+348:         southeast->reset();
+349:         southwest->reset();
+350:     }
+351:     particle = nullptr;
+352: 
+353:     isDivided = false;
+354:     hasBody = false;
+355:     weightBranch = 0;
+356:     width = 0;
+357:     originX = 0;
+358:     originY = 0;
+359: 
+360:     // We set the children to nullptr
+361:     northeast = nullptr;
+362:     northwest = nullptr;
+363:     southeast = nullptr;
+364:     southwest = nullptr;
+365:     // particles = nullptr; // We do not delete the particles listes
+366: }
+[...]
+408: bool QuadTree::buildTree() {
+409:     // We build the tree
+410:     if (particles == nullptr) {
+411:         return false;
+412:     }
+413: 
+414:     // We reset the tree if it was already built
+415:     if (isDivided) {
+416:         //if (debugMode()) std::cout << "Recycling the quadtree" << std::endl;
+417:         // We recycle the quadtree to avoid memory allocation and deallocation but only the children
+418:         // Because we are in the root node
+419:         if (northeast != nullptr) northeast->recycle();
+420:         if (northwest != nullptr) northwest->recycle();
+421:         if (southeast != nullptr) southeast->recycle();
+422:         if (southwest != nullptr) southwest->recycle();
+[...]
+437:     width = 0.0;
+438:     for (Particle* particle : *particles) {
+439:         double distance = std::max(std::abs(particle->getX()), std::abs(particle->getY()));
+440:         if (distance > width) {
+441:             width = distance;
+442:         }
+443:     }
+444: 
+445:     // We do x2 for minus and plus
+446:     width *= 2;
+447:     // We do a little bit more to avoid particles to be on the edge
+448:     width *= 1.1;
+449: 
+450:     //if (debugMode()) std::cout << "Building the quadtree" << std::endl;
+451:     // We insert the particles into the quadtree
+452:     for (Particle* particle : *particles) {
+453:         insertSimple(particle);
+454:     }
+455: 
+456:     return true;
+457: }
+/usr/include/c++/14.2.1/bits/std_abs.h: 72 - 72
+--------------------------------------------------------------------------------
+
+72:   { return __builtin_fabs(__x); }
