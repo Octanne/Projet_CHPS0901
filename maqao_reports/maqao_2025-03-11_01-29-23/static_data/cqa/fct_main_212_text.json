@@ -1,0 +1,433 @@
+{
+  "_cqa_text_report":
+    {
+      "_objects":
+        {
+          "image_col_maj":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/col_maj.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_4x32_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x32_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x64_128":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_128.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_4x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_8x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/8x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x32_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_2x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/2x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_1_call_3":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:95",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:100",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:92",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:103"
+                ],
+              "header": ""
+            },
+          "image_1x64_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_1_call_5":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:88"
+                ],
+              "header": ""
+            },
+          "image_vec_align":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/vec_align.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x32_128":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_128.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_1_complex_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:100",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:92",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:103"
+                ],
+              "header": ""
+            },
+          "list_path_1_call_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:90"
+                ],
+              "header": ""
+            },
+          "image_2x64_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/2x64_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_row_maj":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/row_maj.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_4x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_1_call_2":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:91",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:99"
+                ],
+              "header": ""
+            },
+          "list_path_1_call_4":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:82"
+                ],
+              "header": ""
+            }
+        },
+      "AVG":
+        {
+          "hint":
+            [
+              {
+                "details": "Calling (and then returning from) a function prevents many compiler optimizations (like vectorization), breaks control flow (which reduces pipeline performance) and executes extra instructions to save/restore the registers used inside it, which is very expensive (dozens of cycles). Consider to inline small functions.\n - Particle::getX() const: 1 occurrences<<list_path_1_call_1>>\n - Particle::getY() const: 2 occurrences<<list_path_1_call_2>>\n - QuadTree::insertSimple(Particle*): 4 occurrences<<list_path_1_call_3>>\n - QuadTree::subdivide(): 1 occurrences<<list_path_1_call_4>>\n - QuadTree::updateCenterOfMass(Particle*): 1 occurrences<<list_path_1_call_5>>\n",
+                "title": "CALL instructions",
+                "txt": "Detected function call instructions.\n"
+              },
+              {
+                "details": "These instructions generate more than one micro-operation and only one of them can be decoded during a cycle and the extra micro-operations increase pressure on execution units.\n - JMP: 3 occurrences<<list_path_1_complex_1>>\n",
+                "title": "Complex instructions",
+                "txt": "Detected COMPLEX INSTRUCTIONS.\n"
+              },
+              {
+                "title": "Type of elements and instruction set",
+                "txt": "3 SSE or AVX instructions are processing arithmetic or math operations on double precision FP elements in scalar mode (one at a time).\n"
+              },
+              {
+                "title": "Matching between your function (in the source code) and the binary function",
+                "txt": "The binary function does not contain any FP arithmetical operations.\nThe binary function is loading 66 bytes (8 double precision FP elements).\nThe binary function is storing 17 bytes (2 double precision FP elements)."
+              }
+            ],
+          "expert":
+            [
+              {
+                "title": "General properties",
+                "txt": "nb instructions    : 63\nnb uops            : 123\nloop length        : 208\nused x86 registers : 6\nused mmx registers : 0\nused xmm registers : 2\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 0\n"
+              },
+              {
+                "title": "Front-end",
+                "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 20.50 cycles\nfront end            : 20.50 cycles\n"
+              },
+              {
+                "title": "Back-end",
+                "txt": "       | ALU0/BRU0 | ALU1  | ALU2  | ALU3/BRU1 | AGU0  | AGU1  | AGU2 | FP0  | FP1  | FP2  | FP3\n-------------------------------------------------------------------------------------------------\nuops   | 16.00     | 16.00 | 16.00 | 16.00     | 10.00 | 10.00 | 4.00 | 1.50 | 1.50 | 0.00 | 0.00\ncycles | 16.00     | 16.00 | 16.00 | 16.00     | 10.00 | 10.00 | 4.00 | 1.50 | 1.50 | 0.00 | 0.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3/BRU1: ALU, BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2: store address\n - FP0 (256 bits): VPU\n - FP1 (256 bits): VPU\n - FP2 (256 bits): VPU, FP store data\n - FP3 (256 bits): VPU, DIV/SQRT\n\nCycles executing div or sqrt instructions: NA\nCycles loading/storing data              : 5.50\n"
+              },
+              {
+                "title": "Cycles summary",
+                "txt": "Front-end : 20.50\nDispatch  : 16.00\nOverall L1: 20.50\n"
+              },
+              {
+                "title": "Vectorization ratios",
+                "txt": "INT\nall    : 0%\nload   : 0%\nstore  : 0%\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\n"
+              },
+              {
+                "title": "Vector efficiency ratios",
+                "txt": "INT\nall    : 17%\nload   : 3%\nstore  : 13%\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 19%\nFP\nall     : 25%\nload    : 25%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 25%\nINT+FP\nall     : 19%\nload    : 16%\nstore   : 13%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 21%\n"
+              },
+              {
+                "title": "Cycles and memory resources usage",
+                "txt": "Assuming all data fit into the L1 cache, each call to the function takes 20.50 cycles. At this rate:\n - 5% of peak load performance is reached (3.22 out of 64.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 2% of peak store performance is reached (0.83 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+              },
+              {
+                "title": "Front-end bottlenecks",
+                "txt": "Performance is limited by instruction throughput (loading/decoding program instructions to execution core) (front-end is a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 20.50 to 16.00 cycles (1.28x speedup).\n"
+              },
+              {
+                "title": "ASM code",
+                "txt": "In the binary file, the address of the function is: 2bf30\n\nInstruction                                              | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2 | FP3 | Latency | Recip. throughput | Vectorization\n---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nPUSH %RBP                                                | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 1                 | N/A\nMOV %RSI,%RBP                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nPUSH %RBX                                                | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 1                 | N/A\nMOV %RDI,%RBX                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | N/A\nSUB $0x8,%RSP                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nCMPB $0,0x8(%RDI)                                        | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (3.1%)\nJNE 2bf65 <_ZN8QuadTree12insertSimpleEP8Particle+0x35>   | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nCMPB $0,0x9(%RDI)                                        | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (3.1%)\nJNE 2bf60 <_ZN8QuadTree12insertSimpleEP8Particle+0x30>   | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nMOV 0x18(%RDI),%EAX                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RSI,(%RBX)                                          | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 0   | 0   | 4       | 1                 | scal (25.0%)\nMOVB $0x1,0x9(%RDI)                                      | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 0   | 0   | 4       | 1                 | scal (3.1%)\nADD $0x1,%EAX                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nMOV %EAX,0x18(%RBX)                                      | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 0   | 0   | 4       | 1                 | scal (12.5%)\nADD $0x8,%RSP                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nPOP %RBX                                                 | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nPOP %RBP                                                 | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nRET                                                      | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nNOP                                                      | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nCALL 2be10 <_ZN8QuadTree9subdivideEv>                    | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nMOV %RBX,%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | N/A\nCALL 2b270 <_ZN8QuadTree18updateCenterOfMassEP8Particle> | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOV %RBP,%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | N/A\nCALL 29430 <_ZNK8Particle4getXEv>                        | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOVSD 0x20(%RBX),%XMM1                                   | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (25.0%)\nMOV %RBP,%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | N/A\nCOMISD %XMM0,%XMM1                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0   | 0   | 1       | 0.50              | scal (25.0%)\nJBE 2bfb8 <_ZN8QuadTree12insertSimpleEP8Particle+0x88>   | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nCALL 29440 <_ZNK8Particle4getYEv>                        | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOVSD 0x28(%RBX),%XMM1                                   | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (25.0%)\nCOMISD %XMM0,%XMM1                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0   | 0   | 1       | 0.50              | scal (25.0%)\nJA 2bfe0 <_ZN8QuadTree12insertSimpleEP8Particle+0xb0>    | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nMOV 0x38(%RBX),%RDI                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nCALL 2bf30 <_ZN8QuadTree12insertSimpleEP8Particle>       | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOV 0x18(%RBX),%EAX                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nADD $0x1,%EAX                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nMOV %EAX,0x18(%RBX)                                      | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 0   | 0   | 4       | 1                 | scal (12.5%)\nADD $0x8,%RSP                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nPOP %RBX                                                 | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nPOP %RBP                                                 | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nRET                                                      | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nNOPW (%RAX,%RAX,1)                                       | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nCALL 29440 <_ZNK8Particle4getYEv>                        | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOVSD 0x28(%RBX),%XMM1                                   | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (25.0%)\nCOMISD %XMM0,%XMM1                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0   | 0   | 1       | 0.50              | scal (25.0%)\nJBE 2bff0 <_ZN8QuadTree12insertSimpleEP8Particle+0xc0>   | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nMOV 0x40(%RBX),%RDI                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nCALL 2bf30 <_ZN8QuadTree12insertSimpleEP8Particle>       | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nJMP 2bfa2 <_ZN8QuadTree12insertSimpleEP8Particle+0x72>   | 6     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 2                 | N/A\nNOPW %CS:(%RAX,%RAX,1)                                   | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nMOV 0x48(%RBX),%RDI                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nCALL 2bf30 <_ZN8QuadTree12insertSimpleEP8Particle>       | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nJMP 2bfa2 <_ZN8QuadTree12insertSimpleEP8Particle+0x72>   | 6     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 2                 | N/A\nXCHG %AX,%AX                                             | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nMOV 0x30(%RBX),%RDI                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nCALL 2bf30 <_ZN8QuadTree12insertSimpleEP8Particle>       | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nJMP 2bfa2 <_ZN8QuadTree12insertSimpleEP8Particle+0x72>   | 6     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 2                 | N/A\nXCHG %AX,%AX                                             | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\n"
+              }
+            ],
+          "header":
+            [
+            "Warnings:\nDetected a function call instruction: ignoring called function instructions.\nRerun with --follow-calls=append to include them to analysis  or with --follow-calls=inline to simulate inlining.",
+            "0% of peak computational performance is used (0.00 out of 24.00 FLOP per cycle (GFLOPS @ 1GHz))"
+            ],
+          "brief":
+            [
+
+            ],
+          "gain":
+            [
+              {
+                "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                "title": "Code clean check",
+                "txt": "Detected a slowdown caused by scalar integer instructions (typically used for address computation).\nBy removing them, you can lower the cost of an iteration from 20.50 to 2.50 cycles (8.20x speedup)."
+              },
+              {
+                "workaround": " - Try another compiler or update/tune your current one\n - Make array accesses unit-stride:\n  * If your function streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized function can use their full power.\n",
+                "title": "Vectorization",
+                "txt": "Your function is not vectorized.\nOnly 19% of vector register length is used (average across all SSE/AVX instructions).\nBy vectorizing your function, you can lower the cost of an iteration from 20.50 to 1.20 cycles (17.08x speedup)."
+              },
+              {
+                "title": "Execution units bottlenecks",
+                "txt": "Found no such bottlenecks but see expert reports for more complex bottlenecks."
+              }
+            ],
+          "potential":
+            [
+
+            ]
+        },
+      "paths":
+        [
+          {
+            "hint":
+              [
+                {
+                  "details": "Calling (and then returning from) a function prevents many compiler optimizations (like vectorization), breaks control flow (which reduces pipeline performance) and executes extra instructions to save/restore the registers used inside it, which is very expensive (dozens of cycles). Consider to inline small functions.\n - Particle::getX() const: 1 occurrences<<list_path_1_call_1>>\n - Particle::getY() const: 2 occurrences<<list_path_1_call_2>>\n - QuadTree::insertSimple(Particle*): 4 occurrences<<list_path_1_call_3>>\n - QuadTree::subdivide(): 1 occurrences<<list_path_1_call_4>>\n - QuadTree::updateCenterOfMass(Particle*): 1 occurrences<<list_path_1_call_5>>\n",
+                  "title": "CALL instructions",
+                  "txt": "Detected function call instructions.\n"
+                },
+                {
+                  "details": "These instructions generate more than one micro-operation and only one of them can be decoded during a cycle and the extra micro-operations increase pressure on execution units.\n - JMP: 3 occurrences<<list_path_1_complex_1>>\n",
+                  "title": "Complex instructions",
+                  "txt": "Detected COMPLEX INSTRUCTIONS.\n"
+                },
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "3 SSE or AVX instructions are processing arithmetic or math operations on double precision FP elements in scalar mode (one at a time).\n"
+                },
+                {
+                  "title": "Matching between your function (in the source code) and the binary function",
+                  "txt": "The binary function does not contain any FP arithmetical operations.\nThe binary function is loading 66 bytes (8 double precision FP elements).\nThe binary function is storing 17 bytes (2 double precision FP elements)."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 63\nnb uops            : 123\nloop length        : 208\nused x86 registers : 6\nused mmx registers : 0\nused xmm registers : 2\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 0\n"
+                },
+                {
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 20.50 cycles\nfront end            : 20.50 cycles\n"
+                },
+                {
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1  | ALU2  | ALU3/BRU1 | AGU0  | AGU1  | AGU2 | FP0  | FP1  | FP2  | FP3\n-------------------------------------------------------------------------------------------------\nuops   | 16.00     | 16.00 | 16.00 | 16.00     | 10.00 | 10.00 | 4.00 | 1.50 | 1.50 | 0.00 | 0.00\ncycles | 16.00     | 16.00 | 16.00 | 16.00     | 10.00 | 10.00 | 4.00 | 1.50 | 1.50 | 0.00 | 0.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3/BRU1: ALU, BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2: store address\n - FP0 (256 bits): VPU\n - FP1 (256 bits): VPU\n - FP2 (256 bits): VPU, FP store data\n - FP3 (256 bits): VPU, DIV/SQRT\n\nCycles executing div or sqrt instructions: NA\nCycles loading/storing data              : 5.50\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 20.50\nDispatch  : 16.00\nOverall L1: 20.50\n"
+                },
+                {
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 0%\nload   : 0%\nstore  : 0%\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 0%\n"
+                },
+                {
+                  "title": "Vector efficiency ratios",
+                  "txt": "INT\nall    : 17%\nload   : 3%\nstore  : 13%\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 19%\nFP\nall     : 25%\nload    : 25%\nstore   : NA (no store vectorizable/vectorized instructions)\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 25%\nINT+FP\nall     : 19%\nload    : 16%\nstore   : 13%\nmul     : NA (no mul vectorizable/vectorized instructions)\nadd-sub : NA (no add-sub vectorizable/vectorized instructions)\nfma     : NA (no fma vectorizable/vectorized instructions)\ndiv/sqrt: NA (no div/sqrt vectorizable/vectorized instructions)\nother   : 21%\n"
+                },
+                {
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each call to the function takes 20.50 cycles. At this rate:\n - 5% of peak load performance is reached (3.22 out of 64.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 2% of peak store performance is reached (0.83 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "title": "Front-end bottlenecks",
+                  "txt": "Performance is limited by instruction throughput (loading/decoding program instructions to execution core) (front-end is a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 20.50 to 16.00 cycles (1.28x speedup).\n"
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the function is: 2bf30\n\nInstruction                                              | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2 | FP3 | Latency | Recip. throughput | Vectorization\n---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nPUSH %RBP                                                | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 1                 | N/A\nMOV %RSI,%RBP                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nPUSH %RBX                                                | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 1                 | N/A\nMOV %RDI,%RBX                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | N/A\nSUB $0x8,%RSP                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nCMPB $0,0x8(%RDI)                                        | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (3.1%)\nJNE 2bf65 <_ZN8QuadTree12insertSimpleEP8Particle+0x35>   | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nCMPB $0,0x9(%RDI)                                        | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (3.1%)\nJNE 2bf60 <_ZN8QuadTree12insertSimpleEP8Particle+0x30>   | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nMOV 0x18(%RDI),%EAX                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RSI,(%RBX)                                          | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 0   | 0   | 4       | 1                 | scal (25.0%)\nMOVB $0x1,0x9(%RDI)                                      | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 0   | 0   | 4       | 1                 | scal (3.1%)\nADD $0x1,%EAX                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nMOV %EAX,0x18(%RBX)                                      | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 0   | 0   | 4       | 1                 | scal (12.5%)\nADD $0x8,%RSP                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nPOP %RBX                                                 | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nPOP %RBP                                                 | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nRET                                                      | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nNOP                                                      | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nCALL 2be10 <_ZN8QuadTree9subdivideEv>                    | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nMOV %RBX,%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | N/A\nCALL 2b270 <_ZN8QuadTree18updateCenterOfMassEP8Particle> | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOV %RBP,%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | N/A\nCALL 29430 <_ZNK8Particle4getXEv>                        | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOVSD 0x20(%RBX),%XMM1                                   | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (25.0%)\nMOV %RBP,%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | N/A\nCOMISD %XMM0,%XMM1                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0   | 0   | 1       | 0.50              | scal (25.0%)\nJBE 2bfb8 <_ZN8QuadTree12insertSimpleEP8Particle+0x88>   | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nCALL 29440 <_ZNK8Particle4getYEv>                        | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOVSD 0x28(%RBX),%XMM1                                   | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (25.0%)\nCOMISD %XMM0,%XMM1                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0   | 0   | 1       | 0.50              | scal (25.0%)\nJA 2bfe0 <_ZN8QuadTree12insertSimpleEP8Particle+0xb0>    | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nMOV 0x38(%RBX),%RDI                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nCALL 2bf30 <_ZN8QuadTree12insertSimpleEP8Particle>       | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOV 0x18(%RBX),%EAX                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nADD $0x1,%EAX                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nMOV %EAX,0x18(%RBX)                                      | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 0   | 0   | 4       | 1                 | scal (12.5%)\nADD $0x8,%RSP                                            | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nPOP %RBX                                                 | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nPOP %RBP                                                 | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nRET                                                      | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nNOPW (%RAX,%RAX,1)                                       | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nCALL 29440 <_ZNK8Particle4getYEv>                        | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nMOVSD 0x28(%RBX),%XMM1                                   | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | scal (25.0%)\nCOMISD %XMM0,%XMM1                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0   | 0   | 1       | 0.50              | scal (25.0%)\nJBE 2bff0 <_ZN8QuadTree12insertSimpleEP8Particle+0xc0>   | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.50              | N/A\nMOV 0x40(%RBX),%RDI                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nCALL 2bf30 <_ZN8QuadTree12insertSimpleEP8Particle>       | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nJMP 2bfa2 <_ZN8QuadTree12insertSimpleEP8Particle+0x72>   | 6     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 2                 | N/A\nNOPW %CS:(%RAX,%RAX,1)                                   | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nMOV 0x48(%RBX),%RDI                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nCALL 2bf30 <_ZN8QuadTree12insertSimpleEP8Particle>       | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nJMP 2bfa2 <_ZN8QuadTree12insertSimpleEP8Particle+0x72>   | 6     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 2                 | N/A\nXCHG %AX,%AX                                             | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\nMOV 0x30(%RBX),%RDI                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 3       | 0.50              | N/A\nMOV %RBP,%RSI                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 0.25              | scal (25.0%)\nCALL 2bf30 <_ZN8QuadTree12insertSimpleEP8Particle>       | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0   | 0   | 0       | 1                 | N/A\nJMP 2bfa2 <_ZN8QuadTree12insertSimpleEP8Particle+0x72>   | 6     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 0       | 2                 | N/A\nXCHG %AX,%AX                                             | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0   | 0   | 1       | 0.25              | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "Warnings:\nDetected a function call instruction: ignoring called function instructions.\nRerun with --follow-calls=append to include them to analysis  or with --follow-calls=inline to simulate inlining.",
+              "0% of peak computational performance is used (0.00 out of 24.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                  "title": "Code clean check",
+                  "txt": "Detected a slowdown caused by scalar integer instructions (typically used for address computation).\nBy removing them, you can lower the cost of an iteration from 20.50 to 2.50 cycles (8.20x speedup)."
+                },
+                {
+                  "workaround": " - Try another compiler or update/tune your current one\n - Make array accesses unit-stride:\n  * If your function streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized function can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your function is not vectorized.\nOnly 19% of vector register length is used (average across all SSE/AVX instructions).\nBy vectorizing your function, you can lower the cost of an iteration from 20.50 to 1.20 cycles (17.08x speedup)."
+                },
+                {
+                  "title": "Execution units bottlenecks",
+                  "txt": "Found no such bottlenecks but see expert reports for more complex bottlenecks."
+                }
+              ],
+            "potential":
+              [
+
+              ]
+          }
+        ],
+      "common":
+        {
+          "header":
+            [
+            "The function is defined in /home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:70-82,88-103,109-110.\n",
+            "Warnings:\n - Ignoring paths for analysis\n - Too many paths. Rerun with max-paths=9\n",
+            "Try to simplify control and/or increase the maximum number of paths per function/loop through the 'max-paths-nb' option.\n",
+            "This function has 9 execution paths.\n",
+            "The presence of multiple execution paths is typically the main/first bottleneck.\nTry to simplify control inside function: ideally, try to remove all conditional expressions, for example by (if applicable):\n - hoisting them (moving them outside the function)\n - turning them into conditional moves, MIN or MAX\n\n",
+            "Ex: if (x<0) x=0 => x = (x<0 ? 0 : x) (or MAX(0,x) after defining the corresponding macro)\n"
+            ],
+          "nb_paths": 9
+        }
+    }
+}
