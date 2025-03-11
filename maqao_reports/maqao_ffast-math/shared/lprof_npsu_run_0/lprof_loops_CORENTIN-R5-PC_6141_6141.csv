@@ -1,0 +1,11 @@
+loop_id;module;function_name;function_id;source_info;level;inc_time_p;inc_time_s;inc_time_s_min;inc_time_s_avg;inc_time_s_max;inc_cov_deviation;inc_time_deviation;exc_time_p;exc_time_s;exc_time_s_min;exc_time_s_avg;exc_time_s_max;exc_cov_deviation;exc_time_deviation;nb_threads;flops;
+451;main;QuadTree::calculateForce(Particle*, double&, double&) const;205;quadtree.cpp:143-143,quadtree.cpp:163-163,quadtree.cpp:171-174,quadtree.cpp:181-184;Innermost;27.638864517212;15.474997520447;;;;;;27.638864517212;15.474997520447;;;;;;;;
+452;main;QuadTree::calculateForce(Particle*, double&, double&) const;205;quadtree.cpp:163-163,quadtree.cpp:183-184;Outermost;38.158599853516;21.364995956421;;;;;;10.519734382629;5.889997959137;;;;;;;;
+456;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:275-279;Innermost;0.40185743570328;0.22499994933605;;;;;;0.40185743570328;0.22499994933605;;;;;;;;
+463;main;QuadTree::buildTree();229;quadtree.cpp:72-82,quadtree.cpp:454-454;Single;0.098231822252274;0.054999984800816;;;;;;0.098231822252274;0.054999984800816;;;;;;;;
+457;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;stl_vector.h:1131-1131,stl_iterator.h:1068-1068,quadtree.cpp:274-279;Outermost;0.49115911126137;0.27499994635582;;;;;;0.089301653206348;0.049999985843897;;;;;;;;
+461;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:272-272;Single;0.071441322565079;0.03999999165535;;;;;;0.071441322565079;0.03999999165535;;;;;;;;
+455;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:272-272;Innermost;0.044650826603174;0.024999992921948;;;;;;0.044650826603174;0.024999992921948;;;;;;;;
+459;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:272-272;Single;0.035720661282539;0.019999995827675;;;;;;0.035720661282539;0.019999995827675;;;;;;;;
+448;main;QuadTree::updateParticles(double) [clone ._omp_fn.2];195;stl_vector.h:1131-1131,quadtree.cpp:293-293,quadtree.cpp:300-301,quadtree.cpp:308-309;Single;0.035720661282539;0.019999995827675;;;;;;0.035720661282539;0.019999995827675;;;;;;;;
+462;main;QuadTree::buildTree();229;stl_algobase.h:262-262,quadtree.cpp:439-442,std_abs.h:72-72;Single;0.02679049782455;0.014999996870756;;;;;;0.02679049782455;0.014999996870756;;;;;;;;

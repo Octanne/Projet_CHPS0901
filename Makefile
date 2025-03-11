@@ -16,8 +16,8 @@ HEADERS = $(wildcard $(HEADER_DIR)/*.h)
 OBJECTS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SOURCES))
 EXECUTABLE = $(BIN_DIR)/main
 
-# Flags maybe -Ofast -O3
-CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11 -g -O3 -fno-math-errno -fno-trapping-math -march=native -funroll-loops
+# Flags maybe -Ofast -O3 -ffast-math
+CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11 -g -Ofast -fno-math-errno -fno-trapping-math -march=native -funroll-loops
 LDFLAGS = -lGLEW -lGL -lglfw -lpthread -fopenmp
 LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -lGL -lpthread -fopenmp
 

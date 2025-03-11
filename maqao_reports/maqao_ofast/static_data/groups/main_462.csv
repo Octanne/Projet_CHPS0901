@@ -1,0 +1,5 @@
+group_size;pattern;opcodes;offsets;addresses;stride_status;stride;memory_status;accessed_memory;accessed_memory_nooverlap;accessed_memory_overlap;span;head;unroll_factor;
+2;LL;MOV,MOV,;0,8,;0x40e81,0x40ec7,;Not found;0;Success;16;16;0;16;0;2;
+2;LL;MOV,MOV,;8,16,;0x40f09,0x40f4b,;Not found;0;Success;16;16;0;16;0;2;
+8;LLLLLLLL;VANDPD,VANDPD,VANDPD,VANDPD,VANDPD,VANDPD,VANDPD,VANDPD,;47878,47870,47807,47799,47741,47733,47675,47667,;0x40ea2,0x40eaa,0x40ee9,0x40ef1,0x40f2b,0x40f33,0x40f6d,0x40f75,;RIP based value;0;Success;128;96;32;227;0;2;
+8;LSLSLSLS;VCOMISD,VMOVSD,VCOMISD,VMOVSD,VCOMISD,VMOVSD,VMOVSD,VMOVSD,;16,16,16,16,16,16,16,16,;0x40eb7,0x40ebe,0x40efd,0x40f04,0x40f3f,0x40f46,0x40f7d,0x40f8d,;Success;0;Success;64;8;56;8;0;1;

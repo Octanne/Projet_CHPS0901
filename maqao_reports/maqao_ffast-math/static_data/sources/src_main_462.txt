@@ -1,0 +1,15 @@
+/usr/include/c++/14.2.1/bits/stl_algobase.h: 262 - 262
+--------------------------------------------------------------------------------
+
+262:       if (__a < __b)
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 439 - 442
+--------------------------------------------------------------------------------
+
+439:     for (Particle* particle : *particles) {
+440:         double distance = std::max(std::abs(particle->getX()), std::abs(particle->getY()));
+441:         if (distance > width) {
+442:             width = distance;
+/usr/include/c++/14.2.1/bits/std_abs.h: 72 - 72
+--------------------------------------------------------------------------------
+
+72:   { return __builtin_fabs(__x); }
