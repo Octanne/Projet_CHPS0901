@@ -1,0 +1,11 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 429 - 432
+--------------------------------------------------------------------------------
+
+429:     for (Particle* particle : *particles) {
+430:         double distance = std::max(std::abs(particle->getX()), std::abs(particle->getY()));
+431:         if (distance > width) {
+432:             width = distance;
+/usr/include/c++/14.2.1/bits/std_abs.h: 72 - 72
+--------------------------------------------------------------------------------
+
+72:   { return __builtin_fabs(__x); }
