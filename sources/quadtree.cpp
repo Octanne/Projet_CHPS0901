@@ -257,8 +257,11 @@ void QuadTree::updateParticles(double step) {
     //std::vector<double> localAccY(particles->size(), 0.0);
     double localAccX[particles->size()];
     double localAccY[particles->size()];
-    memset(localAccX, 0, particles->size() * sizeof(double));
-    memset(localAccY, 0, particles->size() * sizeof(double));
+    #pragma omp parallel for
+    for (size_t i = 0; i < particles->size(); ++i) {
+        localAccX[i] = 0.0;
+        localAccY[i] = 0.0;
+    }
 
     // We get are nodes list to handle
     std::vector<QuadTree*> nodesToHandle = poOfSubtree[*rankMPI];
