@@ -253,8 +253,12 @@ void QuadTree::updateParticles(double step) {
     std::vector<std::vector<QuadTree*>> poOfSubtree = computeBalancedRanks(*sizeMPI);
 
     // Stockage des accélérations locales (chaque rang calcule sa contribution)
-    std::vector<double> localAccX(particles->size(), 0.0);
-    std::vector<double> localAccY(particles->size(), 0.0);
+    //std::vector<double> localAccX(particles->size(), 0.0);
+    //std::vector<double> localAccY(particles->size(), 0.0);
+    double localAccX[particles->size()];
+    double localAccY[particles->size()];
+    memset(localAccX, 0, particles->size() * sizeof(double));
+    memset(localAccY, 0, particles->size() * sizeof(double));
 
     // We get are nodes list to handle
     std::vector<QuadTree*> nodesToHandle = poOfSubtree[*rankMPI];
@@ -274,8 +278,10 @@ void QuadTree::updateParticles(double step) {
     }
     
     // MPI AllReduce pour sommer les accélérations locales
-    MPI_Allreduce(MPI_IN_PLACE, localAccX.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
-    MPI_Allreduce(MPI_IN_PLACE, localAccY.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+    //MPI_Allreduce(MPI_IN_PLACE, localAccX.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+    //MPI_Allreduce(MPI_IN_PLACE, localAccY.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+    MPI_Allreduce(MPI_IN_PLACE, localAccX, particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+    MPI_Allreduce(MPI_IN_PLACE, localAccY, particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
 
     // On met à jour les vitesses et positions des particules
     // CAN BE OPTIMIZED BY OPENMP
