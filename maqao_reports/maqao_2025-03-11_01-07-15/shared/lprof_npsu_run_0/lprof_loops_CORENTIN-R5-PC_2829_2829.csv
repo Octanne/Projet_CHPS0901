@@ -1,0 +1,5 @@
+loop_id;module;function_name;function_id;source_info;level;inc_time_p;inc_time_s;inc_time_s_min;inc_time_s_avg;inc_time_s_max;inc_cov_deviation;inc_time_deviation;exc_time_p;exc_time_s;exc_time_s_min;exc_time_s_avg;exc_time_s_max;exc_cov_deviation;exc_time_deviation;nb_threads;flops;
+263;main;QuadTree::updateParticles(double) [clone ._omp_fn.0];515;;Innermost;0.54372501373291;0.059999994933605;;;;;;0.54372501373291;0.059999994933605;;;;;;;;
+264;main;QuadTree::updateParticles(double) [clone ._omp_fn.0];515;;Outermost;0.72496664524078;0.079999983310699;;;;;;0.1812416613102;0.019999995827675;;;;;;;;
+262;main;QuadTree::buildTree();500;;Single;0.090620830655098;0.0099999979138374;;;;;;0.090620830655098;0.0099999979138374;;;;;;;;
+265;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];516;;Single;0.090620830655098;0.0099999979138374;;;;;;0.090620830655098;0.0099999979138374;;;;;;;;

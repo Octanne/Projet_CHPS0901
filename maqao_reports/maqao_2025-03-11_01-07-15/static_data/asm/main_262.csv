@@ -1,0 +1,21 @@
+address;source_location;insn;indent
+0x2956a;:0;LEA	-0x40(%RBP),%RAX;
+0x2956e;:0;MOV	%RAX,%RDI;
+0x29571;:0;CALL	78c2 <_ZNK9__gnu_cxx17__normal_iteratorIPP8ParticleSt6vectorIS2_SaIS2_EEEdeEv>;
+0x29576;:0;MOV	(%RAX),%RAX;
+0x29579;:0;MOV	%RAX,-0x20(%RBP);
+0x2957d;:0;MOV	-0x20(%RBP),%RDX;
+0x29581;:0;MOV	-0x58(%RBP),%RAX;
+0x29585;:0;MOV	%RDX,%RSI;
+0x29588;:0;MOV	%RAX,%RDI;
+0x2958b;:0;CALL	27eca <_ZN8QuadTree12insertSimpleEP8Particle>;
+0x29590;:0;LEA	-0x40(%RBP),%RAX;
+0x29594;:0;MOV	%RAX,%RDI;
+0x29597;:0;CALL	78a2 <_ZN9__gnu_cxx17__normal_iteratorIPP8ParticleSt6vectorIS2_SaIS2_EEEppEv>;
+0x2959c;:0;LEA	-0x38(%RBP),%RDX;
+0x295a0;:0;LEA	-0x40(%RBP),%RAX;
+0x295a4;:0;MOV	%RDX,%RSI;
+0x295a7;:0;MOV	%RAX,%RDI;
+0x295aa;:0;CALL	7866 <_ZN9__gnu_cxxneIPP8ParticleSt6vectorIS2_SaIS2_EEEEbRKNS_17__normal_iteratorIT_T0_EESC_>;
+0x295af;:0;TEST	%AL,%AL;
+0x295b1;:0;JNE	2956a <_ZN8QuadTree9buildTreeEv+0x2be>;

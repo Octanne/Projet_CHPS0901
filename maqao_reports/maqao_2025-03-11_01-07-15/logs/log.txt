@@ -1,0 +1,6 @@
+********************************************************************************
+MAQAO 2.20.13 - a8b9d25147f68c2778b2c2e450419542396ae03f::20241210-162123 || 2024/12/10
+../maqao.x86_64.2.20.13/bin/maqao oneview -R1 --number-processes=2 "--mpi-command=mpirun -n 2" --number-processes-per-node=4 -- bin/main -n 10000 -e 100 -t 1 
+CPY:  [true] bin/main --> /home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-07-15/binaries/main
+CMD:   /home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/../maqao.x86_64.2.20.13/bin/maqao lprof _caller=oneview  --xp="/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-07-15/tools/lprof_npsu_run_0" --mpi-command="mpirun -n 2" --collect-CPU-time-intervals --collect-topology ppn=4   -- /home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-07-15/binaries/main  -n 10000 -e 100 -t 1
+CMD:  /home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/../maqao.x86_64.2.20.13/bin/maqao otter  -input=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-07-15/OTTER/input_manifest.csv -output=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-07-15/OTTER/output_manifest.csv
