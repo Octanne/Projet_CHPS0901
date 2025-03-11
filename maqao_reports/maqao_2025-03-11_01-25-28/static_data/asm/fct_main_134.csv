@@ -1,0 +1,21 @@
+address;source_location;insn;indent
+0x8ff1;:0;PUSH	%RBP;
+0x8ff2;:0;MOV	%RSP,%RBP;
+0x8ff5;:0;MOV	%RDI,-0x18(%RBP);
+0x8ff9;:0;MOV	%RSI,-0x20(%RBP);
+0x8ffd;:0;MOV	%RDX,-0x28(%RBP);
+0x9001;:0;MOV	-0x28(%RBP),%RAX;
+0x9005;:0;MOVSD	(%RAX),%XMM0;
+0x9009;:0;MOVSD	%XMM0,-0x8(%RBP);
+0x900e;:0;JMP	9022 <_ZSt9__fill_a1IPddEN9__gnu_cxx11__enable_ifIXsrSt11__is_scalarIT0_E7__valueEvE6__typeET_S8_RKS4_+0x31>;
+0x9010;:0;MOV	-0x18(%RBP),%RAX;(7) 
+0x9014;:0;MOVSD	-0x8(%RBP),%XMM0;(7) 
+0x9019;:0;MOVSD	%XMM0,(%RAX);(7) 
+0x901d;:0;ADDQ	$0x8,-0x18(%RBP);(7) 
+0x9022;:0;MOV	-0x18(%RBP),%RAX;(7) 
+0x9026;:0;CMP	-0x20(%RBP),%RAX;(7) 
+0x902a;:0;JNE	9010 <_ZSt9__fill_a1IPddEN9__gnu_cxx11__enable_ifIXsrSt11__is_scalarIT0_E7__valueEvE6__typeET_S8_RKS4_+0x1f>;(7) 
+0x902c;:0;NOP;
+0x902d;:0;NOP;
+0x902e;:0;POP	%RBP;
+0x902f;:0;RET;

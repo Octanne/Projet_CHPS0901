@@ -1,0 +1,18 @@
+address;source_location;insn;indent
+0x2a22e;:0;PUSH	%RBP;
+0x2a22f;:0;MOV	%RSP,%RBP;
+0x2a232;:0;SUB	$0x10,%RSP;
+0x2a236;:0;MOV	%RDI,-0x8(%RBP);
+0x2a23a;:0;MOV	%RSI,-0x10(%RBP);
+0x2a23e;:0;MOV	-0x10(%RBP),%RAX;
+0x2a242;:0;MOV	%RAX,%RDI;
+0x2a245;:0;CALL	2acbb <_ZSt4moveIRP8QuadTreeEONSt16remove_referenceIT_E4typeEOS4_>;
+0x2a24a;:0;MOV	%RAX,%RDX;
+0x2a24d;:0;MOV	-0x8(%RBP),%RAX;
+0x2a251;:0;MOV	%RDX,%RSI;
+0x2a254;:0;MOV	%RAX,%RDI;
+0x2a257;:0;CALL	2acca <_ZNSt6vectorIP8QuadTreeSaIS1_EE12emplace_backIJS1_EEEvDpOT_>;
+0x2a25c;:0;NOP;
+0x2a25d;:0;LEAVE;
+0x2a25e;:0;RET;
+0x2a25f;:0;NOP;
