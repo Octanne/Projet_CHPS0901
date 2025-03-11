@@ -1,0 +1,28 @@
+address;source_location;insn;indent
+0x3e619;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;MOV	%R13,%R14;
+0x3e61c;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;MOV	%R13,%RDX;
+0x3e61f;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;MOV	%R13,%R15;
+0x3e622;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;MOV	%R13,%RAX;
+0x3e625;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;SAL	$0x5,%R14;
+0x3e629;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;SAL	$0x5,%RDX;
+0x3e62d;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;MOV	%R13,%RCX;
+0x3e630;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;MOV	%R13,%R11;
+0x3e633;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;VMOVUPD	%YMM1,(%R12,%R14,1);
+0x3e639;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;VMOVUPD	%YMM1,0x20(%RDX,%R12,1);
+0x3e640;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;MOV	%R13,%R14;
+0x3e643;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;MOV	%R13,%RDX;
+0x3e646;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;SAL	$0x5,%R15;
+0x3e64a;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;SAL	$0x5,%RAX;
+0x3e64e;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;SAL	$0x5,%RCX;
+0x3e652;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;SAL	$0x5,%R11;
+0x3e656;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;SAL	$0x5,%R14;
+0x3e65a;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;SAL	$0x5,%RDX;
+0x3e65e;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;ADD	$0x8,%R13;
+0x3e662;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;VMOVUPD	%YMM1,0x40(%R15,%R12,1);
+0x3e669;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;VMOVUPD	%YMM1,0x60(%RAX,%R12,1);
+0x3e670;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;VMOVUPD	%YMM1,0x80(%RCX,%R12,1);
+0x3e67a;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;VMOVUPD	%YMM1,0xa0(%R11,%R12,1);
+0x3e684;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;VMOVUPD	%YMM1,0xc0(%R14,%R12,1);
+0x3e68e;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;VMOVUPD	%YMM1,0xe0(%RDX,%R12,1);
+0x3e698;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;CMP	%RDI,%R13;
+0x3e69b;/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:272;JB	3e619 <_ZN8QuadTree15updateParticlesEd._omp_fn.1+0x2e9>;

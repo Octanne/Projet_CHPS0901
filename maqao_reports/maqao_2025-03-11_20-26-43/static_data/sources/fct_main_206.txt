@@ -1,0 +1,39 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 143 - 187
+--------------------------------------------------------------------------------
+
+143:     return std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+[...]
+150:     double dx = b->getX() - c->getX();
+151:     double dy = b->getY() - c->getY();
+152:     double distance = std::sqrt((dx * dx) + (dy * dy));
+153:     double accel = (-1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
+154:     double forceVecX = dx / distance;
+155:     double forceVecY = dy / distance;
+156: 
+157:     fx += accel * forceVecX;
+158:     fy += accel * forceVecY;
+159: }
+160: 
+161: void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
+162:     // If the current node is a an external node (and not b), calculate the force exerted by the current node on b, and add this amount to b's net force.
+163:     if (!isDivided) {
+164:         if (!hasBody) return; // If the node is empty, we return
+165:         if (b != this->particle) {
+[...]
+171:         double s = width;
+172:         double d = distance(b->getX(), b->getY(), particle->getX(), particle->getY());
+173:         // If ratio > theta we perform recursively on each of the current node's children.
+174:         if (s / d < theta) { 
+175:             // Treat the internal node as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
+176:             // We call the function to calculate the force between the two particles and add it to the net force of the particle.
+177:             calcForce(b, particle, fx, fy);
+178:         } 
+179:         // Otherwise, treat it as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
+180:         else {
+181:             if (northeast != nullptr) northeast->calculateForce(b, fx, fy);
+182:             if (northwest != nullptr) northwest->calculateForce(b, fx, fy);
+183:             if (southeast != nullptr) southeast->calculateForce(b, fx, fy);
+184:             if (southwest != nullptr) southwest->calculateForce(b, fx, fy);
+185:         }
+186:     }
+187: }

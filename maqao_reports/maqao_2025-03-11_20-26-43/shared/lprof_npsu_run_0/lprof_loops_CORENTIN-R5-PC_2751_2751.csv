@@ -1,0 +1,12 @@
+loop_id;module;function_name;function_id;source_info;level;inc_time_p;inc_time_s;inc_time_s_min;inc_time_s_avg;inc_time_s_max;inc_cov_deviation;inc_time_deviation;exc_time_p;exc_time_s;exc_time_s_min;exc_time_s_avg;exc_time_s_max;exc_cov_deviation;exc_time_deviation;nb_threads;flops;
+449;main;QuadTree::calculateForce(Particle*, double&, double&) const;206;quadtree.cpp:143-143,quadtree.cpp:163-163,quadtree.cpp:171-174,quadtree.cpp:181-184;Innermost;16.218669891357;9.5050001144409;;;;;;16.218669891357;9.5050001144409;;;;;;;;
+450;main;QuadTree::calculateForce(Particle*, double&, double&) const;206;quadtree.cpp:163-163,quadtree.cpp:183-184;Outermost;25.697334289551;15.060000419617;;;;;;9.4786643981934;5.5549998283386;;;;;;;;
+454;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:275-279;Innermost;0.17916469275951;0.10500000417233;;;;;;0.17916469275951;0.10500000417233;;;;;;;;
+461;main;QuadTree::buildTree();230;quadtree.cpp:72-82,quadtree.cpp:452-452;Single;0.093848168849945;0.055000003427267;;;;;;0.093848168849945;0.055000003427267;;;;;;;;
+455;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;stl_vector.h:1131-1131,stl_iterator.h:1068-1068,quadtree.cpp:274-279;Outermost;0.23035460710526;0.13500000536442;;;;;;0.051189910620451;0.030000003054738;;;;;;;;
+457;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:272-272;Single;0.034126605838537;0.019999999552965;;;;;;0.034126605838537;0.019999999552965;;;;;;;;
+446;main;QuadTree::updateParticles(double) [clone ._omp_fn.2];196;stl_vector.h:1131-1131,quadtree.cpp:293-293,quadtree.cpp:300-301,quadtree.cpp:308-309;Single;0.025594955310225;0.015000001527369;;;;;;0.025594955310225;0.015000001527369;;;;;;;;
+459;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:272-272;Single;0.017063302919269;0.0099999997764826;;;;;;0.017063302919269;0.0099999997764826;;;;;;;;
+452;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:272-272;Innermost;0.017063302919269;0.0099999997764826;;;;;;0.017063302919269;0.0099999997764826;;;;;;;;
+453;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:272-272;Innermost;0.0085316514596343;0.0049999998882413;;;;;;0.0085316514596343;0.0049999998882413;;;;;;;;
+460;main;QuadTree::buildTree();230;quadtree.cpp:438-441,std_abs.h:72-72;Single;0.0085316514596343;0.0049999998882413;;;;;;0.0085316514596343;0.0049999998882413;;;;;;;;
