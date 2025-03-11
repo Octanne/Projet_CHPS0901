@@ -262,7 +262,7 @@ void QuadTree::updateParticles(double step) {
     
     // We compute the forces exerted on the particles
     // CAN BE OPTIMIZED BY OPENMP
-    #pragma omp parallel for
+    #pragma omp parallel for reduction(+:localAccX[:particles->size()]) reduction(+:localAccY[:particles->size()])
     for (size_t i = 0; i < particles->size(); ++i) {
         Particle* particle = (*particles)[i];
         for (QuadTree* node : poOfSubtree[*rankMPI]) {
@@ -284,24 +284,24 @@ void QuadTree::updateParticles(double step) {
         Particle* particle = (*particles)[i];
 
         // We print the force exerted on the particle
-        if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() 
-            << ") has force (" << localAccX[i] << ", " << localAccY[i] << ")" << std::endl;
+        //if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() 
+        //    << ") has force (" << localAccX[i] << ", " << localAccY[i] << ")" << std::endl;
 
         // We update the velocity of the particle
         particle->setVx(particle->getVx() + localAccX[i] * step);
         particle->setVy(particle->getVy() + localAccY[i] * step);
 
         // We print the velocity of the particle
-        if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY()
-             << ") has velocity (" << particle->getVx() << ", " << particle->getVy() << ")" << std::endl;
+        //if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY()
+        //     << ") has velocity (" << particle->getVx() << ", " << particle->getVy() << ")" << std::endl;
 
         // We update the position of the particle
         particle->setX(particle->getX() + particle->getVx() * step);
         particle->setY(particle->getY() + particle->getVy() * step);
 
         // We print the position of the particle
-        if (debugMode()) std::cout << "Particle now at (" << particle->getX() << ", " << particle->getY() 
-            << ")" << std::endl;
+        //if (debugMode()) std::cout << "Particle now at (" << particle->getX() << ", " << particle->getY() 
+        //    << ")" << std::endl;
     }
 }
 
@@ -404,7 +404,7 @@ bool QuadTree::buildTree() {
 
     // We reset the tree if it was already built
     if (isDivided) {
-        if (debugMode()) std::cout << "Recycling the quadtree" << std::endl;
+        //if (debugMode()) std::cout << "Recycling the quadtree" << std::endl;
         // We recycle the quadtree to avoid memory allocation and deallocation but only the children
         // Because we are in the root node
         if (northeast != nullptr) northeast->recycle();
@@ -415,7 +415,7 @@ bool QuadTree::buildTree() {
         reset();
     }
 
-    if (debugMode()) std::cout << "Compute the quadtree base width" << std::endl;
+    //if (debugMode()) std::cout << "Compute the quadtree base width" << std::endl;
 
     // Sort particles by Morton code or spatial grid
     /*std::sort(particles->begin(), particles->end(), 
@@ -438,7 +438,7 @@ bool QuadTree::buildTree() {
     // We do a little bit more to avoid particles to be on the edge
     width *= 1.1;
 
-    if (debugMode()) std::cout << "Building the quadtree" << std::endl;
+    //if (debugMode()) std::cout << "Building the quadtree" << std::endl;
     // We insert the particles into the quadtree
     for (Particle* particle : *particles) {
         insertSimple(particle);
