@@ -17,7 +17,7 @@ OBJECTS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SOURCES))
 EXECUTABLE = $(BIN_DIR)/main
 
 # Flags
-CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11
+CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11 -g -O3
 LDFLAGS = -lGLEW -lGL -lglfw -lpthread -fopenmp
 LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -lGL -lpthread -fopenmp
 
@@ -25,7 +25,7 @@ LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -l
 all: $(EXECUTABLE)
 
 # Local library build
-locallibs: LDFLAGS=$(LDFLAGS_LOCAL) -g
+locallibs: LDFLAGS=$(LDFLAGS_LOCAL)
 locallibs: CXXFLAGS+=-I${INSTALL_DIR}/include
 locallibs: $(EXECUTABLE)
 
