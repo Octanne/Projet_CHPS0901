@@ -69,43 +69,45 @@ void QuadTree::insert(Particle* particleInsert) {
 }
 
 void QuadTree::insertSimple(Particle* particleInsert) {
-    // If node x does not contain a body, put the new body b here.
-    std::stack<QuadTree*> stack;
-    stack.push(this);
-
-    while (!stack.empty()) {
-        QuadTree* node = stack.top();
-        stack.pop();
-
-        if (!node->isDivided) {
-            if (!node->hasBody) {
-                node->particle = particleInsert;
-                node->hasBody = true;
-                node->weightBranch++;
-                return;
-            } else {
-                node->subdivide();
-            }
-        }
-
-        node->updateCenterOfMass(particleInsert);
-
-        if (particleInsert->getX() < node->getOriginX()) {
-            if (particleInsert->getY() < node->getOriginY()) {
-                stack.push(node->southwest);
-            } else {
-                stack.push(node->northwest);
-            }
+     // If node x does not contain a body, put the new body b here.
+     if (!isDivided) {
+        if (!hasBody) {
+            particle = particleInsert;
+            hasBody = true;
+            // We increment the weight of the branch
+            weightBranch++;
+            return;
         } else {
-            if (particleInsert->getY() < node->getOriginY()) {
-                stack.push(node->southeast);
-            } else {
-                stack.push(node->northeast);
-            }
+            // Subdivide the region further by creating four children
+            // We moving body b update the center-of-mass and total mass of x.
+            subdivide();
+            // We inserting the body c in the appropriate quadrant
         }
-
-        node->weightBranch++;
     }
+
+    // If node x is an internal node, update the center-of-mass and total mass of x.
+    updateCenterOfMass(particleInsert);
+    // Recursively insert the body b in the appropriate quadrant.
+    if (particleInsert->getX() < getOriginX()) { // We check for west quadrants
+        if (particleInsert->getY() < getOriginY()) {
+            southwest->insertSimple(particleInsert);
+            //std::cout << "SouthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+        } else {
+            northwest->insertSimple(particleInsert);
+            //std::cout << "NorthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+        }
+    } else { // We check for east quadrants
+        if (particleInsert->getY() < getOriginY()) {
+            southeast->insertSimple(particleInsert);
+            //std::cout << "SouthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+        } else {
+            northeast->insertSimple(particleInsert);
+            //std::cout << "NorthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+        }
+    }
+
+    // We increment the weight of the branch
+    weightBranch++;
 }
 
 void QuadTree::subdivide() {
