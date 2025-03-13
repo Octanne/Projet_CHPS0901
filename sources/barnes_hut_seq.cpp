@@ -108,8 +108,8 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
 {
     int step = 0;
     // We make a double table to store the forces
-    double *localAccX[particles.size()];
-    double *localAccY[particles.size()];
+    double localAccX[particles.size()];
+    double localAccY[particles.size()];
 
     if (rankMPI == 0) std::cout << "Starting simulation with " << particles.size() << " particles" << std::endl;
     // We do the simulation
@@ -119,7 +119,7 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
         if (!qtVisu->isInPause())
         {
             if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating particles" << std::endl;
-            qt.updateParticles(timeStep);
+            qt.updateParticles(timeStep, localAccX, localAccY);
             if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Particles updated" << std::endl;
             // We update the tree
             if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating quadtree" << std::endl;
