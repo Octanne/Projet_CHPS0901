@@ -248,15 +248,15 @@ std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) co
 // We can also do a fusion of particles when they are too close to the center of mass TO AVOID 
 // THE COLLAPSE OF THE SYSTEM (To much divided sectors)
 
-void QuadTree::updateParticles(double step) { 
+void QuadTree::updateParticles(double step, double *localAccX, double *localAccY) { 
     // We compute the position of the start of the subtree to be handled by each rank
     std::vector<std::vector<QuadTree*>> poOfSubtree = computeBalancedRanks(*sizeMPI);
 
     // Stockage des accélérations locales (chaque rang calcule sa contribution)
-    //std::vector<double> localAccX(particles->size(), 0.0);
-    //std::vector<double> localAccY(particles->size(), 0.0);
+    /*std::vector<double> localAccX(particles->size(), 0.0);
+    std::vector<double> localAccY(particles->size(), 0.0);
     double localAccX[particles->size()];
-    double localAccY[particles->size()];
+    double localAccY[particles->size()];*/
     #pragma omp parallel for
     for (size_t i = 0; i < particles->size(); ++i) {
         localAccX[i] = 0.0;
@@ -272,11 +272,9 @@ void QuadTree::updateParticles(double step) {
     #pragma omp parallel for reduction(+:localAccX[:particles->size()]) reduction(+:localAccY[:particles->size()])
     for (size_t i = 0; i < particles->size(); ++i) {
         Particle* particle = (*particles)[i];
-        for (QuadTree* node : poOfSubtree[*rankMPI]) {
-            double fx = 0.0, fy = 0.0;
-            node->calculateForce(particle, fx, fy); // Déjà basé sur G*mass/d²
-            localAccX[i] += fx; // fx contient l'accélération (pas besoin de diviser par mass)
-            localAccY[i] += fy;
+        for (QuadTree* node : nodesToHandle) {
+            node->calculateForce(particle, localAccX[i], localAccY[i]); // Déjà basé sur G*mass/d²
+            // fx contient l'accélération (pas besoin de diviser par mass)
         }
     }
     

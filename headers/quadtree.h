@@ -54,7 +54,7 @@ public:
     Particle* getParticle() const;
     std::vector<Particle*>* getParticlesList() const;
 
-    void updateParticles(double step = 0.01); // Update the position of the particle step is in seconds
+    void updateParticles(double step = 0.01, double *localAccX = nullptr, double *localAccY = nullptr); // Update the position of the particle step is in seconds
     void insert(Particle* particleInsert);
     void print(int depth = 0);
     void clear();

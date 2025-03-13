@@ -107,6 +107,10 @@ int main(int argc, char** argv) {
 void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualizer *qtVisu, double nbSteps, double timeStep, double refreshRate, bool shouldGUI)
 {
     int step = 0;
+    // We make a double table to store the forces
+    double *localAccX[particles.size()];
+    double *localAccY[particles.size()];
+
     if (rankMPI == 0) std::cout << "Starting simulation with " << particles.size() << " particles" << std::endl;
     // We do the simulation
     while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
