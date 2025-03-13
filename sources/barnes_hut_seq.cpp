@@ -207,27 +207,37 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
             int particleDataSize = numParticles * 5; // Each particle has 5 attributes: x, y, v_x, v_y, mass
             std::vector<double> particleData(particleDataSize);
             for (int i = 0; i < numParticles; i++) {
-            particleData[i * 5] = particles[i]->getX();
-            particleData[i * 5 + 1] = particles[i]->getY();
-            particleData[i * 5 + 2] = particles[i]->getVx();
-            particleData[i * 5 + 3] = particles[i]->getVy();
-            particleData[i * 5 + 4] = particles[i]->getMass();
+                particleData[i * 5] = particles[i]->getX();
+                particleData[i * 5 + 1] = particles[i]->getY();
+                particleData[i * 5 + 2] = particles[i]->getVx();
+                particleData[i * 5 + 3] = particles[i]->getVy();
+                particleData[i * 5 + 4] = particles[i]->getMass();
             }
-            MPI_Bcast(particleData.data(), particleDataSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+            // Send the particle data in chunks
+            int chunkSize = MPI_MAX_PROCESSOR_NAME / (5 * sizeof(double));
+            for (int i = 0; i < particleDataSize; i += chunkSize) {
+                int currentChunkSize = std::min(chunkSize, particleDataSize - i);
+                MPI_Bcast(particleData.data() + i, currentChunkSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+            }
         } else {
             int particleDataSize = numParticles * 5;
             std::vector<double> particleData(particleDataSize);
-            MPI_Bcast(particleData.data(), particleDataSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+            // Receive the particle data in chunks
+            int chunkSize = MPI_MAX_PROCESSOR_NAME / (5 * sizeof(double));
+            for (int i = 0; i < particleDataSize; i += chunkSize) {
+                int currentChunkSize = std::min(chunkSize, particleDataSize - i);
+                MPI_Bcast(particleData.data() + i, currentChunkSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+            }
             for (int i = 0; i < numParticles; i++) {
-            double x = particleData[i * 5];
-            double y = particleData[i * 5 + 1];
-            double v_x = particleData[i * 5 + 2];
-            double v_y = particleData[i * 5 + 3];
-            double mass = particleData[i * 5 + 4];
-            Particle *particle = new Particle(x, y, mass);
-            particle->setVx(v_x);
-            particle->setVy(v_y);
-            particles.push_back(particle);
+                double x = particleData[i * 5];
+                double y = particleData[i * 5 + 1];
+                double v_x = particleData[i * 5 + 2];
+                double v_y = particleData[i * 5 + 3];
+                double mass = particleData[i * 5 + 4];
+                Particle *particle = new Particle(x, y, mass);
+                particle->setVx(v_x);
+                particle->setVy(v_y);
+                particles.push_back(particle);
             }
         }
         std::cout << "Particles received by rank " << rankMPI << std::endl;
