@@ -87,5 +87,7 @@
         "text_encoding": "cpp",
         "hash_set": "cpp"
     },
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json",
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}/compile_commands.json"
 }

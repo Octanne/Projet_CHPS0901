@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <queue>
+#include <stack>
 #include <algorithm>
 
 #include <mpi.h>
@@ -69,44 +70,42 @@ void QuadTree::insert(Particle* particleInsert) {
 
 void QuadTree::insertSimple(Particle* particleInsert) {
     // If node x does not contain a body, put the new body b here.
-    if (!isDivided) {
-        if (!hasBody) {
-            particle = particleInsert;
-            hasBody = true;
-            // We increment the weight of the branch
-            weightBranch++;
-            return;
-        } else {
-            // Subdivide the region further by creating four children
-            // We moving body b update the center-of-mass and total mass of x.
-            subdivide();
-            // We inserting the body c in the appropriate quadrant
-        }
-    }
+    std::stack<QuadTree*> stack;
+    stack.push(this);
 
-    // If node x is an internal node, update the center-of-mass and total mass of x.
-    updateCenterOfMass(particleInsert);
-    // Recursively insert the body b in the appropriate quadrant.
-    if (particleInsert->getX() < getOriginX()) { // We check for west quadrants
-        if (particleInsert->getY() < getOriginY()) {
-            southwest->insertSimple(particleInsert);
-            //std::cout << "SouthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
-        } else {
-            northwest->insertSimple(particleInsert);
-            //std::cout << "NorthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
-        }
-    } else { // We check for east quadrants
-        if (particleInsert->getY() < getOriginY()) {
-            southeast->insertSimple(particleInsert);
-            //std::cout << "SouthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
-        } else {
-            northeast->insertSimple(particleInsert);
-            //std::cout << "NorthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
-        }
-    }
+    while (!stack.empty()) {
+        QuadTree* node = stack.top();
+        stack.pop();
 
-    // We increment the weight of the branch
-    weightBranch++;
+        if (!node->isDivided) {
+            if (!node->hasBody) {
+                node->particle = particleInsert;
+                node->hasBody = true;
+                node->weightBranch++;
+                return;
+            } else {
+                node->subdivide();
+            }
+        }
+
+        node->updateCenterOfMass(particleInsert);
+
+        if (particleInsert->getX() < node->getOriginX()) {
+            if (particleInsert->getY() < node->getOriginY()) {
+                stack.push(node->southwest);
+            } else {
+                stack.push(node->northwest);
+            }
+        } else {
+            if (particleInsert->getY() < node->getOriginY()) {
+                stack.push(node->southeast);
+            } else {
+                stack.push(node->northeast);
+            }
+        }
+
+        node->weightBranch++;
+    }
 }
 
 void QuadTree::subdivide() {
@@ -159,29 +158,33 @@ void calcForce(Particle* b, Particle* c, double& fx, double& fy) {
 }
 
 void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
-    // If the current node is a an external node (and not b), calculate the force exerted by the current node on b, and add this amount to b's net force.
-    if (!isDivided) {
-        if (!hasBody) return; // If the node is empty, we return
-        if (b != this->particle) {
-            // We call the function to calculate the force between the two particles and add it to the net force of the particle.
-            calcForce(b, particle, fx, fy);
-        }
-    } else {
-        // Otherwise, calculate the ratio s / d, where s is the width of the region represented by the internal node, and d is the distance between the body and the node's center-of-mass.
-        double s = width;
-        double d = distance(b->getX(), b->getY(), particle->getX(), particle->getY());
-        // If ratio > theta we perform recursively on each of the current node's children.
-        if (s / d < theta) { 
-            // Treat the internal node as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
-            // We call the function to calculate the force between the two particles and add it to the net force of the particle.
-            calcForce(b, particle, fx, fy);
-        } 
-        // Otherwise, treat it as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
-        else {
-            if (northeast != nullptr) northeast->calculateForce(b, fx, fy);
-            if (northwest != nullptr) northwest->calculateForce(b, fx, fy);
-            if (southeast != nullptr) southeast->calculateForce(b, fx, fy);
-            if (southwest != nullptr) southwest->calculateForce(b, fx, fy);
+    std::stack<const QuadTree*> stack;
+    stack.push(this);
+
+    while (!stack.empty()) {
+        const QuadTree* node = stack.top();
+        stack.pop();
+
+        if (!node->isDivided) {
+            if (!node->hasBody) continue; // If the node is empty, we skip
+            if (b != node->particle) {
+                // We call the function to calculate the force between the two particles and add it to the net force of the particle.
+                calcForce(b, node->particle, fx, fy);
+            }
+        } else {
+            // Calculate the ratio s / d, where s is the width of the region represented by the internal node, and d is the distance between the body and the node's center-of-mass.
+            double s = node->width;
+            double d = distance(b->getX(), b->getY(), node->particle->getX(), node->particle->getY());
+            // If ratio > theta we perform recursively on each of the current node's children.
+            if (s / d < theta) {
+                // Treat the internal node as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
+                calcForce(b, node->particle, fx, fy);
+            } else {
+                if (node->northeast != nullptr) stack.push(node->northeast);
+                if (node->northwest != nullptr) stack.push(node->northwest);
+                if (node->southeast != nullptr) stack.push(node->southeast);
+                if (node->southwest != nullptr) stack.push(node->southwest);
+            }
         }
     }
 }

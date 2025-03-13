@@ -1,0 +1,29 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Iheaders",
+      "-Wall",
+      "-Wextra",
+      "-std=c++11",
+      "-g",
+      "-Ofast",
+      "-fno-math-errno",
+      "-fno-trapping-math",
+      "-march=native",
+      "-funroll-loops",
+      "-Ilibs/install/include",
+      "-c",
+      "-Ilibs/install/include",
+      "-fopenmp",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include",
+      "-I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi",
+      "-o",
+      "obj/quadtree.o",
+      "sources/quadtree.cpp"
+    ],
+    "directory": "/home/corentin/Documents/Cours/M2/S9/CHPS0901 - Cluster Programming/Projet_CHPS0901",
+    "file": "/home/corentin/Documents/Cours/M2/S9/CHPS0901 - Cluster Programming/Projet_CHPS0901/sources/quadtree.cpp",
+    "output": "/home/corentin/Documents/Cours/M2/S9/CHPS0901 - Cluster Programming/Projet_CHPS0901/obj/quadtree.o"
+  }
+]
