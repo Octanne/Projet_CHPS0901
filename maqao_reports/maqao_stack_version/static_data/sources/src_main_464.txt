@@ -1,0 +1,51 @@
+/usr/include/c++/14.2.1/bits/new_allocator.h: 172 - 172
+--------------------------------------------------------------------------------
+
+172: 	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+/usr/include/c++/14.2.1/bits/deque.tcc: 565 - 568
+--------------------------------------------------------------------------------
+
+565:       this->_M_impl._M_finish._M_cur = this->_M_impl._M_finish._M_last - 1;
+566:       _Alloc_traits::destroy(_M_get_Tp_allocator(),
+567: 			     this->_M_impl._M_finish._M_cur);
+568:     }
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 142 - 181
+--------------------------------------------------------------------------------
+
+142:     return std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+[...]
+149:     double dx = b->getX() - c->getX();
+150:     double dy = b->getY() - c->getY();
+151:     double distance = std::sqrt((dx * dx) + (dy * dy));
+152:     double accel = (-1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
+153:     double forceVecX = dx / distance;
+154:     double forceVecY = dy / distance;
+155: 
+156:     fx += accel * forceVecX;
+157:     fy += accel * forceVecY;
+158: }
+[...]
+164:     while (!stack.empty()) {
+165:         const QuadTree* node = stack.top();
+166:         stack.pop();
+167: 
+168:         if (!node->isDivided) {
+169:             if (!node->hasBody) continue; // If the node is empty, we skip
+170:             if (b != node->particle) {
+[...]
+176:             double s = node->width;
+177:             double d = distance(b->getX(), b->getY(), node->particle->getX(), node->particle->getY());
+178:             // If ratio > theta we perform recursively on each of the current node's children.
+179:             if (s / d < theta) {
+180:                 // Treat the internal node as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
+181:                 calcForce(b, node->particle, fx, fy);
+/usr/include/c++/14.2.1/bits/stl_deque.h: 212 - 1603
+--------------------------------------------------------------------------------
+
+212: 	if (_M_cur == _M_first)
+[...]
+265: 	_M_node = __new_node;
+266: 	_M_first = *__new_node;
+267: 	_M_last = _M_first + difference_type(_S_buffer_size());
+[...]
+1603: 	    --this->_M_impl._M_finish._M_cur;

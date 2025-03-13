@@ -1,0 +1,435 @@
+{
+  "report": [
+    {
+      "id_str": "Loop 464 - main",
+      "module": "main",
+      "id": 464,
+      "analysis": "Execution Time: 60 % - Vectorization Ratio: 1.28 % - Vector Length Use: 24.76 %",
+      "coverage": 60.442810058594,
+      "issues": [
+        {
+          "id_str": "Loop Computation Issues",
+          "score": 40,
+          "issues": [
+            {
+              "code": "L2_LC_2",
+              "analysis": "[SA] Presence of expensive FP instructions - Perform hoisting, change algorithm, use SVML or proper numerical library or perform value profiling (count the number of distinct input values). There are 10 issues (= instructions) costing 4 points each.",
+              "score": 40,
+            }
+          ]
+        },
+        {
+          "id_str": "Control Flow Issues",
+          "score": 16,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 4 issues (= calls) costing 1 point each.",
+              "score": 4,
+            },
+            {
+              "code": "L2_CF_3",
+              "analysis": "[SA] Too many paths (8 paths) - Simplify control structure. There are 8 issues ( = paths) costing 1 point each with a malus of 4 points.",
+              "score": 12,
+            }
+          ]
+        },
+        {
+          "id_str": "Data Access Issues",
+          "score": 2,
+          "issues": [
+            {
+              "code": "L2_DA_6",
+              "analysis": "[SA] More than 20% of the loads are accessing the stack - Perform loop splitting to decrease pressure on registers. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Vectorization Roadblocks",
+          "score": 16,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 4 issues (= calls) costing 1 point each.",
+              "score": 4,
+            },
+            {
+              "code": "L2_CF_3",
+              "analysis": "[SA] Too many paths (8 paths) - Simplify control structure. There are 8 issues ( = paths) costing 1 point each with a malus of 4 points.",
+              "score": 12,
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_str": "Loop 465 - main",
+      "module": "main",
+      "id": 465,
+      "analysis": "Execution Time: 1 % - Vectorization Ratio: 0.00 % - Vector Length Use: 0.00 %",
+      "coverage": 1.7340996265411,
+      "issues": [
+        {
+          "id_str": "Control Flow Issues",
+          "score": 2,
+          "issues": [
+            {
+              "code": "L2_CF_4",
+              "analysis": "[SA] Non innermost loop (Outermost) - Collapse loop with innermost ones. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Data Access Issues",
+          "score": 2,
+          "issues": [
+            {
+              "code": "L2_DA_6",
+              "analysis": "[SA] More than 20% of the loads are accessing the stack - Perform loop splitting to decrease pressure on registers. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Vectorization Roadblocks",
+          "score": 2,
+          "issues": [
+            {
+              "code": "L2_CF_4",
+              "analysis": "[SA] Non innermost loop (Outermost) - Collapse loop with innermost ones. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_str": "Loop 455 - main",
+      "module": "main",
+      "id": 455,
+      "analysis": "Execution Time: 1 % - Vectorization Ratio: 17.19 % - Vector Length Use: 31.54 %",
+      "coverage": 1.3750339746475,
+      "issues": [
+        {
+          "id_str": "Loop Computation Issues",
+          "score": 2,
+          "issues": [
+            {
+              "code": "L2_LC_6",
+              "analysis": "[SA] Presence of a large number of scalar integer instructions - Simplify loop structure, perform loop splitting or perform unroll and jam. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Control Flow Issues",
+          "score": 42,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 6 issues (= calls) costing 1 point each.",
+              "score": 6,
+            },
+            {
+              "code": "L2_CF_3",
+              "analysis": "[SA] Too many paths (32 paths) - Simplify control structure. There are 32 issues ( = paths) costing 1 point each with a malus of 4 points.",
+              "score": 36,
+            }
+          ]
+        },
+        {
+          "id_str": "Data Access Issues",
+          "score": 8,
+          "issues": [
+            {
+              "code": "L2_DA_5",
+              "analysis": "[SA] Presence of special instructions executing on a single port (INSERT/EXTRACT) - Simplify data access and try to get stride 1 access. There are 6 issues (= instructions) costing 1 point each.",
+              "score": 6,
+            },
+            {
+              "code": "L2_DA_6",
+              "analysis": "[SA] More than 20% of the loads are accessing the stack - Perform loop splitting to decrease pressure on registers. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Vectorization Roadblocks",
+          "score": 42,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 6 issues (= calls) costing 1 point each.",
+              "score": 6,
+            },
+            {
+              "code": "L2_CF_3",
+              "analysis": "[SA] Too many paths (32 paths) - Simplify control structure. There are 32 issues ( = paths) costing 1 point each with a malus of 4 points.",
+              "score": 36,
+            }
+          ]
+        },
+        {
+          "id_str": "Inefficient Vectorization",
+          "score": 6,
+          "issues": [
+            {
+              "code": "L2_DA_5",
+              "analysis": "[SA] Presence of special instructions executing on a single port (INSERT/EXTRACT) - Simplify data access and try to get stride 1 access. There are 6 issues (= instructions) costing 1 point each.",
+              "score": 6,
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_str": "Loop 469 - main",
+      "module": "main",
+      "id": 469,
+      "analysis": "Execution Time: 0 % - Vectorization Ratio: 0.00 % - Vector Length Use: 22.92 %",
+      "coverage": 0.35200038552284,
+      "issues": [
+        {
+          "id_str": "Loop Computation Issues",
+          "score": 6,
+          "issues": [
+            {
+              "code": "L2_LC_4",
+              "analysis": "[SA] Less than 10% of the FP ADD/SUB/MUL arithmetic operations are performed using FMA - Reorganize arithmetic expressions to exhibit potential for FMA. This issue costs 4 points.",
+              "score": 4,
+            },
+            {
+              "code": "L2_LC_6",
+              "analysis": "[SA] Presence of a large number of scalar integer instructions - Simplify loop structure, perform loop splitting or perform unroll and jam. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Control Flow Issues",
+          "score": 1,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 1 issues (= calls) costing 1 point each.",
+              "score": 1,
+            }
+          ]
+        },
+        {
+          "id_str": "Data Access Issues",
+          "score": 6,
+          "issues": [
+            {
+              "code": "L2_DA_1",
+              "analysis": "[SA] Presence of constant non unit stride data access - Use array restructuring, perform loop interchange or use gather instructions to lower a bit the cost. There are 2 issues ( = data accesses) costing 2 point each.",
+              "score": 4,
+            },
+            {
+              "code": "L2_DA_6",
+              "analysis": "[SA] More than 20% of the loads are accessing the stack - Perform loop splitting to decrease pressure on registers. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Vectorization Roadblocks",
+          "score": 5,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 1 issues (= calls) costing 1 point each.",
+              "score": 1,
+            },
+            {
+              "code": "L2_DA_1",
+              "analysis": "[SA] Presence of constant non unit stride data access - Use array restructuring, perform loop interchange or use gather instructions to lower a bit the cost. There are 2 issues ( = data accesses) costing 2 point each.",
+              "score": 4,
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_str": "Loop 470 - main",
+      "module": "main",
+      "id": 470,
+      "analysis": "Execution Time: 0 % - Vectorization Ratio: 0.00 % - Vector Length Use: 22.97 %",
+      "coverage": 0.18953873217106,
+      "issues": [
+        {
+          "id_str": "Loop Computation Issues",
+          "score": 6,
+          "issues": [
+            {
+              "code": "L2_LC_4",
+              "analysis": "[SA] Less than 10% of the FP ADD/SUB/MUL arithmetic operations are performed using FMA - Reorganize arithmetic expressions to exhibit potential for FMA. This issue costs 4 points.",
+              "score": 4,
+            },
+            {
+              "code": "L2_LC_6",
+              "analysis": "[SA] Presence of a large number of scalar integer instructions - Simplify loop structure, perform loop splitting or perform unroll and jam. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Control Flow Issues",
+          "score": 14,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 1 issues (= calls) costing 1 point each.",
+              "score": 1,
+            },
+            {
+              "code": "L2_CF_3",
+              "analysis": "[SA] Too many paths (7 paths) - Simplify control structure. There are 7 issues ( = paths) costing 1 point each with a malus of 4 points.",
+              "score": 11,
+            },
+            {
+              "code": "L2_CF_4",
+              "analysis": "[SA] Non innermost loop (Outermost) - Collapse loop with innermost ones. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Data Access Issues",
+          "score": 2,
+          "issues": [
+            {
+              "code": "L2_DA_6",
+              "analysis": "[SA] More than 20% of the loads are accessing the stack - Perform loop splitting to decrease pressure on registers. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Vectorization Roadblocks",
+          "score": 14,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 1 issues (= calls) costing 1 point each.",
+              "score": 1,
+            },
+            {
+              "code": "L2_CF_3",
+              "analysis": "[SA] Too many paths (7 paths) - Simplify control structure. There are 7 issues ( = paths) costing 1 point each with a malus of 4 points.",
+              "score": 11,
+            },
+            {
+              "code": "L2_CF_4",
+              "analysis": "[SA] Non innermost loop (Outermost) - Collapse loop with innermost ones. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_str": "Loop 474 - main",
+      "module": "main",
+      "id": 474,
+      "analysis": "Execution Time: 0 % - Vectorization Ratio: 100.00 % - Vector Length Use: 100.00 %",
+      "coverage": 0.038849417120218,
+      "issues": [
+      ]
+    },
+    {
+      "id_str": "Loop 451 - main",
+      "module": "main",
+      "id": 451,
+      "analysis": "Execution Time: 0 % - Vectorization Ratio: 0.00 % - Vector Length Use: 25.00 %",
+      "coverage": 0.035317614674568,
+      "issues": [
+        {
+          "id_str": "Control Flow Issues",
+          "score": 8,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 8 issues (= calls) costing 1 point each.",
+              "score": 8,
+            }
+          ]
+        },
+        {
+          "id_str": "Data Access Issues",
+          "score": 16,
+          "issues": [
+            {
+              "code": "L2_DA_1",
+              "analysis": "[SA] Presence of constant non unit stride data access - Use array restructuring, perform loop interchange or use gather instructions to lower a bit the cost. There are 7 issues ( = data accesses) costing 2 point each.",
+              "score": 14,
+            },
+            {
+              "code": "L2_DA_6",
+              "analysis": "[SA] More than 20% of the loads are accessing the stack - Perform loop splitting to decrease pressure on registers. This issue costs 2 points.",
+              "score": 2,
+            }
+          ]
+        },
+        {
+          "id_str": "Vectorization Roadblocks",
+          "score": 22,
+          "issues": [
+            {
+              "code": "L2_CF_1",
+              "analysis": "[SA] Presence of calls - Inline either by compiler or by hand and use SVML for libm calls. There are 8 issues (= calls) costing 1 point each.",
+              "score": 8,
+            },
+            {
+              "code": "L2_DA_1",
+              "analysis": "[SA] Presence of constant non unit stride data access - Use array restructuring, perform loop interchange or use gather instructions to lower a bit the cost. There are 7 issues ( = data accesses) costing 2 point each.",
+              "score": 14,
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_str": "Loop 472 - main",
+      "module": "main",
+      "id": 472,
+      "analysis": "Execution Time: 0 % - Vectorization Ratio: 100.00 % - Vector Length Use: 100.00 %",
+      "coverage": 0.032963216304779,
+      "issues": [
+      ]
+    },
+    {
+      "id_str": "Loop 468 - main",
+      "module": "main",
+      "id": 468,
+      "analysis": "Execution Time: 0 % - Vectorization Ratio: 100.00 % - Vector Length Use: 100.00 %",
+      "coverage": 0.012949819676578,
+      "issues": [
+        {
+          "id_str": "Loop Computation Issues",
+          "score": 4,
+          "issues": [
+            {
+              "code": "L2_LC_4",
+              "analysis": "[SA] Less than 10% of the FP ADD/SUB/MUL arithmetic operations are performed using FMA - Reorganize arithmetic expressions to exhibit potential for FMA. This issue costs 4 points.",
+              "score": 4,
+            }
+          ]
+        },
+        {
+          "id_str": "Data Access Issues",
+          "score": 0,
+          "issues": [
+            {
+              "code": "L2_DA_3",
+              "analysis": "[SA] Inefficient vectorization: more than 10% of the vector loads instructions are unaligned - When allocating arrays, don’t forget to align them. There are 0 issues ( = arrays) costing 2 points each",
+              "score": 0,
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

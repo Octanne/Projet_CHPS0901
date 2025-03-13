@@ -1,0 +1,191 @@
+{
+  "__fct":
+    {
+      "loops":
+        {
+          "_473":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                    "regions":
+                      [
+                        [
+                        275,
+                        275
+                        ]
+                      ]
+                  }
+                ],
+              "src": "quadtree.cpp:275-275"
+            },
+          "_471":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                    "regions":
+                      [
+                        [
+                        275,
+                        275
+                        ]
+                      ]
+                  }
+                ],
+              "src": "quadtree.cpp:275-275"
+            },
+          "_474":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                    "regions":
+                      [
+                        [
+                        275,
+                        275
+                        ]
+                      ]
+                  }
+                ],
+              "src": "quadtree.cpp:275-275"
+            },
+          "_472":
+            {
+              "src_regions":
+                [
+                  {
+                    "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                    "regions":
+                      [
+                        [
+                        275,
+                        275
+                        ]
+                      ]
+                  }
+                ],
+              "src": "quadtree.cpp:275-275"
+            },
+          "_466":
+            {
+              "_467":
+                {
+                  "src_regions":
+                    [
+                      {
+                        "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                        "regions":
+                          [
+                            [
+                            275,
+                            275
+                            ]
+                          ]
+                      }
+                    ],
+                  "src": "quadtree.cpp:275-275"
+                },
+              "_468":
+                {
+                  "src_regions":
+                    [
+                      {
+                        "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                        "regions":
+                          [
+                            [
+                            275,
+                            275
+                            ]
+                          ]
+                      }
+                    ],
+                  "src": "quadtree.cpp:275-275"
+                },
+              "src_regions":
+                [
+                  {
+                    "path": "/usr/include/c++/14.2.1/bits/stl_vector.h",
+                    "regions":
+                      [
+                        [
+                        1131,
+                        1131
+                        ]
+                      ]
+                  },
+                  {
+                    "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                    "regions":
+                      [
+                        [
+                        275,
+                        275
+                        ]
+                      ]
+                  }
+                ],
+              "src": "quadtree.cpp:275-275"
+            },
+          "_470":
+            {
+              "_469":
+                {
+                  "src_regions":
+                    [
+                      {
+                        "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                        "regions":
+                          [
+                            [
+                            278,
+                            282
+                            ]
+                          ]
+                      }
+                    ],
+                  "src": "quadtree.cpp:278-282"
+                },
+              "src_regions":
+                [
+                  {
+                    "path": "/usr/include/c++/14.2.1/bits/stl_vector.h",
+                    "regions":
+                      [
+                        [
+                        1131,
+                        1131
+                        ]
+                      ]
+                  },
+                  {
+                    "path": "/usr/include/c++/14.2.1/bits/stl_iterator.h",
+                    "regions":
+                      [
+                        [
+                        1068,
+                        1068
+                        ]
+                      ]
+                  },
+                  {
+                    "path": "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp",
+                    "regions":
+                      [
+                        [
+                        277,
+                        282
+                        ]
+                      ]
+                  }
+                ],
+              "src": "stl_vector.h:1131-1131"
+            }
+        }
+    }
+}

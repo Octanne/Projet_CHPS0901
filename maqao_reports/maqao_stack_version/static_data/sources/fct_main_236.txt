@@ -1,0 +1,57 @@
+/usr/include/c++/14.2.1/bits/new_allocator.h: 151 - 172
+--------------------------------------------------------------------------------
+
+151: 	return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+[...]
+172: 	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+/usr/include/c++/14.2.1/bits/stl_algobase.h: 262 - 262
+--------------------------------------------------------------------------------
+
+262:       if (__a < __b)
+/usr/include/c++/14.2.1/bits/stl_deque.h: 266 - 699
+--------------------------------------------------------------------------------
+
+266: 	_M_first = *__new_node;
+267: 	_M_last = _M_first + difference_type(_S_buffer_size());
+[...]
+638:     _Deque_base<_Tp, _Alloc>::
+639:     _M_initialize_map(size_t __num_elements)
+640:     {
+641:       const size_t __num_nodes = (__num_elements / __deque_buf_size(sizeof(_Tp))
+642: 				  + 1);
+643: 
+644:       this->_M_impl._M_map_size = std::max((size_t) _S_initial_map_size,
+645: 					   size_t(__num_nodes + 2));
+646:       this->_M_impl._M_map = _M_allocate_map(this->_M_impl._M_map_size);
+[...]
+653:       _Map_pointer __nstart = (this->_M_impl._M_map
+654: 			       + (this->_M_impl._M_map_size - __num_nodes) / 2);
+655:       _Map_pointer __nfinish = __nstart + __num_nodes;
+656: 
+657:       __try
+658: 	{ _M_create_nodes(__nstart, __nfinish); }
+659:       __catch(...)
+660: 	{
+661: 	  _M_deallocate_map(this->_M_impl._M_map, this->_M_impl._M_map_size);
+662: 	  this->_M_impl._M_map = _Map_pointer();
+663: 	  this->_M_impl._M_map_size = 0;
+664: 	  __throw_exception_again;
+665: 	}
+666: 
+667:       this->_M_impl._M_start._M_set_node(__nstart);
+668:       this->_M_impl._M_finish._M_set_node(__nfinish - 1);
+669:       this->_M_impl._M_start._M_cur = _M_impl._M_start._M_first;
+670:       this->_M_impl._M_finish._M_cur = (this->_M_impl._M_finish._M_first
+671: 					+ __num_elements
+672: 					% __deque_buf_size(sizeof(_Tp)));
+673:     }
+[...]
+683: 	  for (__cur = __nstart; __cur < __nfinish; ++__cur)
+684: 	    *__cur = this->_M_allocate_node();
+685: 	}
+686:       __catch(...)
+687: 	{
+688: 	  _M_destroy_nodes(__nstart, __cur);
+689: 	  __throw_exception_again;
+[...]
+699:       for (_Map_pointer __n = __nstart; __n < __nfinish; ++__n)

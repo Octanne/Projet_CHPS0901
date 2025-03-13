@@ -1,0 +1,92 @@
+/usr/include/c++/14.2.1/bits/new_allocator.h: 151 - 191
+--------------------------------------------------------------------------------
+
+151: 	return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+[...]
+172: 	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+[...]
+191: 	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+/usr/include/c++/14.2.1/bits/deque.tcc: 173 - 568
+--------------------------------------------------------------------------------
+
+173: 	    ++this->_M_impl._M_finish._M_cur;
+[...]
+565:       this->_M_impl._M_finish._M_cur = this->_M_impl._M_finish._M_last - 1;
+566:       _Alloc_traits::destroy(_M_get_Tp_allocator(),
+567: 			     this->_M_impl._M_finish._M_cur);
+568:     }
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 71 - 109
+--------------------------------------------------------------------------------
+
+71: void QuadTree::insertSimple(Particle* particleInsert) {
+72:     // If node x does not contain a body, put the new body b here.
+73:     std::stack<QuadTree*> stack;
+74:     stack.push(this);
+75: 
+76:     while (!stack.empty()) {
+77:         QuadTree* node = stack.top();
+78:         stack.pop();
+79: 
+80:         if (!node->isDivided) {
+81:             if (!node->hasBody) {
+82:                 node->particle = particleInsert;
+83:                 node->hasBody = true;
+84:                 node->weightBranch++;
+85:                 return;
+86:             } else {
+87:                 node->subdivide();
+88:             }
+89:         }
+90: 
+91:         node->updateCenterOfMass(particleInsert);
+92: 
+93:         if (particleInsert->getX() < node->getOriginX()) {
+94:             if (particleInsert->getY() < node->getOriginY()) {
+95:                 stack.push(node->southwest);
+96:             } else {
+97:                 stack.push(node->northwest);
+98:             }
+99:         } else {
+100:             if (particleInsert->getY() < node->getOriginY()) {
+101:                 stack.push(node->southeast);
+102:             } else {
+103:                 stack.push(node->northeast);
+104:             }
+105:         }
+106: 
+107:         node->weightBranch++;
+108:     }
+109: }
+/usr/include/c++/14.2.1/bits/stl_deque.h: 152 - 1603
+--------------------------------------------------------------------------------
+
+152:       : _M_cur(), _M_first(), _M_last(), _M_node() { }
+[...]
+212: 	if (_M_cur == _M_first)
+[...]
+265: 	_M_node = __new_node;
+266: 	_M_first = *__new_node;
+267: 	_M_last = _M_first + difference_type(_S_buffer_size());
+[...]
+620:       if (this->_M_impl._M_map)
+621: 	{
+622: 	  _M_destroy_nodes(this->_M_impl._M_start._M_node,
+[...]
+644:       this->_M_impl._M_map_size = std::max((size_t) _S_initial_map_size,
+[...]
+653:       _Map_pointer __nstart = (this->_M_impl._M_map
+[...]
+669:       this->_M_impl._M_start._M_cur = _M_impl._M_start._M_first;
+[...]
+684: 	    *__cur = this->_M_allocate_node();
+685: 	}
+686:       __catch(...)
+[...]
+699:       for (_Map_pointer __n = __nstart; __n < __nfinish; ++__n)
+[...]
+1540: 	if (this->_M_impl._M_finish._M_cur
+1541: 	    != this->_M_impl._M_finish._M_last - 1)
+[...]
+1548: 	  _M_push_back_aux(__x);
+[...]
+1603: 	    --this->_M_impl._M_finish._M_cur;
