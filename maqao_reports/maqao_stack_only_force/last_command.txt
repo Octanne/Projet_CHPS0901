@@ -1,0 +1,1 @@
+../maqao.x86_64.2.20.13/bin/maqao oneview -R1 --number-processes=2 "--mpi-command=mpirun -n 2 --bind-to core --map-by socket:PE=2 --report-bindings" --number-processes-per-node=4 -- bin/main -n 100000 -e 100 -t 1 -s false 

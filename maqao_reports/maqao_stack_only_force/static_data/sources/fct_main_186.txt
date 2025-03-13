@@ -1,0 +1,5 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/particle.cpp: 34 - 35
+--------------------------------------------------------------------------------
+
+34:     this->mass = mass;
+35: }
