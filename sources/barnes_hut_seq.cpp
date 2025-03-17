@@ -108,8 +108,8 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
 {
     int step = 0;
     // We make a double table to store the forces
-    double localAccX[particles.size()];
-    double localAccY[particles.size()];
+    double *localAccX = new double[particles.size()];
+    double *localAccY = new double[particles.size()];
 
     if (rankMPI == 0) std::cout << "Starting simulation with " << particles.size() << " particles" << std::endl;
     // We do the simulation
@@ -217,22 +217,12 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
                 particleData[i * 5 + 3] = particles[i]->getVy();
                 particleData[i * 5 + 4] = particles[i]->getMass();
             }
-            // Send the particle data in chunks
-            int chunkSize = MPI_MAX_PROCESSOR_NAME / (5 * sizeof(double));
-            for (int i = 0; i < particleDataSize; i += chunkSize) {
-                int currentChunkSize = std::min(chunkSize, particleDataSize - i);
-                MPI_Bcast(particleData.data() + i, currentChunkSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
-            }
+            // Send the particle data
+            MPI_Bcast(particleData.data(), particleDataSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
         } else {
             int particleDataSize = numParticles * 5;
             std::vector<double> particleData(particleDataSize);
-            // Receive the particle data in chunks
-            int chunkSize = MPI_MAX_PROCESSOR_NAME / (5 * sizeof(double));
-            for (int i = 0; i < particleDataSize; i += chunkSize) {
-                int currentChunkSize = std::min(chunkSize, particleDataSize - i);
-                MPI_Bcast(particleData.data() + i, currentChunkSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
-                std::cout << "Particles received by rank " << rankMPI << std::endl;
-            }
+            MPI_Bcast(particleData.data(), particleDataSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
             for (int i = 0; i < numParticles; i++) {
                 double x = particleData[i * 5];
                 double y = particleData[i * 5 + 1];
