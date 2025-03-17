@@ -6,3 +6,5 @@ obj/
 results/
 # Remove local libs directory
 libs/
+# Remove jobs file directory
+jobs/
