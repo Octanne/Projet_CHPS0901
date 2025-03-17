@@ -251,45 +251,33 @@ std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) co
 void QuadTree::updateParticles(double step, double *localAccX, double *localAccY) { 
     // We compute the position of the start of the subtree to be handled by each rank
     std::vector<std::vector<QuadTree*>> poOfSubtree = computeBalancedRanks(*sizeMPI);
-
     // Stockage des accélérations locales (chaque rang calcule sa contribution)
-    /*std::vector<double> localAccX(particles->size(), 0.0);
-    std::vector<double> localAccY(particles->size(), 0.0);
-    double localAccX[particles->size()];
-    double localAccY[particles->size()];*/
-    #pragma omp parallel for
-    for (size_t i = 0; i < particles->size(); ++i) {
-        localAccX[i] = 0.0;
-        localAccY[i] = 0.0;
-    }
 
     // We get are nodes list to handle
     std::vector<QuadTree*> nodesToHandle = poOfSubtree[*rankMPI];
     // We handle the nodes
-    
+
     // We compute the forces exerted on the particles
-    // CAN BE OPTIMIZED BY OPENMP
-    #pragma omp parallel for reduction(+:localAccX[:particles->size()]) reduction(+:localAccY[:particles->size()])
+    #pragma omp parallel for
     for (size_t i = 0; i < particles->size(); ++i) {
         Particle* particle = (*particles)[i];
+        localAccX[i] = 0.0;
+        localAccY[i] = 0.0;
         for (QuadTree* node : nodesToHandle) {
             node->calculateForce(particle, localAccX[i], localAccY[i]); // Déjà basé sur G*mass/d²
             // fx contient l'accélération (pas besoin de diviser par mass)
         }
     }
-    
+
     // MPI AllReduce pour sommer les accélérations locales
-    //MPI_Allreduce(MPI_IN_PLACE, localAccX.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
-    //MPI_Allreduce(MPI_IN_PLACE, localAccY.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
     MPI_Allreduce(MPI_IN_PLACE, localAccX, particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
     MPI_Allreduce(MPI_IN_PLACE, localAccY, particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
 
     // On met à jour les vitesses et positions des particules
-    // CAN BE OPTIMIZED BY OPENMP
     #pragma omp parallel for
     for (size_t i = 0; i < particles->size(); ++i) {
-        Particle* particle = (*particles)[i];
-
+        Particle* particle = particles->at(i);
+        
         // We print the force exerted on the particle
         //if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() 
         //    << ") has force (" << localAccX[i] << ", " << localAccY[i] << ")" << std::endl;
