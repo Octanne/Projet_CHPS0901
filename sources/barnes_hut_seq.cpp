@@ -231,6 +231,7 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
             for (int i = 0; i < particleDataSize; i += chunkSize) {
                 int currentChunkSize = std::min(chunkSize, particleDataSize - i);
                 MPI_Bcast(particleData.data() + i, currentChunkSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+                std::cout << "Particles received by rank " << rankMPI << std::endl;
             }
             for (int i = 0; i < numParticles; i++) {
                 double x = particleData[i * 5];
@@ -244,7 +245,6 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
                 particles.push_back(particle);
             }
         }
-        std::cout << "Particles received by rank " << rankMPI << std::endl;
     }
 }
 
