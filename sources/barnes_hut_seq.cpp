@@ -108,6 +108,7 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
 {
     int step = 0;
     // We make a double table to store the forces
+    // We do it in dynamic memory to avoid stack overflow
     double *localAccX = new double[particles.size()];
     double *localAccY = new double[particles.size()];
 
@@ -118,13 +119,13 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
         // We update the position of the particles
         if (!qtVisu->isInPause())
         {
-            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating particles" << std::endl;
+            //if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating particles" << std::endl;
             qt.updateParticles(timeStep, localAccX, localAccY);
-            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Particles updated" << std::endl;
+            //if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Particles updated" << std::endl;
             // We update the tree
-            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating quadtree" << std::endl;
+            //if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating quadtree" << std::endl;
             qt.buildTree();
-            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Quadtree updated" << std::endl;
+            //if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Quadtree updated" << std::endl;
             step++;
         }
         // Refresh every refreshRate if GUI is enabled
@@ -202,14 +203,14 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
     }
     else
     {
+        int particleDataSize = numParticles * 5; // Each particle has 5 attributes: x, y, v_x, v_y, mass
+        std::vector<double> particleData(particleDataSize);
         // make it only done by rank 0 and then broadcast the particles to the other ranks
         if (rankMPI == 0) {
             std::cout << "Generating " << numParticles << " particles" << std::endl;
             // We generate the particles
             particles = Particle::generateParticles(numParticles, windowSizeG, windowSizeG, maxMass, minMass);
             // We send the particles list to all the other ranks
-            int particleDataSize = numParticles * 5; // Each particle has 5 attributes: x, y, v_x, v_y, mass
-            std::vector<double> particleData(particleDataSize);
             for (int i = 0; i < numParticles; i++) {
                 particleData[i * 5] = particles[i]->getX();
                 particleData[i * 5 + 1] = particles[i]->getY();
@@ -220,8 +221,6 @@ void loadParticles(std::vector<Particle *> &particles, std::string &filename, do
             // Send the particle data
             MPI_Bcast(particleData.data(), particleDataSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
         } else {
-            int particleDataSize = numParticles * 5;
-            std::vector<double> particleData(particleDataSize);
             MPI_Bcast(particleData.data(), particleDataSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
             for (int i = 0; i < numParticles; i++) {
                 double x = particleData[i * 5];

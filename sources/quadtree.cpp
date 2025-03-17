@@ -433,7 +433,7 @@ bool QuadTree::buildTree() {
     // We need to calculate the width of the newWindow of simulation
     // For that we need to calculate the maximum distance from the origin
     width = 0.0;
-    // #pragma omp parallel for reduction(max:width) TODO future step
+    #pragma omp parallel for reduction(max:width)
     for (Particle* particle : *particles) {
         double distance = std::max(std::abs(particle->getX()), std::abs(particle->getY()));
         if (distance > width) {
@@ -448,7 +448,7 @@ bool QuadTree::buildTree() {
 
     //if (debugMode()) std::cout << "Building the quadtree" << std::endl;
     // We insert the particles into the quadtree
-    // PUT semaphore for the insertion on the different branches (QuadTree)
+    // PUT semaphore for the insertion on the different branches (QuadTree) Potential improvement
     for (Particle* particle : *particles) {
         insertSimple(particle);
     }

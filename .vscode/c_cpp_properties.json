@@ -4,13 +4,14 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/lib/x86_64-linux-gnu/openmpi/include"
+                "${workspaceFolder}/libs/install/include/**",
+                "/apps/spack/spack-softwares/linux-rocky9-zen3/gcc-13.1.0/openmpi-4.1.6-aa2vvcpzjmstlhhbgkuyw6a5ms7wqyyu/include/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc-13",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "linux-clang-x64",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
             "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
