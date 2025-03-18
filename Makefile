@@ -17,8 +17,8 @@ OBJECTS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SOURCES))
 EXECUTABLE = $(BIN_DIR)/main
 
 # Flags maybe -Ofast -O3 -ffast-math
-CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++17 -O3 -ftree-vectorize -march=native -funroll-loops -flto -DNDEBUG -fno-math-errno -fno-trapping-math
-LDFLAGS = -lGLEW -lGL -lglfw -lpthread -fopenmp
+CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++17 -O3 -ftree-vectorize -march=native -funroll-loops -flto=auto -DNDEBUG -fno-math-errno -fno-trapping-math
+LDFLAGS = -lGLEW -lGL -lglfw -fopenmp
 LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -lGL -lpthread -fopenmp
 
 # Targets
