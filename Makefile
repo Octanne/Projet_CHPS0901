@@ -18,7 +18,7 @@ EXECUTABLE = $(BIN_DIR)/main
 
 # Flags
 # Potential flags : -std=c++11 -g -O3 -fno-math-errno -fno-trapping-math -march=native -funroll-loops
-CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++17 -O3 -march=native -funroll-loops -DNDEBUG -fno-math-errno -fno-trapping-math
+CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11 -g -flto=auto -O3 -march=native -funroll-loops -DNDEBUG -fno-math-errno -fno-trapping-math
 LDFLAGS = -lGLEW -lGL -lglfw -fopenmp
 LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -lGL -fopenmp
 
