@@ -98,25 +98,40 @@ void launchSimulation(QuadTree &qt, std::vector<Particle *> &particles, Visualiz
 {
     int step = 0;
     if (rankMPI == 0) std::cout << "Starting simulation with " << particles.size() << " particles" << std::endl;
+    
+    // We make a double table to store the forces
+    // We do it in dynamic memory to avoid stack overflow
+    std::vector<double> localAccX(particles.size(), 0.0);
+    std::vector<double> localAccY(particles.size(), 0.0);
+
     // We do the simulation
-    while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
-    {
-        // We update the position of the particles
-        if (!qtVisu->isInPause())
+    if (shouldGUI && rankMPI == 0) {
+        while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
         {
-            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating particles" << std::endl;
-            qt.updateParticles(timeStep);
-            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Particles updated" << std::endl;
+            // We update the position of the particles
+            if (!qtVisu->isInPause())
+            {
+                //if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating particles" << std::endl;
+                qt.updateParticles(timeStep, localAccX.data(), localAccY.data());
+                //if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Particles updated" << std::endl;
+                // We update the tree
+                //if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating quadtree" << std::endl;
+                qt.buildTree();
+                //if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Quadtree updated" << std::endl;
+                step++;
+            }
+            // Refresh every refreshRate if GUI is enabled
+            usleep(refreshRate * 1000000);
+        }
+    } else {
+        while (!qtVisu->hasToClose() && (nbSteps == 0 || step < nbSteps))
+        {
+            // We update the position of the particles
+            qt.updateParticles(timeStep, localAccX.data(), localAccY.data());
             // We update the tree
-            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Updating quadtree" << std::endl;
             qt.buildTree();
-            if (qtVisu->isInDebug() && rankMPI == 0) std::cout << "Quadtree updated" << std::endl;
             step++;
         }
-        // Refresh every refreshRate if GUI is enabled
-        if (shouldGUI) usleep(refreshRate * 1000000);
-        // We print the quadtree
-        if (!shouldGUI && qtVisu->isInDebug()) qt.print();
     }
 }
 

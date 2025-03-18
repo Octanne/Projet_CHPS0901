@@ -247,7 +247,7 @@ std::vector<std::vector<QuadTree*>> QuadTree::computeBalancedRanks(int nRank) co
 // We can also do a fusion of particles when they are too close to the center of mass TO AVOID 
 // THE COLLAPSE OF THE SYSTEM (To much divided sectors)
 
-void QuadTree::updateParticles(double step) { 
+void QuadTree::updateParticles(double step, double *localAccX, double *localAccY) { 
     // We compute the position of the start of the subtree to be handled by each rank
     std::vector<std::vector<QuadTree*>> poOfSubtree = computeBalancedRanks(*sizeMPI);
 
@@ -273,8 +273,8 @@ void QuadTree::updateParticles(double step) {
     }
     
     // MPI AllReduce pour sommer les accélérations locales
-    MPI_Allreduce(MPI_IN_PLACE, localAccX.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
-    MPI_Allreduce(MPI_IN_PLACE, localAccY.data(), particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+    MPI_Allreduce(MPI_IN_PLACE, localAccX, particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+    MPI_Allreduce(MPI_IN_PLACE, localAccY, particles->size(), MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
 
     // On met à jour les vitesses et positions des particules
     // CAN BE OPTIMIZED BY OPENMP
@@ -283,24 +283,24 @@ void QuadTree::updateParticles(double step) {
         Particle* particle = (*particles)[i];
 
         // We print the force exerted on the particle
-        if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() 
-            << ") has force (" << localAccX[i] << ", " << localAccY[i] << ")" << std::endl;
+        /*if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() 
+            << ") has force (" << localAccX[i] << ", " << localAccY[i] << ")" << std::endl;*/
 
         // We update the velocity of the particle
         particle->setVx(particle->getVx() + localAccX[i] * step);
         particle->setVy(particle->getVy() + localAccY[i] * step);
 
         // We print the velocity of the particle
-        if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY()
-             << ") has velocity (" << particle->getVx() << ", " << particle->getVy() << ")" << std::endl;
+        /*if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY()
+             << ") has velocity (" << particle->getVx() << ", " << particle->getVy() << ")" << std::endl;*/
 
         // We update the position of the particle
         particle->setX(particle->getX() + particle->getVx() * step);
         particle->setY(particle->getY() + particle->getVy() * step);
 
         // We print the position of the particle
-        if (debugMode()) std::cout << "Particle now at (" << particle->getX() << ", " << particle->getY() 
-            << ")" << std::endl;
+        /*if (debugMode()) std::cout << "Particle now at (" << particle->getX() << ", " << particle->getY() 
+            << ")" << std::endl;*/
     }
 }
 
