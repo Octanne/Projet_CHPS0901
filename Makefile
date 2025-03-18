@@ -17,9 +17,10 @@ OBJECTS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SOURCES))
 EXECUTABLE = $(BIN_DIR)/main
 
 # Flags maybe -Ofast -O3 -ffast-math
+# Potential flags : -std=c++17 -O3 -march=native -funroll-loops -DNDEBUG -fno-math-errno -fno-trapping-math
 CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11 -g -O3 -fno-math-errno -fno-trapping-math -march=native -funroll-loops
-LDFLAGS = -lGLEW -lGL -lglfw -lpthread -fopenmp
-LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -lGL -lpthread -fopenmp
+LDFLAGS = -lGLEW -lGL -lglfw -fopenmp
+LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -lGL -fopenmp
 
 # Targets
 all: $(EXECUTABLE)
