@@ -150,13 +150,13 @@ void calcForce(Particle* b, Particle* c, double& fx, double& fy) {
     // We add the force to the net force of the particle.
     double dx = b->getX() - c->getX();
     double dy = b->getY() - c->getY();
-    double distance = std::sqrt((dx * dx) + (dy * dy));
-    double accel = (-1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
-    double forceVecX = dx / distance;
-    double forceVecY = dy / distance;
+    double distSq = dx * dx + dy * dy;
+    double invDist = 1.0 / std::sqrt(distSq);
+    double invDist3 = invDist * invDist * invDist;
+    double force = Particle::G * c->getMass() * invDist3;
 
-    fx += accel * forceVecX;
-    fy += accel * forceVecY;
+    fx += force * dx;
+    fy += force * dy;
 }
 
 void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {

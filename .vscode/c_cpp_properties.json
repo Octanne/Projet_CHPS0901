@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/lib/x86_64-linux-gnu/openmpi/include"
+                "/apps/spack/spack-softwares/linux-rocky9-zen3/gcc-13.1.0/openmpi-4.1.6-aa2vvcpzjmstlhhbgkuyw6a5ms7wqyyu/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc-13",

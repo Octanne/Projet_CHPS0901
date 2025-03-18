@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=n_corps_chps0901    # Job name
 #SBATCH --output=results/output_ncorps_%j.txt  # Output file (%j will be replaced with the job ID)
-#SBATCH --ntasks=5                     # Number of MPI processes (n processes)
+#SBATCH --ntasks=4                     # Number of MPI processes (n processes)
 #SBATCH --cpus-per-task=16             # Number of CPU cores per MPI process (for OpenMP threads)
-#SBATCH --time=01:00:00                # Maximum runtime (1 hour)
-#SBATCH --mem=20G                      # Memory allocation
+#SBATCH --time=04:00:00                # Maximum runtime (1 hour)
+#SBATCH --mem=60G                      # Memory allocation
 #SBATCH --account=M24090               # Projet name
 # --partition=standard                 # Partition to use (change based on your cluster setup)
 
