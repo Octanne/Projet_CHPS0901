@@ -252,8 +252,8 @@ void QuadTree::updateParticles(double step, double *localAccX, double *localAccY
     std::vector<std::vector<QuadTree*>> poOfSubtree = computeBalancedRanks(*sizeMPI);
 
     // Stockage des accélérations locales (chaque rang calcule sa contribution)
-    std::vector<double> localAccX(particles->size(), 0.0);
-    std::vector<double> localAccY(particles->size(), 0.0);
+    /*std::vector<double> localAccX(particles->size(), 0.0);
+    std::vector<double> localAccY(particles->size(), 0.0);*/
 
     // We get are nodes list to handle
     std::vector<QuadTree*> nodesToHandle = poOfSubtree[*rankMPI];
