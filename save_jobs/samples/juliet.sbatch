@@ -14,7 +14,7 @@ spack load gcc@13.1.0
 
 export LD_LIBRARY_PATH="$(pwd)/libs/install/lib64:$LD_LIBRARY_PATH"
 # Set the number of threads for OpenMP (if not set in code or environment)
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK  # Use the number of CPU cores per task
+export OMP_NUM_THREADS=\$SLURM_CPUS_PER_TASK  # Use the number of CPU cores per task
 
 # Run the program using mpirun with OpenMP parallelism inside each MPI process
 mpirun -n $SLURM_NTASKS bin/main -n 100000 -e 100 -t 1

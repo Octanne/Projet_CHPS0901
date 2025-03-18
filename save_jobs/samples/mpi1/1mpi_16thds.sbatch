@@ -17,7 +17,7 @@ spack load gcc@13.1.0
 ulimit -s unlimited
 
 export LD_LIBRARY_PATH="$(pwd)/libs/install/lib64:\$LD_LIBRARY_PATH"
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export OMP_NUM_THREADS=\$SLURM_CPUS_PER_TASK
 
 mpirun -n \$SLURM_NTASKS bin/main -n 800000 -e 100 -t 1 -w 100000
 EOF
