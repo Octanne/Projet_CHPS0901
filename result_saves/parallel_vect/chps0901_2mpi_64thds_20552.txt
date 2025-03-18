@@ -1,0 +1,11 @@
+[juliet3:1096754] *** Process received signal ***
+[juliet3:1096754] Signal: Segmentation fault (11)
+[juliet3:1096754] Signal code: Address not mapped (1)
+[juliet3:1096754] Failing at address: 0x14fcd93192be
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node juliet3 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
