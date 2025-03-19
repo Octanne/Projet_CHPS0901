@@ -1,0 +1,16 @@
+
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+--------------------------------------------------------------------------
+WARNING: Open MPI failed to TCP connect to a peer MPI process.  This
+should not happen.
+
+Your Open MPI job may now hang or fail.
+
+  Local host: juliet5
+  PID:        2065269
+  Message:    connect() to 172.21.0.35:1056 failed
+  Error:      Operation now in progress (115)
+--------------------------------------------------------------------------
+
+
