@@ -1,0 +1,11 @@
+[juliet4:148287] *** Process received signal ***
+[juliet4:148287] Signal: Segmentation fault (11)
+[juliet4:148287] Signal code: Address not mapped (1)
+[juliet4:148287] Failing at address: 0x14599131937f
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 148287 on node juliet4 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
