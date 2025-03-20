@@ -1,0 +1,6 @@
+
+
+Simulation time: 68.4581 seconds
+Creating folder results
+Particles status result saved to results/particle_output_1742425668.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
