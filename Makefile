@@ -30,6 +30,11 @@ locallibs: LDFLAGS=$(LDFLAGS_LOCAL)
 locallibs: CXXFLAGS+=-I${INSTALL_DIR}/include
 locallibs: $(EXECUTABLE)
 
+# No visualisation
+novisual: LDFLAGS=-fopenmp
+novisual: CXXFLAGS+=-DVISU=0
+novisual: $(EXECUTABLE)
+
 $(EXECUTABLE): $(OBJECTS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(OBJECTS) -o $@ $(LDFLAGS)

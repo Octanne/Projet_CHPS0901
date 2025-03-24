@@ -155,16 +155,19 @@ QuadTree initQuadTree(std::vector<Particle *> &particles, double windowSizeG)
 
 void cleanVisualizer(Visualizer *qtVisu, bool& shouldGUI)
 {
+    #if VISU
     if (shouldGUI && rankMPI == 0)
     {
         std::cout << "End of simulation : waiting for the window to be closed" << std::endl;
         qtVisu->closeWindow();
         qtVisu->waitClosedWindow();
     }
+    #endif
 }
 
 void initVisualizer(Visualizer *qtVisu, bool shouldGUI, double debugMode)
 {
+    #if VISU
     qtVisu->setDebug(debugMode);
     if (shouldGUI && rankMPI == 0)
     {
@@ -179,6 +182,7 @@ void initVisualizer(Visualizer *qtVisu, bool shouldGUI, double debugMode)
         Visualizer::getInstance()->closeWindow();
         printf("Interrupt signal received (%d)\n", signum); });
     }
+    #endif
 }
 
 void cleanParticles(std::vector<Particle *> &particles, bool saveParticles)

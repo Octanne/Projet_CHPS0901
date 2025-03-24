@@ -28,7 +28,9 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->shouldPause = false;
     this->renderBoundaries = false;
     this->windowThread = nullptr;
+    #if VISU
     this->window = nullptr;
+    #endif
 
     this->winX = 0;
     this->winY = 0;
@@ -218,6 +220,7 @@ void Visualizer::waitClosedWindow() {
     windowThread->join();
 }
 
+#if VISU
 void Visualizer::framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     instance->windowSize = width;
     glMatrixMode(GL_PROJECTION);
@@ -401,6 +404,7 @@ int Visualizer::createWindow() {
 
     return 0;
 }
+#endif
 
 bool Visualizer::hasToClose() const {
     return shouldClose;
