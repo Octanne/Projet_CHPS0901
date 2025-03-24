@@ -24,26 +24,34 @@ sudo yum update
 sudo yum install cmake gcc-c++ make glfw-devel glew-devel glm-devel
 ```
 
-## Utilisation sans la tête graphiques
-Si vous souhaitez compiler l'application sans utiliser la partie graphique faites : `make novisual`.
+## Compilation
+Pour compiler l'application, vous pouvez utiliser les commandes suivantes dans le répertoire du projet :
 
-## Utilisation de bibliothèques locales
-Si vous souhaitez compiler l'application en utilisant des bibliothèques installées localement, vous pouvez utiliser le script `install_lib.sh` pour installer les bibliothèques nécessaires dans un répertoire local. Ensuite, compilez l'application avec la commande `make locallibs`.
-
-### Installation des bibliothèques locales
-Pour installer les bibliothèques localement, exécutez le script `install_lib.sh` :
+- Pour compiler avec les bibliothèques graphiques :
 ```sh
-./install_lib.sh
+make all
 ```
 
-### Compilation avec les bibliothèques locales
-Après avoir installé les bibliothèques localement, compilez l'application avec la commande suivante :
+- Pour compiler sans les bibliothèques graphiques :
 ```sh
-make locallibs
+make all NO_VISUAL=1
 ```
 
+- Pour compiler une version spécifique avec les bibliothèques graphiques :
+```sh
+make <specific_version>
+```
 
+- Pour compiler une version spécifique sans les bibliothèques graphiques :
+```sh
+make <specific_version> NO_VISUAL=1
+```
 
+Les versions spécifiques disponibles sont :
+- `parallel_vect`
+- `parallel_recur`
+- `parallel_norecycle`
+- `sequential`
 
 ## Structure du projet
 Le projet est organisé comme suit :
@@ -57,12 +65,6 @@ Projet_CHPS0901/
 ├── sources/     # Contient les fichiers source (.cpp)
 ├── Makefile     # Fichier Makefile pour la compilation
 └── README.md    # Fichier README avec les instructions
-```
-
-## Compilation
-Pour compiler l'application, exécutez la commande suivante dans le répertoire du projet :
-```sh
-make
 ```
 
 ## Utilisation
