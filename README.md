@@ -15,6 +15,17 @@ sudo apt install cmake g++ make libglfw3-dev libglew-dev libglm-dev
 ### ArchLinux
 ```sh
 sudo pacman -Syu
+sudo pacman -S cmake gcc make glfw-3 glew glm
+```
+
+### RHEL
+```sh
+sudo yum update
+sudo yum install cmake gcc-c++ make glfw-devel glew-devel glm-devel
+```
+
+## Utilisation sans la tête graphiques
+Si vous souhaitez compiler l'application sans utiliser la partie graphique faites : `make novisual`.
 
 ## Utilisation de bibliothèques locales
 Si vous souhaitez compiler l'application en utilisant des bibliothèques installées localement, vous pouvez utiliser le script `install_lib.sh` pour installer les bibliothèques nécessaires dans un répertoire local. Ensuite, compilez l'application avec la commande `make locallibs`.
@@ -30,14 +41,9 @@ Après avoir installé les bibliothèques localement, compilez l'application ave
 ```sh
 make locallibs
 ```
-sudo pacman -S cmake gcc make glfw-3 glew glm
-```
 
-### RHEL
-```sh
-sudo yum update
-sudo yum install cmake gcc-c++ make glfw-devel glew-devel glm-devel
-```
+
+
 
 ## Structure du projet
 Le projet est organisé comme suit :
