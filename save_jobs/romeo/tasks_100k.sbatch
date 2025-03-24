@@ -3,8 +3,9 @@ NTASKS=8
 CPUS_PER_TASK=24
 N_PARTICULES=100000
 N_ITERATIONS=100
+BIN_PATH=${1:-bin/main}
 
-        sbatch <<EOF
+sbatch <<EOF
 #!/bin/bash
 #!/bin/bash
 #SBATCH --job-name=chps0901_romeo_results_800k
@@ -24,7 +25,7 @@ for NTASKS in {1..8}; do
     for CPUS_PER_TASK in {1..24}; do
         echo "========================================"
         export OMP_NUM_THREADS=\$CPUS_PER_TASK
-        mpirun -n \$NTASKS bin/main -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000 -s false
+        mpirun -n \$NTASKS $BIN_PATH -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000 -s false
         echo "========================================"
     done
 done
