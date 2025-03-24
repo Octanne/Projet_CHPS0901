@@ -27,7 +27,7 @@ for NTASKS in {1..8}; do
     for CPUS_PER_TASK in {1..24}; do
         echo "========================================"
         export OMP_NUM_THREADS=\$CPUS_PER_TASK
-        mpirun -n \$NTASKS $BIN_PATH -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000 -s false
+        mpirun -n \$NTASKS $BIN_PATH -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000
         echo "========================================"
     done
 done
