@@ -4,8 +4,8 @@ CPUS_PER_TASK=24
 N_PARTICULES=100000
 N_ITERATIONS=100
 BIN_PATH=${1:-bin/main}
-#Keep only the last folder of the path
-VERS=$(basename $BIN_PATH)
+#Keep only the 3rd last folder of the path
+VERS=$(basename $(dirname $(dirname $BIN_PATH)))
 
 sbatch <<EOF
 #!/bin/bash
