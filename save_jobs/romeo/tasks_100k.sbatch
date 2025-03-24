@@ -9,7 +9,7 @@ sbatch <<EOF
 #!/bin/bash
 #!/bin/bash
 #SBATCH --job-name=chps0901_romeo_results_800k
-#SBATCH --output=results/romeo/chps0901_romeo_800k_%j.txt
+#SBATCH --output=results/romeo/chps0901_romeo_800k_${BIN_PATH}_%j.txt
 #SBATCH --ntasks=$NTASKS
 #SBATCH --cpus-per-task=$CPUS_PER_TASK
 #SBATCH --time=012:00:00
