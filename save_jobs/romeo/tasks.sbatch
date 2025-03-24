@@ -1,19 +1,17 @@
 #!/bin/bash
-NTASKS=2
-CPUS_PER_TASK=2
+NTASKS=8
+CPUS_PER_TASK=24
 N_PARTICULES=800000
 N_ITERATIONS=100
 
-for NTASKS in {1..8}; do
-    for CPUS_PER_TASK in {1..24}; do
         sbatch <<EOF
 #!/bin/bash
 #!/bin/bash
-#SBATCH --job-name=chps0901_${NTASKS}mpi_${CPUS_PER_TASK}thds
-#SBATCH --output=results/romeo/chps0901_${NTASKS}mpi_${CPUS_PER_TASK}thds_%j.txt
+#SBATCH --job-name=chps0901_romeo_results
+#SBATCH --output=results/romeo/chps0901_romeo_%j.txt
 #SBATCH --ntasks=$NTASKS
 #SBATCH --cpus-per-task=$CPUS_PER_TASK
-#SBATCH --time=04:00:00
+#SBATCH --time=08:00:00
 #SBATCH --mem=20G
 #SBATCH --account=r250059
 #SBATCH --constraint=x64cpu
@@ -24,7 +22,9 @@ ulimit -s unlimited
 
 export OMP_NUM_THREADS=\$SLURM_CPUS_PER_TASK
 
-mpirun -n \$SLURM_NTASKS bin/main -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000 -s false
-EOF
+for NTASKS in {1..8}; do
+    for CPUS_PER_TASK in {1..24}; do
+        mpirun -n \$NTASKS bin/main -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000 -s false
     done
 done
+EOF
