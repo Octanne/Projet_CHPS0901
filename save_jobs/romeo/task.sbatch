@@ -1,16 +1,16 @@
 #!/bin/bash
-NTASKS=2
-CPUS_PER_TASK=2
+NTASKS=1
+CPUS_PER_TASK=1
 N_PARTICULES=800000
 N_ITERATIONS=100
         
 sbatch <<EOF
 #!/bin/bash
-#SBATCH --job-name=chps0901_${NTASKS}mpi_${CPUS_PER_TASK}thds
-#SBATCH --output=results/romeo/chps0901_${NTASKS}mpi_${CPUS_PER_TASK}thds_%j.txt
+#SBATCH --job-name=chps0901_sequential
+#SBATCH --output=results/romeo/chps0901_100k_and_800k_sequential_%j.txt
 #SBATCH --ntasks=$NTASKS
 #SBATCH --cpus-per-task=$CPUS_PER_TASK
-#SBATCH --time=04:00:00
+#SBATCH --time=18:00:00
 #SBATCH --mem=20G
 #SBATCH --account=r250059
 #SBATCH --constraint=x64cpu
@@ -21,5 +21,9 @@ ulimit -s unlimited
 
 export OMP_NUM_THREADS=\$SLURM_CPUS_PER_TASK
 
-mpirun -n \$SLURM_NTASKS bin/main -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000 -s false
+echo "========================================"
+versions/sequential/bin/main -n 100000 -e $N_ITERATIONS -t 1 -w 100000
+echo "========================================"
+versions/sequential/bin/main -n 800000 -e $N_ITERATIONS -t 1 -w 100000
+echo "========================================"
 EOF
