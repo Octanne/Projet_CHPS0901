@@ -1,14 +1,14 @@
 #!/bin/bash
 NTASKS=8
 CPUS_PER_TASK=24
-N_PARTICULES=100000
+N_PARTICULES=800000
 N_ITERATIONS=100
 
         sbatch <<EOF
 #!/bin/bash
 #!/bin/bash
-#SBATCH --job-name=chps0901_romeo_results
-#SBATCH --output=results/romeo/chps0901_romeo_%j.txt
+#SBATCH --job-name=chps0901_romeo_results_800k
+#SBATCH --output=results/romeo/chps0901_romeo_800k_%j.txt
 #SBATCH --ntasks=$NTASKS
 #SBATCH --cpus-per-task=$CPUS_PER_TASK
 #SBATCH --time=08:00:00
