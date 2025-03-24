@@ -41,6 +41,7 @@ Visualizer::Visualizer(QuadTree* qt, double windowDefaultSize) {
     this->accountedSem = false;
 }
 
+#if VISU
 int Visualizer::drawQuadTreeArea(QuadTree* qt, int root) {
     if (qt == nullptr) {
         if (debugMode) std::cout << "Quad is null" << std::endl;
@@ -220,7 +221,6 @@ void Visualizer::waitClosedWindow() {
     windowThread->join();
 }
 
-#if VISU
 void Visualizer::framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     instance->windowSize = width;
     glMatrixMode(GL_PROJECTION);

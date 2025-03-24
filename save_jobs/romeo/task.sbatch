@@ -19,7 +19,6 @@ romeo_load_x64cpu_env
 spack load openmpi@4.1.7 %aocc
 ulimit -s unlimited
 
-export LD_LIBRARY_PATH="$(pwd)/libs/install/lib64:\$LD_LIBRARY_PATH"
 export OMP_NUM_THREADS=\$SLURM_CPUS_PER_TASK
 
 mpirun -n \$SLURM_NTASKS bin/main -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000 -s false

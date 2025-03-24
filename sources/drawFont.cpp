@@ -1,10 +1,13 @@
 #include "drawFont.h"
 
+#if VISU
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
+#endif
 #include <iostream>
 #include <fstream>
 
+#if VISU
 // We set fontTexture
 std::vector<GLuint> fontTexture(256);
 // We set charUVs and charSizes to 256
@@ -154,3 +157,4 @@ void drawText(const std::string& text, float x, float y, float scale) {
     glPopMatrix();
     glDisable(GL_TEXTURE_2D);
 }
+#endif
