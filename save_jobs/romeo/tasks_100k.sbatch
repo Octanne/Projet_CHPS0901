@@ -11,7 +11,7 @@ N_ITERATIONS=100
 #SBATCH --output=results/romeo/chps0901_romeo_800k_%j.txt
 #SBATCH --ntasks=$NTASKS
 #SBATCH --cpus-per-task=$CPUS_PER_TASK
-#SBATCH --time=08:00:00
+#SBATCH --time=012:00:00
 #SBATCH --mem=20G
 #SBATCH --account=r250059
 #SBATCH --constraint=x64cpu
@@ -20,8 +20,8 @@ romeo_load_x64cpu_env
 spack load openmpi@4.1.7 %aocc
 ulimit -s unlimited
 
-for NTASKS in {8..1}; do
-    for CPUS_PER_TASK in {24..1}; do
+for NTASKS in {1..8}; do
+    for CPUS_PER_TASK in {1..24}; do
         echo "========================================"
         export OMP_NUM_THREADS=\$CPUS_PER_TASK
         mpirun -n \$NTASKS bin/main -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000 -s false
