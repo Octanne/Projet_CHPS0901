@@ -10,8 +10,8 @@ VERS=$(basename $(dirname $(dirname $BIN_PATH)))
 sbatch <<EOF
 #!/bin/bash
 #!/bin/bash
-#SBATCH --job-name=chps0901_romeo_results_800k
-#SBATCH --output=results/romeo/chps0901_romeo_800k_${VERS}_%j.txt
+#SBATCH --job-name=chps0901_romeo_results_100k
+#SBATCH --output=results/romeo/chps0901_romeo_100k_${VERS}_%j.txt
 #SBATCH --ntasks=$NTASKS
 #SBATCH --cpus-per-task=$CPUS_PER_TASK
 #SBATCH --time=012:00:00
