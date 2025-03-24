@@ -3,7 +3,7 @@ bin/
 # Remove obj directory
 obj/
 # Remove results directory
-#results/
+results/particle_*
 # Remove local libs directory
 libs/
 # Remove jobs file directory
