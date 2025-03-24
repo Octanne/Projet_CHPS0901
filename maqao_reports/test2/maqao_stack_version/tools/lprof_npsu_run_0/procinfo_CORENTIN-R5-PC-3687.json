@@ -1,0 +1,20 @@
+{
+  "content": {
+    "proc_name"          : "AMD_fam17h_mod71h",
+    "hostname"           : "CORENTIN-R5-PC",
+    "architecture_code"  : "2",
+    "uarchitecture_code" : "36",
+    "architecture"       : "x86_64",
+    "uarchitecture"      : "ZEN_V2",
+    "cpui_model_name"    : "AMD Ryzen 5 3600X 6-Core Processor",
+    "cpui_cache_size"    : "512 KB",
+    "cpui_cpu_cores"     : "6",
+    "max_frequency"          : "4409000",
+    "cur_frequency"      : "4148758",
+    "driver_frequency"   : "amd-pstate-epp",
+    "scaling_governor"   : "powersave",
+    "huge_pages"         : "always",
+    "os_version"         : "Linux 6.12.17-1-lts #1 SMP PREEMPT_DYNAMIC Thu, 27 Feb 2025 14:12:30 +0000",
+    "is_lstopo"          : true,
+  }
+}

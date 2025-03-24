@@ -1,0 +1,22 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 112 - 130
+--------------------------------------------------------------------------------
+
+112: void QuadTree::subdivide() {
+113:     // We create the four quadrants
+114:     double newWidth = width / 2;
+115:     double center = newWidth / 2;
+116:     northwest = getNode(newWidth, originX - center, originY + center, 0);
+117:     northeast = getNode(newWidth, originX + center, originY + center, 0);
+118:     southwest = getNode(newWidth, originX - center, originY - center, 0);
+119:     southeast = getNode(newWidth, originX + center, originY - center, 0);
+120:     isDivided = true; // The node is set to divided
+121:     hasBody = false; // The node is not a leaf anymore
+122: 
+123:     // Recursively insert the body b in the appropriate quadrant.
+124:     Particle* particleToMove = particle;
+125:     particle = new Particle();
+126:     //std::cout << "Subdivided the quadtree origin at (" << originX << ", " << originY << ") with width " << width << std::endl;
+127:     insertSimple(particleToMove);
+128:     // We decrement the weight of the branch because we have moved the particle and it will be inserted again
+129:     weightBranch--;
+130: }

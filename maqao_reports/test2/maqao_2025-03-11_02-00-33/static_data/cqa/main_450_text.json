@@ -1,0 +1,825 @@
+{
+  "_cqa_text_report":
+    {
+      "_objects":
+        {
+          "list_path_2_call_3":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:181"
+                ],
+              "header": ""
+            },
+          "image_col_maj":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/col_maj.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_4x32_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x32_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x64_128":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_128.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_4x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_8x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/8x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x32_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_2x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/2x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_1_call_3":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:181",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:182"
+                ],
+              "header": ""
+            },
+          "image_1x64_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_3_call_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172"
+                ],
+              "header": ""
+            },
+          "image_vec_align":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/vec_align.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_row_maj":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/row_maj.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_1x32_128":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_128.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_4_call_2":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172"
+                ],
+              "header": ""
+            },
+          "image_4x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/4x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_1_call_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172"
+                ],
+              "header": ""
+            },
+          "image_1x32_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x32_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "image_2x64_256":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/2x64_256.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_3_call_3":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:182"
+                ],
+              "header": ""
+            },
+          "list_path_1_call_2":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172"
+                ],
+              "header": ""
+            },
+          "list_path_2_call_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172"
+                ],
+              "header": ""
+            },
+          "list_path_2_call_2":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172"
+                ],
+              "header": ""
+            },
+          "list_path_3_call_2":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172"
+                ],
+              "header": ""
+            },
+          "image_1x64_512":
+            {
+              "type": "image",
+              "format": "url",
+              "data": "../images/cqa/1x64_512.svg",
+              "size":
+                {
+                  "x": 500
+                }
+            },
+          "list_path_4_call_1":
+            {
+              "dynamic": true,
+              "initial": "closed",
+              "type": "list",
+              "lines":
+                [
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172",
+                "/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:172"
+                ],
+              "header": ""
+            }
+        },
+      "AVG":
+        {
+          "hint":
+            [
+              {
+                "details": "Calling (and then returning from) a function prevents many compiler optimizations (like vectorization), breaks control flow (which reduces pipeline performance) and executes extra instructions to save/restore the registers used inside it, which is very expensive (dozens of cycles). Consider to inline small functions.\n - Particle::getX() const: 0 occurrences\n - Particle::getY() const: 0 occurrences\n - QuadTree::calculateForce(Particle*, double&, double&) const: 0 occurrences\n",
+                "title": "CALL instructions",
+                "txt": "Detected function call instructions.\n"
+              },
+              {
+                "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                "details": " - Constant unknown stride: 2 occurrence(s)\nNon-unit stride (uncontiguous) accesses are not efficiently using data caches\n",
+                "title": "Slow data structures access",
+                "txt": "Detected data structures (typically arrays) that cannot be efficiently read/written"
+              },
+              {
+                "title": "Type of elements and instruction set",
+                "txt": "7 SSE or AVX instructions are processing arithmetic or math operations on double precision FP elements in scalar mode (one at a time).\n"
+              },
+              {
+                "title": "Matching between your loop (in the source code) and the binary loop",
+                "txt": "The binary loop is composed of 7 FP arithmetical operations:\n - 3: addition or subtraction (1 inside FMA instructions)\n - 2: multiply (1 inside FMA instructions)\n - 1: divide\n - 1: square root\nThe binary loop is loading 81 bytes (10 double precision FP elements).\nThe binary loop is storing 16 bytes (2 double precision FP elements)."
+              },
+              {
+                "title": "Arithmetic intensity",
+                "txt": "Arithmetic intensity is 0.07 FP operations per loaded or stored byte."
+              },
+              {
+                "workaround": "Unroll your loop if trip count is significantly higher than target unroll factor and if some data references are common to consecutive iterations. This can be done manually. Or by recompiling with -funroll-loops and/or -floop-unroll-and-jam. Or with the unroll (resp. unroll_and_jam) directive on top of the inner (resp. surrounding) loop. You can enforce an unroll factor: #pragma GCC unroll N",
+                "title": "Unroll opportunity",
+                "txt": "Loop is potentially data access bound."
+              }
+            ],
+          "expert":
+            [
+              {
+                "title": "General properties",
+                "txt": "nb instructions    : 43\nnb uops            : 68\nloop length        : 181\nused x86 registers : 9.75\nused mmx registers : 0\nused xmm registers : 9\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 2\nADD-SUB / MUL ratio: 2.00\n"
+              },
+              {
+                "title": "Front-end",
+                "txt": "MACRO FUSION NOT POSSIBLE\nmicro-operation queue: 11.33 cycles\nfront end            : 11.33 cycles\n"
+              },
+              {
+                "title": "Back-end",
+                "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3\n---------------------------------------------------------------------------------------------\nuops   | 9.50      | 9.50 | 9.50 | 9.50      | 8.00 | 8.00 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\ncycles | 9.50      | 9.50 | 9.50 | 9.50      | 8.00 | 8.00 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3/BRU1: ALU, BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2: store address\n - FP0 (256 bits): VPU\n - FP1 (256 bits): VPU\n - FP2 (256 bits): VPU, FP store data\n - FP3 (256 bits): VPU, DIV/SQRT\n\nCycles executing div or sqrt instructions: 9.00-14.50\nLongest recurrence chain latency (RecMII): 3.00\n"
+              },
+              {
+                "title": "Cycles summary",
+                "txt": "Front-end : 11.33\nDispatch  : 9.50\nDIV/SQRT  : 9.00-14.50\nData deps.: 3.00\nOverall L1: 11.33-14.50\n"
+              },
+              {
+                "title": "Vectorization ratios",
+                "txt": "INT\nall    : 0%\nload   : 0%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\n"
+              },
+              {
+                "title": "Vector efficiency ratios",
+                "txt": "INT\nall    : 25%\nload   : 25%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 25%\nFP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\nINT+FP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\n"
+              },
+              {
+                "title": "Cycles and memory resources usage",
+                "txt": "Assuming all data fit into the L1 cache, each iteration of the binary loop takes 14.50 cycles. At this rate:\n - 8% of peak load performance is reached (5.59 out of 64.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 3% of peak store performance is reached (1.10 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+              }
+            ],
+          "header":
+            [
+            "2% of peak computational performance is used (0.48 out of 24.00 FLOP per cycle (GFLOPS @ 1GHz))"
+            ],
+          "brief":
+            [
+
+            ],
+          "gain":
+            [
+              {
+                "workaround": " - Try another compiler or update/tune your current one:\n  * recompile with fassociative-math (included in Ofast or ffast-math) to extend loop vectorization to FP reductions.\n - Remove inter-iterations dependences from your loop and make it unit-stride:\n  * If your arrays have 2 or more dimensions, check whether elements are accessed contiguously and, otherwise, try to permute loops accordingly:\nC storage order is row-major: for(i) for(j) a[j][i] = b[j][i]; (slow, non stride 1) => for(i) for(j) a[i][j] = b[i][j]; (fast, stride 1)<<image_row_maj>>\n  * If your loop streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized loop can use their full power.\n",
+                "title": "Vectorization",
+                "txt": "Your loop is not vectorized.\n4 data elements could be processed at once in vector registers.\n<<image_1x64_256>>By vectorizing your loop, you can lower the cost of an iteration from 14.50 to 3.62 cycles (4.00x speedup)."
+              }
+            ],
+          "potential":
+            [
+              {
+                "title": "Expensive FP math instructions/calls",
+                "txt": "Detected performance impact from expensive FP math instructions/calls.\nBy removing/reexpressing them, you can lower the cost of an iteration from 14.50 to 11.33 cycles (1.28x speedup)."
+              },
+              {
+                "workaround": "Try to change order in which elements are evaluated (using parentheses) in arithmetic expressions containing both ADD/SUB and MUL operations to enable your compiler to generate FMA instructions wherever possible.\nFor instance a + b*c is a valid FMA (MUL then ADD).\nHowever (a+b)* c cannot be translated into an FMA (ADD then MUL).",
+                "title": "FMA",
+                "txt": "Detected 1 FMA (fused multiply-add) operations.\nPresence of both ADD/SUB and MUL operations."
+              }
+            ]
+        },
+      "paths":
+        [
+          {
+            "hint":
+              [
+                {
+                  "details": "Calling (and then returning from) a function prevents many compiler optimizations (like vectorization), breaks control flow (which reduces pipeline performance) and executes extra instructions to save/restore the registers used inside it, which is very expensive (dozens of cycles). Consider to inline small functions.\n - Particle::getX() const: 2 occurrences<<list_path_1_call_1>>\n - Particle::getY() const: 2 occurrences<<list_path_1_call_2>>\n - QuadTree::calculateForce(Particle*, double&, double&) const: 2 occurrences<<list_path_1_call_3>>\n",
+                  "title": "CALL instructions",
+                  "txt": "Detected function call instructions.\n"
+                },
+                {
+                  "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                  "details": " - Constant unknown stride: 2 occurrence(s)\nNon-unit stride (uncontiguous) accesses are not efficiently using data caches\n",
+                  "title": "Slow data structures access",
+                  "txt": "Detected data structures (typically arrays) that cannot be efficiently read/written"
+                },
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "7 SSE or AVX instructions are processing arithmetic or math operations on double precision FP elements in scalar mode (one at a time).\n"
+                },
+                {
+                  "title": "Matching between your loop (in the source code) and the binary loop",
+                  "txt": "The binary loop is composed of 7 FP arithmetical operations:\n - 3: addition or subtraction (1 inside FMA instructions)\n - 2: multiply (1 inside FMA instructions)\n - 1: divide\n - 1: square root\nThe binary loop is loading 81 bytes (10 double precision FP elements).\nThe binary loop is storing 16 bytes (2 double precision FP elements)."
+                },
+                {
+                  "title": "Arithmetic intensity",
+                  "txt": "Arithmetic intensity is 0.07 FP operations per loaded or stored byte."
+                },
+                {
+                  "workaround": "Unroll your loop if trip count is significantly higher than target unroll factor and if some data references are common to consecutive iterations. This can be done manually. Or by recompiling with -funroll-loops and/or -floop-unroll-and-jam. Or with the unroll (resp. unroll_and_jam) directive on top of the inner (resp. surrounding) loop. You can enforce an unroll factor: #pragma GCC unroll N",
+                  "title": "Unroll opportunity",
+                  "txt": "Loop is potentially data access bound."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 47\nnb uops            : 77\nloop length        : 195\nused x86 registers : 11\nused mmx registers : 0\nused xmm registers : 9\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 2\nADD-SUB / MUL ratio: 2.00\n"
+                },
+                {
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 12.83 cycles\nfront end            : 12.83 cycles\n"
+                },
+                {
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1  | ALU2  | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3\n-----------------------------------------------------------------------------------------------\nuops   | 10.75     | 10.75 | 10.75 | 10.75     | 8.50 | 8.50 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\ncycles | 10.75     | 10.75 | 10.75 | 10.75     | 8.50 | 8.50 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3/BRU1: ALU, BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2: store address\n - FP0 (256 bits): VPU\n - FP1 (256 bits): VPU\n - FP2 (256 bits): VPU, FP store data\n - FP3 (256 bits): VPU, DIV/SQRT\n\nCycles executing div or sqrt instructions: 9.00-14.50\nCycles loading/storing data              : 5.50\nLongest recurrence chain latency (RecMII): 3.00\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 12.83\nDispatch  : 10.75\nDIV/SQRT  : 9.00-14.50\nData deps.: 3.00\nOverall L1: 12.83-14.50\n"
+                },
+                {
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 0%\nload   : 0%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\n"
+                },
+                {
+                  "title": "Vector efficiency ratios",
+                  "txt": "INT\nall    : 25%\nload   : 25%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 25%\nFP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\nINT+FP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\n"
+                },
+                {
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each iteration of the binary loop takes 14.50 cycles. At this rate:\n - 8% of peak load performance is reached (5.59 out of 64.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 3% of peak store performance is reached (1.10 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "title": "Front-end bottlenecks",
+                  "txt": "Found no such bottlenecks."
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the loop is: 3e175\n\nInstruction                                                    | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | Latency | Recip. throughput | Vectorization\n-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nVMOVSD 0x10(%R15),%XMM2                                        | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nMOV (%R15),%RDI                                                | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVMOVSD %XMM2,0x8(%RSP)                                         | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bf00 <_ZNK8Particle4getYEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV (%R15),%RDI                                                | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVMOVQ %XMM0,%RBP                                               | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bef0 <_ZNK8Particle4getXEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV %R12,%RDI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nVMOVQ %XMM0,%RBX                                               | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bf00 <_ZNK8Particle4getYEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV %R12,%RDI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nVMOVSD %XMM0,(%RSP)                                            | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bef0 <_ZNK8Particle4getXEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nVMOVQ %RBP,%XMM5                                               | 1     | 0         | 0    | 1    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 2       | 1                 | scal (25.0%)\nVSUBSD (%RSP),%XMM5,%XMM1                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0.50 | 0.50 | 3       | 0.50              | scal (25.0%)\nVMOVQ %RBX,%XMM4                                               | 1     | 0         | 0    | 1    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 2       | 1                 | scal (25.0%)\nVMOVSD 0x8(%RSP),%XMM6                                         | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nVSUBSD %XMM0,%XMM4,%XMM0                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0.50 | 0.50 | 3       | 0.50              | scal (25.0%)\nVMOVSD 0xc8bf(%RIP),%XMM7                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nVMULSD %XMM1,%XMM1,%XMM3                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVFMADD132SD %XMM0,%XMM3,%XMM0                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 5       | 0.50              | scal (25.0%)\nVSQRTSD %XMM0,%XMM0,%XMM0                                      | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 1    | 14      | 4-8               | scal (25.0%)\nVDIVSD %XMM0,%XMM6,%XMM8                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 1    | 13      | 5-6.50            | scal (25.0%)\nVCOMISD %XMM8,%XMM7                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 1    | 0    | 2       | 1                 | scal (25.0%)\nJA 3e330 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x1e0> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x30(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e204 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xb4>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV %R13,%RCX                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nMOV %R14,%RDX                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nMOV %R12,%RSI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nCALL 3e150 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_>     | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV 0x38(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e21b <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xcb>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV %R13,%RCX                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nMOV %R14,%RDX                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nMOV %R12,%RSI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nCALL 3e150 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_>     | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV 0x40(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e250 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x100> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x48(%R15),%R15                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | N/A\nTEST %R15,%R15                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e23f <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xef>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nCMPB $0,0x8(%R15)                                              | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nJNE 3e175 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x25> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "Warnings:\nDetected a function call instruction: ignoring called function instructions.\nRerun with --follow-calls=append to include them to analysis  or with --follow-calls=inline to simulate inlining.",
+              "2% of peak computational performance is used (0.48 out of 24.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try another compiler or update/tune your current one:\n  * recompile with fassociative-math (included in Ofast or ffast-math) to extend loop vectorization to FP reductions.\n - Remove inter-iterations dependences from your loop and make it unit-stride:\n  * If your arrays have 2 or more dimensions, check whether elements are accessed contiguously and, otherwise, try to permute loops accordingly:\nC storage order is row-major: for(i) for(j) a[j][i] = b[j][i]; (slow, non stride 1) => for(i) for(j) a[i][j] = b[i][j]; (fast, stride 1)<<image_row_maj>>\n  * If your loop streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized loop can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your loop is not vectorized.\n4 data elements could be processed at once in vector registers.\n<<image_1x64_256>>By vectorizing your loop, you can lower the cost of an iteration from 14.50 to 3.62 cycles (4.00x speedup)."
+                },
+                {
+                  "workaround": " - Reduce the number of division or square root instructions:\n  * If denominator is constant over iterations, use reciprocal (replace x/y with x*(1/y)). Check precision impact. This will be done by your compiler with ffast-math or Ofast\n - Check whether you really need double precision. If not, switch to single precision to speedup execution\n",
+                  "title": "Execution units bottlenecks",
+                  "txt": "Performance is limited by execution of divide and square root operations (the divide/square root unit is a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 14.50 to 12.83 cycles (1.13x speedup).\n"
+                }
+              ],
+            "potential":
+              [
+                {
+                  "title": "Expensive FP math instructions/calls",
+                  "txt": "Detected performance impact from expensive FP math instructions/calls.\nBy removing/reexpressing them, you can lower the cost of an iteration from 14.50 to 12.83 cycles (1.13x speedup)."
+                },
+                {
+                  "workaround": "Try to change order in which elements are evaluated (using parentheses) in arithmetic expressions containing both ADD/SUB and MUL operations to enable your compiler to generate FMA instructions wherever possible.\nFor instance a + b*c is a valid FMA (MUL then ADD).\nHowever (a+b)* c cannot be translated into an FMA (ADD then MUL).",
+                  "title": "FMA",
+                  "txt": "Detected 1 FMA (fused multiply-add) operations.\nPresence of both ADD/SUB and MUL operations."
+                }
+              ]
+          },
+          {
+            "hint":
+              [
+                {
+                  "details": "Calling (and then returning from) a function prevents many compiler optimizations (like vectorization), breaks control flow (which reduces pipeline performance) and executes extra instructions to save/restore the registers used inside it, which is very expensive (dozens of cycles). Consider to inline small functions.\n - Particle::getX() const: 2 occurrences<<list_path_2_call_1>>\n - Particle::getY() const: 2 occurrences<<list_path_2_call_2>>\n - QuadTree::calculateForce(Particle*, double&, double&) const: 1 occurrences<<list_path_2_call_3>>\n",
+                  "title": "CALL instructions",
+                  "txt": "Detected function call instructions.\n"
+                },
+                {
+                  "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                  "details": " - Constant unknown stride: 2 occurrence(s)\nNon-unit stride (uncontiguous) accesses are not efficiently using data caches\n",
+                  "title": "Slow data structures access",
+                  "txt": "Detected data structures (typically arrays) that cannot be efficiently read/written"
+                },
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "7 SSE or AVX instructions are processing arithmetic or math operations on double precision FP elements in scalar mode (one at a time).\n"
+                },
+                {
+                  "title": "Matching between your loop (in the source code) and the binary loop",
+                  "txt": "The binary loop is composed of 7 FP arithmetical operations:\n - 3: addition or subtraction (1 inside FMA instructions)\n - 2: multiply (1 inside FMA instructions)\n - 1: divide\n - 1: square root\nThe binary loop is loading 81 bytes (10 double precision FP elements).\nThe binary loop is storing 16 bytes (2 double precision FP elements)."
+                },
+                {
+                  "title": "Arithmetic intensity",
+                  "txt": "Arithmetic intensity is 0.07 FP operations per loaded or stored byte."
+                },
+                {
+                  "workaround": "Unroll your loop if trip count is significantly higher than target unroll factor and if some data references are common to consecutive iterations. This can be done manually. Or by recompiling with -funroll-loops and/or -floop-unroll-and-jam. Or with the unroll (resp. unroll_and_jam) directive on top of the inner (resp. surrounding) loop. You can enforce an unroll factor: #pragma GCC unroll N",
+                  "title": "Unroll opportunity",
+                  "txt": "Loop is potentially data access bound."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 43\nnb uops            : 68\nloop length        : 181\nused x86 registers : 11\nused mmx registers : 0\nused xmm registers : 9\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 2\nADD-SUB / MUL ratio: 2.00\n"
+                },
+                {
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 11.33 cycles\nfront end            : 11.33 cycles\n"
+                },
+                {
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3\n---------------------------------------------------------------------------------------------\nuops   | 9.50      | 9.50 | 9.50 | 9.50      | 8.00 | 8.00 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\ncycles | 9.50      | 9.50 | 9.50 | 9.50      | 8.00 | 8.00 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3/BRU1: ALU, BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2: store address\n - FP0 (256 bits): VPU\n - FP1 (256 bits): VPU\n - FP2 (256 bits): VPU, FP store data\n - FP3 (256 bits): VPU, DIV/SQRT\n\nCycles executing div or sqrt instructions: 9.00-14.50\nCycles loading/storing data              : 5.50\nLongest recurrence chain latency (RecMII): 3.00\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 11.33\nDispatch  : 9.50\nDIV/SQRT  : 9.00-14.50\nData deps.: 3.00\nOverall L1: 11.33-14.50\n"
+                },
+                {
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 0%\nload   : 0%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\n"
+                },
+                {
+                  "title": "Vector efficiency ratios",
+                  "txt": "INT\nall    : 25%\nload   : 25%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 25%\nFP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\nINT+FP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\n"
+                },
+                {
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each iteration of the binary loop takes 14.50 cycles. At this rate:\n - 8% of peak load performance is reached (5.59 out of 64.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 3% of peak store performance is reached (1.10 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "title": "Front-end bottlenecks",
+                  "txt": "Found no such bottlenecks."
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the loop is: 3e175\n\nInstruction                                                    | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | Latency | Recip. throughput | Vectorization\n-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nVMOVSD 0x10(%R15),%XMM2                                        | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nMOV (%R15),%RDI                                                | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVMOVSD %XMM2,0x8(%RSP)                                         | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bf00 <_ZNK8Particle4getYEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV (%R15),%RDI                                                | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVMOVQ %XMM0,%RBP                                               | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bef0 <_ZNK8Particle4getXEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV %R12,%RDI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nVMOVQ %XMM0,%RBX                                               | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bf00 <_ZNK8Particle4getYEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV %R12,%RDI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nVMOVSD %XMM0,(%RSP)                                            | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bef0 <_ZNK8Particle4getXEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nVMOVQ %RBP,%XMM5                                               | 1     | 0         | 0    | 1    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 2       | 1                 | scal (25.0%)\nVSUBSD (%RSP),%XMM5,%XMM1                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0.50 | 0.50 | 3       | 0.50              | scal (25.0%)\nVMOVQ %RBX,%XMM4                                               | 1     | 0         | 0    | 1    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 2       | 1                 | scal (25.0%)\nVMOVSD 0x8(%RSP),%XMM6                                         | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nVSUBSD %XMM0,%XMM4,%XMM0                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0.50 | 0.50 | 3       | 0.50              | scal (25.0%)\nVMOVSD 0xc8bf(%RIP),%XMM7                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nVMULSD %XMM1,%XMM1,%XMM3                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVFMADD132SD %XMM0,%XMM3,%XMM0                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 5       | 0.50              | scal (25.0%)\nVSQRTSD %XMM0,%XMM0,%XMM0                                      | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 1    | 14      | 4-8               | scal (25.0%)\nVDIVSD %XMM0,%XMM6,%XMM8                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 1    | 13      | 5-6.50            | scal (25.0%)\nVCOMISD %XMM8,%XMM7                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 1    | 0    | 2       | 1                 | scal (25.0%)\nJA 3e330 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x1e0> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x30(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e204 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xb4>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV %R13,%RCX                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nMOV %R14,%RDX                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nMOV %R12,%RSI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nCALL 3e150 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_>     | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV 0x38(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e21b <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xcb>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x40(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e250 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x100> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x48(%R15),%R15                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | N/A\nTEST %R15,%R15                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e23f <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xef>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nCMPB $0,0x8(%R15)                                              | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nJNE 3e175 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x25> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "Warnings:\nDetected a function call instruction: ignoring called function instructions.\nRerun with --follow-calls=append to include them to analysis  or with --follow-calls=inline to simulate inlining.",
+              "2% of peak computational performance is used (0.48 out of 24.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try another compiler or update/tune your current one:\n  * recompile with fassociative-math (included in Ofast or ffast-math) to extend loop vectorization to FP reductions.\n - Remove inter-iterations dependences from your loop and make it unit-stride:\n  * If your arrays have 2 or more dimensions, check whether elements are accessed contiguously and, otherwise, try to permute loops accordingly:\nC storage order is row-major: for(i) for(j) a[j][i] = b[j][i]; (slow, non stride 1) => for(i) for(j) a[i][j] = b[i][j]; (fast, stride 1)<<image_row_maj>>\n  * If your loop streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized loop can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your loop is not vectorized.\n4 data elements could be processed at once in vector registers.\n<<image_1x64_256>>By vectorizing your loop, you can lower the cost of an iteration from 14.50 to 3.62 cycles (4.00x speedup)."
+                },
+                {
+                  "workaround": " - Reduce the number of division or square root instructions:\n  * If denominator is constant over iterations, use reciprocal (replace x/y with x*(1/y)). Check precision impact. This will be done by your compiler with ffast-math or Ofast\n - Check whether you really need double precision. If not, switch to single precision to speedup execution\n",
+                  "title": "Execution units bottlenecks",
+                  "txt": "Performance is limited by execution of divide and square root operations (the divide/square root unit is a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 14.50 to 11.33 cycles (1.28x speedup).\n"
+                }
+              ],
+            "potential":
+              [
+                {
+                  "title": "Expensive FP math instructions/calls",
+                  "txt": "Detected performance impact from expensive FP math instructions/calls.\nBy removing/reexpressing them, you can lower the cost of an iteration from 14.50 to 11.33 cycles (1.28x speedup)."
+                },
+                {
+                  "workaround": "Try to change order in which elements are evaluated (using parentheses) in arithmetic expressions containing both ADD/SUB and MUL operations to enable your compiler to generate FMA instructions wherever possible.\nFor instance a + b*c is a valid FMA (MUL then ADD).\nHowever (a+b)* c cannot be translated into an FMA (ADD then MUL).",
+                  "title": "FMA",
+                  "txt": "Detected 1 FMA (fused multiply-add) operations.\nPresence of both ADD/SUB and MUL operations."
+                }
+              ]
+          },
+          {
+            "hint":
+              [
+                {
+                  "details": "Calling (and then returning from) a function prevents many compiler optimizations (like vectorization), breaks control flow (which reduces pipeline performance) and executes extra instructions to save/restore the registers used inside it, which is very expensive (dozens of cycles). Consider to inline small functions.\n - Particle::getX() const: 2 occurrences<<list_path_3_call_1>>\n - Particle::getY() const: 2 occurrences<<list_path_3_call_2>>\n - QuadTree::calculateForce(Particle*, double&, double&) const: 1 occurrences<<list_path_3_call_3>>\n",
+                  "title": "CALL instructions",
+                  "txt": "Detected function call instructions.\n"
+                },
+                {
+                  "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                  "details": " - Constant unknown stride: 2 occurrence(s)\nNon-unit stride (uncontiguous) accesses are not efficiently using data caches\n",
+                  "title": "Slow data structures access",
+                  "txt": "Detected data structures (typically arrays) that cannot be efficiently read/written"
+                },
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "7 SSE or AVX instructions are processing arithmetic or math operations on double precision FP elements in scalar mode (one at a time).\n"
+                },
+                {
+                  "title": "Matching between your loop (in the source code) and the binary loop",
+                  "txt": "The binary loop is composed of 7 FP arithmetical operations:\n - 3: addition or subtraction (1 inside FMA instructions)\n - 2: multiply (1 inside FMA instructions)\n - 1: divide\n - 1: square root\nThe binary loop is loading 81 bytes (10 double precision FP elements).\nThe binary loop is storing 16 bytes (2 double precision FP elements)."
+                },
+                {
+                  "title": "Arithmetic intensity",
+                  "txt": "Arithmetic intensity is 0.07 FP operations per loaded or stored byte."
+                },
+                {
+                  "workaround": "Unroll your loop if trip count is significantly higher than target unroll factor and if some data references are common to consecutive iterations. This can be done manually. Or by recompiling with -funroll-loops and/or -floop-unroll-and-jam. Or with the unroll (resp. unroll_and_jam) directive on top of the inner (resp. surrounding) loop. You can enforce an unroll factor: #pragma GCC unroll N",
+                  "title": "Unroll opportunity",
+                  "txt": "Loop is potentially data access bound."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 43\nnb uops            : 68\nloop length        : 181\nused x86 registers : 11\nused mmx registers : 0\nused xmm registers : 9\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 2\nADD-SUB / MUL ratio: 2.00\n"
+                },
+                {
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 11.33 cycles\nfront end            : 11.33 cycles\n"
+                },
+                {
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3\n---------------------------------------------------------------------------------------------\nuops   | 9.50      | 9.50 | 9.50 | 9.50      | 8.00 | 8.00 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\ncycles | 9.50      | 9.50 | 9.50 | 9.50      | 8.00 | 8.00 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3/BRU1: ALU, BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2: store address\n - FP0 (256 bits): VPU\n - FP1 (256 bits): VPU\n - FP2 (256 bits): VPU, FP store data\n - FP3 (256 bits): VPU, DIV/SQRT\n\nCycles executing div or sqrt instructions: 9.00-14.50\nCycles loading/storing data              : 5.50\nLongest recurrence chain latency (RecMII): 3.00\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 11.33\nDispatch  : 9.50\nDIV/SQRT  : 9.00-14.50\nData deps.: 3.00\nOverall L1: 11.33-14.50\n"
+                },
+                {
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 0%\nload   : 0%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\n"
+                },
+                {
+                  "title": "Vector efficiency ratios",
+                  "txt": "INT\nall    : 25%\nload   : 25%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 25%\nFP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\nINT+FP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\n"
+                },
+                {
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each iteration of the binary loop takes 14.50 cycles. At this rate:\n - 8% of peak load performance is reached (5.59 out of 64.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 3% of peak store performance is reached (1.10 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "title": "Front-end bottlenecks",
+                  "txt": "Found no such bottlenecks."
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the loop is: 3e175\n\nInstruction                                                    | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | Latency | Recip. throughput | Vectorization\n-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nVMOVSD 0x10(%R15),%XMM2                                        | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nMOV (%R15),%RDI                                                | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVMOVSD %XMM2,0x8(%RSP)                                         | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bf00 <_ZNK8Particle4getYEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV (%R15),%RDI                                                | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVMOVQ %XMM0,%RBP                                               | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bef0 <_ZNK8Particle4getXEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV %R12,%RDI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nVMOVQ %XMM0,%RBX                                               | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bf00 <_ZNK8Particle4getYEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV %R12,%RDI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nVMOVSD %XMM0,(%RSP)                                            | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bef0 <_ZNK8Particle4getXEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nVMOVQ %RBP,%XMM5                                               | 1     | 0         | 0    | 1    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 2       | 1                 | scal (25.0%)\nVSUBSD (%RSP),%XMM5,%XMM1                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0.50 | 0.50 | 3       | 0.50              | scal (25.0%)\nVMOVQ %RBX,%XMM4                                               | 1     | 0         | 0    | 1    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 2       | 1                 | scal (25.0%)\nVMOVSD 0x8(%RSP),%XMM6                                         | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nVSUBSD %XMM0,%XMM4,%XMM0                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0.50 | 0.50 | 3       | 0.50              | scal (25.0%)\nVMOVSD 0xc8bf(%RIP),%XMM7                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nVMULSD %XMM1,%XMM1,%XMM3                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVFMADD132SD %XMM0,%XMM3,%XMM0                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 5       | 0.50              | scal (25.0%)\nVSQRTSD %XMM0,%XMM0,%XMM0                                      | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 1    | 14      | 4-8               | scal (25.0%)\nVDIVSD %XMM0,%XMM6,%XMM8                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 1    | 13      | 5-6.50            | scal (25.0%)\nVCOMISD %XMM8,%XMM7                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 1    | 0    | 2       | 1                 | scal (25.0%)\nJA 3e330 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x1e0> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x30(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e204 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xb4>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x38(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e21b <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xcb>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV %R13,%RCX                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nMOV %R14,%RDX                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nMOV %R12,%RSI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nCALL 3e150 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_>     | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV 0x40(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e250 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x100> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x48(%R15),%R15                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | N/A\nTEST %R15,%R15                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e23f <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xef>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nCMPB $0,0x8(%R15)                                              | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nJNE 3e175 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x25> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "Warnings:\nDetected a function call instruction: ignoring called function instructions.\nRerun with --follow-calls=append to include them to analysis  or with --follow-calls=inline to simulate inlining.",
+              "2% of peak computational performance is used (0.48 out of 24.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try another compiler or update/tune your current one:\n  * recompile with fassociative-math (included in Ofast or ffast-math) to extend loop vectorization to FP reductions.\n - Remove inter-iterations dependences from your loop and make it unit-stride:\n  * If your arrays have 2 or more dimensions, check whether elements are accessed contiguously and, otherwise, try to permute loops accordingly:\nC storage order is row-major: for(i) for(j) a[j][i] = b[j][i]; (slow, non stride 1) => for(i) for(j) a[i][j] = b[i][j]; (fast, stride 1)<<image_row_maj>>\n  * If your loop streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized loop can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your loop is not vectorized.\n4 data elements could be processed at once in vector registers.\n<<image_1x64_256>>By vectorizing your loop, you can lower the cost of an iteration from 14.50 to 3.62 cycles (4.00x speedup)."
+                },
+                {
+                  "workaround": " - Reduce the number of division or square root instructions:\n  * If denominator is constant over iterations, use reciprocal (replace x/y with x*(1/y)). Check precision impact. This will be done by your compiler with ffast-math or Ofast\n - Check whether you really need double precision. If not, switch to single precision to speedup execution\n",
+                  "title": "Execution units bottlenecks",
+                  "txt": "Performance is limited by execution of divide and square root operations (the divide/square root unit is a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 14.50 to 11.33 cycles (1.28x speedup).\n"
+                }
+              ],
+            "potential":
+              [
+                {
+                  "title": "Expensive FP math instructions/calls",
+                  "txt": "Detected performance impact from expensive FP math instructions/calls.\nBy removing/reexpressing them, you can lower the cost of an iteration from 14.50 to 11.33 cycles (1.28x speedup)."
+                },
+                {
+                  "workaround": "Try to change order in which elements are evaluated (using parentheses) in arithmetic expressions containing both ADD/SUB and MUL operations to enable your compiler to generate FMA instructions wherever possible.\nFor instance a + b*c is a valid FMA (MUL then ADD).\nHowever (a+b)* c cannot be translated into an FMA (ADD then MUL).",
+                  "title": "FMA",
+                  "txt": "Detected 1 FMA (fused multiply-add) operations.\nPresence of both ADD/SUB and MUL operations."
+                }
+              ]
+          },
+          {
+            "hint":
+              [
+                {
+                  "details": "Calling (and then returning from) a function prevents many compiler optimizations (like vectorization), breaks control flow (which reduces pipeline performance) and executes extra instructions to save/restore the registers used inside it, which is very expensive (dozens of cycles). Consider to inline small functions.\n - Particle::getX() const: 2 occurrences<<list_path_4_call_1>>\n - Particle::getY() const: 2 occurrences<<list_path_4_call_2>>\n",
+                  "title": "CALL instructions",
+                  "txt": "Detected function call instructions.\n"
+                },
+                {
+                  "workaround": " - Try to reorganize arrays of structures to structures of arrays\n - Consider to permute loops (see vectorization gain report)\n",
+                  "details": " - Constant unknown stride: 2 occurrence(s)\nNon-unit stride (uncontiguous) accesses are not efficiently using data caches\n",
+                  "title": "Slow data structures access",
+                  "txt": "Detected data structures (typically arrays) that cannot be efficiently read/written"
+                },
+                {
+                  "title": "Type of elements and instruction set",
+                  "txt": "7 SSE or AVX instructions are processing arithmetic or math operations on double precision FP elements in scalar mode (one at a time).\n"
+                },
+                {
+                  "title": "Matching between your loop (in the source code) and the binary loop",
+                  "txt": "The binary loop is composed of 7 FP arithmetical operations:\n - 3: addition or subtraction (1 inside FMA instructions)\n - 2: multiply (1 inside FMA instructions)\n - 1: divide\n - 1: square root\nThe binary loop is loading 81 bytes (10 double precision FP elements).\nThe binary loop is storing 16 bytes (2 double precision FP elements)."
+                },
+                {
+                  "title": "Arithmetic intensity",
+                  "txt": "Arithmetic intensity is 0.07 FP operations per loaded or stored byte."
+                },
+                {
+                  "workaround": "Unroll your loop if trip count is significantly higher than target unroll factor and if some data references are common to consecutive iterations. This can be done manually. Or by recompiling with -funroll-loops and/or -floop-unroll-and-jam. Or with the unroll (resp. unroll_and_jam) directive on top of the inner (resp. surrounding) loop. You can enforce an unroll factor: #pragma GCC unroll N",
+                  "title": "Unroll opportunity",
+                  "txt": "Loop is potentially data access bound."
+                }
+              ],
+            "expert":
+              [
+                {
+                  "title": "General properties",
+                  "txt": "nb instructions    : 39\nnb uops            : 59\nloop length        : 167\nused x86 registers : 6\nused mmx registers : 0\nused xmm registers : 9\nused ymm registers : 0\nused zmm registers : 0\nnb stack references: 2\nADD-SUB / MUL ratio: 2.00\n"
+                },
+                {
+                  "title": "Front-end",
+                  "txt": "MACRO FUSION NOT POSSIBLE\nFIT IN UOP CACHE\nmicro-operation queue: 9.83 cycles\nfront end            : 9.83 cycles\n"
+                },
+                {
+                  "title": "Back-end",
+                  "txt": "       | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3\n---------------------------------------------------------------------------------------------\nuops   | 8.25      | 8.25 | 8.25 | 8.25      | 7.50 | 7.50 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\ncycles | 8.25      | 8.25 | 8.25 | 8.25      | 7.50 | 7.50 | 4.00 | 1.50 | 1.50 | 5.00 | 4.00\n\nExecution ports to units layout:\n - ALU0/BRU0: ALU, BRU\n - ALU1: ALU\n - ALU2: ALU\n - ALU3/BRU1: ALU, BRU\n - AGU0 (256 bits): store address, load\n - AGU1 (256 bits): store address, load\n - AGU2: store address\n - FP0 (256 bits): VPU\n - FP1 (256 bits): VPU\n - FP2 (256 bits): VPU, FP store data\n - FP3 (256 bits): VPU, DIV/SQRT\n\nCycles executing div or sqrt instructions: 9.00-14.50\nCycles loading/storing data              : 5.50\nLongest recurrence chain latency (RecMII): 3.00\n"
+                },
+                {
+                  "title": "Cycles summary",
+                  "txt": "Front-end : 9.83\nDispatch  : 8.25\nDIV/SQRT  : 9.00-14.50\nData deps.: 3.00\nOverall L1: 9.83-14.50\n"
+                },
+                {
+                  "title": "Vectorization ratios",
+                  "txt": "INT\nall    : 0%\nload   : 0%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 0%\nFP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\nINT+FP\nall     : 0%\nload    : 0%\nstore   : 0%\nmul     : 0%\nadd-sub : 0%\nfma     : 0%\ndiv/sqrt: 0%\nother   : 0%\n"
+                },
+                {
+                  "title": "Vector efficiency ratios",
+                  "txt": "INT\nall    : 25%\nload   : 25%\nstore  : NA (no store vectorizable/vectorized instructions)\nmul    : NA (no mul vectorizable/vectorized instructions)\nadd-sub: NA (no add-sub vectorizable/vectorized instructions)\nfma    : NA (no fma vectorizable/vectorized instructions)\nother  : 25%\nFP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\nINT+FP\nall     : 25%\nload    : 25%\nstore   : 25%\nmul     : 25%\nadd-sub : 25%\nfma     : 25%\ndiv/sqrt: 25%\nother   : 25%\n"
+                },
+                {
+                  "title": "Cycles and memory resources usage",
+                  "txt": "Assuming all data fit into the L1 cache, each iteration of the binary loop takes 14.50 cycles. At this rate:\n - 8% of peak load performance is reached (5.59 out of 64.00 bytes loaded per cycle (GB/s @ 1GHz))\n - 3% of peak store performance is reached (1.10 out of 32.00 bytes stored per cycle (GB/s @ 1GHz))\n"
+                },
+                {
+                  "title": "Front-end bottlenecks",
+                  "txt": "Found no such bottlenecks."
+                },
+                {
+                  "title": "ASM code",
+                  "txt": "In the binary file, the address of the loop is: 3e175\n\nInstruction                                                    | Nb FU | ALU0/BRU0 | ALU1 | ALU2 | ALU3/BRU1 | AGU0 | AGU1 | AGU2 | FP0  | FP1  | FP2  | FP3  | Latency | Recip. throughput | Vectorization\n-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\nVMOVSD 0x10(%R15),%XMM2                                        | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nMOV (%R15),%RDI                                                | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVMOVSD %XMM2,0x8(%RSP)                                         | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bf00 <_ZNK8Particle4getYEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV (%R15),%RDI                                                | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVMOVQ %XMM0,%RBP                                               | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bef0 <_ZNK8Particle4getXEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV %R12,%RDI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nVMOVQ %XMM0,%RBX                                               | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bf00 <_ZNK8Particle4getYEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nMOV %R12,%RDI                                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 0       | 0.25              | scal (25.0%)\nVMOVSD %XMM0,(%RSP)                                            | 1     | 0         | 0    | 0    | 0         | 0.33 | 0.33 | 0.33 | 0    | 0    | 1    | 0    | 1       | 1                 | scal (25.0%)\nCALL 3bef0 <_ZNK8Particle4getXEv>                              | 6     | 1.25      | 1.25 | 1.25 | 1.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 0       | 1                 | N/A\nVMOVQ %RBP,%XMM5                                               | 1     | 0         | 0    | 1    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 2       | 1                 | scal (25.0%)\nVSUBSD (%RSP),%XMM5,%XMM1                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0.50 | 0.50 | 3       | 0.50              | scal (25.0%)\nVMOVQ %RBX,%XMM4                                               | 1     | 0         | 0    | 1    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 2       | 1                 | scal (25.0%)\nVMOVSD 0x8(%RSP),%XMM6                                         | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nVSUBSD %XMM0,%XMM4,%XMM0                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0.50 | 0.50 | 3       | 0.50              | scal (25.0%)\nVMOVSD 0xc8bf(%RIP),%XMM7                                      | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | scal (25.0%)\nVMULSD %XMM1,%XMM1,%XMM3                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 3       | 0.50              | scal (25.0%)\nVFMADD132SD %XMM0,%XMM3,%XMM0                                  | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 0    | 0    | 5       | 0.50              | scal (25.0%)\nVSQRTSD %XMM0,%XMM0,%XMM0                                      | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 1    | 14      | 4-8               | scal (25.0%)\nVDIVSD %XMM0,%XMM6,%XMM8                                       | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0    | 0    | 0    | 1    | 13      | 5-6.50            | scal (25.0%)\nVCOMISD %XMM8,%XMM7                                            | 1     | 0         | 0    | 0    | 0         | 0    | 0    | 0    | 0.50 | 0.50 | 1    | 0    | 2       | 1                 | scal (25.0%)\nJA 3e330 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x1e0> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x30(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e204 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xb4>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x38(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e21b <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xcb>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x40(%R15),%RDI                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | scal (25.0%)\nTEST %RDI,%RDI                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e250 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x100> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nMOV 0x48(%R15),%R15                                            | 1     | 0         | 0    | 0    | 0         | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 3       | 0.50              | N/A\nTEST %R15,%R15                                                 | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.25              | scal (25.0%)\nJE 3e23f <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0xef>  | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nCMPB $0,0x8(%R15)                                              | 1     | 0.25      | 0.25 | 0.25 | 0.25      | 0.50 | 0.50 | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\nJNE 3e175 <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_+0x25> | 1     | 0.50      | 0    | 0    | 0.50      | 0    | 0    | 0    | 0    | 0    | 0    | 0    | 1       | 0.50              | N/A\n"
+                }
+              ],
+            "header":
+              [
+              "Warnings:\nDetected a function call instruction: ignoring called function instructions.\nRerun with --follow-calls=append to include them to analysis  or with --follow-calls=inline to simulate inlining.",
+              "2% of peak computational performance is used (0.48 out of 24.00 FLOP per cycle (GFLOPS @ 1GHz))"
+              ],
+            "brief":
+              [
+
+              ],
+            "gain":
+              [
+                {
+                  "workaround": " - Try another compiler or update/tune your current one:\n  * recompile with fassociative-math (included in Ofast or ffast-math) to extend loop vectorization to FP reductions.\n - Remove inter-iterations dependences from your loop and make it unit-stride:\n  * If your arrays have 2 or more dimensions, check whether elements are accessed contiguously and, otherwise, try to permute loops accordingly:\nC storage order is row-major: for(i) for(j) a[j][i] = b[j][i]; (slow, non stride 1) => for(i) for(j) a[i][j] = b[i][j]; (fast, stride 1)<<image_row_maj>>\n  * If your loop streams arrays of structures (AoS), try to use structures of arrays instead (SoA):\nfor(i) a[i].x = b[i].x; (slow, non stride 1) => for(i) a.x[i] = b.x[i]; (fast, stride 1)\n",
+                  "details": "All SSE/AVX instructions are used in scalar version (process only one data element in vector registers).\nSince your execution units are vector units, only a vectorized loop can use their full power.\n",
+                  "title": "Vectorization",
+                  "txt": "Your loop is not vectorized.\n4 data elements could be processed at once in vector registers.\n<<image_1x64_256>>By vectorizing your loop, you can lower the cost of an iteration from 14.50 to 3.62 cycles (4.00x speedup)."
+                },
+                {
+                  "workaround": " - Reduce the number of division or square root instructions:\n  * If denominator is constant over iterations, use reciprocal (replace x/y with x*(1/y)). Check precision impact. This will be done by your compiler with ffast-math or Ofast\n - Check whether you really need double precision. If not, switch to single precision to speedup execution\n",
+                  "title": "Execution units bottlenecks",
+                  "txt": "Performance is limited by execution of divide and square root operations (the divide/square root unit is a bottleneck).\n\nBy removing all these bottlenecks, you can lower the cost of an iteration from 14.50 to 9.83 cycles (1.47x speedup).\n"
+                }
+              ],
+            "potential":
+              [
+                {
+                  "title": "Expensive FP math instructions/calls",
+                  "txt": "Detected performance impact from expensive FP math instructions/calls.\nBy removing/reexpressing them, you can lower the cost of an iteration from 14.50 to 9.83 cycles (1.47x speedup)."
+                },
+                {
+                  "workaround": "Try to change order in which elements are evaluated (using parentheses) in arithmetic expressions containing both ADD/SUB and MUL operations to enable your compiler to generate FMA instructions wherever possible.\nFor instance a + b*c is a valid FMA (MUL then ADD).\nHowever (a+b)* c cannot be translated into an FMA (ADD then MUL).",
+                  "title": "FMA",
+                  "txt": "Detected 1 FMA (fused multiply-add) operations.\nPresence of both ADD/SUB and MUL operations."
+                }
+              ]
+          }
+        ],
+      "common":
+        {
+          "header":
+            [
+            "The loop is defined in /home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp:143,163,171-174,181-184.\n",
+            "The related source loop is not unrolled or unrolled with no peel/tail loop.",
+            "This loop has 4 execution paths.\n",
+            "The presence of multiple execution paths is typically the main/first bottleneck.\nTry to simplify control inside loop: ideally, try to remove all conditional expressions, for example by (if applicable):\n - hoisting them (moving them outside the loop)\n - turning them into conditional moves, MIN or MAX\n\n",
+            "Ex: if (x<0) x=0 => x = (x<0 ? 0 : x) (or MAX(0,x) after defining the corresponding macro)\n"
+            ],
+          "nb_paths": 4
+        }
+    }
+}

@@ -1,0 +1,7 @@
+ID;Module;Source Location;Source Function;Level;Max Time Over Threads (s);Time w.r.t. Wall Time (s);Coverage (% app. time);Speedup if no scalar integer;Speedup if FP arith vectorized;Speedup if fully vectorized;Speedup if FP only;Number of paths;Vectorization Ratio (%);Vectorization Efficiency (%);CQA cycles;CQA cycles if no scalar integer;CQA cycles if FP arith vectorized;CQA cycles if fully vectorized;CQA cycles if FP only
+Loop 263;main;;QuadTree::updateParticles(double) [clone ._omp_fn.0];Innermost;0.089999988675117;0.074405170977116;0.67365330457687;3.38;2.24;4.00;13.50;1;8.00;27.00;13.50;4.00;6.02;3.38;1.00
+Loop 264;main;;QuadTree::updateParticles(double) [clone ._omp_fn.0];Outermost;0.019999995827675;0.0068892929702997;0.062374629080296;NA;NA;NA;NA;2;NA;NA;NA;NA;NA;NA;NA
+Loop 265;main;;QuadTree::updateParticles(double) [clone ._omp_fn.1];Single;0.00999999884516;0.0068892929702997;0.062374629080296;4.90;3.13;4.00;44.08;8;3.90;25.97;88.17;18.00;28.15;22.04;2.00
+Loop 262;main;;QuadTree::buildTree();Single;0.00999999884516;0.0055114799179137;0.049900118261576;1.00;1.00;4.00;13.00;1;0.00;25.00;6.50;6.50;6.50;1.63;0.50
+Loop 261;main;;QuadTree::buildTree();Single;0.00999999884516;0.0027557786088437;0.024950407445431;2.53;1.00;4.00;13.92;2;0.00;25.00;13.92;5.50;13.92;3.48;1.00
+Loop 7;main;;__gnu_cxx::__enable_if<std::__is_scalar<double>::__value, void>::__type std::__fill_a1<double*, double>(double*, double*, double const&);Single;0.00499999942258;0.0013778893044218;0.012475203722715;1.25;1.00;4.00;1.67;1;0.00;25.00;2.50;2.00;2.50;0.63;1.50

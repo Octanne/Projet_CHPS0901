@@ -1,0 +1,28 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 342 - 366
+--------------------------------------------------------------------------------
+
+342: void QuadTree::reset() {
+343:     if (particle != nullptr && isDivided) {
+344:         delete particle;
+345: 
+346:         northeast->reset();
+347:         northwest->reset();
+348:         southeast->reset();
+349:         southwest->reset();
+350:     }
+351:     particle = nullptr;
+352: 
+353:     isDivided = false;
+354:     hasBody = false;
+355:     weightBranch = 0;
+356:     width = 0;
+357:     originX = 0;
+358:     originY = 0;
+359: 
+360:     // We set the children to nullptr
+361:     northeast = nullptr;
+362:     northwest = nullptr;
+363:     southeast = nullptr;
+364:     southwest = nullptr;
+365:     // particles = nullptr; // We do not delete the particles listes
+366: }

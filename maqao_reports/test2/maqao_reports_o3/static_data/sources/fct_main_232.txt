@@ -1,0 +1,113 @@
+/usr/include/c++/14.2.1/bits/new_allocator.h: 151 - 191
+--------------------------------------------------------------------------------
+
+151: 	return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+[...]
+172: 	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+[...]
+191: 	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+/usr/include/c++/14.2.1/bits/deque.tcc: 167 - 568
+--------------------------------------------------------------------------------
+
+167: 	if (this->_M_impl._M_finish._M_cur
+168: 	    != this->_M_impl._M_finish._M_last - 1)
+169: 	  {
+170: 	    _Alloc_traits::construct(this->_M_impl,
+171: 				     this->_M_impl._M_finish._M_cur,
+172: 				     std::forward<_Args>(__args)...);
+173: 	    ++this->_M_impl._M_finish._M_cur;
+[...]
+492: 	if (size() == max_size())
+493: 	  __throw_length_error(
+494: 	      __N("cannot create std::deque larger than max_size()"));
+495: 
+496: 	_M_reserve_map_at_back();
+497: 	*(this->_M_impl._M_finish._M_node + 1) = this->_M_allocate_node();
+[...]
+507: 	    this->_M_impl._M_finish._M_set_node(this->_M_impl._M_finish._M_node
+[...]
+516:       }
+[...]
+565:       this->_M_impl._M_finish._M_cur = this->_M_impl._M_finish._M_last - 1;
+566:       _Alloc_traits::destroy(_M_get_Tp_allocator(),
+567: 			     this->_M_impl._M_finish._M_cur);
+568:     }
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 144 - 192
+--------------------------------------------------------------------------------
+
+144:     return std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+[...]
+151:     double dx = b->getX() - c->getX();
+152:     double dy = b->getY() - c->getY();
+153:     double distance = std::sqrt((dx * dx) + (dy * dy));
+154:     double accel = (-1 * Particle::G * c->getMass()) / std::pow(distance,2.0);
+155:     double forceVecX = dx / distance;
+156:     double forceVecY = dy / distance;
+157: 
+158:     fx += accel * forceVecX;
+159:     fy += accel * forceVecY;
+160: }
+161: 
+162: void QuadTree::calculateForce(Particle* b, double& fx, double& fy) const {
+163:     std::stack<const QuadTree*> stack;
+164:     stack.push(this);
+165: 
+166:     while (!stack.empty()) {
+167:         const QuadTree* node = stack.top();
+168:         stack.pop();
+169: 
+170:         if (!node->isDivided) {
+171:             if (!node->hasBody) continue; // If the node is empty, we skip
+172:             if (b != node->particle) {
+[...]
+178:             double s = node->width;
+179:             double d = distance(b->getX(), b->getY(), node->particle->getX(), node->particle->getY());
+180:             // If ratio > theta we perform recursively on each of the current node's children.
+181:             if (s / d < theta) {
+182:                 // Treat the internal node as a single body, and calculate the force it exerts on body b, and add this amount to b's net force.
+183:                 calcForce(b, node->particle, fx, fy);
+184:             } else {
+185:                 if (node->northeast != nullptr) stack.push(node->northeast);
+186:                 if (node->northwest != nullptr) stack.push(node->northwest);
+187:                 if (node->southeast != nullptr) stack.push(node->southeast);
+188:                 if (node->southwest != nullptr) stack.push(node->southwest);
+189:             }
+190:         }
+191:     }
+192: }
+/usr/include/c++/14.2.1/bits/stl_deque.h: 212 - 2176
+--------------------------------------------------------------------------------
+
+212: 	if (_M_cur == _M_first)
+[...]
+265: 	_M_node = __new_node;
+266: 	_M_first = *__new_node;
+267: 	_M_last = _M_first + difference_type(_S_buffer_size());
+[...]
+373: 	  * (__x._M_node - __y._M_node - bool(__x._M_node))
+374: 	  + (__x._M_cur - __x._M_first)
+375: 	  + (__y._M_last - __y._M_cur);
+[...]
+460:       { _M_initialize_map(0); }
+[...]
+620:       if (this->_M_impl._M_map)
+621: 	{
+622: 	  _M_destroy_nodes(this->_M_impl._M_start._M_node,
+[...]
+699:       for (_Map_pointer __n = __nstart; __n < __nfinish; ++__n)
+[...]
+1540: 	if (this->_M_impl._M_finish._M_cur
+1541: 	    != this->_M_impl._M_finish._M_last - 1)
+1542: 	  {
+1543: 	    _Alloc_traits::construct(this->_M_impl,
+1544: 				     this->_M_impl._M_finish._M_cur, __x);
+1545: 	    ++this->_M_impl._M_finish._M_cur;
+1546: 	  }
+1547: 	else
+1548: 	  _M_push_back_aux(__x);
+[...]
+1603: 	    --this->_M_impl._M_finish._M_cur;
+[...]
+2174: 	if (__nodes_to_add + 1 > this->_M_impl._M_map_size
+2175: 	    - (this->_M_impl._M_finish._M_node - this->_M_impl._M_map))
+2176: 	  _M_reallocate_map(__nodes_to_add, false);

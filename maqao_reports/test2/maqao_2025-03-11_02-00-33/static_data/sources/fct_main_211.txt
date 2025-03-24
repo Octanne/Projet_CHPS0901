@@ -1,0 +1,36 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 70 - 110
+--------------------------------------------------------------------------------
+
+70: void QuadTree::insertSimple(Particle* particleInsert) {
+71:     // If node x does not contain a body, put the new body b here.
+72:     if (!isDivided) {
+73:         if (!hasBody) {
+74:             particle = particleInsert;
+75:             hasBody = true;
+76:             // We increment the weight of the branch
+77:             weightBranch++;
+78:             return;
+79:         } else {
+80:             // Subdivide the region further by creating four children
+81:             // We moving body b update the center-of-mass and total mass of x.
+82:             subdivide();
+[...]
+88:     updateCenterOfMass(particleInsert);
+89:     // Recursively insert the body b in the appropriate quadrant.
+90:     if (particleInsert->getX() < getOriginX()) { // We check for west quadrants
+91:         if (particleInsert->getY() < getOriginY()) {
+92:             southwest->insertSimple(particleInsert);
+93:             //std::cout << "SouthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+94:         } else {
+95:             northwest->insertSimple(particleInsert);
+96:             //std::cout << "NorthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+97:         }
+98:     } else { // We check for east quadrants
+99:         if (particleInsert->getY() < getOriginY()) {
+100:             southeast->insertSimple(particleInsert);
+101:             //std::cout << "SouthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+102:         } else {
+103:             northeast->insertSimple(particleInsert);
+[...]
+109:     weightBranch++;
+110: }

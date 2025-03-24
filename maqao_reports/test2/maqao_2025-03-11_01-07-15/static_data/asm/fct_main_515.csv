@@ -1,0 +1,129 @@
+address;source_location;insn;indent
+0x2970f;:0;PUSH	%RBP;
+0x29710;:0;MOV	%RSP,%RBP;
+0x29713;:0;PUSH	%R12;
+0x29715;:0;PUSH	%RBX;
+0x29716;:0;SUB	$0x60,%RSP;
+0x2971a;:0;MOV	%RDI,-0x68(%RBP);
+0x2971e;:0;MOV	%FS:0x28,%RAX;
+0x29727;:0;MOV	%RAX,-0x18(%RBP);
+0x2972b;:0;XOR	%EAX,%EAX;
+0x2972d;:0;MOV	-0x68(%RBP),%RAX;
+0x29731;:0;MOV	(%RAX),%RAX;
+0x29734;:0;MOV	%RAX,-0x38(%RBP);
+0x29738;:0;MOV	-0x38(%RBP),%RAX;
+0x2973c;:0;MOV	0x50(%RAX),%RAX;
+0x29740;:0;MOV	%RAX,%RDI;
+0x29743;:0;CALL	7768 <_ZNKSt6vectorIP8ParticleSaIS1_EE4sizeEv>;
+0x29748;:0;MOV	%RAX,%RBX;
+0x2974b;:0;TEST	%RBX,%RBX;
+0x2974e;:0;JE	298dd <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0x1ce>;
+0x29754;:0;CALL	43d0 <omp_get_num_threads@plt>;
+0x29759;:0;MOVSXD	%EAX,%R12;
+0x2975c;:0;CALL	4400 <omp_get_thread_num@plt>;
+0x29761;:0;MOVSXD	%EAX,%RSI;
+0x29764;:0;MOV	%RBX,%RAX;
+0x29767;:0;MOV	$0,%EDX;
+0x2976c;:0;DIV	%R12;
+0x2976f;:0;MOV	%RAX,%RCX;
+0x29772;:0;MOV	%RBX,%RAX;
+0x29775;:0;MOV	$0,%EDX;
+0x2977a;:0;DIV	%R12;
+0x2977d;:0;MOV	%RDX,%RAX;
+0x29780;:0;CMP	%RAX,%RSI;
+0x29783;:0;JB	298cf <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0x1c0>;
+0x29789;:0;IMUL	%RCX,%RSI;
+0x2978d;:0;MOV	%RSI,%RDX;
+0x29790;:0;ADD	%RDX,%RAX;
+0x29793;:0;LEA	(%RAX,%RCX,1),%RBX;
+0x29797;:0;CMP	%RBX,%RAX;
+0x2979a;:0;JAE	298dd <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0x1ce>;
+0x297a0;:0;MOV	%RAX,-0x40(%RBP);
+0x297a4;:0;MOV	-0x38(%RBP),%RAX;(264) 
+0x297a8;:0;MOV	0x50(%RAX),%RAX;(264) 
+0x297ac;:0;MOV	-0x40(%RBP),%RDX;(264) 
+0x297b0;:0;MOV	%RDX,%RSI;(264) 
+0x297b3;:0;MOV	%RAX,%RDI;(264) 
+0x297b6;:0;CALL	79f8 <_ZNSt6vectorIP8ParticleSaIS1_EEixEm>;(264) 
+0x297bb;:0;MOV	(%RAX),%RAX;(264) 
+0x297be;:0;MOV	%RAX,-0x30(%RBP);(264) 
+0x297c2;:0;MOV	0x14d9f(%RIP),%RAX;(264) 
+0x297c9;:0;MOV	(%RAX),%EAX;(264) 
+0x297cb;:0;MOVSXD	%EAX,%RDX;(264) 
+0x297ce;:0;MOV	-0x68(%RBP),%RAX;(264) 
+0x297d2;:0;MOV	0x8(%RAX),%RAX;(264) 
+0x297d6;:0;MOV	%RDX,%RSI;(264) 
+0x297d9;:0;MOV	%RAX,%RDI;(264) 
+0x297dc;:0;CALL	2a204 <_ZNSt6vectorIS_IP8QuadTreeSaIS1_EESaIS3_EEixEm>;(264) 
+0x297e1;:0;MOV	%RAX,-0x28(%RBP);(264) 
+0x297e5;:0;MOV	-0x28(%RBP),%RAX;(264) 
+0x297e9;:0;MOV	%RAX,%RDI;(264) 
+0x297ec;:0;CALL	2a490 <_ZNSt6vectorIP8QuadTreeSaIS1_EE5beginEv>;(264) 
+0x297f1;:0;MOV	%RAX,-0x60(%RBP);(264) 
+0x297f5;:0;MOV	-0x28(%RBP),%RAX;(264) 
+0x297f9;:0;MOV	%RAX,%RDI;(264) 
+0x297fc;:0;CALL	2a4d8 <_ZNSt6vectorIP8QuadTreeSaIS1_EE3endEv>;(264) 
+0x29801;:0;MOV	%RAX,-0x58(%RBP);(264) 
+0x29805;:0;NOP;(264) 
+0x29806;:0;LEA	-0x58(%RBP),%RDX;  (263) 
+0x2980a;:0;LEA	-0x60(%RBP),%RAX;  (263) 
+0x2980e;:0;MOV	%RDX,%RSI;  (263) 
+0x29811;:0;MOV	%RAX,%RDI;  (263) 
+0x29814;:0;CALL	2a524 <_ZN9__gnu_cxxneIPP8QuadTreeSt6vectorIS2_SaIS2_EEEEbRKNS_17__normal_iteratorIT_T0_EESC_>;  (263) 
+0x29819;:0;TEST	%AL,%AL;  (263) 
+0x2981b;:0;JNE	29831 <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0x122>;  (263) 
+0x2981d;:0;ADDQ	$0x1,-0x40(%RBP);(264) 
+0x29822;:0;CMP	%RBX,-0x40(%RBP);(264) 
+0x29826;:0;JB	297a4 <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0x95>;(264) 
+0x2982c;:0;JMP	298dd <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0x1ce>;
+0x29831;:0;LEA	-0x60(%RBP),%RAX;  (263) 
+0x29835;:0;MOV	%RAX,%RDI;  (263) 
+0x29838;:0;CALL	2a580 <_ZNK9__gnu_cxx17__normal_iteratorIPP8QuadTreeSt6vectorIS2_SaIS2_EEEdeEv>;  (263) 
+0x2983d;:0;MOV	(%RAX),%RAX;  (263) 
+0x29840;:0;MOV	%RAX,-0x20(%RBP);  (263) 
+0x29844;:0;PXOR	%XMM0,%XMM0;  (263) 
+0x29848;:0;MOVSD	%XMM0,-0x50(%RBP);  (263) 
+0x2984d;:0;PXOR	%XMM0,%XMM0;  (263) 
+0x29851;:0;MOVSD	%XMM0,-0x48(%RBP);  (263) 
+0x29856;:0;LEA	-0x48(%RBP),%RCX;  (263) 
+0x2985a;:0;LEA	-0x50(%RBP),%RDX;  (263) 
+0x2985e;:0;MOV	-0x30(%RBP),%RSI;  (263) 
+0x29862;:0;MOV	-0x20(%RBP),%RAX;  (263) 
+0x29866;:0;MOV	%RAX,%RDI;  (263) 
+0x29869;:0;CALL	2852c <_ZNK8QuadTree14calculateForceEP8ParticleRdS2_>;  (263) 
+0x2986e;:0;MOV	-0x68(%RBP),%RAX;  (263) 
+0x29872;:0;MOV	0x10(%RAX),%RAX;  (263) 
+0x29876;:0;MOV	-0x40(%RBP),%RDX;  (263) 
+0x2987a;:0;MOV	%RDX,%RSI;  (263) 
+0x2987d;:0;MOV	%RAX,%RDI;  (263) 
+0x29880;:0;CALL	79d8 <_ZNSt6vectorIdSaIdEEixEm>;  (263) 
+0x29885;:0;MOVSD	(%RAX),%XMM1;  (263) 
+0x29889;:0;MOVSD	-0x50(%RBP),%XMM0;  (263) 
+0x2988e;:0;ADDSD	%XMM1,%XMM0;  (263) 
+0x29892;:0;MOVSD	%XMM0,(%RAX);  (263) 
+0x29896;:0;MOV	-0x68(%RBP),%RAX;  (263) 
+0x2989a;:0;MOV	0x18(%RAX),%RAX;  (263) 
+0x2989e;:0;MOV	-0x40(%RBP),%RDX;  (263) 
+0x298a2;:0;MOV	%RDX,%RSI;  (263) 
+0x298a5;:0;MOV	%RAX,%RDI;  (263) 
+0x298a8;:0;CALL	79d8 <_ZNSt6vectorIdSaIdEEixEm>;  (263) 
+0x298ad;:0;MOVSD	(%RAX),%XMM1;  (263) 
+0x298b1;:0;MOVSD	-0x48(%RBP),%XMM0;  (263) 
+0x298b6;:0;ADDSD	%XMM1,%XMM0;  (263) 
+0x298ba;:0;MOVSD	%XMM0,(%RAX);  (263) 
+0x298be;:0;LEA	-0x60(%RBP),%RAX;  (263) 
+0x298c2;:0;MOV	%RAX,%RDI;  (263) 
+0x298c5;:0;CALL	2a560 <_ZN9__gnu_cxx17__normal_iteratorIPP8QuadTreeSt6vectorIS2_SaIS2_EEEppEv>;  (263) 
+0x298ca;:0;JMP	29806 <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0xf7>;  (263) 
+0x298cf;:0;MOV	$0,%EAX;
+0x298d4;:0;ADD	$0x1,%RCX;
+0x298d8;:0;JMP	29789 <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0x7a>;
+0x298dd;:0;MOV	-0x18(%RBP),%RAX;
+0x298e1;:0;SUB	%FS:0x28,%RAX;
+0x298ea;:0;JE	298f1 <_ZN8QuadTree15updateParticlesEd._omp_fn.0+0x1e2>;
+0x298ec;:0;CALL	4270 <__stack_chk_fail@plt>;
+0x298f1;:0;ADD	$0x60,%RSP;
+0x298f5;:0;POP	%RBX;
+0x298f6;:0;POP	%R12;
+0x298f8;:0;POP	%RBP;
+0x298f9;:0;RET;

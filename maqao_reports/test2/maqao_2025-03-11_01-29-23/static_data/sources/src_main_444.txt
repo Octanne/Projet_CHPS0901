@@ -1,0 +1,50 @@
+/usr/include/c++/14.2.1/bits/basic_ios.h: 49 - 49
+--------------------------------------------------------------------------------
+
+49:       if (!__f)
+/usr/include/c++/14.2.1/bits/stl_vector.h: 1131 - 1131
+--------------------------------------------------------------------------------
+
+1131: 	return *(this->_M_impl._M_start + __n);
+/usr/include/c++/14.2.1/ostream: 232 - 767
+--------------------------------------------------------------------------------
+
+232:       { return _M_insert(__f); }
+[...]
+676: 	__ostream_insert(__out, __s,
+[...]
+745:     { return flush(__os.put(__os.widen('\n'))); }
+[...]
+767:     { return __os.flush(); }
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 18 - 303
+--------------------------------------------------------------------------------
+
+18:     return *debugModePtr;
+[...]
+284:         Particle* particle = (*particles)[i];
+285: 
+286:         // We print the force exerted on the particle
+287:         if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY() 
+288:             << ") has force (" << localAccX[i] << ", " << localAccY[i] << ")" << std::endl;
+289: 
+290:         // We update the velocity of the particle
+291:         particle->setVx(particle->getVx() + localAccX[i] * step);
+292:         particle->setVy(particle->getVy() + localAccY[i] * step);
+293: 
+294:         // We print the velocity of the particle
+295:         if (debugMode()) std::cout << "Particle at (" << particle->getX() << ", " << particle->getY()
+296:              << ") has velocity (" << particle->getVx() << ", " << particle->getVy() << ")" << std::endl;
+297: 
+298:         // We update the position of the particle
+299:         particle->setX(particle->getX() + particle->getVx() * step);
+300:         particle->setY(particle->getY() + particle->getVy() * step);
+301: 
+302:         // We print the position of the particle
+303:         if (debugMode()) std::cout << "Particle now at (" << particle->getX() << ", " << particle->getY() 
+/usr/include/c++/14.2.1/bits/locale_facets.h: 882 - 885
+--------------------------------------------------------------------------------
+
+882: 	if (_M_widen_ok)
+883: 	  return _M_widen[static_cast<unsigned char>(__c)];
+884: 	this->_M_widen_init();
+885: 	return this->do_widen(__c);

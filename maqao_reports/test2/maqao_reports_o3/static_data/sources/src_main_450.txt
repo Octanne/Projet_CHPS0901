@@ -1,0 +1,16 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 73 - 459
+--------------------------------------------------------------------------------
+
+73:      if (!isDivided) {
+74:         if (!hasBody) {
+75:             particle = particleInsert;
+76:             hasBody = true;
+77:             // We increment the weight of the branch
+78:             weightBranch++;
+79:             return;
+80:         } else {
+81:             // Subdivide the region further by creating four children
+82:             // We moving body b update the center-of-mass and total mass of x.
+83:             subdivide();
+[...]
+459:     for (Particle* particle : *particles) {

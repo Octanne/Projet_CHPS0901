@@ -1,0 +1,29 @@
+/usr/include/c++/14.2.1/bits/new_allocator.h: 191 - 191
+--------------------------------------------------------------------------------
+
+191: 	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+/usr/include/c++/14.2.1/bits/vector.tcc: 114 - 123
+--------------------------------------------------------------------------------
+
+114: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+115: 	  {
+116: 	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
+117: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+118: 				     std::forward<_Args>(__args)...);
+119: 	    ++this->_M_impl._M_finish;
+120: 	    _GLIBCXX_ASAN_ANNOTATE_GREW(1);
+121: 	  }
+122: 	else
+123: 	  _M_realloc_append(std::forward<_Args>(__args)...);
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 332 - 340
+--------------------------------------------------------------------------------
+
+332: void QuadTree::recycle() {
+333:     if (isDivided) {
+334:         northeast->recycle();
+335:         northwest->recycle();
+336:         southeast->recycle();
+337:         southwest->recycle();
+338:     }
+339:     nodePool.push_back(this);
+340: }

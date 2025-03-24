@@ -1,0 +1,28 @@
+address;source_location;insn;indent
+0x2afae;:0;PUSH	%RBP;
+0x2afaf;:0;MOV	%RSP,%RBP;
+0x2afb2;:0;SUB	$0x30,%RSP;
+0x2afb6;:0;MOV	%RDI,-0x28(%RBP);
+0x2afba;:0;MOV	%RSI,-0x30(%RBP);
+0x2afbe;:0;MOV	%FS:0x28,%RAX;
+0x2afc7;:0;MOV	%RAX,-0x8(%RBP);
+0x2afcb;:0;XOR	%EAX,%EAX;
+0x2afcd;:0;MOV	-0x28(%RBP),%RAX;
+0x2afd1;:0;MOV	(%RAX),%RAX;
+0x2afd4;:0;MOV	-0x30(%RBP),%RDX;
+0x2afd8;:0;SAL	$0x3,%RDX;
+0x2afdc;:0;NEG	%RDX;
+0x2afdf;:0;ADD	%RDX,%RAX;
+0x2afe2;:0;MOV	%RAX,-0x18(%RBP);
+0x2afe6;:0;LEA	-0x18(%RBP),%RDX;
+0x2afea;:0;LEA	-0x10(%RBP),%RAX;
+0x2afee;:0;MOV	%RDX,%RSI;
+0x2aff1;:0;MOV	%RAX,%RDI;
+0x2aff4;:0;CALL	2af46 <_ZN9__gnu_cxx17__normal_iteratorIPP8QuadTreeSt6vectorIS2_SaIS2_EEEC1ERKS3_>;
+0x2aff9;:0;MOV	-0x10(%RBP),%RAX;
+0x2affd;:0;MOV	-0x8(%RBP),%RDX;
+0x2b001;:0;SUB	%FS:0x28,%RDX;
+0x2b00a;:0;JE	2b011 <_ZNK9__gnu_cxx17__normal_iteratorIPP8QuadTreeSt6vectorIS2_SaIS2_EEEmiEl+0x63>;
+0x2b00c;:0;CALL	4270 <__stack_chk_fail@plt>;
+0x2b011;:0;LEAVE;
+0x2b012;:0;RET;

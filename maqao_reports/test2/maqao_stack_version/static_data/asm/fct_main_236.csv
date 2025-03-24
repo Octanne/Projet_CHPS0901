@@ -1,0 +1,178 @@
+address;source_location;insn;indent
+0x43c10;/usr/include/c++/14.2.1/bits/stl_deque.h:638;PUSH	%RBP;
+0x43c11;/usr/include/c++/14.2.1/bits/stl_algobase.h:262;MOV	$0x8,%EAX;
+0x43c16;/usr/include/c++/14.2.1/bits/stl_deque.h:638;MOV	%RSP,%RBP;
+0x43c19;/usr/include/c++/14.2.1/bits/stl_deque.h:638;PUSH	%R15;
+0x43c1b;/usr/include/c++/14.2.1/bits/stl_deque.h:638;MOV	%RDI,%R15;
+0x43c1e;/usr/include/c++/14.2.1/bits/stl_deque.h:641;MOV	%RSI,%RDI;
+0x43c21;/usr/include/c++/14.2.1/bits/stl_deque.h:638;PUSH	%R14;
+0x43c23;/usr/include/c++/14.2.1/bits/stl_deque.h:641;SHR	$0x6,%RDI;
+0x43c27;/usr/include/c++/14.2.1/bits/stl_deque.h:638;PUSH	%R13;
+0x43c29;/usr/include/c++/14.2.1/bits/stl_deque.h:638;PUSH	%R12;
+0x43c2b;/usr/include/c++/14.2.1/bits/stl_deque.h:638;PUSH	%RBX;
+0x43c2c;/usr/include/c++/14.2.1/bits/stl_deque.h:641;LEA	0x1(%RDI),%RBX;
+0x43c30;/usr/include/c++/14.2.1/bits/stl_deque.h:645;ADD	$0x3,%RDI;
+0x43c34;/usr/include/c++/14.2.1/bits/stl_deque.h:638;AND	$-0x20,%RSP;
+0x43c38;/usr/include/c++/14.2.1/bits/stl_deque.h:638;SUB	$0x20,%RSP;
+0x43c3c;/usr/include/c++/14.2.1/bits/stl_algobase.h:262;CMP	%RAX,%RDI;
+0x43c3f;/usr/include/c++/14.2.1/bits/stl_algobase.h:262;CMOVB	%RAX,%RDI;
+0x43c43;/usr/include/c++/14.2.1/bits/stl_deque.h:638;MOV	%RSI,0x18(%RSP);
+0x43c48;/usr/include/c++/14.2.1/bits/stl_deque.h:644;MOV	%RDI,0x8(%R15);
+0x43c4c;/usr/include/c++/14.2.1/bits/new_allocator.h:151;SAL	$0x3,%RDI;
+0x43c50;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43c55;/usr/include/c++/14.2.1/bits/stl_deque.h:654;MOV	0x8(%R15),%RDX;
+0x43c59;/usr/include/c++/14.2.1/bits/stl_deque.h:646;MOV	%RAX,(%R15);
+0x43c5c;/usr/include/c++/14.2.1/bits/stl_deque.h:654;SUB	%RBX,%RDX;
+0x43c5f;/usr/include/c++/14.2.1/bits/stl_deque.h:654;SHR	$0x1,%RDX;
+0x43c62;/usr/include/c++/14.2.1/bits/stl_deque.h:653;LEA	(%RAX,%RDX,8),%R14;
+0x43c66;/usr/include/c++/14.2.1/bits/stl_deque.h:655;LEA	(%R14,%RBX,8),%R13;
+0x43c6a;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	%R13,%R14;
+0x43c6d;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JAE	43dfa <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x1ea>;
+0x43c73;/usr/include/c++/14.2.1/bits/stl_deque.h:683;MOV	%R14,%R12;
+0x43c76;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;
+0x43c7b;/usr/include/c++/14.2.1/bits/stl_deque.h:683;MOV	%R14,%RBX;
+0x43c7e;/usr/include/c++/14.2.1/bits/stl_deque.h:683;NOT	%R12;
+0x43c81;/usr/include/c++/14.2.1/bits/stl_deque.h:683;ADD	%R13,%R12;
+0x43c84;/usr/include/c++/14.2.1/bits/stl_deque.h:683;SHR	$0x3,%R12;
+0x43c88;/usr/include/c++/14.2.1/bits/stl_deque.h:683;AND	$0x7,%R12D;
+0x43c8c;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43c91;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x8(%R14),%RBX;
+0x43c95;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%R14);
+0x43c98;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	%R13,%RBX;
+0x43c9b;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JAE	43dfa <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x1ea>;
+0x43ca1;/usr/include/c++/14.2.1/bits/stl_deque.h:683;TEST	%R12,%R12;
+0x43ca4;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JE	43d52 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x142>;
+0x43caa;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	$0x1,%R12;
+0x43cae;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JE	43d38 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x128>;
+0x43cb4;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	$0x2,%R12;
+0x43cb8;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JE	43d27 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x117>;
+0x43cba;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	$0x3,%R12;
+0x43cbe;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JE	43d16 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x106>;
+0x43cc0;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	$0x4,%R12;
+0x43cc4;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JE	43d05 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0xf5>;
+0x43cc6;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	$0x5,%R12;
+0x43cca;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JE	43cf4 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0xe4>;
+0x43ccc;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	$0x6,%R12;
+0x43cd0;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JE	43ce3 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0xd3>;
+0x43cd2;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;
+0x43cd7;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43cdc;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%RBX);
+0x43cdf;/usr/include/c++/14.2.1/bits/stl_deque.h:683;ADD	$0x8,%RBX;
+0x43ce3;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;
+0x43ce8;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43ced;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%RBX);
+0x43cf0;/usr/include/c++/14.2.1/bits/stl_deque.h:683;ADD	$0x8,%RBX;
+0x43cf4;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;
+0x43cf9;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43cfe;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%RBX);
+0x43d01;/usr/include/c++/14.2.1/bits/stl_deque.h:683;ADD	$0x8,%RBX;
+0x43d05;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;
+0x43d0a;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43d0f;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%RBX);
+0x43d12;/usr/include/c++/14.2.1/bits/stl_deque.h:683;ADD	$0x8,%RBX;
+0x43d16;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;
+0x43d1b;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43d20;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%RBX);
+0x43d23;/usr/include/c++/14.2.1/bits/stl_deque.h:683;ADD	$0x8,%RBX;
+0x43d27;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;
+0x43d2c;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43d31;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%RBX);
+0x43d34;/usr/include/c++/14.2.1/bits/stl_deque.h:683;ADD	$0x8,%RBX;
+0x43d38;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;
+0x43d3d;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;
+0x43d42;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%RBX);
+0x43d45;/usr/include/c++/14.2.1/bits/stl_deque.h:683;ADD	$0x8,%RBX;
+0x43d49;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	%R13,%RBX;
+0x43d4c;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JAE	43dfa <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x1ea>;
+0x43d52;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;(478) 
+0x43d57;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;(478) 
+0x43d5c;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%RBX);(478) 
+0x43d5f;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x8(%RBX),%R12;(478) 
+0x43d63;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;(478) 
+0x43d68;/usr/include/c++/14.2.1/bits/stl_deque.h:683;MOV	%R12,%RBX;(478) 
+0x43d6b;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;(478) 
+0x43d70;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,(%R12);(478) 
+0x43d74;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;(478) 
+0x43d79;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x8(%R12),%RBX;(478) 
+0x43d7e;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;(478) 
+0x43d83;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,0x8(%R12);(478) 
+0x43d88;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;(478) 
+0x43d8d;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x10(%R12),%RBX;(478) 
+0x43d92;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;(478) 
+0x43d97;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,0x10(%R12);(478) 
+0x43d9c;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;(478) 
+0x43da1;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x18(%R12),%RBX;(478) 
+0x43da6;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;(478) 
+0x43dab;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,0x18(%R12);(478) 
+0x43db0;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;(478) 
+0x43db5;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x20(%R12),%RBX;(478) 
+0x43dba;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;(478) 
+0x43dbf;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,0x20(%R12);(478) 
+0x43dc4;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;(478) 
+0x43dc9;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x28(%R12),%RBX;(478) 
+0x43dce;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;(478) 
+0x43dd3;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,0x28(%R12);(478) 
+0x43dd8;/usr/include/c++/14.2.1/bits/new_allocator.h:151;MOV	$0x200,%EDI;(478) 
+0x43ddd;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x30(%R12),%RBX;(478) 
+0x43de2;/usr/include/c++/14.2.1/bits/new_allocator.h:151;CALL	4120 <_Znwm@plt>;(478) 
+0x43de7;/usr/include/c++/14.2.1/bits/stl_deque.h:683;LEA	0x38(%R12),%RBX;(478) 
+0x43dec;/usr/include/c++/14.2.1/bits/stl_deque.h:684;MOV	%RAX,0x30(%R12);(478) 
+0x43df1;/usr/include/c++/14.2.1/bits/stl_deque.h:683;CMP	%R13,%RBX;(478) 
+0x43df4;/usr/include/c++/14.2.1/bits/stl_deque.h:683;JB	43d52 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x142>;(478) 
+0x43dfa;/usr/include/c++/14.2.1/bits/stl_deque.h:672;MOV	0x18(%RSP),%R8;
+0x43dff;/usr/include/c++/14.2.1/bits/stl_deque.h:266;MOV	-0x8(%R13),%RDI;
+0x43e03;/usr/include/c++/14.2.1/bits/stl_deque.h:668;SUB	$0x8,%R13;
+0x43e07;/usr/include/c++/14.2.1/bits/stl_deque.h:266;MOV	(%R14),%RSI;
+0x43e0a;/usr/include/c++/14.2.1/bits/stl_deque.h:672;AND	$0x3f,%R8D;
+0x43e0e;/usr/include/c++/14.2.1/bits/stl_deque.h:267;LEA	0x200(%RDI),%R10;
+0x43e15;/usr/include/c++/14.2.1/bits/stl_deque.h:267;LEA	0x200(%RSI),%RCX;
+0x43e1c;/usr/include/c++/14.2.1/bits/stl_deque.h:671;LEA	(%RDI,%R8,8),%R9;
+0x43e20;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VMOVQ	%RSI,%XMM2;
+0x43e25;/usr/include/c++/14.2.1/bits/stl_deque.h:267;VMOVQ	%R10,%XMM6;
+0x43e2a;/usr/include/c++/14.2.1/bits/stl_deque.h:267;VMOVQ	%RCX,%XMM1;
+0x43e2f;/usr/include/c++/14.2.1/bits/stl_deque.h:671;VMOVQ	%R9,%XMM5;
+0x43e34;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VPUNPCKLQDQ	%XMM2,%XMM2,%XMM0;
+0x43e38;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VPINSRQ	$0x1,%R13,%XMM6,%XMM7;
+0x43e3e;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VPINSRQ	$0x1,%R14,%XMM1,%XMM3;
+0x43e44;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VPINSRQ	$0x1,%RDI,%XMM5,%XMM8;
+0x43e4a;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VINSERTI128	$0x1,%XMM3,%YMM0,%YMM4;
+0x43e50;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VINSERTI128	$0x1,%XMM7,%YMM8,%YMM9;
+0x43e56;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VMOVDQU	%YMM4,0x10(%R15);
+0x43e5c;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VMOVDQU	%YMM9,0x30(%R15);
+0x43e62;/usr/include/c++/14.2.1/bits/stl_deque.h:669;VZEROUPPER;
+0x43e65;/usr/include/c++/14.2.1/bits/stl_deque.h:673;LEA	-0x28(%RBP),%RSP;
+0x43e69;/usr/include/c++/14.2.1/bits/stl_deque.h:673;POP	%RBX;
+0x43e6a;/usr/include/c++/14.2.1/bits/stl_deque.h:673;POP	%R12;
+0x43e6c;/usr/include/c++/14.2.1/bits/stl_deque.h:673;POP	%R13;
+0x43e6e;/usr/include/c++/14.2.1/bits/stl_deque.h:673;POP	%R14;
+0x43e70;/usr/include/c++/14.2.1/bits/stl_deque.h:673;POP	%R15;
+0x43e72;/usr/include/c++/14.2.1/bits/stl_deque.h:673;POP	%RBP;
+0x43e73;/usr/include/c++/14.2.1/bits/stl_deque.h:673;RET;
+0x43e74;/usr/include/c++/14.2.1/bits/stl_deque.h:686;MOV	%RAX,%RDI;
+0x43e77;/usr/include/c++/14.2.1/bits/stl_deque.h:686;VZEROUPPER;
+0x43e7a;/usr/include/c++/14.2.1/bits/stl_deque.h:686;CALL	4090 <__cxa_begin_catch@plt>;
+0x43e7f;/usr/include/c++/14.2.1/bits/stl_deque.h:699;CMP	%RBX,%R14;(477) 
+0x43e82;/usr/include/c++/14.2.1/bits/stl_deque.h:699;JAE	43e92 <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x282>;(477) 
+0x43e84;/usr/include/c++/14.2.1/bits/new_allocator.h:172;MOV	(%R14),%RDI;(477) 
+0x43e87;/usr/include/c++/14.2.1/bits/stl_deque.h:699;ADD	$0x8,%R14;(477) 
+0x43e8b;/usr/include/c++/14.2.1/bits/new_allocator.h:172;CALL	4400 <_ZdlPv@plt>;(477) 
+0x43e90;/usr/include/c++/14.2.1/bits/stl_deque.h:699;JMP	43e7f <_ZNSt11_Deque_baseIPK8QuadTreeSaIS2_EE17_M_initialize_mapEm+0x26f>;(477) 
+0x43e92;/usr/include/c++/14.2.1/bits/stl_deque.h:689;CALL	45f0 <__cxa_rethrow@plt>;
+0x43e97;/usr/include/c++/14.2.1/bits/stl_deque.h:686;MOV	%RAX,%R14;
+0x43e9a;/usr/include/c++/14.2.1/bits/stl_deque.h:686;VZEROUPPER;
+0x43e9d;/usr/include/c++/14.2.1/bits/stl_deque.h:686;CALL	45b0 <__cxa_end_catch@plt>;
+0x43ea2;/usr/include/c++/14.2.1/bits/stl_deque.h:659;MOV	%R14,%RDI;
+0x43ea5;/usr/include/c++/14.2.1/bits/stl_deque.h:659;CALL	4090 <__cxa_begin_catch@plt>;
+0x43eaa;/usr/include/c++/14.2.1/bits/new_allocator.h:172;MOV	(%R15),%RDI;
+0x43ead;/usr/include/c++/14.2.1/bits/new_allocator.h:172;CALL	4400 <_ZdlPv@plt>;
+0x43eb2;/usr/include/c++/14.2.1/bits/stl_deque.h:663;XOR	%R11D,%R11D;
+0x43eb5;/usr/include/c++/14.2.1/bits/stl_deque.h:663;MOV	%R11,(%R15);
+0x43eb8;/usr/include/c++/14.2.1/bits/stl_deque.h:663;MOV	%R11,0x8(%R15);
+0x43ebc;/usr/include/c++/14.2.1/bits/stl_deque.h:664;CALL	45f0 <__cxa_rethrow@plt>;
+0x43ec1;/usr/include/c++/14.2.1/bits/stl_deque.h:659;MOV	%RAX,%R15;
+0x43ec4;/usr/include/c++/14.2.1/bits/stl_deque.h:659;VZEROUPPER;
+0x43ec7;/usr/include/c++/14.2.1/bits/stl_deque.h:659;CALL	45b0 <__cxa_end_catch@plt>;
+0x43ecc;/usr/include/c++/14.2.1/bits/stl_deque.h:659;MOV	%R15,%RDI;
+0x43ecf;/usr/include/c++/14.2.1/bits/stl_deque.h:659;CALL	44d0 <_Unwind_Resume@plt>;
+0x43ed4;:0;NOPW	%CS:(%RAX,%RAX,1);
+0x43ede;:0;XCHG	%AX,%AX;

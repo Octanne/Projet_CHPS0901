@@ -1,0 +1,5 @@
+group_size;pattern;opcodes;offsets;addresses;stride_status;stride;memory_status;accessed_memory;accessed_memory_nooverlap;accessed_memory_overlap;span;head;unroll_factor;
+1;L;CMP,;8,;0x2b591,;Not found;0;Success;1;1;0;1;0;1;
+7;LLLLLLL;MOVSD,MOV,MOV,MOV,MOV,MOV,MOV,;16,0,0,48,56,64,72,;0x2b4a1,0x2b4a7,0x2b4b6,0x2b525,0x2b53c,0x2b553,0x2b588,;Not found;0;Success;56;48;8;80;0;1;
+1;L;MOVSD,;42501,;0x2b4fb,;RIP based value;0;Success;8;8;0;8;0;1;
+8;SSSSLLLL;MOVSD,MOVSD,MOVSD,MOVSD,MOVSD,MOVSD,SUBSD,MOVSD,;24,16,8,0,8,16,0,24,;0x2b4ab,0x2b4ba,0x2b4c8,0x2b4d6,0x2b4e0,0x2b4e6,0x2b4ec,0x2b4f1,;Success;0;Success;64;32;32;32;0;1;

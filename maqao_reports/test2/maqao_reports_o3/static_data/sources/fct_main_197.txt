@@ -1,0 +1,18 @@
+/usr/include/c++/14.2.1/bits/stl_vector.h: 993 - 1131
+--------------------------------------------------------------------------------
+
+993:       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+[...]
+1131: 	return *(this->_M_impl._M_start + __n);
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 296 - 314
+--------------------------------------------------------------------------------
+
+296:     #pragma omp parallel for
+297:     for (size_t i = 0; i < particles->size(); ++i) {
+298:         Particle* particle = (*particles)[i];
+[...]
+305:         particle->setVx(particle->getVx() + localAccX[i] * step);
+306:         particle->setVy(particle->getVy() + localAccY[i] * step);
+[...]
+313:         particle->setX(particle->getX() + particle->getVx() * step);
+314:         particle->setY(particle->getY() + particle->getVy() * step);

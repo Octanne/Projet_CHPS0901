@@ -1,0 +1,138 @@
+/usr/include/c++/14.2.1/bits/basic_ios.h: 49 - 49
+--------------------------------------------------------------------------------
+
+49:       if (!__f)
+/usr/include/c++/14.2.1/bits/new_allocator.h: 191 - 191
+--------------------------------------------------------------------------------
+
+191: 	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+/usr/include/c++/14.2.1/bits/vector.tcc: 114 - 123
+--------------------------------------------------------------------------------
+
+114: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+115: 	  {
+116: 	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
+117: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+118: 				     std::forward<_Args>(__args)...);
+119: 	    ++this->_M_impl._M_finish;
+120: 	    _GLIBCXX_ASAN_ANNOTATE_GREW(1);
+121: 	  }
+122: 	else
+123: 	  _M_realloc_append(std::forward<_Args>(__args)...);
+/usr/include/c++/14.2.1/ostream: 676 - 767
+--------------------------------------------------------------------------------
+
+676: 	__ostream_insert(__out, __s,
+[...]
+745:     { return flush(__os.put(__os.widen('\n'))); }
+[...]
+767:     { return __os.flush(); }
+/usr/include/c++/14.2.1/bits/stl_iterator.h: 1068 - 1068
+--------------------------------------------------------------------------------
+
+1068:       : _M_current(__i) { }
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 18 - 448
+--------------------------------------------------------------------------------
+
+18:     return *debugModePtr;
+[...]
+72:     if (!isDivided) {
+73:         if (!hasBody) {
+74:             particle = particleInsert;
+75:             hasBody = true;
+76:             // We increment the weight of the branch
+77:             weightBranch++;
+78:             return;
+79:         } else {
+80:             // Subdivide the region further by creating four children
+81:             // We moving body b update the center-of-mass and total mass of x.
+82:             subdivide();
+[...]
+324:     if (isDivided) {
+325:         northeast->recycle();
+326:         northwest->recycle();
+327:         southeast->recycle();
+328:         southwest->recycle();
+329:     }
+330:     nodePool.push_back(this);
+331: }
+332: 
+333: void QuadTree::reset() {
+334:     if (particle != nullptr && isDivided) {
+335:         delete particle;
+336: 
+337:         northeast->reset();
+338:         northwest->reset();
+339:         southeast->reset();
+340:         southwest->reset();
+341:     }
+342:     particle = nullptr;
+343: 
+344:     isDivided = false;
+345:     hasBody = false;
+346:     weightBranch = 0;
+347:     width = 0;
+348:     originX = 0;
+349:     originY = 0;
+350: 
+351:     // We set the children to nullptr
+352:     northeast = nullptr;
+353:     northwest = nullptr;
+354:     southeast = nullptr;
+355:     southwest = nullptr;
+356:     // particles = nullptr; // We do not delete the particles listes
+357: }
+[...]
+399: bool QuadTree::buildTree() {
+400:     // We build the tree
+401:     if (particles == nullptr) {
+402:         return false;
+403:     }
+404: 
+405:     // We reset the tree if it was already built
+406:     if (isDivided) {
+407:         if (debugMode()) std::cout << "Recycling the quadtree" << std::endl;
+408:         // We recycle the quadtree to avoid memory allocation and deallocation but only the children
+409:         // Because we are in the root node
+410:         if (northeast != nullptr) northeast->recycle();
+411:         if (northwest != nullptr) northwest->recycle();
+412:         if (southeast != nullptr) southeast->recycle();
+413:         if (southwest != nullptr) southwest->recycle();
+414:         // We reset the root node
+415:         reset();
+416:     }
+417: 
+418:     if (debugMode()) std::cout << "Compute the quadtree base width" << std::endl;
+[...]
+428:     width = 0.0;
+429:     for (Particle* particle : *particles) {
+430:         double distance = std::max(std::abs(particle->getX()), std::abs(particle->getY()));
+431:         if (distance > width) {
+432:             width = distance;
+433:         }
+434:     }
+435: 
+436:     // We do x2 for minus and plus
+437:     width *= 2;
+438:     // We do a little bit more to avoid particles to be on the edge
+439:     width *= 1.1;
+440: 
+441:     if (debugMode()) std::cout << "Building the quadtree" << std::endl;
+442:     // We insert the particles into the quadtree
+443:     for (Particle* particle : *particles) {
+444:         insertSimple(particle);
+445:     }
+446: 
+447:     return true;
+448: }
+/usr/include/c++/14.2.1/bits/std_abs.h: 72 - 72
+--------------------------------------------------------------------------------
+
+72:   { return __builtin_fabs(__x); }
+/usr/include/c++/14.2.1/bits/locale_facets.h: 882 - 885
+--------------------------------------------------------------------------------
+
+882: 	if (_M_widen_ok)
+883: 	  return _M_widen[static_cast<unsigned char>(__c)];
+884: 	this->_M_widen_init();
+885: 	return this->do_widen(__c);

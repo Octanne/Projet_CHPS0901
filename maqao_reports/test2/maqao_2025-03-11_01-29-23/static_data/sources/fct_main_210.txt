@@ -1,0 +1,53 @@
+/usr/include/c++/14.2.1/bits/stl_vector.h: 99 - 1327
+--------------------------------------------------------------------------------
+
+99: 	: _M_start(), _M_finish(), _M_end_of_storage()
+[...]
+1327: 	--this->_M_impl._M_finish;
+/usr/include/c++/14.2.1/bits/stl_iterator.h: 1068 - 1068
+--------------------------------------------------------------------------------
+
+1068:       : _M_current(__i) { }
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 31 - 357
+--------------------------------------------------------------------------------
+
+31:     : particle(nullptr), isDivided(false), hasBody(false), width(width), weightBranch(weightBranch),
+32:       originX(originX), originY(originY), northeast(nullptr), 
+33:       northwest(nullptr), southeast(nullptr), southwest(nullptr) {
+34:     this->particles = new std::vector<Particle*>();
+[...]
+312: QuadTree* QuadTree::getNode(double w, double ox, double oy, int weightBranch) {
+313:     if (nodePool.empty()) {
+314:         return new QuadTree(w, ox, oy, 0);
+315:     }
+316:     QuadTree* node = nodePool.back();
+317:     nodePool.pop_back();
+318:     node->reset(); // Clear children/particle
+319:     node->width = w; node->originX = ox; node->originY = oy; node->weightBranch = weightBranch;
+320:     return node;
+321: }
+[...]
+334:     if (particle != nullptr && isDivided) {
+335:         delete particle;
+336: 
+337:         northeast->reset();
+338:         northwest->reset();
+339:         southeast->reset();
+340:         southwest->reset();
+341:     }
+342:     particle = nullptr;
+343: 
+344:     isDivided = false;
+345:     hasBody = false;
+346:     weightBranch = 0;
+347:     width = 0;
+348:     originX = 0;
+349:     originY = 0;
+350: 
+351:     // We set the children to nullptr
+352:     northeast = nullptr;
+353:     northwest = nullptr;
+354:     southeast = nullptr;
+355:     southwest = nullptr;
+356:     // particles = nullptr; // We do not delete the particles listes
+357: }

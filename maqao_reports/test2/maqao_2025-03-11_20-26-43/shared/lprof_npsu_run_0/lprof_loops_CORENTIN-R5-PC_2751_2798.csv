@@ -1,0 +1,9 @@
+loop_id;module;function_name;function_id;source_info;level;inc_time_p;inc_time_s;inc_time_s_min;inc_time_s_avg;inc_time_s_max;inc_cov_deviation;inc_time_deviation;exc_time_p;exc_time_s;exc_time_s_min;exc_time_s_avg;exc_time_s_max;exc_cov_deviation;exc_time_deviation;nb_threads;flops;
+449;main;QuadTree::calculateForce(Particle*, double&, double&) const;206;quadtree.cpp:143-143,quadtree.cpp:163-163,quadtree.cpp:171-174,quadtree.cpp:181-184;Innermost;28.320779800415;9.1999988555908;;;;;;28.320779800415;9.1999988555908;;;;;;;;
+450;main;QuadTree::calculateForce(Particle*, double&, double&) const;206;quadtree.cpp:163-163,quadtree.cpp:183-184;Outermost;44.974632263184;14.609998703003;;;;;;16.653852462769;5.4100003242493;;;;;;;;
+454;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:275-279;Innermost;0.3694015443325;0.12000001221895;;;;;;0.3694015443325;0.12000001221895;;;;;;;;
+457;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:272-272;Single;0.076958656311035;0.025000002235174;;;;;;0.076958656311035;0.025000002235174;;;;;;;;
+455;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;stl_vector.h:1131-1131,stl_iterator.h:1068-1068,quadtree.cpp:274-279;Outermost;0.43096846342087;0.14000000059605;;;;;;0.061566922813654;0.02000000141561;;;;;;;;
+446;main;QuadTree::updateParticles(double) [clone ._omp_fn.2];196;stl_vector.h:1131-1131,quadtree.cpp:293-293,quadtree.cpp:300-301,quadtree.cpp:308-309;Single;0.061566922813654;0.02000000141561;;;;;;0.061566922813654;0.02000000141561;;;;;;;;
+459;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:272-272;Single;0.015391730703413;0.0050000003539026;;;;;;0.015391730703413;0.0050000003539026;;;;;;;;
+453;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];207;quadtree.cpp:272-272;Innermost;0.015391730703413;0.0050000003539026;;;;;;0.015391730703413;0.0050000003539026;;;;;;;;

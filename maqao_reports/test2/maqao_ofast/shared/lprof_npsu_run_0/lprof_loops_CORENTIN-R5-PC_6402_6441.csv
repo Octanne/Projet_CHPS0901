@@ -1,0 +1,10 @@
+loop_id;module;function_name;function_id;source_info;level;inc_time_p;inc_time_s;inc_time_s_min;inc_time_s_avg;inc_time_s_max;inc_cov_deviation;inc_time_deviation;exc_time_p;exc_time_s;exc_time_s_min;exc_time_s_avg;exc_time_s_max;exc_cov_deviation;exc_time_deviation;nb_threads;flops;
+451;main;QuadTree::calculateForce(Particle*, double&, double&) const;205;quadtree.cpp:143-143,quadtree.cpp:163-163,quadtree.cpp:171-174,quadtree.cpp:181-184;Innermost;35.937019348145;15.434991836548;;;;;;35.937019348145;15.434991836548;;;;;;;;
+452;main;QuadTree::calculateForce(Particle*, double&, double&) const;205;quadtree.cpp:163-163,quadtree.cpp:183-184;Outermost;48.882270812988;20.99499130249;;;;;;12.945246696472;5.5599985122681;;;;;;;;
+456;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:275-279;Innermost;0.47729775309563;0.20499992370605;;;;;;0.47729775309563;0.20499992370605;;;;;;;;
+457;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;stl_vector.h:1131-1131,stl_iterator.h:1068-1068,quadtree.cpp:274-279;Outermost;0.57042902708054;0.2449999153614;;;;;;0.09313128888607;0.03999999538064;;;;;;;;
+448;main;QuadTree::updateParticles(double) [clone ._omp_fn.2];195;stl_vector.h:1131-1131,quadtree.cpp:293-293,quadtree.cpp:300-301,quadtree.cpp:308-309;Single;0.09313128888607;0.03999999538064;;;;;;0.09313128888607;0.03999999538064;;;;;;;;
+459;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:272-272;Single;0.046565644443035;0.01999999769032;;;;;;0.046565644443035;0.01999999769032;;;;;;;;
+455;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:272-272;Innermost;0.034924235194921;0.014999999664724;;;;;;0.034924235194921;0.014999999664724;;;;;;;;
+461;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:272-272;Single;0.011641411110759;0.00499999942258;;;;;;0.011641411110759;0.00499999942258;;;;;;;;
+454;main;QuadTree::updateParticles(double) [clone ._omp_fn.1];206;quadtree.cpp:272-272;Innermost;0.011641411110759;0.00499999942258;;;;;;0.011641411110759;0.00499999942258;;;;;;;;

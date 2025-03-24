@@ -1,0 +1,35 @@
+
+* Info: "ref-cycles" not supported on CORENTIN-R5-PC: fallback to "cpu-clock"[0mBarnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 10000 particles
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 1759.99
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 10000
+Number of MPI processes: 2
+Number of OpenMP threads: 2
+Starting simulation with 10000 particles
+Simulation time: 4.50516 seconds
+Creating folder results
+Particles status result saved to results/particle_output_1741652971.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+
+
+Your experiment path is /home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0
+
+To display your profiling results:
+#######################################################################################################################################################################
+#    LEVEL    |     REPORT     |                                                               COMMAND                                                                #
+#######################################################################################################################################################################
+#  Functions  |  Cluster-wide  |  maqao lprof -df xp=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0      #
+#  Functions  |  Per-node      |  maqao lprof -df -dn xp=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-process   |  maqao lprof -df -dp xp=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0  #
+#  Functions  |  Per-thread    |  maqao lprof -df -dt xp=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0  #
+#  Loops      |  Cluster-wide  |  maqao lprof -dl xp=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0      #
+#  Loops      |  Per-node      |  maqao lprof -dl -dn xp=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-process   |  maqao lprof -dl -dp xp=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0  #
+#  Loops      |  Per-thread    |  maqao lprof -dl -dt xp=/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/maqao_2025-03-11_01-29-23/tools/lprof_npsu_run_0  #
+#######################################################################################################################################################################
+

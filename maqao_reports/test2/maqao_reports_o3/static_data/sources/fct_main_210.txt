@@ -1,0 +1,36 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 71 - 111
+--------------------------------------------------------------------------------
+
+71: void QuadTree::insertSimple(Particle* particleInsert) {
+72:      // If node x does not contain a body, put the new body b here.
+73:      if (!isDivided) {
+74:         if (!hasBody) {
+75:             particle = particleInsert;
+76:             hasBody = true;
+77:             // We increment the weight of the branch
+78:             weightBranch++;
+79:             return;
+80:         } else {
+81:             // Subdivide the region further by creating four children
+82:             // We moving body b update the center-of-mass and total mass of x.
+83:             subdivide();
+[...]
+89:     updateCenterOfMass(particleInsert);
+90:     // Recursively insert the body b in the appropriate quadrant.
+91:     if (particleInsert->getX() < getOriginX()) { // We check for west quadrants
+92:         if (particleInsert->getY() < getOriginY()) {
+93:             southwest->insertSimple(particleInsert);
+94:             //std::cout << "SouthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+95:         } else {
+96:             northwest->insertSimple(particleInsert);
+97:             //std::cout << "NorthWest inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+98:         }
+99:     } else { // We check for east quadrants
+100:         if (particleInsert->getY() < getOriginY()) {
+101:             southeast->insertSimple(particleInsert);
+102:             //std::cout << "SouthEast inserted particle at (" << particleInsert->getX() << ", " << particleInsert->getY() << ", " << particleInsert->getMass() << ")" << std::endl;
+103:         } else {
+104:             northeast->insertSimple(particleInsert);
+[...]
+110:     weightBranch++;
+111: }

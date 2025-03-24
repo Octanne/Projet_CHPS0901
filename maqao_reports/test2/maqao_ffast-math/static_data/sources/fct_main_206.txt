@@ -1,0 +1,21 @@
+/usr/include/c++/14.2.1/bits/stl_vector.h: 993 - 1131
+--------------------------------------------------------------------------------
+
+993:       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+[...]
+1131: 	return *(this->_M_impl._M_start + __n);
+/usr/include/c++/14.2.1/bits/stl_iterator.h: 1068 - 1068
+--------------------------------------------------------------------------------
+
+1068:       : _M_current(__i) { }
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 272 - 279
+--------------------------------------------------------------------------------
+
+272:     #pragma omp parallel for reduction(+:localAccX[:particles->size()]) reduction(+:localAccY[:particles->size()])
+273:     for (size_t i = 0; i < particles->size(); ++i) {
+274:         Particle* particle = (*particles)[i];
+275:         for (QuadTree* node : poOfSubtree[*rankMPI]) {
+276:             double fx = 0.0, fy = 0.0;
+277:             node->calculateForce(particle, fx, fy); // Déjà basé sur G*mass/d²
+278:             localAccX[i] += fx; // fx contient l'accélération (pas besoin de diviser par mass)
+279:             localAccY[i] += fy;

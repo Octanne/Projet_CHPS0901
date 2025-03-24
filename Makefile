@@ -1,49 +1,34 @@
 # Makefile for C++ project
-INSTALL_DIR=libs/install
+VERSIONS_DIR=versions
+VERSIONS_COMPILATION=$(wildcard $(VERSIONS_DIR)/*)
+# We remove the versions/ prefix
+VERS=$(subst versions/,,$(VERSIONS_COMPILATION))
+# version specific targets
+NO_VISUAL=0
 
-# Compiler
-CXX = mpicxx
-
-# Directories
-SRC_DIR = sources
-HEADER_DIR = headers
-OBJ_DIR = obj
-BIN_DIR = bin
-
-# Files
-SOURCES = $(wildcard $(SRC_DIR)/*.cpp)
-HEADERS = $(wildcard $(HEADER_DIR)/*.h)
-OBJECTS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SOURCES))
-EXECUTABLE = $(BIN_DIR)/main
-
-# Flags
-# Potential flags : -std=c++11 -g -O3 -fno-math-errno -fno-trapping-math -march=native -funroll-loops
-CXXFLAGS = -I$(HEADER_DIR) -Wall -Wextra -std=c++11 -g -flto=auto -O3 -march=native -funroll-loops -DNDEBUG -fno-math-errno -fno-trapping-math
-LDFLAGS = -lGLEW -lGL -lglfw -fopenmp
-LDFLAGS_LOCAL = -I${INSTALL_DIR}/include -L${INSTALL_DIR}/lib64 -lGLEW -lglfw -lGL -fopenmp
+# We print the list of available versions 
+# Only print the version name
+versions: $(VERSIONS_COMPILATION)
+	@echo "Specifying LOCAL_LIBS=1 will build the version with local libraries."
+	@echo "Specifying NO_VISUAL=1 will build the version without visualisation."
+	@echo "Available versions:"
+	@echo $(VERSIONS_COMPILATION) | tr ' ' '\n' | sed 's|^|  - |; s|versions/||'
 
 # Targets
-all: $(EXECUTABLE)
+all: $(VERS)
 
-# Local library build
-locallibs: LDFLAGS=$(LDFLAGS_LOCAL)
-locallibs: CXXFLAGS+=-I${INSTALL_DIR}/include
-locallibs: $(EXECUTABLE)
+# We build the versions
+$(VERS):
+	@echo "Building $@..."
+	$(MAKE) -C $(VERSIONS_DIR)/$@ $(if $(filter 1,$(NO_VISUAL)),novisual)
+	@echo "Building $@ done."
 
-# No visualisation
-novisual: LDFLAGS=-fopenmp
-novisual: CXXFLAGS+=-DVISU=0
-novisual: $(EXECUTABLE)
-
-$(EXECUTABLE): $(OBJECTS)
-	@mkdir -p $(BIN_DIR)
-	$(CXX) $(OBJECTS) -o $@ $(LDFLAGS)
-
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADERS)
-	@mkdir -p $(OBJ_DIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@ $(LDFLAGS)
-
+# We clean the versions
 clean:
-	rm -rf $(OBJ_DIR) $(BIN_DIR)
+	@echo "Cleaning..."
+	@for version in $(VERS); do \
+		$(MAKE) -s -C $(VERSIONS_DIR)/$$version clean; \
+	done
+	@echo "Cleaning done."
 
 .PHONY: all clean

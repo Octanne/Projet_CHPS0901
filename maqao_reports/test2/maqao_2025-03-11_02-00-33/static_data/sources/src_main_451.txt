@@ -1,0 +1,16 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 143 - 184
+--------------------------------------------------------------------------------
+
+143:     return std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+[...]
+163:     if (!isDivided) {
+[...]
+171:         double s = width;
+172:         double d = distance(b->getX(), b->getY(), particle->getX(), particle->getY());
+173:         // If ratio > theta we perform recursively on each of the current node's children.
+174:         if (s / d < theta) { 
+[...]
+181:             if (northeast != nullptr) northeast->calculateForce(b, fx, fy);
+182:             if (northwest != nullptr) northwest->calculateForce(b, fx, fy);
+183:             if (southeast != nullptr) southeast->calculateForce(b, fx, fy);
+184:             if (southwest != nullptr) southwest->calculateForce(b, fx, fy);

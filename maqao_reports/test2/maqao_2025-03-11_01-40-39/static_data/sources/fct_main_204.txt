@@ -1,0 +1,10 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 132 - 138
+--------------------------------------------------------------------------------
+
+132: void QuadTree::updateCenterOfMass(Particle* particleInsert) {
+133:     double totalMass = particle->getMass() + particleInsert->getMass();
+134:     particle->setX((particle->getX() * particle->getMass() + particleInsert->getX() * particleInsert->getMass()) / totalMass);
+135:     particle->setY((particle->getY() * particle->getMass() + particleInsert->getY() * particleInsert->getMass()) / totalMass);
+136:     particle->setMass(totalMass);
+137:     //std::cout << "Center of mass updated" << std::endl;
+138: }

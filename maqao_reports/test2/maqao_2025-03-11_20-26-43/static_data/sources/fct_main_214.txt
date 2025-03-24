@@ -1,0 +1,34 @@
+/home/corentin/Documents/Cours/M2/CHPS0901/Projet_CHPS0901/sources/quadtree.cpp: 318 - 406
+--------------------------------------------------------------------------------
+
+318:     clear();
+[...]
+368: void QuadTree::clear() {
+369:     if (isDivided) {
+370:         //std::cerr << "Deleting quadtree" << std::endl;
+371:         //std::cerr << "Deleting the quadtree at (" << originX << ", " << originY << ")" << std::endl;
+372:         // We delete the particle if divided because it as been created by the quadtree
+373:         if (particle != nullptr) {
+374:             delete particle;
+[...]
+382:         delete northeast;
+383:         delete northwest;
+384:         delete southeast;
+385:         delete southwest;
+[...]
+391:     particle = nullptr;
+392: 
+393:     isDivided = false;
+394:     hasBody = false;
+395:     weightBranch = 0;
+396:     width = 0;
+397:     originX = 0;
+398:     originY = 0;
+399: 
+400:     // We set the children to nullptr
+401:     northeast = nullptr;
+402:     northwest = nullptr;
+403:     southeast = nullptr;
+404:     southwest = nullptr;
+405:     // particles = nullptr; // We do not delete the particles listes
+406: }

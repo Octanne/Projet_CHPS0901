@@ -1,0 +1,3 @@
+group_size;pattern;opcodes;offsets;addresses;stride_status;stride;memory_status;accessed_memory;accessed_memory_nooverlap;accessed_memory_overlap;span;head;unroll_factor;
+1;L;MOV,;0,;0x2ce5e,;Not found;0;Success;8;8;0;8;0;1;
+5;LLSSS;CMP,CMP,ADD,MOV,MOV,;8,9,24,0,9,;0x2ce5a,0x2ce40,0x2ce4a,0x2ce4e,0x2ce51,;Success;0;Success;15;14;1;28;0;1;
