@@ -6,9 +6,16 @@ The simulation window size is 219999
 Running simulation for 100 steps with a time step of 1s
 Simulation ended in 128.761s
 Folder created: results
+With 100 000 particles
 Particles status result saved to results/particle_output_1742847547.txt
 End of Simulation with Barnes-Hut Sequential Implementation
 ========================================
 Barnes-Hut Sequential Implementation
 The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
+Simulation ended in 1842.83s
+Folder created: results
+With 800 000 particles
+Particles status result saved to results/particle_output_1742849399.txt
+End of Simulation with Barnes-Hut Sequential Implementation
+========================================

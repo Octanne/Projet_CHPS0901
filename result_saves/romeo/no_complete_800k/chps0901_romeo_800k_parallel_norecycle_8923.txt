@@ -2,251 +2,297 @@ Loading x86_64 (no gpu) environment
 Environment loaded. Spack available.
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 1
-Starting simulation with 100000 particles
-Simulation time: 123.263 seconds
+Starting simulation with 800000 particles
+Simulation time: 1687.28 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742846925.txt
+Particles status result saved to results/particle_output_1742850260.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 2
-Starting simulation with 100000 particles
-Simulation time: 134.213 seconds
+Starting simulation with 800000 particles
+Simulation time: 1691.54 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742847060.txt
+Particles status result saved to results/particle_output_1742851958.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 3
-Starting simulation with 100000 particles
-Simulation time: 139.42 seconds
+Starting simulation with 800000 particles
+Simulation time: 1693.72 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742847201.txt
+Particles status result saved to results/particle_output_1742853659.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 4
-Starting simulation with 100000 particles
-Simulation time: 142.128 seconds
+Starting simulation with 800000 particles
+Simulation time: 1697.7 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742847344.txt
+Particles status result saved to results/particle_output_1742855363.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 5
-Starting simulation with 100000 particles
-Simulation time: 143.994 seconds
+Starting simulation with 800000 particles
+Simulation time: 1703.21 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742847489.txt
+Particles status result saved to results/particle_output_1742857073.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 6
-Starting simulation with 100000 particles
-Simulation time: 146.646 seconds
+Starting simulation with 800000 particles
+Simulation time: 1699.66 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742847637.txt
+Particles status result saved to results/particle_output_1742858779.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 7
-Starting simulation with 100000 particles
-Simulation time: 148.058 seconds
+Starting simulation with 800000 particles
+Simulation time: 1706.78 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742847786.txt
+Particles status result saved to results/particle_output_1742860492.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 8
-Starting simulation with 100000 particles
-Simulation time: 150.674 seconds
+Starting simulation with 800000 particles
+Simulation time: 1706.33 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742847938.txt
+Particles status result saved to results/particle_output_1742862205.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 9
-Starting simulation with 100000 particles
-Simulation time: 151.609 seconds
+Starting simulation with 800000 particles
+Simulation time: 1706.9 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742848091.txt
+Particles status result saved to results/particle_output_1742863918.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 10
-Starting simulation with 100000 particles
-Simulation time: 152.99 seconds
+Starting simulation with 800000 particles
+Simulation time: 1712.57 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742848262.txt
+Particles status result saved to results/particle_output_1742865637.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 11
-Starting simulation with 100000 particles
-Simulation time: 155.178 seconds
+Starting simulation with 800000 particles
+Simulation time: 1708.15 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742848418.txt
+Particles status result saved to results/particle_output_1742867352.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 12
-Starting simulation with 100000 particles
-Simulation time: 156.863 seconds
+Starting simulation with 800000 particles
+Simulation time: 1712.73 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742848576.txt
+Particles status result saved to results/particle_output_1742869071.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 13
-Starting simulation with 100000 particles
-Simulation time: 158.25 seconds
+Starting simulation with 800000 particles
+Simulation time: 1707.63 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742848736.txt
+Particles status result saved to results/particle_output_1742870786.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 14
-Starting simulation with 100000 particles
-Simulation time: 159.714 seconds
+Starting simulation with 800000 particles
+Simulation time: 1709.7 seconds
 Folder created: results
-Particles status result saved to results/particle_output_1742848896.txt
+Particles status result saved to results/particle_output_1742872502.txt
 End of Simulation with Barnes-Hut MPI/OpenMP Implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP Implementation
-Generating 100000 particles
+Generating 800000 particles
 Particles received by rank 0
-The simulation window size is 219999
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 15
-Starting simulation with 100000 particles
+Starting simulation with 800000 particles
+Simulation time: 1708.56 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742874217.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Particles received by rank 0
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 1
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 1713.43 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742875937.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Particles received by rank 0
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 1
+Number of OpenMP threads: 17
+Starting simulation with 800000 particles
+slurmstepd: error: *** JOB 8923 ON romeo-c024 CANCELLED AT 2025-03-25T05:36:28 DUE TO TIME LIMIT ***
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[31521,0],0] on node romeo-c024
+  Remote daemon: [[31521,0],1] on node romeo-c025
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------
