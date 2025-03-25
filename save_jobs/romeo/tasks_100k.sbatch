@@ -9,7 +9,6 @@ VERS=$(basename $(dirname $(dirname $BIN_PATH)))
 
 sbatch <<EOF
 #!/bin/bash
-#!/bin/bash
 #SBATCH --job-name=chps0901_romeo_results_100k
 #SBATCH --output=results/romeo/chps0901_romeo_100k_${VERS}_%j.txt
 #SBATCH --ntasks=$NTASKS

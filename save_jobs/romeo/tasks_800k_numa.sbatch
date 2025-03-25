@@ -9,7 +9,6 @@ VERS=$(basename $(dirname $(dirname $BIN_PATH)))
 
 sbatch <<EOF
 #!/bin/bash
-#!/bin/bash
 #SBATCH --job-name=chps0901_romeo_results_800k_numa_${VERS}
 #SBATCH --output=results/romeo/chps0901_romeo_800k_numa_${VERS}_%j.txt
 #SBATCH --ntasks=$NTASKS
@@ -27,7 +26,7 @@ for NTASKS in {1..8}; do
     for CPUS_PER_TASK in {1..24}; do
         echo "========================================"
         export OMP_NUM_THREADS=\$CPUS_PER_TASK
-        mpirun --map-by ppr:1:node -n \$NTASKS $BIN_PATH -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000
+        mpirun --map-by numa --bind-to numa -np \$NTASKS $BIN_PATH -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000
         echo "========================================"
     done
 done
