@@ -3,6 +3,31 @@
 ## Description
 Ce projet est une application qui simule l'algorithme de Barnes-Hut pour la simulation de systèmes de particules.
 
+## Performances
+
+### Comparaison des temps d'exécution
+
+| Version                | Particules | Configuration            | Temps (s)   |
+|------------------------|------------|--------------------------|-------------|
+| Sequential             | 100k       | -                        | 128.761     |
+| Sequential             | 800k       | -                        | 1842.83     |
+| Parallel recur         | 100k       | 8 MPI, 24 threads        | 13.1497     |
+| Parallel recur         | 100k       | 5 MPI, 24 threads        | 12.042      |
+| Parallel recur         | 100k       | 4 MPI, 24 threads        | 7.8727      |
+| Parallel no_recycle    | 100k       | 8 MPI, 24 threads        | 21.0021     |
+| Parallel no_recycle    | 100k       | 5 MPI, 24 threads        | 19.9955     |
+| Parallel no_recycle    | 100k       | 4 MPI, 24 threads        | 16.3927     |
+| Parallel vect (stack)  | 100k       | 8 MPI, 24 threads        | 40.9011     |
+| Parallel vect (stack)  | 100k       | 5 MPI, 24 threads        | 32.0044     |
+| Parallel vect (stack)  | 100k       | 4 MPI, 24 threads        | 10.5198     |
+| Parallel recur         | 800k       | 8 MPI, 24 threads        | 832.531     |
+
+### Observations
+
+- Les versions parallèles montrent une accélération significative par rapport à la version séquentielle.
+- La configuration avec 4 MPI et 24 threads semble offrir les meilleures performances pour les versions parallèles.
+- Les résultats peuvent varier en fonction de l'affinité des threads et du binding des NUMA nodes. Lors de nos tests, les tâches étaient réparties sur plusieurs nœuds sans binding spécifique, ce qui peut expliquer pourquoi certaines configurations avec moins de ressources (OMP) ont produit de meilleurs résultats.
+
 ## Prérequis
 Avant de pouvoir utiliser et compiler l'application, assurez-vous d'avoir installé les bibliothèques nécessaires.
 
@@ -54,7 +79,7 @@ Les versions spécifiques disponibles sont :
 - `sequential`
 
 ## Structure du projet
-Le projet est organisé comme suit :
+Le projet est organisé comme suit pour chaque version situé dans le dossier 'versions' :
 ```
 Projet_CHPS0901/
 ├── bin/         # Contient les exécutables compilés
