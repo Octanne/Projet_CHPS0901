@@ -4,6 +4,7 @@ bin/
 obj/
 # Remove results directory
 results/particles_old/particle_*
+results/particle_*
 # Remove local libs directory
 libs/
 # Remove jobs file directory
