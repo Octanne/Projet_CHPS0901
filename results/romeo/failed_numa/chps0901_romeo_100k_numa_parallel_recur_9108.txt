@@ -1,0 +1,2594 @@
+Loading x86_64 (no gpu) environment
+Environment loaded. Spack available.
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 112.983 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917066.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 119.989 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917188.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 127.134 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917317.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 135.887 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917454.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 144.219 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917600.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 149.006 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917751.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 153.152 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917905.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 158.165 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918065.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 162.248 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918229.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 166.66 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918398.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 171.494 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918571.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 174.813 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918747.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 179.271 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918928.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 182.71 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919113.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 186.841 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919301.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 190.635 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919493.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 191.598 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919687.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 195.041 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919884.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 196.631 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920082.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 199.507 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920283.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 201.75 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920487.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 204.629 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920693.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 207.513 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920902.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 208.004 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921112.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 64.6329 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921178.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 72.49 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921252.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 81.0082 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921335.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 89.9854 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921427.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 97.5864 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921526.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 102.342 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921630.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 106.626 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921738.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 111.731 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921851.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 115.695 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921969.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 120.382 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742922091.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 123.873 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742922216.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 128.158 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742922346.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 132.88 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742922481.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 136.182 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742922619.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 139.835 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742922760.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 143.422 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742922905.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 144.877 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742923052.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 148.446 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742923202.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 150.299 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742923354.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 152.609 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742923509.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 156.607 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742923667.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 158.156 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742923827.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 160.389 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742923989.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 163.761 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924155.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 220.635 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924377.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 112.863 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924491.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 77.2711 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924570.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 59.5675 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924631.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 48.9158 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924681.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 41.8336 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924725.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 36.7291 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924763.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 33.6661 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924798.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 31.009 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924830.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 28.6069 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924860.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 26.4344 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924888.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 25.0688 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924915.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 39.8189 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924956.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 37.6466 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742924995.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 39.1599 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925035.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 36.7365 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925074.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 34.4771 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925110.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 36.8871 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925148.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 40.5243 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925190.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 37.9839 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925229.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 39.0205 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925270.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 43.5899 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925315.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 36.0469 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925352.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 35.7058 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925389.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_recur/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================

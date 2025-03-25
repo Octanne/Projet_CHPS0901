@@ -1,0 +1,2426 @@
+Loading x86_64 (no gpu) environment
+Environment loaded. Spack available.
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 122.142 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917075.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 132.978 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917209.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 137.805 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917348.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 140.769 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917490.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 142.757 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917680.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 144.82 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917826.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 146.93 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742917974.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 149.048 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918124.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 150.306 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918275.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 152.031 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918429.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 153.277 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918583.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 154.573 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918739.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 156.406 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918896.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 157.903 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919055.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 160.336 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919217.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 161.323 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919379.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 162.941 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919543.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 164.425 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919709.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 165.313 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742919875.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 166.629 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920043.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 168.286 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920212.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 169.175 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920383.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 170.268 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920554.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 100000 particles
+Particles received by rank 0
+The simulation window size is 219999
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 170.396 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920726.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  2
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  3
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  4
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  5
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  6
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  7
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================
+========================================
+--------------------------------------------------------------------------
+Your job has requested more processes than the ppr for
+this topology can support:
+
+  App: versions/parallel_norecycle/bin/main
+  Number of procs:  8
+  PPR: 1:node
+
+Please revise the conflict and try again.
+--------------------------------------------------------------------------
+========================================

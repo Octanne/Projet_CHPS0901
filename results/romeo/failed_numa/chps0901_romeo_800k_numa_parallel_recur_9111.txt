@@ -2,98 +2,93 @@ Loading x86_64 (no gpu) environment
 Environment loaded. Spack available.
 ========================================
 Barnes-Hut MPI/OpenMP with recycle memory implementation
-Generating 100000 particles
-Particles received by rank 0
-The simulation window size is 219999
+Generating 800000 particles
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 1
-Starting simulation with 100000 particles
-Simulation time: 123.281 seconds
-Folder created
-Particles status result saved to results/particle_output_1742917077.txt
+Starting simulation with 800000 particles
+Simulation time: 1557.81 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742918593.txt
 End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP with recycle memory implementation
-Generating 100000 particles
-Particles received by rank 0
-The simulation window size is 219999
+Generating 800000 particles
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 2
-Starting simulation with 100000 particles
-Simulation time: 129.965 seconds
-Folder created
-Particles status result saved to results/particle_output_1742917208.txt
+Starting simulation with 800000 particles
+Simulation time: 1573.33 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742920200.txt
 End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP with recycle memory implementation
-Generating 100000 particles
-Particles received by rank 0
-The simulation window size is 219999
+Generating 800000 particles
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 3
-Starting simulation with 100000 particles
-Simulation time: 137.264 seconds
-Folder created
-Particles status result saved to results/particle_output_1742917347.txt
+Starting simulation with 800000 particles
+Simulation time: 1582.88 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742921790.txt
 End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP with recycle memory implementation
-Generating 100000 particles
-Particles received by rank 0
-The simulation window size is 219999
+Generating 800000 particles
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 4
-Starting simulation with 100000 particles
-Simulation time: 141.731 seconds
-Folder created
-Particles status result saved to results/particle_output_1742917490.txt
+Starting simulation with 800000 particles
+Simulation time: 1599.78 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742923396.txt
 End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP with recycle memory implementation
-Generating 100000 particles
-Particles received by rank 0
-The simulation window size is 219999
+Generating 800000 particles
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 5
-Starting simulation with 100000 particles
-Simulation time: 144.409 seconds
-Folder created
-Particles status result saved to results/particle_output_1742917682.txt
+Starting simulation with 800000 particles
+Simulation time: 1597.2 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1742925000.txt
 End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
 ========================================
 ========================================
 Barnes-Hut MPI/OpenMP with recycle memory implementation
-Generating 100000 particles
-Particles received by rank 0
-The simulation window size is 219999
+Generating 800000 particles
+The simulation window size is 220000
 Running simulation for 100 steps with a time step of 1s
 Step (dt): 1s
 Number of epochs compute: 100
-Number of particles: 100000
+Number of particles: 800000
 Number of MPI processes: 1
 Number of OpenMP threads: 6
-Starting simulation with 100000 particles
+Starting simulation with 800000 particles
+slurmstepd: error: *** JOB 9111 ON romeo-c028 CANCELLED AT 2025-03-25T19:04:04 ***
