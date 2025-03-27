@@ -1,0 +1,3074 @@
+Loading x86_64 (no gpu) environment
+Environment loaded. Spack available.
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 112.716 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743079992.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 60.2861 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080054.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 42.4303 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080098.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 33.403 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080132.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 28.015 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080162.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 23.9549 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080187.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 21.5106 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080210.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 19.6802 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080231.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 18.0879 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080251.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 16.903 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080269.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 16.0558 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080286.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 15.1185 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080303.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 14.497 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080319.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 13.9661 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080334.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 13.4124 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080349.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 13.0244 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080363.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 12.641 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080377.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 12.2444 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080391.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 12.0288 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080404.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 11.7264 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080417.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 11.4794 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080430.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 11.2526 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080443.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 11.0531 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080455.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 1
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 10.9005 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080468.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 92.2008 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080561.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 47.9607 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080610.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 33.0665 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080645.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 25.5403 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080672.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 21.0227 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080694.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 17.6333 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080713.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 15.5169 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080730.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 13.9552 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080745.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 12.6212 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080759.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 11.6758 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080772.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 10.844 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080784.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 10.1415 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080808.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 9.61331 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080819.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 9.10663 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080830.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 8.66659 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080840.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 8.35114 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080849.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 8.00084 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080859.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 7.73879 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080868.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 7.42578 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080877.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 7.21078 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080885.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 7.01835 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080893.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 6.83037 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080902.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 6.69 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080910.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 2
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 6.52501 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743080918.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 83.3234 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081002.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 43.2042 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081047.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 29.5963 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081078.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 22.7434 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081102.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 18.5952 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081122.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 15.6835 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081139.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 13.7242 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081154.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 12.2317 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081167.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 11.0858 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081180.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 10.1872 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081191.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 9.48315 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081202.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 8.83795 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081212.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 8.38027 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081222.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 7.8855 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081231.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 7.53441 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081240.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 7.15268 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081249.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 6.87997 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081257.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 6.64512 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081265.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 6.37668 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081273.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 6.18405 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081280.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 5.98267 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081288.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 5.81969 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081295.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 5.66591 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081302.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 3
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 5.56629 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081309.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 77.9786 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081388.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 39.8584 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081429.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 27.1881 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081458.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 20.8025 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081480.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 16.9642 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081498.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 14.1507 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081514.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 12.2656 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081527.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 10.9821 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081540.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 9.91032 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081551.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 9.06255 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081561.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 8.38073 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081571.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 7.7842 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081580.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 7.30517 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081589.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 6.91802 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081597.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 6.5139 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081605.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 6.21016 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081613.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 5.93462 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081620.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 5.6698 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081627.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 5.42968 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081634.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 5.31182 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081640.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 5.09415 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081647.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 4.95493 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081653.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 4.79676 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081659.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 4
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 4.64395 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081665.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 74.0613 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081741.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 38.116 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081780.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 26.0017 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081808.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 19.8633 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081829.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 16.1965 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081846.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 13.6237 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081861.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 11.8716 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081875.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 10.539 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081886.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 9.52375 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081897.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 8.73736 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081907.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 8.10871 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081917.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 7.54229 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081926.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 7.09997 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081934.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 6.69451 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081942.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 6.3228 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081950.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 6.06256 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081957.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 5.76712 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081965.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 5.53751 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081972.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 5.33845 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081978.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 5.14791 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081985.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 4.9961 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081991.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 4.82279 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081997.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 4.73317 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082003.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 5
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 4.61549 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082009.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 71.8616 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082083.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 36.8338 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082121.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 25.111 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082147.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 19.1614 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082168.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 15.6523 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082185.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 13.1538 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082199.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 11.4495 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082212.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 10.2132 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082224.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 9.22095 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082234.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 8.42303 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082244.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 7.7919 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082253.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 7.25151 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082262.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 6.81956 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082270.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 6.40167 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082278.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 6.09591 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082285.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 5.8068 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082292.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 5.56315 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082299.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 5.35466 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082306.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 5.14425 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082313.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 4.97358 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082319.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 4.79411 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082325.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 4.64309 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082331.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 4.52518 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082337.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 6
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 4.43275 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082343.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 69.85 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082414.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 35.6079 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082451.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 24.2555 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082477.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 18.6156 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082497.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 15.1518 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082513.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 12.7206 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082527.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 11.0631 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082540.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 9.82478 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082551.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 9.03834 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082561.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 14.6052 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082577.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 19.7899 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082598.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 22.8117 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082622.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 23.2227 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082647.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 24.0312 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082672.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 26.0395 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082700.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 28.0214 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082729.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 27.2899 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082758.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 28.4317 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082788.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 29.9273 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082819.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 29.1326 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082849.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 28.4753 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082879.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 30.548 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082911.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 30.0937 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082943.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 7
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 28.8118 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082973.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 1
+Starting simulation with 100000 particles
+Simulation time: 67.6336 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083042.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 2
+Starting simulation with 100000 particles
+Simulation time: 34.4512 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083078.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 3
+Starting simulation with 100000 particles
+Simulation time: 23.378 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083102.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 4
+Starting simulation with 100000 particles
+Simulation time: 17.819 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083122.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 5
+Starting simulation with 100000 particles
+Simulation time: 14.4396 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083137.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 6
+Starting simulation with 100000 particles
+Simulation time: 12.1191 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083151.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 7
+Starting simulation with 100000 particles
+Simulation time: 10.5382 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083163.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 8
+Starting simulation with 100000 particles
+Simulation time: 9.3555 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083173.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 9
+Starting simulation with 100000 particles
+Simulation time: 8.4199 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083183.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 10
+Starting simulation with 100000 particles
+Simulation time: 14.055 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083199.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 11
+Starting simulation with 100000 particles
+Simulation time: 18.7457 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083219.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 12
+Starting simulation with 100000 particles
+Simulation time: 23.7201 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083244.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 13
+Starting simulation with 100000 particles
+Simulation time: 22.5846 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083268.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 14
+Starting simulation with 100000 particles
+Simulation time: 24.9585 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083294.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 15
+Starting simulation with 100000 particles
+Simulation time: 23.8331 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083319.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 16
+Starting simulation with 100000 particles
+Simulation time: 24.9124 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083346.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 17
+Starting simulation with 100000 particles
+Simulation time: 25.7226 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083373.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 18
+Starting simulation with 100000 particles
+Simulation time: 27.0184 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083401.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 19
+Starting simulation with 100000 particles
+Simulation time: 25.5565 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083428.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 20
+Starting simulation with 100000 particles
+Simulation time: 27.0916 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083457.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 21
+Starting simulation with 100000 particles
+Simulation time: 27.8638 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083486.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 22
+Starting simulation with 100000 particles
+Simulation time: 26.7336 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083514.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 23
+Starting simulation with 100000 particles
+Simulation time: 27.9824 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083543.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 100000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 100000
+Number of MPI processes: 8
+Number of OpenMP threads: 24
+Starting simulation with 100000 particles
+Simulation time: 27.7154 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083572.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
