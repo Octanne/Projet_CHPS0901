@@ -23,7 +23,7 @@ spack load openmpi@4.1.7 %aocc
 ulimit -s unlimited
 
 for NTASKS in {2..8}; do
-    for CPUS_PER_TASK in {8..24}; do
+    for CPUS_PER_TASK in {4 8 16 24}; do
         echo "========================================"
         export OMP_NUM_THREADS=\$CPUS_PER_TASK
         mpirun -n \$NTASKS $BIN_PATH -n $N_PARTICULES -e $N_ITERATIONS -t 1 -w 100000
