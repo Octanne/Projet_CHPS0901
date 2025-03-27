@@ -76,6 +76,7 @@ Les versions spécifiques disponibles sont :
 - `parallel_vect`
 - `parallel_recur`
 - `parallel_norecycle`
+- `parallel_localtree`
 - `sequential`
 
 ## Structure du projet
