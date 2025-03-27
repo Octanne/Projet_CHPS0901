@@ -9,5 +9,5 @@ Step (dt): 1s
 Number of epochs compute: 100
 Number of particles: 800000
 Number of MPI processes: 2
-Number of OpenMP threads: 8
+Number of OpenMP threads: 4
 Starting simulation with 800000 particles
