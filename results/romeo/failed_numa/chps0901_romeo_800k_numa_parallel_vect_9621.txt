@@ -86,3 +86,34 @@ Number of particles: 800000
 Number of MPI processes: 3
 Number of OpenMP threads: 4
 Starting simulation with 800000 particles
+Simulation time: 17157.9 seconds
+Folder created
+Particles status result saved to results/particle_output_1743102806.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+Particles received by rank 0
+Particles received by rank 1
+Particles received by rank 2
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+slurmstepd: error: *** JOB 9621 ON romeo-c030 CANCELLED AT 2025-03-27T22:00:40 DUE TO TIME LIMIT ***
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[45095,0],0] on node romeo-c030
+  Remote daemon: [[45095,0],1] on node romeo-c031
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------

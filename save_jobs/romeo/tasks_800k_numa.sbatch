@@ -13,7 +13,8 @@ sbatch <<EOF
 #SBATCH --output=results/romeo/chps0901_romeo_800k_numa_${VERS}_%j.txt
 #SBATCH --ntasks=$NTASKS
 #SBATCH --cpus-per-task=$CPUS_PER_TASK
-#SBATCH --time=08:00:00
+#SBATCH --nodes=1
+#SBATCH --time=24:00:00
 #SBATCH --mem=20G
 #SBATCH --account=r250059
 #SBATCH --constraint=x64cpu
