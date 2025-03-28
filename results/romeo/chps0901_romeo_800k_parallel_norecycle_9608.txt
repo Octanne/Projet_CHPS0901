@@ -1,0 +1,127 @@
+Loading x86_64 (no gpu) environment
+Environment loaded. Spack available.
+========================================
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 1
+Starting simulation with 800000 particles
+Simulation time: 2560.59 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082419.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 2262.87 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743084689.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 2851.2 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743087547.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 1
+Starting simulation with 800000 particles
+Simulation time: 2564.69 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743090118.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Particles received by rank 0
+Particles received by rank 1
+Particles received by rank 2
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 24
+Starting simulation with 800000 particles
+Simulation time: 805.934 seconds
+slurmstepd: error: *** JOB 9608 ON romeo-c022 CANCELLED AT 2025-03-27T19:06:36 ***
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[47379,0],0] on node romeo-c022
+  Remote daemon: [[47379,0],2] on node romeo-c024
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------

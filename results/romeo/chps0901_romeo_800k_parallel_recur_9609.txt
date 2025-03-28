@@ -1,0 +1,115 @@
+Loading x86_64 (no gpu) environment
+Environment loaded. Spack available.
+========================================
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 1
+Starting simulation with 800000 particles
+Simulation time: 2120.52 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081979.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 2101.37 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743084086.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 2101.73 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743086194.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 1
+Starting simulation with 800000 particles
+Simulation time: 2099.51 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743088300.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 9
+Starting simulation with 800000 particles
+Simulation time: 566.432 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743090084.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+Starting simulation with 800000 particles
+Simulation time: 1502.2 seconds
+Folder created: results
+Folder created: results
+slurmstepd: error: *** JOB 9609 ON romeo-c024 CANCELLED AT 2025-03-27T19:06:36 ***
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[27568,0],0] on node romeo-c024
+  Remote daemon: [[27568,0],1] on node romeo-c025
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------
