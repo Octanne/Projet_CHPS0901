@@ -1,0 +1,814 @@
+Loading x86_64 (no gpu) environment
+Environment loaded. Spack available.
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 4
+Starting simulation with 800000 particles
+Simulation time: 921.237 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743111261.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 562.031 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743111829.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 400.724 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743112236.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Particles received by rank 0
+Particles received by rank 1
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 24
+Starting simulation with 800000 particles
+Simulation time: 346.823 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743112589.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Particles received by rank 0
+Particles received by rank 1
+Particles received by rank 2
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 4
+Starting simulation with 800000 particles
+Simulation time: 3830.19 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743116425.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Particles received by rank 0
+Particles received by rank 1
+Particles received by rank 2
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 1986.6 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743118418.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Particles received by rank 0
+Particles received by rank 1
+Particles received by rank 2
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 1083.54 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743119508.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Particles received by rank 0
+Particles received by rank 1
+Particles received by rank 2
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 24
+Starting simulation with 800000 particles
+Simulation time: 783.684 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743120298.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Particles received by rank 0
+Particles received by rank 2
+Particles received by rank 3
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 4
+Number of OpenMP threads: 4
+Starting simulation with 800000 particles
+Simulation time: 449.493 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743120754.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Particles received by rank 0
+Particles received by rank 2
+Particles received by rank 3
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 4
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 308.001 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743121068.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Particles received by rank 0
+Particles received by rank 2
+Particles received by rank 3
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 4
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 241.394 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743121316.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Particles received by rank 0
+Particles received by rank 2
+Particles received by rank 3
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 4
+Number of OpenMP threads: 24
+Starting simulation with 800000 particles
+Simulation time: 219.137 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743121541.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Particles received by rank 0
+Particles received by rank 4
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 5
+Number of OpenMP threads: 4
+Starting simulation with 800000 particles
+Simulation time: 2914.21 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743124462.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Particles received by rank 0
+Particles received by rank 4
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 5
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 1533.17 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743126001.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Particles received by rank 0
+Particles received by rank 4
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 5
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 853.693 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743126861.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Particles received by rank 0
+Particles received by rank 4
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 5
+Number of OpenMP threads: 24
+Starting simulation with 800000 particles
+Simulation time: 628.773 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743127496.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Particles received by rank 0
+Particles received by rank 5
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 6
+Number of OpenMP threads: 4
+Starting simulation with 800000 particles
+Simulation time: 4568.59 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743132071.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Particles received by rank 0
+Particles received by rank 5
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 6
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 2359.08 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743134437.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Particles received by rank 0
+Particles received by rank 5
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 6
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 1268.52 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743135712.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Particles received by rank 0
+Particles received by rank 5
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 6
+Number of OpenMP threads: 24
+Starting simulation with 800000 particles
+Simulation time: 905.855 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743136624.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Sending particles to rank 6
+Particles received by rank 5
+Particles sent to rank 6
+Particles received by rank 0
+Particles received by rank 6
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 7
+Number of OpenMP threads: 4
+Starting simulation with 800000 particles
+Simulation time: 3336.54 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743139967.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Sending particles to rank 6
+Particles received by rank 5
+Particles sent to rank 6
+Particles received by rank 0
+Particles received by rank 6
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 7
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 1744.76 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743141718.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Sending particles to rank 6
+Particles received by rank 5
+Particles sent to rank 6
+Particles received by rank 0
+Particles received by rank 6
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 7
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 960.222 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743142685.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Sending particles to rank 6
+Particles received by rank 5
+Particles sent to rank 6
+Particles received by rank 0
+Particles received by rank 6
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 7
+Number of OpenMP threads: 24
+Starting simulation with 800000 particles
+Simulation time: 699.679 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743143391.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Sending particles to rank 6
+Particles received by rank 5
+Particles sent to rank 6
+Sending particles to rank 7
+Particles received by rank 6
+Particles sent to rank 7
+Particles received by rank 0
+Particles received by rank 7
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 8
+Number of OpenMP threads: 4
+Starting simulation with 800000 particles
+Simulation time: 3178.62 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743146576.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Sending particles to rank 6
+Particles received by rank 5
+Particles sent to rank 6
+Sending particles to rank 7
+Particles received by rank 6
+Particles sent to rank 7
+Particles received by rank 0
+Particles received by rank 7
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 8
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 1667.48 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743148250.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Sending particles to rank 6
+Particles received by rank 5
+Particles sent to rank 6
+Sending particles to rank 7
+Particles received by rank 6
+Particles sent to rank 7
+Particles received by rank 0
+Particles received by rank 7
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 8
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 922.246 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743149179.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP Implementation
+Generating 800000 particles
+Sending particles to rank 1
+Particles sent to rank 1
+Sending particles to rank 2
+Particles sent to rank 2
+Sending particles to rank 3
+Particles received by rank 1
+Particles sent to rank 3
+Sending particles to rank 4
+Particles received by rank 2
+Particles received by rank 3
+Particles sent to rank 4
+Sending particles to rank 5
+Particles received by rank 4
+Particles sent to rank 5
+Sending particles to rank 6
+Particles received by rank 5
+Particles sent to rank 6
+Sending particles to rank 7
+Particles received by rank 6
+Particles sent to rank 7
+Particles received by rank 0
+Particles received by rank 7
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 8
+Number of OpenMP threads: 24
+Starting simulation with 800000 particles
+Simulation time: 674.664 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743149860.txt
+End of Simulation with Barnes-Hut MPI/OpenMP Implementation
+========================================

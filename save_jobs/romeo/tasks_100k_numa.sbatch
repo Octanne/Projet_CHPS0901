@@ -12,6 +12,7 @@ sbatch <<EOF
 #SBATCH --job-name=chps0901_romeo_results_100k_numa_${VERS}
 #SBATCH --output=results/romeo/chps0901_romeo_100k_numa_${VERS}_%j.txt
 #SBATCH --ntasks=$NTASKS
+#SBATCH --nodes=1
 #SBATCH --cpus-per-task=$CPUS_PER_TASK
 #SBATCH --time=24:00:00
 #SBATCH --mem=20G
