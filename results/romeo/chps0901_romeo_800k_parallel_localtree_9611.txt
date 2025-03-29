@@ -1,0 +1,1274 @@
+Loading x86_64 (no gpu) environment
+Environment loaded. Spack available.
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:675845] *** Process received signal ***
+[romeo-c026:675845] Signal: Aborted (6)
+[romeo-c026:675845] Signal code:  (-6)
+[romeo-c026:675845] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1498e803e6f0]
+[romeo-c026:675845] [ 1] /lib64/libc.so.6(+0x8b94c)[0x1498e808b94c]
+[romeo-c026:675845] [ 2] /lib64/libc.so.6(raise+0x16)[0x1498e803e646]
+[romeo-c026:675845] [ 3] /lib64/libc.so.6(abort+0xd3)[0x1498e80287f3]
+[romeo-c026:675845] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x1498e833e5bc]
+[romeo-c026:675845] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x1498e833a798]
+[romeo-c026:675845] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x1498e83218a2]
+[romeo-c026:675845] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x1498e833b3c5]
+[romeo-c026:675845] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x1498e8340638]
+[romeo-c026:675845] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x1498e834576d]
+[romeo-c026:675845] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x1498e8331741]
+[romeo-c026:675845] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55fd423c4bd2]
+[romeo-c026:675845] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55fd423c25e4]
+[romeo-c026:675845] [13] /lib64/libc.so.6(+0x29590)[0x1498e8029590]
+[romeo-c026:675845] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x1498e8029640]
+[romeo-c026:675845] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55fd423c0b75]
+[romeo-c026:675845] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 1465.69 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743081325.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 2
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 1486.12 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082817.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:680160] *** Process received signal ***
+[romeo-c026:680160] Signal: Aborted (6)
+[romeo-c026:680160] Signal code:  (-6)
+[romeo-c026:680160] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x152ff2c3e6f0]
+[romeo-c026:680160] [ 1] /lib64/libc.so.6(+0x8b94c)[0x152ff2c8b94c]
+[romeo-c026:680160] [ 2] /lib64/libc.so.6(raise+0x16)[0x152ff2c3e646]
+[romeo-c026:680160] [ 3] /lib64/libc.so.6(abort+0xd3)[0x152ff2c287f3]
+[romeo-c026:680160] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x152ff2e635bc]
+[romeo-c026:680160] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x152ff2e5f798]
+[romeo-c026:680160] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x152ff2e468a2]
+[romeo-c026:680160] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x152ff2e603c5]
+[romeo-c026:680160] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x152ff2e65638]
+[romeo-c026:680160] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x152ff2e6a76d]
+[romeo-c026:680160] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x152ff2e56741]
+[romeo-c026:680160] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x559d4a66dbd2]
+[romeo-c026:680160] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x559d4a66b5e4]
+[romeo-c026:680160] [13] /lib64/libc.so.6(+0x29590)[0x152ff2c29590]
+[romeo-c026:680160] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x152ff2c29640]
+[romeo-c026:680160] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x559d4a669b75]
+[romeo-c026:680160] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:680191] *** Process received signal ***
+[romeo-c026:680191] Signal: Aborted (6)
+[romeo-c026:680191] Signal code:  (-6)
+[romeo-c026:680191] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1549cfe3e6f0]
+[romeo-c026:680191] [ 1] /lib64/libc.so.6(+0x8b94c)[0x1549cfe8b94c]
+[romeo-c026:680191] [ 2] /lib64/libc.so.6(raise+0x16)[0x1549cfe3e646]
+[romeo-c026:680191] [ 3] /lib64/libc.so.6(abort+0xd3)[0x1549cfe287f3]
+[romeo-c026:680191] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x1549d013e5bc]
+[romeo-c026:680191] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x1549d013a798]
+[romeo-c026:680191] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x1549d01218a2]
+[romeo-c026:680191] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x1549d013b3c5]
+[romeo-c026:680191] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x1549d0140638]
+[romeo-c026:680191] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x1549d014576d]
+[romeo-c026:680191] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x1549d0131741]
+[romeo-c026:680191] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x558bd8681bd2]
+[romeo-c026:680191] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x558bd867f5e4]
+[romeo-c026:680191] [13] /lib64/libc.so.6(+0x29590)[0x1549cfe29590]
+[romeo-c026:680191] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x1549cfe29640]
+[romeo-c026:680191] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x558bd867db75]
+[romeo-c026:680191] *** End of error message ***
+OMP: Error #101: Out of heap memory.
+[romeo-c026:680190] *** Process received signal ***
+[romeo-c026:680190] Signal: Aborted (6)
+[romeo-c026:680190] Signal code:  (-6)
+[romeo-c026:680190] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1522e463e6f0]
+[romeo-c026:680190] [ 1] /lib64/libc.so.6(+0x8b94c)[0x1522e468b94c]
+[romeo-c026:680190] [ 2] /lib64/libc.so.6(raise+0x16)[0x1522e463e646]
+[romeo-c026:680190] [ 3] /lib64/libc.so.6(abort+0xd3)[0x1522e46287f3]
+[romeo-c026:680190] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x1522e493e5bc]
+[romeo-c026:680190] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x1522e493a798]
+[romeo-c026:680190] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x1522e49218a2]
+[romeo-c026:680190] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x1522e493b3c5]
+[romeo-c026:680190] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x1522e4940638]
+[romeo-c026:680190] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x1522e494576d]
+[romeo-c026:680190] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x1522e4931741]
+[romeo-c026:680190] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x56496fda8bd2]
+[romeo-c026:680190] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x56496fda65e4]
+[romeo-c026:680190] [13] /lib64/libc.so.6(+0x29590)[0x1522e4629590]
+[romeo-c026:680190] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x1522e4629640]
+[romeo-c026:680190] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x56496fda4b75]
+[romeo-c026:680190] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 166.679 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743082992.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 3
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 96.4113 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083094.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:680722] *** Process received signal ***
+[romeo-c026:680722] Signal: Aborted (6)
+[romeo-c026:680722] Signal code:  (-6)
+[romeo-c026:680722] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14b0fca3e6f0]
+[romeo-c026:680722] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14b0fca8b94c]
+[romeo-c026:680722] [ 2] /lib64/libc.so.6(raise+0x16)[0x14b0fca3e646]
+[romeo-c026:680722] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14b0fca287f3]
+[romeo-c026:680722] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14b0fcd3e5bc]
+[romeo-c026:680722] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14b0fcd3a798]
+[romeo-c026:680722] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14b0fcd218a2]
+[romeo-c026:680722] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14b0fcd3b3c5]
+[romeo-c026:680722] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14b0fcd40638]
+[romeo-c026:680722] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x14b0fcd4576d]
+[romeo-c026:680722] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x14b0fcd31741]
+[romeo-c026:680722] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5589638efbd2]
+[romeo-c026:680722] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5589638ed5e4]
+[romeo-c026:680722] [13] /lib64/libc.so.6(+0x29590)[0x14b0fca29590]
+[romeo-c026:680722] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b0fca29640]
+[romeo-c026:680722] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5589638ebb75]
+[romeo-c026:680722] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+OMP: Error #101: Out of heap memory.
+[romeo-c026:680721] *** Process received signal ***
+[romeo-c026:680721] Signal: Aborted (6)
+[romeo-c026:680721] Signal code:  (-6)
+[romeo-c026:680721] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14e14a03e6f0]
+[romeo-c026:680721] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14e14a08b94c]
+[romeo-c026:680721] [ 2] /lib64/libc.so.6(raise+0x16)[0x14e14a03e646]
+[romeo-c026:680721] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14e14a0287f3]
+[romeo-c026:680721] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14e14a33e5bc]
+[romeo-c026:680721] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14e14a33a798]
+[romeo-c026:680721] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14e14a3218a2]
+[romeo-c026:680721] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14e14a33b3c5]
+[romeo-c026:680721] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14e14a340638]
+[romeo-c026:680721] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x14e14a341b30]
+[romeo-c026:680721] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x14e14a3428fe]
+[romeo-c026:680721] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x14e14a342d05]
+[romeo-c026:680721] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x14e14a331694]
+[romeo-c026:680721] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x55a925416bd2]
+[romeo-c026:680721] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x55a9254145e4]
+[romeo-c026:680721] [15] /lib64/libc.so.6(+0x29590)[0x14e14a029590]
+[romeo-c026:680721] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x14e14a029640]
+[romeo-c026:680721] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x55a925412b75]
+[romeo-c026:680721] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:680753] *** Process received signal ***
+[romeo-c026:680753] Signal: Aborted (6)
+[romeo-c026:680753] Signal code:  (-6)
+[romeo-c026:680753] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x148c9923e6f0]
+[romeo-c026:680753] [ 1] /lib64/libc.so.6(+0x8b94c)[0x148c9928b94c]
+[romeo-c026:680753] [ 2] /lib64/libc.so.6(raise+0x16)[0x148c9923e646]
+[romeo-c026:680753] [ 3] /lib64/libc.so.6(abort+0xd3)[0x148c992287f3]
+[romeo-c026:680753] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x148c994635bc]
+[romeo-c026:680753] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x148c9945f798]
+[romeo-c026:680753] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x148c994468a2]
+[romeo-c026:680753] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x148c994603c5]
+[romeo-c026:680753] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x148c99465638]
+[romeo-c026:680753] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x148c9946a76d]
+[romeo-c026:680753] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x148c99456741]
+[romeo-c026:680753] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5569f6955bd2]
+[romeo-c026:680753] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5569f69535e4]
+[romeo-c026:680753] [13] /lib64/libc.so.6(+0x29590)[0x148c99229590]
+[romeo-c026:680753] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x148c99229640]
+[romeo-c026:680753] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5569f6951b75]
+[romeo-c026:680753] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:680754] *** Process received signal ***
+[romeo-c026:680754] Signal: Aborted (6)
+[romeo-c026:680754] Signal code:  (-6)
+[romeo-c026:680754] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14e262c3e6f0]
+[romeo-c026:680754] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14e262c8b94c]
+[romeo-c026:680754] [ 2] /lib64/libc.so.6(raise+0x16)[0x14e262c3e646]
+[romeo-c026:680754] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14e262c287f3]
+[romeo-c026:680754] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14e262f3e5bc]
+[romeo-c026:680754] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14e262f3a798]
+[romeo-c026:680754] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14e262f218a2]
+[romeo-c026:680754] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14e262f3b3c5]
+[romeo-c026:680754] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14e262f40638]
+[romeo-c026:680754] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x14e262f41b30]
+[romeo-c026:680754] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x14e262f428fe]
+[romeo-c026:680754] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x14e262f42d05]
+[romeo-c026:680754] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x14e262f31694]
+[romeo-c026:680754] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x5583534ecbd2]
+[romeo-c026:680754] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x5583534ea5e4]
+[romeo-c026:680754] [15] /lib64/libc.so.6(+0x29590)[0x14e262c29590]
+[romeo-c026:680754] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x14e262c29640]
+[romeo-c026:680754] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x5583534e8b75]
+[romeo-c026:680754] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+OMP: Error #101: Out of heap memory.
+[romeo-c026:680755] *** Process received signal ***
+[romeo-c026:680755] Signal: Aborted (6)
+[romeo-c026:680755] Signal code:  (-6)
+[romeo-c026:680755] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x148392a3e6f0]
+[romeo-c026:680755] [ 1] /lib64/libc.so.6(+0x8b94c)[0x148392a8b94c]
+[romeo-c026:680755] [ 2] /lib64/libc.so.6(raise+0x16)[0x148392a3e646]
+[romeo-c026:680755] [ 3] /lib64/libc.so.6(abort+0xd3)[0x148392a287f3]
+[romeo-c026:680755] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x148392d3e5bc]
+[romeo-c026:680755] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x148392d3a798]
+[romeo-c026:680755] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x148392d218a2]
+[romeo-c026:680755] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x148392d3b3c5]
+[romeo-c026:680755] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x148392d40638]
+[romeo-c026:680755] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x148392d4576d]
+[romeo-c026:680755] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x148392d31741]
+[romeo-c026:680755] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55729bbfcbd2]
+[romeo-c026:680755] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55729bbfa5e4]
+[romeo-c026:680755] [13] /lib64/libc.so.6(+0x29590)[0x148392a29590]
+[romeo-c026:680755] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x148392a29640]
+[romeo-c026:680755] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55729bbf8b75]
+[romeo-c026:680755] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 4
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 147.987 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083250.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 4
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 82.2831 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083338.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681301] *** Process received signal ***
+[romeo-c026:681301] Signal: Aborted (6)
+[romeo-c026:681301] Signal code:  (-6)
+[romeo-c026:681301] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15086d23e6f0]
+[romeo-c026:681301] [ 1] /lib64/libc.so.6(+0x8b94c)[0x15086d28b94c]
+[romeo-c026:681301] [ 2] /lib64/libc.so.6(raise+0x16)[0x15086d23e646]
+[romeo-c026:681301] [ 3] /lib64/libc.so.6(abort+0xd3)[0x15086d2287f3]
+[romeo-c026:681301] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x15086d4635bc]
+[romeo-c026:681301] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x15086d45f798]
+[romeo-c026:681301] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x15086d4468a2]
+[romeo-c026:681301] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x15086d4603c5]
+[romeo-c026:681301] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x15086d465638]
+[romeo-c026:681301] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x15086d466b30]
+[romeo-c026:681301] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x15086d4678fe]
+[romeo-c026:681301] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x15086d467d05]
+[romeo-c026:681301] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x15086d456694]
+[romeo-c026:681301] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x557d876a2bd2]
+[romeo-c026:681301] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x557d876a05e4]
+[romeo-c026:681301] [15] /lib64/libc.so.6(+0x29590)[0x15086d229590]
+[romeo-c026:681301] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x15086d229640]
+[romeo-c026:681301] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x557d8769eb75]
+[romeo-c026:681301] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681302] *** Process received signal ***
+[romeo-c026:681302] Signal: Aborted (6)
+[romeo-c026:681302] Signal code:  (-6)
+[romeo-c026:681302] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1483e023e6f0]
+[romeo-c026:681302] [ 1] /lib64/libc.so.6(+0x8b94c)[0x1483e028b94c]
+[romeo-c026:681302] [ 2] /lib64/libc.so.6(raise+0x16)[0x1483e023e646]
+[romeo-c026:681302] [ 3] /lib64/libc.so.6(abort+0xd3)[0x1483e02287f3]
+[romeo-c026:681302] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x1483e053e5bc]
+[romeo-c026:681302] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x1483e053a798]
+[romeo-c026:681302] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x1483e05218a2]
+[romeo-c026:681302] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x1483e053b3c5]
+[romeo-c026:681302] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x1483e0540638]
+[romeo-c026:681302] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x1483e054576d]
+[romeo-c026:681302] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x1483e0531741]
+[romeo-c026:681302] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55a9262b6bd2]
+[romeo-c026:681302] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55a9262b45e4]
+[romeo-c026:681302] [13] /lib64/libc.so.6(+0x29590)[0x1483e0229590]
+[romeo-c026:681302] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x1483e0229640]
+[romeo-c026:681302] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55a9262b2b75]
+[romeo-c026:681302] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681341] *** Process received signal ***
+[romeo-c026:681341] Signal: Aborted (6)
+[romeo-c026:681341] Signal code:  (-6)
+[romeo-c026:681341] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15227cc3e6f0]
+[romeo-c026:681341] [ 1] /lib64/libc.so.6(+0x8b94c)[0x15227cc8b94c]
+[romeo-c026:681341] [ 2] /lib64/libc.so.6(raise+0x16)[0x15227cc3e646]
+[romeo-c026:681341] [ 3] /lib64/libc.so.6(abort+0xd3)[0x15227cc287f3]
+[romeo-c026:681341] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x15227cf3e5bc]
+[romeo-c026:681341] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x15227cf3a798]
+[romeo-c026:681341] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x15227cf218a2]
+[romeo-c026:681341] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x15227cf3b3c5]
+[romeo-c026:681341] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x15227cf40638]
+[romeo-c026:681341] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x15227cf41b30]
+[romeo-c026:681341] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x15227cf428fe]
+[romeo-c026:681341] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x15227cf42d05]
+[romeo-c026:681341] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x15227cf31694]
+[romeo-c026:681341] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x55920d3e4bd2]
+[romeo-c026:681341] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x55920d3e25e4]
+[romeo-c026:681341] [15] /lib64/libc.so.6(+0x29590)[0x15227cc29590]
+[romeo-c026:681341] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x15227cc29640]
+[romeo-c026:681341] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x55920d3e0b75]
+[romeo-c026:681341] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681342] *** Process received signal ***
+[romeo-c026:681342] Signal: Aborted (6)
+[romeo-c026:681342] Signal code:  (-6)
+[romeo-c026:681342] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14706a03e6f0]
+[romeo-c026:681342] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14706a08b94c]
+[romeo-c026:681342] [ 2] /lib64/libc.so.6(raise+0x16)[0x14706a03e646]
+[romeo-c026:681342] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14706a0287f3]
+[romeo-c026:681342] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14706a33e5bc]
+[romeo-c026:681342] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14706a33a798]
+[romeo-c026:681342] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14706a3218a2]
+[romeo-c026:681342] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14706a33b3c5]
+[romeo-c026:681342] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14706a340638]
+[romeo-c026:681342] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x14706a341b30]
+[romeo-c026:681342] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x14706a3428fe]
+[romeo-c026:681342] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x14706a342d05]
+[romeo-c026:681342] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x14706a331694]
+[romeo-c026:681342] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x55b106b72bd2]
+[romeo-c026:681342] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x55b106b705e4]
+[romeo-c026:681342] [15] /lib64/libc.so.6(+0x29590)[0x14706a029590]
+[romeo-c026:681342] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x14706a029640]
+[romeo-c026:681342] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x55b106b6eb75]
+[romeo-c026:681342] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681343] *** Process received signal ***
+[romeo-c026:681343] Signal: Aborted (6)
+[romeo-c026:681343] Signal code:  (-6)
+[romeo-c026:681343] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x147aff43e6f0]
+[romeo-c026:681343] [ 1] /lib64/libc.so.6(+0x8b94c)[0x147aff48b94c]
+[romeo-c026:681343] [ 2] /lib64/libc.so.6(raise+0x16)[0x147aff43e646]
+[romeo-c026:681343] [ 3] /lib64/libc.so.6(abort+0xd3)[0x147aff4287f3]
+[romeo-c026:681343] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x147aff73e5bc]
+[romeo-c026:681343] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x147aff73a798]
+[romeo-c026:681343] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x147aff7218a2]
+[romeo-c026:681343] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x147aff73b3c5]
+[romeo-c026:681343] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x147aff740638]
+[romeo-c026:681343] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x147aff74576d]
+[romeo-c026:681343] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x147aff731741]
+[romeo-c026:681343] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55f51e7c5bd2]
+[romeo-c026:681343] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55f51e7c35e4]
+[romeo-c026:681343] [13] /lib64/libc.so.6(+0x29590)[0x147aff429590]
+[romeo-c026:681343] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x147aff429640]
+[romeo-c026:681343] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55f51e7c1b75]
+[romeo-c026:681343] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681344] *** Process received signal ***
+[romeo-c026:681344] Signal: Aborted (6)
+[romeo-c026:681344] Signal code:  (-6)
+[romeo-c026:681344] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14a97543e6f0]
+[romeo-c026:681344] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14a97548b94c]
+[romeo-c026:681344] [ 2] /lib64/libc.so.6(raise+0x16)[0x14a97543e646]
+[romeo-c026:681344] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14a9754287f3]
+[romeo-c026:681344] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14a97573e5bc]
+[romeo-c026:681344] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14a97573a798]
+[romeo-c026:681344] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14a9757218a2]
+[romeo-c026:681344] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14a97573b3c5]
+[romeo-c026:681344] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14a975740638]
+[romeo-c026:681344] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x14a975741b30]
+[romeo-c026:681344] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x14a9757428fe]
+[romeo-c026:681344] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x14a975742d05]
+[romeo-c026:681344] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x14a975731694]
+[romeo-c026:681344] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x5642be530bd2]
+[romeo-c026:681344] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x5642be52e5e4]
+[romeo-c026:681344] [15] /lib64/libc.so.6(+0x29590)[0x14a975429590]
+[romeo-c026:681344] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x14a975429640]
+[romeo-c026:681344] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x5642be52cb75]
+[romeo-c026:681344] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 5
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 138.284 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083483.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 5
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 76.4359 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083565.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681844] *** Process received signal ***
+[romeo-c026:681844] Signal: Aborted (6)
+[romeo-c026:681844] Signal code:  (-6)
+[romeo-c026:681844] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14c4fa63e6f0]
+[romeo-c026:681844] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14c4fa68b94c]
+[romeo-c026:681844] [ 2] /lib64/libc.so.6(raise+0x16)[0x14c4fa63e646]
+[romeo-c026:681844] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14c4fa6287f3]
+[romeo-c026:681844] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14c4fa8635bc]
+[romeo-c026:681844] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14c4fa85f798]
+[romeo-c026:681844] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14c4fa8468a2]
+[romeo-c026:681844] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14c4fa8603c5]
+[romeo-c026:681844] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14c4fa865638]
+[romeo-c026:681844] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x14c4fa86a76d]
+[romeo-c026:681844] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x14c4fa856741]
+[romeo-c026:681844] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5626109eebd2]
+[romeo-c026:681844] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5626109ec5e4]
+[romeo-c026:681844] [13] /lib64/libc.so.6(+0x29590)[0x14c4fa629590]
+[romeo-c026:681844] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x14c4fa629640]
+[romeo-c026:681844] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5626109eab75]
+[romeo-c026:681844] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681845] *** Process received signal ***
+[romeo-c026:681845] Signal: Aborted (6)
+[romeo-c026:681845] Signal code:  (-6)
+[romeo-c026:681845] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x15158c83e6f0]
+[romeo-c026:681845] [ 1] /lib64/libc.so.6(+0x8b94c)[0x15158c88b94c]
+[romeo-c026:681845] [ 2] /lib64/libc.so.6(raise+0x16)[0x15158c83e646]
+[romeo-c026:681845] [ 3] /lib64/libc.so.6(abort+0xd3)[0x15158c8287f3]
+[romeo-c026:681845] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x15158ca635bc]
+[romeo-c026:681845] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x15158ca5f798]
+[romeo-c026:681845] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x15158ca468a2]
+[romeo-c026:681845] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x15158ca603c5]
+[romeo-c026:681845] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x15158ca65638]
+[romeo-c026:681845] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x15158ca6a76d]
+[romeo-c026:681845] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x15158ca56741]
+[romeo-c026:681845] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55e040168bd2]
+[romeo-c026:681845] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55e0401665e4]
+[romeo-c026:681845] [13] /lib64/libc.so.6(+0x29590)[0x15158c829590]
+[romeo-c026:681845] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x15158c829640]
+[romeo-c026:681845] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55e040164b75]
+[romeo-c026:681845] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681846] *** Process received signal ***
+[romeo-c026:681846] Signal: Aborted (6)
+[romeo-c026:681846] Signal code:  (-6)
+[romeo-c026:681846] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14f2c043e6f0]
+[romeo-c026:681846] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14f2c048b94c]
+[romeo-c026:681846] [ 2] /lib64/libc.so.6(raise+0x16)[0x14f2c043e646]
+[romeo-c026:681846] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14f2c04287f3]
+[romeo-c026:681846] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14f2c06635bc]
+[romeo-c026:681846] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14f2c065f798]
+[romeo-c026:681846] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14f2c06468a2]
+[romeo-c026:681846] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14f2c06603c5]
+[romeo-c026:681846] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14f2c0665638]
+[romeo-c026:681846] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x14f2c066a76d]
+[romeo-c026:681846] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x14f2c0656741]
+[romeo-c026:681846] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5655227aabd2]
+[romeo-c026:681846] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5655227a85e4]
+[romeo-c026:681846] [13] /lib64/libc.so.6(+0x29590)[0x14f2c0429590]
+[romeo-c026:681846] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x14f2c0429640]
+[romeo-c026:681846] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5655227a6b75]
+[romeo-c026:681846] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:681893] *** Process received signal ***
+[romeo-c026:681893] Signal: Aborted (6)
+[romeo-c026:681893] Signal code:  (-6)
+[romeo-c026:681893] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14777d83e6f0]
+[romeo-c026:681893] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14777d88b94c]
+[romeo-c026:681893] [ 2] /lib64/libc.so.6(raise+0x16)[0x14777d83e646]
+[romeo-c026:681893] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14777d8287f3]
+[romeo-c026:681893] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14777da635bc]
+[romeo-c026:681893] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14777da5f798]
+[romeo-c026:681893] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14777da468a2]
+[romeo-c026:681893] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14777da603c5]
+[romeo-c026:681893] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14777da65638]
+[romeo-c026:681893] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x14777da66b30]
+[romeo-c026:681893] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x14777da678fe]
+[romeo-c026:681893] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x14777da67d05]
+[romeo-c026:681893] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x14777da56694]
+[romeo-c026:681893] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x5580045b1bd2]
+[romeo-c026:681893] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x5580045af5e4]
+[romeo-c026:681893] [15] /lib64/libc.so.6(+0x29590)[0x14777d829590]
+[romeo-c026:681893] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x14777d829640]
+[romeo-c026:681893] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x5580045adb75]
+[romeo-c026:681893] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 6
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 127.515 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083701.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 6
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 70.7008 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083777.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:682446] *** Process received signal ***
+[romeo-c026:682446] Signal: Aborted (6)
+[romeo-c026:682446] Signal code:  (-6)
+[romeo-c026:682446] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x148579c3e6f0]
+[romeo-c026:682446] [ 1] /lib64/libc.so.6(+0x8b94c)[0x148579c8b94c]
+[romeo-c026:682446] [ 2] /lib64/libc.so.6(raise+0x16)[0x148579c3e646]
+[romeo-c026:682446] [ 3] /lib64/libc.so.6(abort+0xd3)[0x148579c287f3]
+[romeo-c026:682446] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x148579f3e5bc]
+[romeo-c026:682446] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x148579f3a798]
+[romeo-c026:682446] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x148579f218a2]
+[romeo-c026:682446] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x148579f3b3c5]
+[romeo-c026:682446] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x148579f40638]
+[romeo-c026:682446] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x148579f41b30]
+[romeo-c026:682446] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x148579f428fe]
+[romeo-c026:682446] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x148579f42d05]
+[romeo-c026:682446] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x148579f31694]
+[romeo-c026:682446] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x56237b59abd2]
+[romeo-c026:682446] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x56237b5985e4]
+[romeo-c026:682446] [15] /lib64/libc.so.6(+0x29590)[0x148579c29590]
+[romeo-c026:682446] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x148579c29640]
+[romeo-c026:682446] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x56237b596b75]
+[romeo-c026:682446] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c027:521887] *** Process received signal ***
+[romeo-c027:521887] Signal: Aborted (6)
+[romeo-c027:521887] Signal code:  (-6)
+[romeo-c027:521887] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x152002a3e6f0]
+[romeo-c027:521887] [ 1] /lib64/libc.so.6(+0x8b94c)[0x152002a8b94c]
+[romeo-c027:521887] [ 2] /lib64/libc.so.6(raise+0x16)[0x152002a3e646]
+[romeo-c027:521887] [ 3] /lib64/libc.so.6(abort+0xd3)[0x152002a287f3]
+[romeo-c027:521887] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x152002c635bc]
+[romeo-c027:521887] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x152002c5f798]
+[romeo-c027:521887] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x152002c468a2]
+[romeo-c027:521887] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x152002c603c5]
+[romeo-c027:521887] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x152002c65638]
+[romeo-c027:521887] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x152002c6a76d]
+[romeo-c027:521887] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x152002c56741]
+[romeo-c027:521887] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x564c83891bd2]
+[romeo-c027:521887] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x564c8388f5e4]
+[romeo-c027:521887] [13] /lib64/libc.so.6(+0x29590)[0x152002a29590]
+[romeo-c027:521887] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x152002a29640]
+[romeo-c027:521887] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x564c8388db75]
+[romeo-c027:521887] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:682478] *** Process received signal ***
+[romeo-c026:682478] Signal: Aborted (6)
+[romeo-c026:682478] Signal code:  (-6)
+[romeo-c026:682478] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14c87863e6f0]
+[romeo-c026:682478] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14c87868b94c]
+[romeo-c026:682478] [ 2] /lib64/libc.so.6(raise+0x16)[0x14c87863e646]
+[romeo-c026:682478] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14c8786287f3]
+[romeo-c026:682478] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14c87893e5bc]
+[romeo-c026:682478] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14c87893a798]
+[romeo-c026:682478] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14c8789218a2]
+[romeo-c026:682478] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14c87893b3c5]
+[romeo-c026:682478] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14c878940638]
+[romeo-c026:682478] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x14c878941b30]
+[romeo-c026:682478] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x14c8789428fe]
+[romeo-c026:682478] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x14c878942d05]
+[romeo-c026:682478] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x14c878931694]
+[romeo-c026:682478] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x55d2813c0bd2]
+[romeo-c026:682478] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x55d2813be5e4]
+[romeo-c026:682478] [15] /lib64/libc.so.6(+0x29590)[0x14c878629590]
+[romeo-c026:682478] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x14c878629640]
+[romeo-c026:682478] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x55d2813bcb75]
+[romeo-c026:682478] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:682480] *** Process received signal ***
+[romeo-c026:682480] Signal: Aborted (6)
+[romeo-c026:682480] Signal code:  (-6)
+[romeo-c026:682480] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1461e703e6f0]
+[romeo-c026:682480] [ 1] /lib64/libc.so.6(+0x8b94c)[0x1461e708b94c]
+[romeo-c026:682480] [ 2] /lib64/libc.so.6(raise+0x16)[0x1461e703e646]
+[romeo-c026:682480] [ 3] /lib64/libc.so.6(abort+0xd3)[0x1461e70287f3]
+[romeo-c026:682480] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x1461e72635bc]
+[romeo-c026:682480] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x1461e725f798]
+[romeo-c026:682480] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x1461e72468a2]
+[romeo-c026:682480] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x1461e72603c5]
+[romeo-c026:682480] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x1461e7265638]
+[romeo-c026:682480] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x1461e726a76d]
+[romeo-c026:682480] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x1461e7256741]
+[romeo-c026:682480] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5653adda7bd2]
+[romeo-c026:682480] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5653adda55e4]
+[romeo-c026:682480] [13] /lib64/libc.so.6(+0x29590)[0x1461e7029590]
+[romeo-c026:682480] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x1461e7029640]
+[romeo-c026:682480] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5653adda3b75]
+[romeo-c026:682480] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c027:521912] *** Process received signal ***
+[romeo-c027:521912] Signal: Aborted (6)
+[romeo-c027:521912] Signal code:  (-6)
+[romeo-c027:521912] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1463a843e6f0]
+[romeo-c027:521912] [ 1] /lib64/libc.so.6(+0x8b94c)[0x1463a848b94c]
+[romeo-c027:521912] [ 2] /lib64/libc.so.6(raise+0x16)[0x1463a843e646]
+[romeo-c027:521912] [ 3] /lib64/libc.so.6(abort+0xd3)[0x1463a84287f3]
+[romeo-c027:521912] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x1463a873e5bc]
+[romeo-c027:521912] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x1463a873a798]
+[romeo-c027:521912] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x1463a87218a2]
+[romeo-c027:521912] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x1463a873b3c5]
+[romeo-c027:521912] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x1463a8740638]
+[romeo-c027:521912] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x1463a874576d]
+[romeo-c027:521912] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x1463a8731741]
+[romeo-c027:521912] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x561092f68bd2]
+[romeo-c027:521912] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x561092f665e4]
+[romeo-c027:521912] [13] /lib64/libc.so.6(+0x29590)[0x1463a8429590]
+[romeo-c027:521912] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x1463a8429640]
+[romeo-c027:521912] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x561092f64b75]
+[romeo-c027:521912] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 7
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 121.898 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083909.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 7
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 66.3824 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743083981.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:682956] *** Process received signal ***
+[romeo-c026:682956] Signal: Aborted (6)
+[romeo-c026:682956] Signal code:  (-6)
+[romeo-c026:682956] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14e1df43e6f0]
+[romeo-c026:682956] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14e1df48b94c]
+[romeo-c026:682956] [ 2] /lib64/libc.so.6(raise+0x16)[0x14e1df43e646]
+[romeo-c026:682956] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14e1df4287f3]
+[romeo-c026:682956] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14e1df73e5bc]
+[romeo-c026:682956] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14e1df73a798]
+[romeo-c026:682956] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14e1df7218a2]
+[romeo-c026:682956] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14e1df73b3c5]
+[romeo-c026:682956] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14e1df740638]
+[romeo-c026:682956] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x14e1df74576d]
+[romeo-c026:682956] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x14e1df731741]
+[romeo-c026:682956] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5599fc498bd2]
+[romeo-c026:682956] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5599fc4965e4]
+[romeo-c026:682956] [13] /lib64/libc.so.6(+0x29590)[0x14e1df429590]
+[romeo-c026:682956] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x14e1df429640]
+[romeo-c026:682956] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5599fc494b75]
+[romeo-c026:682956] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:682957] *** Process received signal ***
+[romeo-c026:682957] Signal: Aborted (6)
+[romeo-c026:682957] Signal code:  (-6)
+[romeo-c026:682957] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x153fe963e6f0]
+[romeo-c026:682957] [ 1] /lib64/libc.so.6(+0x8b94c)[0x153fe968b94c]
+[romeo-c026:682957] [ 2] /lib64/libc.so.6(raise+0x16)[0x153fe963e646]
+[romeo-c026:682957] [ 3] /lib64/libc.so.6(abort+0xd3)[0x153fe96287f3]
+[romeo-c026:682957] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x153fe98635bc]
+[romeo-c026:682957] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x153fe985f798]
+[romeo-c026:682957] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x153fe98468a2]
+[romeo-c026:682957] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x153fe98603c5]
+[romeo-c026:682957] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x153fe9865638]
+[romeo-c026:682957] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x153fe986a76d]
+[romeo-c026:682957] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x153fe9856741]
+[romeo-c026:682957] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5583911bebd2]
+[romeo-c026:682957] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5583911bc5e4]
+[romeo-c026:682957] [13] /lib64/libc.so.6(+0x29590)[0x153fe9629590]
+[romeo-c026:682957] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x153fe9629640]
+[romeo-c026:682957] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5583911bab75]
+[romeo-c026:682957] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:682958] *** Process received signal ***
+[romeo-c026:682958] Signal: Aborted (6)
+[romeo-c026:682958] Signal code:  (-6)
+[romeo-c026:682958] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x146c9983e6f0]
+[romeo-c026:682958] [ 1] /lib64/libc.so.6(+0x8b94c)[0x146c9988b94c]
+[romeo-c026:682958] [ 2] /lib64/libc.so.6(raise+0x16)[0x146c9983e646]
+[romeo-c026:682958] [ 3] /lib64/libc.so.6(abort+0xd3)[0x146c998287f3]
+[romeo-c026:682958] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x146c99b3e5bc]
+[romeo-c026:682958] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x146c99b3a798]
+[romeo-c026:682958] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x146c99b218a2]
+[romeo-c026:682958] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x146c99b3b3c5]
+[romeo-c026:682958] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x146c99b40638]
+[romeo-c026:682958] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x146c99b4576d]
+[romeo-c026:682958] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x146c99b31741]
+[romeo-c026:682958] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5632a95c5bd2]
+[romeo-c026:682958] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5632a95c35e4]
+[romeo-c026:682958] [13] /lib64/libc.so.6(+0x29590)[0x146c99829590]
+[romeo-c026:682958] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x146c99829640]
+[romeo-c026:682958] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5632a95c1b75]
+[romeo-c026:682958] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:682959] *** Process received signal ***
+[romeo-c026:682959] Signal: Aborted (6)
+[romeo-c026:682959] Signal code:  (-6)
+[romeo-c026:682959] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x153bce03e6f0]
+[romeo-c026:682959] [ 1] /lib64/libc.so.6(+0x8b94c)[0x153bce08b94c]
+[romeo-c026:682959] [ 2] /lib64/libc.so.6(raise+0x16)[0x153bce03e646]
+[romeo-c026:682959] [ 3] /lib64/libc.so.6(abort+0xd3)[0x153bce0287f3]
+[romeo-c026:682959] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x153bce2635bc]
+[romeo-c026:682959] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x153bce25f798]
+[romeo-c026:682959] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x153bce2468a2]
+[romeo-c026:682959] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x153bce2603c5]
+[romeo-c026:682959] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x153bce265638]
+[romeo-c026:682959] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x153bce266b30]
+[romeo-c026:682959] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x153bce2678fe]
+[romeo-c026:682959] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x153bce267d05]
+[romeo-c026:682959] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x153bce256694]
+[romeo-c026:682959] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x5623e8a6abd2]
+[romeo-c026:682959] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x5623e8a685e4]
+[romeo-c026:682959] [15] /lib64/libc.so.6(+0x29590)[0x153bce029590]
+[romeo-c026:682959] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x153bce029640]
+[romeo-c026:682959] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x5623e8a66b75]
+[romeo-c026:682959] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c027:522198] *** Process received signal ***
+[romeo-c027:522198] Signal: Aborted (6)
+[romeo-c027:522198] Signal code:  (-6)
+[romeo-c027:522198] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x153acca3e6f0]
+[romeo-c027:522198] [ 1] /lib64/libc.so.6(+0x8b94c)[0x153acca8b94c]
+[romeo-c027:522198] [ 2] /lib64/libc.so.6(raise+0x16)[0x153acca3e646]
+[romeo-c027:522198] [ 3] /lib64/libc.so.6(abort+0xd3)[0x153acca287f3]
+[romeo-c027:522198] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x153accc635bc]
+[romeo-c027:522198] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x153accc5f798]
+[romeo-c027:522198] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x153accc468a2]
+[romeo-c027:522198] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x153accc603c5]
+[romeo-c027:522198] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x153accc65638]
+[romeo-c027:522198] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x153accc66b30]
+[romeo-c027:522198] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x153accc678fe]
+[romeo-c027:522198] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x153accc67d05]
+[romeo-c027:522198] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x153accc56694]
+[romeo-c027:522198] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x56201879abd2]
+[romeo-c027:522198] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x5620187985e4]
+[romeo-c027:522198] [15] /lib64/libc.so.6(+0x29590)[0x153acca29590]
+[romeo-c027:522198] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x153acca29640]
+[romeo-c027:522198] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x562018796b75]
+[romeo-c027:522198] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 0 on node romeo-c026 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c027:522224] *** Process received signal ***
+[romeo-c027:522224] Signal: Aborted (6)
+[romeo-c027:522224] Signal code:  (-6)
+[romeo-c027:522224] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x145e9283e6f0]
+[romeo-c027:522224] [ 1] /lib64/libc.so.6(+0x8b94c)[0x145e9288b94c]
+[romeo-c027:522224] [ 2] /lib64/libc.so.6(raise+0x16)[0x145e9283e646]
+[romeo-c027:522224] [ 3] /lib64/libc.so.6(abort+0xd3)[0x145e928287f3]
+[romeo-c027:522224] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x145e92a635bc]
+[romeo-c027:522224] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x145e92a5f798]
+[romeo-c027:522224] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x145e92a468a2]
+[romeo-c027:522224] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x145e92a603c5]
+[romeo-c027:522224] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x145e92a65638]
+[romeo-c027:522224] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x145e92a6a76d]
+[romeo-c027:522224] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x145e92a56741]
+[romeo-c027:522224] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5598c51a1bd2]
+[romeo-c027:522224] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5598c519f5e4]
+[romeo-c027:522224] [13] /lib64/libc.so.6(+0x29590)[0x145e92829590]
+[romeo-c027:522224] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x145e92829640]
+[romeo-c027:522224] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5598c519db75]
+[romeo-c027:522224] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c027:522225] *** Process received signal ***
+[romeo-c027:522225] Signal: Aborted (6)
+[romeo-c027:522225] Signal code:  (-6)
+[romeo-c027:522225] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x1538f0a3e6f0]
+[romeo-c027:522225] [ 1] /lib64/libc.so.6(+0x8b94c)[0x1538f0a8b94c]
+[romeo-c027:522225] [ 2] /lib64/libc.so.6(raise+0x16)[0x1538f0a3e646]
+[romeo-c027:522225] [ 3] /lib64/libc.so.6(abort+0xd3)[0x1538f0a287f3]
+[romeo-c027:522225] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x1538f0d3e5bc]
+[romeo-c027:522225] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x1538f0d3a798]
+[romeo-c027:522225] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x1538f0d218a2]
+[romeo-c027:522225] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x1538f0d3b3c5]
+[romeo-c027:522225] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x1538f0d40638]
+[romeo-c027:522225] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x1538f0d4576d]
+[romeo-c027:522225] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x1538f0d31741]
+[romeo-c027:522225] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55fcca5c2bd2]
+[romeo-c027:522225] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55fcca5c05e4]
+[romeo-c027:522225] [13] /lib64/libc.so.6(+0x29590)[0x1538f0a29590]
+[romeo-c027:522225] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x1538f0a29640]
+[romeo-c027:522225] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55fcca5beb75]
+[romeo-c027:522225] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:683013] *** Process received signal ***
+[romeo-c026:683013] Signal: Aborted (6)
+[romeo-c026:683013] Signal code:  (-6)
+[romeo-c026:683013] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x154aa283e6f0]
+[romeo-c026:683013] [ 1] /lib64/libc.so.6(+0x8b94c)[0x154aa288b94c]
+[romeo-c026:683013] [ 2] /lib64/libc.so.6(raise+0x16)[0x154aa283e646]
+[romeo-c026:683013] [ 3] /lib64/libc.so.6(abort+0xd3)[0x154aa28287f3]
+[romeo-c026:683013] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x154aa2a635bc]
+[romeo-c026:683013] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x154aa2a5f798]
+[romeo-c026:683013] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x154aa2a468a2]
+[romeo-c026:683013] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x154aa2a603c5]
+[romeo-c026:683013] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x154aa2a65638]
+[romeo-c026:683013] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x154aa2a6a76d]
+[romeo-c026:683013] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x154aa2a56741]
+[romeo-c026:683013] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x56167c31bbd2]
+[romeo-c026:683013] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x56167c3195e4]
+[romeo-c026:683013] [13] /lib64/libc.so.6(+0x29590)[0x154aa2829590]
+[romeo-c026:683013] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x154aa2829640]
+[romeo-c026:683013] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x56167c317b75]
+[romeo-c026:683013] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:683014] *** Process received signal ***
+[romeo-c026:683014] Signal: Aborted (6)
+[romeo-c026:683014] Signal code:  (-6)
+[romeo-c026:683014] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14c977a3e6f0]
+[romeo-c026:683014] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14c977a8b94c]
+[romeo-c026:683014] [ 2] /lib64/libc.so.6(raise+0x16)[0x14c977a3e646]
+[romeo-c026:683014] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14c977a287f3]
+[romeo-c026:683014] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14c977c635bc]
+[romeo-c026:683014] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14c977c5f798]
+[romeo-c026:683014] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14c977c468a2]
+[romeo-c026:683014] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14c977c603c5]
+[romeo-c026:683014] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14c977c65638]
+[romeo-c026:683014] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x14c977c66b30]
+[romeo-c026:683014] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x14c977c678fe]
+[romeo-c026:683014] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x14c977c67d05]
+[romeo-c026:683014] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x14c977c56694]
+[romeo-c026:683014] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x55c8569d9bd2]
+[romeo-c026:683014] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x55c8569d75e4]
+[romeo-c026:683014] [15] /lib64/libc.so.6(+0x29590)[0x14c977a29590]
+[romeo-c026:683014] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x14c977a29640]
+[romeo-c026:683014] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x55c8569d5b75]
+[romeo-c026:683014] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "{4".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:683015] *** Process received signal ***
+[romeo-c026:683015] Signal: Aborted (6)
+[romeo-c026:683015] Signal code:  (-6)
+[romeo-c026:683015] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14b7a1a3e6f0]
+[romeo-c026:683015] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14b7a1a8b94c]
+[romeo-c026:683015] [ 2] /lib64/libc.so.6(raise+0x16)[0x14b7a1a3e646]
+[romeo-c026:683015] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14b7a1a287f3]
+[romeo-c026:683015] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14b7a1d3e5bc]
+[romeo-c026:683015] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14b7a1d3a798]
+[romeo-c026:683015] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14b7a1d218a2]
+[romeo-c026:683015] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14b7a1d3b3c5]
+[romeo-c026:683015] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14b7a1d40638]
+[romeo-c026:683015] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x14b7a1d4576d]
+[romeo-c026:683015] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x14b7a1d31741]
+[romeo-c026:683015] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55ba33253bd2]
+[romeo-c026:683015] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55ba332515e4]
+[romeo-c026:683015] [13] /lib64/libc.so.6(+0x29590)[0x14b7a1a29590]
+[romeo-c026:683015] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b7a1a29640]
+[romeo-c026:683015] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55ba3324fb75]
+[romeo-c026:683015] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 5 with PID 522224 on node romeo-c027 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 8
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+Simulation time: 114.854 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743084104.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+The local quadtrees has been built
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 8
+Number of OpenMP threads: 16
+Starting simulation with 800000 particles
+Simulation time: 61.4144 seconds
+Folder created: results
+Particles status result saved to results/particle_output_1743084171.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c027:522566] *** Process received signal ***
+[romeo-c027:522566] Signal: Aborted (6)
+[romeo-c027:522566] Signal code:  (-6)
+[romeo-c027:522566] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x150cbf83e6f0]
+[romeo-c027:522566] [ 1] /lib64/libc.so.6(+0x8b94c)[0x150cbf88b94c]
+[romeo-c027:522566] [ 2] /lib64/libc.so.6(raise+0x16)[0x150cbf83e646]
+[romeo-c027:522566] [ 3] /lib64/libc.so.6(abort+0xd3)[0x150cbf8287f3]
+[romeo-c027:522566] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x150cbfb3e5bc]
+[romeo-c027:522566] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x150cbfb3a798]
+[romeo-c027:522566] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x150cbfb218a2]
+[romeo-c027:522566] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x150cbfb3b3c5]
+[romeo-c027:522566] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x150cbfb40638]
+[romeo-c027:522566] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x40b30)[0x150cbfb41b30]
+[romeo-c027:522566] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x418fe)[0x150cbfb428fe]
+[romeo-c027:522566] [11] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x41d05)[0x150cbfb42d05]
+[romeo-c027:522566] [12] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x64)[0x150cbfb31694]
+[romeo-c027:522566] [13] versions/parallel_localtree/bin/main(+0x8bd2)[0x562801a52bd2]
+[romeo-c027:522566] [14] versions/parallel_localtree/bin/main(+0x65e4)[0x562801a505e4]
+[romeo-c027:522566] [15] /lib64/libc.so.6(+0x29590)[0x150cbf829590]
+[romeo-c027:522566] [16] /lib64/libc.so.6(__libc_start_main+0x80)[0x150cbf829640]
+[romeo-c027:522566] [17] versions/parallel_localtree/bin/main(+0x4b75)[0x562801a4eb75]
+[romeo-c027:522566] *** End of error message ***
+OMP: Error #101: Out of heap memory.
+[romeo-c027:522567] *** Process received signal ***
+[romeo-c027:522567] Signal: Aborted (6)
+[romeo-c027:522567] Signal code:  (-6)
+[romeo-c027:522567] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14b38683e6f0]
+[romeo-c027:522567] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14b38688b94c]
+[romeo-c027:522567] [ 2] /lib64/libc.so.6(raise+0x16)[0x14b38683e646]
+[romeo-c027:522567] [ 3] /lib64/libc.so.6(abort+0xd3)[0x14b3868287f3]
+[romeo-c027:522567] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14b386b3e5bc]
+[romeo-c027:522567] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14b386b3a798]
+[romeo-c027:522567] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x14b386b218a2]
+[romeo-c027:522567] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14b386b3b3c5]
+[romeo-c027:522567] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x14b386b40638]
+[romeo-c027:522567] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x14b386b4576d]
+[romeo-c027:522567] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x14b386b31741]
+[romeo-c027:522567] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55ecc53c8bd2]
+[romeo-c027:522567] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55ecc53c65e4]
+[romeo-c027:522567] [13] /lib64/libc.so.6(+0x29590)[0x14b386829590]
+[romeo-c027:522567] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x14b386829640]
+[romeo-c027:522567] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55ecc53c4b75]
+[romeo-c027:522567] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:683495] *** Process received signal ***
+[romeo-c026:683495] Signal: Aborted (6)
+[romeo-c026:683495] Signal code:  (-6)
+[romeo-c026:683495] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x148ad783e6f0]
+[romeo-c026:683495] [ 1] /lib64/libc.so.6(+0x8b94c)[0x148ad788b94c]
+[romeo-c026:683495] [ 2] /lib64/libc.so.6(raise+0x16)[0x148ad783e646]
+[romeo-c026:683495] [ 3] /lib64/libc.so.6(abort+0xd3)[0x148ad78287f3]
+[romeo-c026:683495] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x148ad7b3e5bc]
+[romeo-c026:683495] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x148ad7b3a798]
+[romeo-c026:683495] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x148ad7b218a2]
+[romeo-c026:683495] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x148ad7b3b3c5]
+[romeo-c026:683495] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x148ad7b40638]
+[romeo-c026:683495] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x148ad7b4576d]
+[romeo-c026:683495] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x148ad7b31741]
+[romeo-c026:683495] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x55730cba3bd2]
+[romeo-c026:683495] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x55730cba15e4]
+[romeo-c026:683495] [13] /lib64/libc.so.6(+0x29590)[0x148ad7829590]
+[romeo-c026:683495] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x148ad7829640]
+[romeo-c026:683495] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x55730cb9fb75]
+[romeo-c026:683495] *** End of error message ***
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Warning #234: OMP_NUM_THREADS: Invalid symbols found. Check the value "24}".
+OMP: Error #101: Out of heap memory.
+[romeo-c026:683497] *** Process received signal ***
+[romeo-c026:683497] Signal: Aborted (6)
+[romeo-c026:683497] Signal code:  (-6)
+[romeo-c026:683497] [ 0] /lib64/libc.so.6(+0x3e6f0)[0x14949143e6f0]
+[romeo-c026:683497] [ 1] /lib64/libc.so.6(+0x8b94c)[0x14949148b94c]
+[romeo-c026:683497] [ 2] /lib64/libc.so.6(raise+0x16)[0x14949143e646]
+[romeo-c026:683497] [ 3] /lib64/libc.so.6(abort+0xd3)[0x1494914287f3]
+[romeo-c026:683497] [ 4] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3d5bc)[0x14949173e5bc]
+[romeo-c026:683497] [ 5] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x39798)[0x14949173a798]
+[romeo-c026:683497] [ 6] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x208a2)[0x1494917218a2]
+[romeo-c026:683497] [ 7] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3a3c5)[0x14949173b3c5]
+[romeo-c026:683497] [ 8] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(+0x3f638)[0x149491740638]
+[romeo-c026:683497] [ 9] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmp_fork_call+0x13fd)[0x14949174576d]
+[romeo-c026:683497] [10] /opt/softwares/amd/aocc-compiler-5.0.0/lib/libomp.so(__kmpc_fork_call+0x111)[0x149491731741]
+[romeo-c026:683497] [11] versions/parallel_localtree/bin/main(+0x8bd2)[0x5605e033fbd2]
+[romeo-c026:683497] [12] versions/parallel_localtree/bin/main(+0x65e4)[0x5605e033d5e4]
+[romeo-c026:683497] [13] /lib64/libc.so.6(+0x29590)[0x149491429590]
+[romeo-c026:683497] [14] /lib64/libc.so.6(__libc_start_main+0x80)[0x149491429640]
+[romeo-c026:683497] [15] versions/parallel_localtree/bin/main(+0x4b75)[0x5605e033bb75]
+[romeo-c026:683497] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 5 with PID 522566 on node romeo-c027 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+========================================
