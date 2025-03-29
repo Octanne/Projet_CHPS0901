@@ -329,3 +329,26 @@ Number of particles: 800000
 Number of MPI processes: 6
 Number of OpenMP threads: 4
 Starting simulation with 800000 particles
+Simulation time: 14712.8 seconds
+Folder created
+Particles status result saved to results/particle_output_1743191243.txt
+End of Simulation with Barnes-Hut MPI/OpenMP with recycle memory implementation
+========================================
+========================================
+Barnes-Hut MPI/OpenMP with recycle memory implementation
+Generating 800000 particles
+Particles received by rank 0
+Particles received by rank 1
+Particles received by rank 2
+Particles received by rank 3
+Particles received by rank 5
+Particles received by rank 4
+The simulation window size is 220000
+Running simulation for 100 steps with a time step of 1s
+Step (dt): 1s
+Number of epochs compute: 100
+Number of particles: 800000
+Number of MPI processes: 6
+Number of OpenMP threads: 8
+Starting simulation with 800000 particles
+slurmstepd: error: *** JOB 9723 ON romeo-c005 CANCELLED AT 2025-03-28T22:19:20 DUE TO TIME LIMIT ***
