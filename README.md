@@ -3,7 +3,7 @@
 ## Description
 Ce projet est une application qui simule l'algorithme de Barnes-Hut pour la simulation de systèmes de particules.
 
-## Performances
+## Performances (Notes temporaire)
 
 ### Comparaison des temps d'exécution
 
@@ -22,7 +22,7 @@ Ce projet est une application qui simule l'algorithme de Barnes-Hut pour la simu
 | Parallel vect (stack)  | 100k       | 4 MPI, 24 threads        | 10.5198     |
 | Parallel recur         | 800k       | 8 MPI, 24 threads        | 832.531     |
 
-### Observations
+### Observations (Note temporaire)
 
 - Les versions parallèles montrent une accélération significative par rapport à la version séquentielle.
 - La configuration avec 4 MPI et 24 threads semble offrir les meilleures performances pour les versions parallèles.
